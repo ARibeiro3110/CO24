@@ -1,0 +1,5 @@
+(program 
+	(println 057) 
+	(println 057) 
+	(return 0) 
+)
