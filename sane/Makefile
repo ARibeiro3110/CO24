@@ -7,7 +7,7 @@ CDK_INC_DIR = $(ROOT)/usr/include
 CDK_LIB_DIR = $(ROOT)/usr/lib
 CDK_BIN_DIR = $(ROOT)/usr/bin
 
-LANGUAGE=mml
+LANGUAGE=til
 
 #---------------------------------------------------------------
 # PROBABLY, THERE'S NO NEED TO CHANGE ANYTHING BEYOND THIS POINT
@@ -61,9 +61,11 @@ $(Y_NAME).tab.h: $(Y_NAME).y
 $(L_NAME).o: $(L_NAME).cpp $(Y_NAME).tab.h
 
 .auto/all_nodes.h: 
+	mkdir -p .auto
 	$(CDK) ast --decls ast --language $(LANGUAGE) > $@
 
 .auto/visitor_decls.h: 
+	mkdir -p .auto
 	$(CDK) ast --decls target --language $(LANGUAGE) > $@
 
 $(COMPILER): $(L_NAME).o $(Y_NAME).tab.o $(OFILES)
