@@ -1,5 +1,5 @@
 (program 
-	(println 057) 
-	(println 057) 
+	(println 0x2f) 
+	(println 0x2f) 
 	(return 0) 
 )
