@@ -1,3 +1,38 @@
 <pre>
 Checking project structure...
+In file included from .auto/all_nodes.h:28,
+                 from til_parser.y:8:
+./ast/adress_of_node.h: In constructor 'til::address_of_node::address_of_node(int, cdk::lvalue_node*)':
+./ast/adress_of_node.h:17:14: error: type 'cdk::basic_node' is not a direct base of 'til::address_of_node'
+   17 |       : cdk::basic_node(lineno), _lvalue(lvalue) {}
+      |              ^~~~~~~~~~
+./ast/adress_of_node.h:17:48: error: no matching function for call to 'cdk::expression_node::expression_node()'
+   17 |       : cdk::basic_node(lineno), _lvalue(lvalue) {}
+      |                                                ^
+In file included from /usr/include/cdk/ast/binary_operation_node.h:4,
+                 from /usr/include/cdk/ast/add_node.h:4,
+                 from /usr/include/cdk/ast/all.h:51,
+                 from .auto/all_nodes.h:4:
+/usr/include/cdk/ast/expression_node.h:13:5: note: candidate: 'cdk::expression_node::expression_node(int)'
+   13 |     expression_node(int lineno) noexcept:
+      |     ^~~~~~~~~~~~~~~
+/usr/include/cdk/ast/expression_node.h:13:5: note:   candidate expects 1 argument, 0 provided
+/usr/include/cdk/ast/expression_node.h:11:9: note: candidate: 'cdk::expression_node::expression_node(const cdk::expression_node&)'
+   11 |   class expression_node : public typed_node {
+      |         ^~~~~~~~~~~~~~~
+/usr/include/cdk/ast/expression_node.h:11:9: note:   candidate expects 1 argument, 0 provided
+/usr/include/cdk/ast/expression_node.h:11:9: note: candidate: 'cdk::expression_node::expression_node(cdk::expression_node&&)'
+/usr/include/cdk/ast/expression_node.h:11:9: note:   candidate expects 1 argument, 0 provided
+./ast/adress_of_node.h: In member function 'cdk::expression_node* til::address_of_node::lvalue()':
+./ast/adress_of_node.h:19:43: error: cannot convert 'cdk::lvalue_node*' to 'cdk::expression_node*' in return
+   19 |   cdk::expression_node *lvalue() { return _lvalue; }
+      |                                           ^~~~~~~
+      |                                           |
+      |                                           cdk::lvalue_node*
+./ast/adress_of_node.h: In member function 'virtual void til::address_of_node::accept(basic_ast_visitor*, int)':
+./ast/adress_of_node.h:22:9: error: 'class basic_ast_visitor' has no member named 'do_address_of_node'; did you mean 'do_adress_of_node'?
+   22 |     sp->do_address_of_node(this, level);
+      |         ^~~~~~~~~~~~~~~~~~
+      |         do_adress_of_node
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
