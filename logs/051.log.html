@@ -1,8 +1,8 @@
 <pre>
 Checking project structure...
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_decl_node(til::decl_node*, int)':
-targets/postfix_writer.cpp:513:10: warning: variable 'frame_offset' set but not used [-Wunused-but-set-variable]
-  513 |   size_t frame_offset;
+targets/postfix_writer.cpp:515:10: warning: variable 'frame_offset' set but not used [-Wunused-but-set-variable]
+  515 |   size_t frame_offset;
       |          ^~~~~~~~~~~~
 targets/type_checker.cpp:24:13: warning: 'bool compatible_types(std::shared_ptr<cdk::basic_type>, cdk::typename_type)' defined but not used [-Wunused-function]
    24 | static bool compatible_types(std::shared_ptr<cdk::basic_type> t1, cdk::typename_type t2) {
@@ -34,8 +34,8 @@ ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------A-07-7-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/A-07-7-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_A-07-7-N-ok.out	Mon Apr 22 12:27:12 2024
+ok. Running: *** expected/A-07-7-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_A-07-7-N-ok.out	Mon Apr 22 16:26:36 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 <font color="brown">--- 1,2 ----</font>
@@ -45,8 +45,8 @@ ok. Running: *** expected/A-07-7-N-ok.out	Mon Apr 22 12:23:29 2024
 <font color='white' style='background: blue;'>---------------------------A-08-8-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/A-08-8-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_A-08-8-N-ok.out	Mon Apr 22 12:27:12 2024
+ok. Running: *** expected/A-08-8-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_A-08-8-N-ok.out	Mon Apr 22 16:26:36 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! xYz
@@ -94,25 +94,11 @@ ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-10-18-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/B-10-18-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_B-10-18-N-ok.out	Mon Apr 22 12:27:13 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-! 0
-<font color="brown">--- 1 ----</font>
-! -2
-<font color='brown'>output differs from expected</font>
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-11-19-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/B-11-19-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_B-11-19-N-ok.out	Mon Apr 22 12:27:13 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-! 0
-<font color="brown">--- 1 ----</font>
-! -2
-<font color='brown'>output differs from expected</font>
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-12-20-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
@@ -120,14 +106,7 @@ ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-13-21-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/B-13-21-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_B-13-21-N-ok.out	Mon Apr 22 12:27:13 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-! 0
-<font color="brown">--- 1 ----</font>
-! -2
-<font color='brown'>output differs from expected</font>
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-14-22-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
@@ -167,8 +146,8 @@ ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-25-31-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/B-25-31-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_B-25-31-N-ok.out	Mon Apr 22 12:27:14 2024
+ok. Running: *** expected/B-25-31-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_B-25-31-N-ok.out	Mon Apr 22 16:26:36 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 4747
@@ -263,8 +242,8 @@ ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------E-01-53-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-01-53-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_E-01-53-N-ok.out	Mon Apr 22 12:27:15 2024
+ok. Running: *** expected/E-01-53-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_E-01-53-N-ok.out	Mon Apr 22 16:26:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 123
@@ -276,8 +255,8 @@ ok. Running: *** expected/E-01-53-N-ok.out	Mon Apr 22 12:23:29 2024
 <font color='white' style='background: blue;'>---------------------------E-02-54-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-02-54-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_E-02-54-N-ok.out	Mon Apr 22 12:27:15 2024
+ok. Running: *** expected/E-02-54-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_E-02-54-N-ok.out	Mon Apr 22 16:26:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 10-1-2-3
@@ -295,8 +274,8 @@ ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------E-04-56-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-04-56-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_E-04-56-N-ok.out	Mon Apr 22 12:27:15 2024
+ok. Running: *** expected/E-04-56-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_E-04-56-N-ok.out	Mon Apr 22 16:26:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 135
@@ -308,8 +287,8 @@ ok. Running: *** expected/E-04-56-N-ok.out	Mon Apr 22 12:23:29 2024
 <font color='white' style='background: blue;'>---------------------------E-05-57-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-05-57-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_E-05-57-N-ok.out	Mon Apr 22 12:27:15 2024
+ok. Running: *** expected/E-05-57-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_E-05-57-N-ok.out	Mon Apr 22 16:26:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 123
@@ -321,8 +300,8 @@ ok. Running: *** expected/E-05-57-N-ok.out	Mon Apr 22 12:23:29 2024
 <font color='white' style='background: blue;'>---------------------------E-06-58-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-06-58-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_E-06-58-N-ok.out	Mon Apr 22 12:27:15 2024
+ok. Running: *** expected/E-06-58-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_E-06-58-N-ok.out	Mon Apr 22 16:26:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 10-1-2-3
@@ -340,8 +319,8 @@ ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------E-08-60-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-08-60-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_E-08-60-N-ok.out	Mon Apr 22 12:27:15 2024
+ok. Running: *** expected/E-08-60-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_E-08-60-N-ok.out	Mon Apr 22 16:26:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 135
@@ -351,43 +330,43 @@ ok. Running: *** expected/E-08-60-N-ok.out	Mon Apr 22 12:23:29 2024
 ! 5
 <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------E-09-61-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: E-09-61-N-ok.asm:12: error: undefined symbol `x' (first use)
-E-09-61-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
+Compiler: ok (0/0). YASM: E-09-61-N-ok.asm:13: error: undefined symbol `x' (first use)
+E-09-61-N-ok.asm:13: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------E-10-62-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: E-10-62-N-ok.asm:12: error: undefined symbol `x' (first use)
-E-10-62-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
+Compiler: ok (0/0). YASM: E-10-62-N-ok.asm:13: error: undefined symbol `x' (first use)
+E-10-62-N-ok.asm:13: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------E-11-63-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: E-11-63-N-ok.asm:12: error: undefined symbol `x' (first use)
-E-11-63-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
+Compiler: ok (0/0). YASM: E-11-63-N-ok.asm:13: error: undefined symbol `x' (first use)
+E-11-63-N-ok.asm:13: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------E-12-64-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: E-12-64-N-ok.asm:12: error: undefined symbol `x' (first use)
-E-12-64-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
+Compiler: ok (0/0). YASM: E-12-64-N-ok.asm:13: error: undefined symbol `x' (first use)
+E-12-64-N-ok.asm:13: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------E-13-65-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: E-13-65-N-ok.asm:12: error: undefined symbol `x' (first use)
-E-13-65-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
+Compiler: ok (0/0). YASM: E-13-65-N-ok.asm:13: error: undefined symbol `x' (first use)
+E-13-65-N-ok.asm:13: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------E-14-66-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: E-14-66-N-ok.asm:12: error: undefined symbol `x' (first use)
-E-14-66-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
+Compiler: ok (0/0). YASM: E-14-66-N-ok.asm:13: error: undefined symbol `x' (first use)
+E-14-66-N-ok.asm:13: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------F-01-67-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: F-01-67-N-ok.asm:12: error: undefined symbol `y' (first use)
-F-01-67-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
-F-01-67-N-ok.asm:25: error: undefined symbol `x' (first use)
+Compiler: ok (0/0). YASM: F-01-67-N-ok.asm:13: error: undefined symbol `y' (first use)
+F-01-67-N-ok.asm:13: error:  (Each undefined symbol is reported only once.)
+F-01-67-N-ok.asm:26: error: undefined symbol `x' (first use)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------F-02-68-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: F-02-68-N-ok.asm:12: error: undefined symbol `y' (first use)
-F-02-68-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
-F-02-68-N-ok.asm:25: error: undefined symbol `x' (first use)
+Compiler: ok (0/0). YASM: F-02-68-N-ok.asm:13: error: undefined symbol `y' (first use)
+F-02-68-N-ok.asm:13: error:  (Each undefined symbol is reported only once.)
+F-02-68-N-ok.asm:26: error: undefined symbol `x' (first use)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------F-03-69-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: F-03-69-N-ok.asm:12: error: undefined symbol `x' (first use)
-F-03-69-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
-F-03-69-N-ok.asm:34: error: undefined symbol `y' (first use)
+Compiler: ok (0/0). YASM: F-03-69-N-ok.asm:13: error: undefined symbol `x' (first use)
+F-03-69-N-ok.asm:13: error:  (Each undefined symbol is reported only once.)
+F-03-69-N-ok.asm:35: error: undefined symbol `y' (first use)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------G-01-70-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
@@ -396,8 +375,8 @@ ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------G-02-71-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/G-02-71-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_G-02-71-N-ok.out	Mon Apr 22 12:27:16 2024
+ok. Running: *** expected/G-02-71-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_G-02-71-N-ok.out	Mon Apr 22 16:26:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 8
@@ -419,8 +398,8 @@ ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------G-06-75-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/G-06-75-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_G-06-75-N-ok.out	Mon Apr 22 12:27:16 2024
+ok. Running: *** expected/G-06-75-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_G-06-75-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 8
@@ -428,14 +407,14 @@ ok. Running: *** expected/G-06-75-N-ok.out	Mon Apr 22 12:23:29 2024
 ! 4
 <font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------G-07-76-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: G-07-76-N-ok.asm:37: error: undefined symbol `printd' (first use)
-G-07-76-N-ok.asm:37: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------G-08-77-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/G-08-77-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_G-08-77-N-ok.out	Mon Apr 22 12:27:16 2024
+ok. Running: *** expected/G-08-77-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_G-08-77-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 8
@@ -446,8 +425,8 @@ ok. Running: *** expected/G-08-77-N-ok.out	Mon Apr 22 12:23:29 2024
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/J-01-78-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_J-01-78-N-ok.out	Mon Apr 22 12:27:16 2024
+*** expected/J-01-78-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_J-01-78-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - ola
@@ -457,8 +436,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/J-02-79-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_J-02-79-N-ok.out	Mon Apr 22 12:27:16 2024
+*** expected/J-02-79-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_J-02-79-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 2
@@ -468,8 +447,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/J-03-80-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_J-03-80-N-ok.out	Mon Apr 22 12:27:16 2024
+*** expected/J-03-80-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_J-03-80-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - ola
@@ -480,8 +459,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/J-04-81-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_J-04-81-N-ok.out	Mon Apr 22 12:27:16 2024
+*** expected/J-04-81-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_J-04-81-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 3
@@ -491,8 +470,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/J-05-82-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_J-05-82-N-ok.out	Mon Apr 22 12:27:16 2024
+*** expected/J-05-82-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_J-05-82-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 314
@@ -507,8 +486,8 @@ ok. Running: <font color='green'>TEST PASSED!</font>
 3: 'f' was not declared in this scope
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/J-07-84-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_J-07-84-N-ok.out	Mon Apr 22 12:27:16 2024
+ok. Running: *** expected/J-07-84-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_J-07-84-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 3
@@ -518,8 +497,8 @@ ok. Running: *** expected/J-07-84-N-ok.out	Mon Apr 22 12:23:29 2024
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/J-08-85-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_J-08-85-N-ok.out	Mon Apr 22 12:27:16 2024
+*** expected/J-08-85-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_J-08-85-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 2
@@ -530,8 +509,8 @@ ok. Running: execution failed
 4: 'f' was not declared in this scope
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/K-01-86-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_K-01-86-N-ok.out	Mon Apr 22 12:27:16 2024
+ok. Running: *** expected/K-01-86-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_K-01-86-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 310
@@ -542,8 +521,8 @@ ok. Running: *** expected/K-01-86-N-ok.out	Mon Apr 22 12:23:29 2024
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/K-02-87-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_K-02-87-N-ok.out	Mon Apr 22 12:27:16 2024
+*** expected/K-02-87-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_K-02-87-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 3
@@ -553,8 +532,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/K-03-88-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_K-03-88-N-ok.out	Mon Apr 22 12:27:16 2024
+*** expected/K-03-88-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_K-03-88-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 7
@@ -564,8 +543,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/K-04-89-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_K-04-89-N-ok.out	Mon Apr 22 12:27:16 2024
+*** expected/K-04-89-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_K-04-89-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 4
@@ -575,8 +554,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/K-05-90-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_K-05-90-N-ok.out	Mon Apr 22 12:27:17 2024
+*** expected/K-05-90-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_K-05-90-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 6
@@ -586,8 +565,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/K-06-91-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_K-06-91-N-ok.out	Mon Apr 22 12:27:17 2024
+*** expected/K-06-91-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_K-06-91-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 10
@@ -597,8 +576,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/K-07-92-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_K-07-92-N-ok.out	Mon Apr 22 12:27:17 2024
+*** expected/K-07-92-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_K-07-92-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - ola
@@ -609,8 +588,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/K-08-93-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_K-08-93-N-ok.out	Mon Apr 22 12:27:17 2024
+*** expected/K-08-93-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_K-08-93-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - ola
@@ -621,8 +600,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/K-09-94-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_K-09-94-N-ok.out	Mon Apr 22 12:27:17 2024
+*** expected/K-09-94-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_K-09-94-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - ola10
@@ -633,8 +612,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/K-10-95-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_K-10-95-N-ok.out	Mon Apr 22 12:27:17 2024
+*** expected/K-10-95-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_K-10-95-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - ola10
@@ -645,8 +624,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/K-11-96-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_K-11-96-N-ok.out	Mon Apr 22 12:27:17 2024
+*** expected/K-11-96-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_K-11-96-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - ola
@@ -657,8 +636,8 @@ ok. Running: execution failed
 11: 'f' was not declared in this scope
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/L-01-97-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_L-01-97-N-ok.out	Mon Apr 22 12:27:17 2024
+ok. Running: *** expected/L-01-97-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_L-01-97-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 15
@@ -670,8 +649,8 @@ ok. Running: *** expected/L-01-97-N-ok.out	Mon Apr 22 12:23:29 2024
 17: 'f' was not declared in this scope
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/L-02-98-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_L-02-98-N-ok.out	Mon Apr 22 12:27:17 2024
+ok. Running: *** expected/L-02-98-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_L-02-98-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 6
@@ -683,25 +662,46 @@ ok. Running: *** expected/L-02-98-N-ok.out	Mon Apr 22 12:23:29 2024
 17: 'f' was not declared in this scope
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/L-03-99-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_L-03-99-N-ok.out	Mon Apr 22 12:27:17 2024
+ok. Running: *** expected/L-03-99-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_L-03-99-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 6
 <font color="brown">--- 0 ----</font>
 <font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------O-01-100-N-ok.til---------------------------</font>
-Compiler: failed (139/0). YASM: O-01-100-N-ok.asm:23: error: undefined symbol `printd' (first use)
-O-01-100-N-ok.asm:23: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+*** expected/O-01-100-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_O-01-100-N-ok.out	Mon Apr 22 16:26:38 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 1.3E15
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------O-02-101-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: O-02-101-N-ok.asm:22: error: undefined symbol `printd' (first use)
-O-02-101-N-ok.asm:22: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+*** expected/O-02-101-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_O-02-101-N-ok.out	Mon Apr 22 16:26:38 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 1E12
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------O-03-102-N-ok.til---------------------------</font>
-Compiler: failed (139/0). YASM: O-03-102-N-ok.asm:22: error: undefined symbol `printd' (first use)
-O-03-102-N-ok.asm:22: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+*** expected/O-03-102-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_O-03-102-N-ok.out	Mon Apr 22 16:26:38 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 99
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------P-01-103-N-ok.til---------------------------</font>
 3: object allocation can only target reference types
 4: indexation temporarly disabled
@@ -710,8 +710,8 @@ O-03-102-N-ok.asm:22: error:  (Each undefined symbol is reported only once.)
 7: indexation temporarly disabled
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/P-01-103-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_P-01-103-N-ok.out	Mon Apr 22 12:27:17 2024
+ok. Running: *** expected/P-01-103-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_P-01-103-N-ok.out	Mon Apr 22 16:26:38 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 6.2E33.1E3
@@ -728,8 +728,8 @@ ok. Running: *** expected/P-01-103-N-ok.out	Mon Apr 22 12:23:29 2024
 11: indexation temporarly disabled
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/P-02-104-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_P-02-104-N-ok.out	Mon Apr 22 12:27:17 2024
+ok. Running: *** expected/P-02-104-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_P-02-104-N-ok.out	Mon Apr 22 16:26:39 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 378
@@ -741,9 +741,9 @@ ok. Running: *** expected/P-02-104-N-ok.out	Mon Apr 22 12:23:29 2024
 16: indexation temporarly disabled
 22: indexation temporarly disabled
 28: indexation temporarly disabled
-Compiler: ok (0/0). YASM: P-03-105-N-ok.asm:20: error: undefined symbol `i' (first use)
-P-03-105-N-ok.asm:20: error:  (Each undefined symbol is reported only once.)
-P-03-105-N-ok.asm:28: error: undefined symbol `n' (first use)
+Compiler: ok (0/0). YASM: P-03-105-N-ok.asm:21: error: undefined symbol `i' (first use)
+P-03-105-N-ok.asm:21: error:  (Each undefined symbol is reported only once.)
+P-03-105-N-ok.asm:29: error: undefined symbol `n' (first use)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------P-04-106-N-ok.til---------------------------</font>
 2: expected expression of 'double' but got 'integer'
@@ -751,26 +751,40 @@ P-03-105-N-ok.asm:28: error: undefined symbol `n' (first use)
 8: indexation temporarly disabled
 11: indexation temporarly disabled
 13: indexation temporarly disabled
-Compiler: ok (0/0). YASM: P-04-106-N-ok.asm:16: error: undefined symbol `i' (first use)
-P-04-106-N-ok.asm:16: error:  (Each undefined symbol is reported only once.)
-P-04-106-N-ok.asm:41: error: undefined symbol `j' (first use)
+Compiler: ok (0/0). YASM: P-04-106-N-ok.asm:17: error: undefined symbol `i' (first use)
+P-04-106-N-ok.asm:17: error:  (Each undefined symbol is reported only once.)
+P-04-106-N-ok.asm:42: error: undefined symbol `j' (first use)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------P-05-107-N-ok.til---------------------------</font>
 4: object allocation can only target reference types
 5: indexation temporarly disabled
 6: indexation temporarly disabled
-Compiler: ok (0/0). YASM: P-05-107-N-ok.asm:18: error: undefined symbol `printd' (first use)
-P-05-107-N-ok.asm:18: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: *** expected/P-05-107-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_P-05-107-N-ok.out	Mon Apr 22 16:26:39 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+! 6
+<font color="brown">--- 1 ----</font>
+! 0
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------P-06-108-N-ok.til---------------------------</font>
 5: object allocation can only target reference types
 6: object allocation can only target reference types
 7: indexation temporarly disabled
 8: indexation temporarly disabled
 9: indexation temporarly disabled
-Compiler: ok (0/0). YASM: P-06-108-N-ok.asm:18: error: undefined symbol `printd' (first use)
-P-06-108-N-ok.asm:18: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: *** expected/P-06-108-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_P-06-108-N-ok.out	Mon Apr 22 16:26:39 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+! 3
+<font color="brown">--- 1 ----</font>
+! 0
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------P-07-109-N-ok.til---------------------------</font>
 7: object allocation can only target reference types
 8: indexation temporarly disabled
@@ -778,8 +792,8 @@ P-06-108-N-ok.asm:18: error:  (Each undefined symbol is reported only once.)
 10: indexation temporarly disabled
 12: indexation temporarly disabled
 2: indexation temporarly disabled
-Compiler: ok (0/0). YASM: P-07-109-N-ok.asm:15: error: undefined symbol `p' (first use)
-P-07-109-N-ok.asm:15: error:  (Each undefined symbol is reported only once.)
+Compiler: ok (0/0). YASM: P-07-109-N-ok.asm:16: error: undefined symbol `p' (first use)
+P-07-109-N-ok.asm:16: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------Q-01-110-N-ok.til---------------------------</font>
 5: object allocation can only target reference types
@@ -787,9 +801,9 @@ P-07-109-N-ok.asm:15: error:  (Each undefined symbol is reported only once.)
 7: indexation temporarly disabled
 8: indexation temporarly disabled
 10: indexation temporarly disabled
-Compiler: ok (0/0). YASM: Q-01-110-N-ok.asm:15: error: undefined symbol `p' (first use)
-Q-01-110-N-ok.asm:15: error:  (Each undefined symbol is reported only once.)
-Q-01-110-N-ok.asm:22: error: undefined symbol `q' (first use)
+Compiler: ok (0/0). YASM: Q-01-110-N-ok.asm:16: error: undefined symbol `p' (first use)
+Q-01-110-N-ok.asm:16: error:  (Each undefined symbol is reported only once.)
+Q-01-110-N-ok.asm:23: error: undefined symbol `q' (first use)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------Q-02-111-N-ok.til---------------------------</font>
 5: object allocation can only target reference types
@@ -797,31 +811,37 @@ Q-01-110-N-ok.asm:22: error: undefined symbol `q' (first use)
 7: indexation temporarly disabled
 8: indexation temporarly disabled
 10: indexation temporarly disabled
-Compiler: ok (0/0). YASM: Q-02-111-N-ok.asm:15: error: undefined symbol `p' (first use)
-Q-02-111-N-ok.asm:15: error:  (Each undefined symbol is reported only once.)
-Q-02-111-N-ok.asm:26: error: undefined symbol `q' (first use)
+Compiler: ok (0/0). YASM: Q-02-111-N-ok.asm:16: error: undefined symbol `p' (first use)
+Q-02-111-N-ok.asm:16: error:  (Each undefined symbol is reported only once.)
+Q-02-111-N-ok.asm:27: error: undefined symbol `q' (first use)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------Q-03-112-N-ok.til---------------------------</font>
 5: indexation temporarly disabled
-Compiler: ok (0/0). YASM: Q-03-112-N-ok.asm:16: error: undefined symbol `p' (first use)
-Q-03-112-N-ok.asm:16: error:  (Each undefined symbol is reported only once.)
+Compiler: ok (0/0). YASM: Q-03-112-N-ok.asm:17: error: undefined symbol `p' (first use)
+Q-03-112-N-ok.asm:17: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------Q-04-113-N-ok.til---------------------------</font>
 5: indexation temporarly disabled
-Compiler: ok (0/0). YASM: Q-04-113-N-ok.asm:11: error: undefined symbol `r' (first use)
-Q-04-113-N-ok.asm:11: error:  (Each undefined symbol is reported only once.)
-Q-04-113-N-ok.asm:12: error: undefined symbol `p' (first use)
+Compiler: ok (0/0). YASM: Q-04-113-N-ok.asm:12: error: undefined symbol `r' (first use)
+Q-04-113-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
+Q-04-113-N-ok.asm:13: error: undefined symbol `p' (first use)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------Q-05-114-N-ok.til---------------------------</font>
 2: indexation temporarly disabled
-Compiler: ok (0/0). YASM: Q-05-114-N-ok.asm:26: error: undefined symbol `printd' (first use)
-Q-05-114-N-ok.asm:26: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+*** expected/Q-05-114-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_Q-05-114-N-ok.out	Mon Apr 22 16:26:39 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 6.1E1
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------Q-06-115-N-ok.til---------------------------</font>
 1: indexation temporarly disabled
-Compiler: ok (0/0). YASM: Q-06-115-N-ok.asm:15: error: undefined symbol `r' (first use)
-Q-06-115-N-ok.asm:15: error:  (Each undefined symbol is reported only once.)
-Q-06-115-N-ok.asm:22: error: undefined symbol `printd' (first use)
+Compiler: ok (0/0). YASM: Q-06-115-N-ok.asm:16: error: undefined symbol `r' (first use)
+Q-06-115-N-ok.asm:16: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------Q-07-116-N-ok.til---------------------------</font>
 4: object allocation can only target reference types
@@ -832,8 +852,8 @@ Q-06-115-N-ok.asm:22: error: undefined symbol `printd' (first use)
 1: indexation temporarly disabled
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/Q-07-116-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_Q-07-116-N-ok.out	Mon Apr 22 12:27:17 2024
+ok. Running: *** expected/Q-07-116-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_Q-07-116-N-ok.out	Mon Apr 22 16:26:39 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 6.1E1
@@ -852,8 +872,8 @@ ok. Running: <font color='green'>TEST PASSED!</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/S-01-119-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_S-01-119-N-ok.out	Mon Apr 22 12:27:18 2024
+*** expected/S-01-119-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_S-01-119-N-ok.out	Mon Apr 22 16:26:39 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 3
@@ -861,15 +881,15 @@ ok. Running: execution failed
 <font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------S-01-120-N-ok.til---------------------------</font>
 3: Well ... in function declarations are currently not supported
-Compiler: ok (0/0). YASM: S-01-120-N-ok.asm:11: error: undefined symbol `f' (first use)
-S-01-120-N-ok.asm:11: error:  (Each undefined symbol is reported only once.)
+Compiler: ok (0/0). YASM: S-01-120-N-ok.asm:12: error: undefined symbol `f' (first use)
+S-01-120-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------U-01-121-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/U-01-121-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_U-01-121-N-ok.out	Mon Apr 22 12:27:18 2024
+*** expected/U-01-121-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_U-01-121-N-ok.out	Mon Apr 22 16:26:39 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 46
@@ -879,8 +899,8 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/U-02-122-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_U-02-122-N-ok.out	Mon Apr 22 12:27:18 2024
+*** expected/U-02-122-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_U-02-122-N-ok.out	Mon Apr 22 16:26:39 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 4630
@@ -890,34 +910,32 @@ ok. Running: execution failed
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/U-03-123-N-ok.out	Mon Apr 22 12:23:29 2024
---- logs/051_U-03-123-N-ok.out	Mon Apr 22 12:27:18 2024
+*** expected/U-03-123-N-ok.out	Mon Apr 22 16:23:24 2024
+--- logs/051_U-03-123-N-ok.out	Mon Apr 22 16:26:39 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 463025
 <font color="brown">--- 0 ----</font>
 <font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------X-01-124-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: X-01-124-N-ok.asm:30: error: undefined symbol `printd' (first use)
-X-01-124-N-ok.asm:30: error:  (Each undefined symbol is reported only once.)
-X-01-124-N-ok.asm:49: error: undefined symbol `ff' (first use)
+Compiler: ok (0/0). YASM: X-01-124-N-ok.asm:50: error: undefined symbol `ff' (first use)
+X-01-124-N-ok.asm:50: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------X-02-125-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: X-02-125-N-ok.asm:26: error: undefined symbol `printd' (first use)
-X-02-125-N-ok.asm:26: error:  (Each undefined symbol is reported only once.)
-X-02-125-N-ok.asm:45: error: undefined symbol `ff' (first use)
+Compiler: ok (0/0). YASM: X-02-125-N-ok.asm:46: error: undefined symbol `ff' (first use)
+X-02-125-N-ok.asm:46: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------Z-01-126-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: Z-01-126-N-ok.asm:16: error: undefined symbol `g' (first use)
-Z-01-126-N-ok.asm:16: error:  (Each undefined symbol is reported only once.)
+Compiler: ok (0/0). YASM: Z-01-126-N-ok.asm:17: error: undefined symbol `g' (first use)
+Z-01-126-N-ok.asm:17: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------Z-02-127-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: Z-02-127-N-ok.asm:11: error: undefined symbol `i' (first use)
-Z-02-127-N-ok.asm:11: error:  (Each undefined symbol is reported only once.)
+Compiler: ok (0/0). YASM: Z-02-127-N-ok.asm:12: error: undefined symbol `i' (first use)
+Z-02-127-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------Z-03-128-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: Z-03-128-N-ok.asm:11: error: undefined symbol `i' (first use)
-Z-03-128-N-ok.asm:11: error:  (Each undefined symbol is reported only once.)
+Compiler: ok (0/0). YASM: Z-03-128-N-ok.asm:12: error: undefined symbol `i' (first use)
+Z-03-128-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------Z-04-129-N-ok.til---------------------------</font>
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
@@ -928,13 +946,13 @@ Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------Z-06-131-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: Z-06-131-N-ok.asm:12: error: undefined symbol `g' (first use)
-Z-06-131-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
-Z-06-131-N-ok.asm:21: error: undefined symbol `f' (first use)
+Compiler: ok (0/0). YASM: Z-06-131-N-ok.asm:13: error: undefined symbol `g' (first use)
+Z-06-131-N-ok.asm:13: error:  (Each undefined symbol is reported only once.)
+Z-06-131-N-ok.asm:22: error: undefined symbol `f' (first use)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------Z-07-132-N-ok.til---------------------------</font>
-Compiler: ok (0/0). YASM: Z-07-132-N-ok.asm:12: error: undefined symbol `f' (first use)
-Z-07-132-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
-Z-07-132-N-ok.asm:16: error: undefined symbol `g' (first use)
+Compiler: ok (0/0). YASM: Z-07-132-N-ok.asm:13: error: undefined symbol `f' (first use)
+Z-07-132-N-ok.asm:13: error:  (Each undefined symbol is reported only once.)
+Z-07-132-N-ok.asm:17: error: undefined symbol `g' (first use)
 'yasm' failed
 </pre>
