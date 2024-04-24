@@ -1,6 +1,6 @@
 <pre>
 Checking project structure...
-In file included from .auto/all_nodes.h:40,
+In file included from .auto/all_nodes.h:39,
                  from til_parser.y:8:
 ./ast/stop_node.h:15:15: error: expected unqualified-id before 'int'
    15 |     next_node(int lineno, const int &argument) :
@@ -9,5 +9,25 @@ In file included from .auto/all_nodes.h:40,
    15 |     next_node(int lineno, const int &argument) :
       |              ~^~~
       |               )
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:66:106: error: no matching function for call to 'til::print_node::print_node(int, cdk::expression_node*&)'
+   66 |      | tPRINT expr ';'                  { $$ = new til::print_node(LINE, $2); }
+      |                                                                                                          ^
+In file included from .auto/all_nodes.h:35:
+./ast/print_node.h:15:5: note: candidate: 'til::print_node::print_node(int, cdk::sequence_node*)'
+   15 |     print_node(int lineno, cdk::sequence_node *args) :
+      |     ^~~~~~~~~~
+./ast/print_node.h:15:48: note:   no known conversion for argument 2 from 'cdk::expression_node*' to 'cdk::sequence_node*'
+   15 |     print_node(int lineno, cdk::sequence_node *args) :
+      |                            ~~~~~~~~~~~~~~~~~~~~^~~~
+./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(const til::print_node&)'
+   11 |   class print_node : public cdk::basic_node {
+      |         ^~~~~~~~~~
+./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(til::print_node&&)'
+./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:68:62: error: expected type-specifier
+   68 |      | tWHILE '(' expr ')' stmt         { $$ = new til::while_node(LINE, $3, $5); }
+      |                                                              ^~~
 make: *** [Makefile:40: til_parser.tab.o] Error 1
 
