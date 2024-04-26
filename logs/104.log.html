@@ -1,3 +1,26 @@
 <pre>
 Checking project structure...
+In file included from .auto/all_nodes.h:33,
+                 from til_parser.y:8:
+./ast/while_node.h: In member function 'virtual void til::loop_node::accept(basic_ast_visitor*, int)':
+./ast/while_node.h:24:57: error: 'class basic_ast_visitor' has no member named 'do_loop_node'; did you mean 'do_le_node'?
+   24 |     void accept(basic_ast_visitor *sp, int level) { sp->do_loop_node(this, level); }
+      |                                                         ^~~~~~~~~~~~
+      |                                                         do_le_node
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:68:123: error: invalid use of incomplete type 'class til::while_node'
+   68 |      | tWHILE '(' expr ')' stmt         { $$ = new til::while_node(LINE, $3, $5); }
+      |                                                                                                                           ^
+In file included from ./targets/basic_ast_visitor.h:13,
+                 from /usr/include/cdk/ast/basic_node.h:6,
+                 from /usr/include/cdk/ast/typed_node.h:4,
+                 from /usr/include/cdk/ast/expression_node.h:4,
+                 from /usr/include/cdk/ast/binary_operation_node.h:4,
+                 from /usr/include/cdk/ast/add_node.h:4,
+                 from /usr/include/cdk/ast/all.h:51,
+                 from .auto/all_nodes.h:4:
+./.auto/all_nodes.h:17:7: note: forward declaration of 'class til::while_node'
+   17 | class while_node;
+      |       ^~~~~~~~~~
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
