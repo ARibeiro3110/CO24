@@ -1,3 +1,10 @@
 <pre>
 Checking project structure...
+In file included from .auto/all_nodes.h:41,
+                 from til_parser.y:8:
+./ast/next_node.h: In constructor 'til::next_node::next_node(int, int)':
+./ast/next_node.h:13:42: error: cannot convert 'til::next_node::level' from type 'int (til::next_node::)() const' to type 'int'
+   13 |                 cdk::basic_node(lineno), _level(level) {}
+      |                                          ^~~~~~~~~~~~~
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
