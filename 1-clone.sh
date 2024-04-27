@@ -3,7 +3,7 @@
 rm -rf checked-out checked-out-ref
 mkdir -p checked-out
 
-for i in {000..200}; do
+for i in {000..139} {190..200}; do
   (cd checked-out; git clone git@gitlab.rnl.tecnico.ulisboa.pt:leic-a-co24/prj/$i.git)
 done
 
@@ -17,7 +17,7 @@ done
 #(cd checked-out; rm -rf 000 [2-9]??)
 
 cp -a checked-out checked-out-ref
-for i in {000..200}; do
+for i in {000..139} {190..200}; do
   (cd checked-out-ref/$i; git -c advice.detachedHead=false checkout `git rev-list -1 --date=iso --before="2024-04-09T12:30:00+00:00" master`)
 done
 
