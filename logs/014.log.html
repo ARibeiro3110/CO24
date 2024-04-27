@@ -1,33 +1,62 @@
 <pre>
 Checking project structure...
-In file included from .auto/all_nodes.h:39,
-                 from til_parser.y:8:
-./ast/stop_node.h:15:15: error: expected unqualified-id before 'int'
-   15 |     next_node(int lineno, const int &argument) :
-      |               ^~~
-./ast/stop_node.h:15:15: error: expected ')' before 'int'
-   15 |     next_node(int lineno, const int &argument) :
-      |              ~^~~
-      |               )
-til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
-til_parser.y:66:106: error: no matching function for call to 'til::print_node::print_node(int, cdk::expression_node*&)'
-   66 |      | tPRINT expr ';'                  { $$ = new til::print_node(LINE, $2); }
-      |                                                                                                          ^
-In file included from .auto/all_nodes.h:35:
-./ast/print_node.h:15:5: note: candidate: 'til::print_node::print_node(int, cdk::sequence_node*)'
-   15 |     print_node(int lineno, cdk::sequence_node *args) :
-      |     ^~~~~~~~~~
-./ast/print_node.h:15:48: note:   no known conversion for argument 2 from 'cdk::expression_node*' to 'cdk::sequence_node*'
-   15 |     print_node(int lineno, cdk::sequence_node *args) :
-      |                            ~~~~~~~~~~~~~~~~~~~~^~~~
-./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(const til::print_node&)'
-   11 |   class print_node : public cdk::basic_node {
-      |         ^~~~~~~~~~
-./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
-./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(til::print_node&&)'
-./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
-til_parser.y:68:62: error: expected type-specifier
-   68 |      | tWHILE '(' expr ')' stmt         { $$ = new til::while_node(LINE, $3, $5); }
-      |                                                              ^~~
-make: *** [Makefile:40: til_parser.tab.o] Error 1
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_print_node(til::print_node*, int)':
+targets/postfix_writer.cpp:219:36: error: 'class cdk::basic_node' has no member named 'is_typed'
+  219 |     if (node->argument()->node(i)->is_typed(cdk::TYPE_INT)) {
+      |                                    ^~~~~~~~
+targets/postfix_writer.cpp:222:43: error: 'class cdk::basic_node' has no member named 'is_typed'
+  222 |     } else if (node->argument()->node(i)->is_typed(cdk::TYPE_STRING)) {
+      |                                           ^~~~~~~~
+targets/postfix_writer.cpp: At global scope:
+targets/postfix_writer.cpp:245:6: error: variable or field 'do_loop_node' declared void
+  245 | void til::postfix_writer::do_loop_node(til::while_node * const node, int lvl) {
+      |      ^~~
+targets/postfix_writer.cpp:245:45: error: 'while_node' is not a member of 'til'
+  245 | void til::postfix_writer::do_loop_node(til::while_node * const node, int lvl) {
+      |                                             ^~~~~~~~~~
+targets/postfix_writer.cpp:245:58: error: expected primary-expression before 'const'
+  245 | void til::postfix_writer::do_loop_node(til::while_node * const node, int lvl) {
+      |                                                          ^~~~~
+targets/postfix_writer.cpp:245:70: error: expected primary-expression before 'int'
+  245 | void til::postfix_writer::do_loop_node(til::while_node * const node, int lvl) {
+      |                                                                      ^~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_next_node(til::next_node*, int)':
+targets/postfix_writer.cpp:285:4: error: 'empty' was not declared in this scope
+  285 |   (empty)
+      |    ^~~~~
+targets/postfix_writer.cpp:285:4: note: suggested alternatives:
+In file included from /usr/include/c++/13/string:53,
+                 from targets/postfix_writer.cpp:1:
+/usr/include/c++/13/bits/range_access.h:304:5: note:   'std::empty'
+  304 |     empty(initializer_list<_Tp> __il) noexcept
+      |     ^~~~~
+In file included from /usr/include/c++/13/string_view:48,
+                 from /usr/include/c++/13/bits/basic_string.h:47,
+                 from /usr/include/c++/13/string:54:
+/usr/include/c++/13/bits/ranges_base.h:495:44: note:   'std::ranges::__cust::empty'
+  495 |     inline constexpr __cust_access::_Empty empty{};
+      |                                            ^~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_stop_node(til::stop_node*, int)':
+targets/postfix_writer.cpp:291:4: error: 'empty' was not declared in this scope
+  291 |   (empty)
+      |    ^~~~~
+targets/postfix_writer.cpp:291:4: note: suggested alternatives:
+/usr/include/c++/13/bits/range_access.h:304:5: note:   'std::empty'
+  304 |     empty(initializer_list<_Tp> __il) noexcept
+      |     ^~~~~
+/usr/include/c++/13/bits/ranges_base.h:495:44: note:   'std::ranges::__cust::empty'
+  495 |     inline constexpr __cust_access::_Empty empty{};
+      |                                            ^~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_return_node(til::return_node*, int)':
+targets/postfix_writer.cpp:299:4: error: 'empty' was not declared in this scope
+  299 |   (empty)
+      |    ^~~~~
+targets/postfix_writer.cpp:299:4: note: suggested alternatives:
+/usr/include/c++/13/bits/range_access.h:304:5: note:   'std::empty'
+  304 |     empty(initializer_list<_Tp> __il) noexcept
+      |     ^~~~~
+/usr/include/c++/13/bits/ranges_base.h:495:44: note:   'std::ranges::__cust::empty'
+  495 |     inline constexpr __cust_access::_Empty empty{};
+      |                                            ^~~~~
+make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
