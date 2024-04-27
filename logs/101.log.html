@@ -4,23 +4,35 @@ In file included from ./targets/basic_ast_visitor.h:64,
                  from /usr/include/cdk/ast/basic_node.h:6,
                  from /usr/include/cdk/ast/sequence_node.h:5,
                  from til_scanner.l:6:
-./.auto/visitor_decls.h:11:16: error: 'virtual void basic_ast_visitor::do_function_call_node(til::function_call_node*, int)' cannot be overloaded with 'virtual void basic_ast_visitor::do_function_call_node(til::function_call_node*, int)'
+./.auto/visitor_decls.h:10:16: error: 'virtual void basic_ast_visitor::do_for_node(til::for_node*, int)' cannot be overloaded with 'virtual void basic_ast_visitor::do_for_node(til::for_node*, int)'
+   10 |   virtual void do_for_node(til::for_node *const node, int lvl) = 0;
+      |                ^~~~~~~~~~~
+./.auto/visitor_decls.h:9:16: note: previous declaration 'virtual void basic_ast_visitor::do_for_node(til::for_node*, int)'
+    9 |   virtual void do_for_node(til::for_node *const node, int lvl) = 0;
+      |                ^~~~~~~~~~~
+./.auto/visitor_decls.h:12:16: error: 'virtual void basic_ast_visitor::do_function_call_node(til::function_call_node*, int)' cannot be overloaded with 'virtual void basic_ast_visitor::do_function_call_node(til::function_call_node*, int)'
+   12 |   virtual void do_function_call_node(til::function_call_node *const node, int lvl) = 0;
+      |                ^~~~~~~~~~~~~~~~~~~~~
+./.auto/visitor_decls.h:11:16: note: previous declaration 'virtual void basic_ast_visitor::do_function_call_node(til::function_call_node*, int)'
    11 |   virtual void do_function_call_node(til::function_call_node *const node, int lvl) = 0;
       |                ^~~~~~~~~~~~~~~~~~~~~
-./.auto/visitor_decls.h:10:16: note: previous declaration 'virtual void basic_ast_visitor::do_function_call_node(til::function_call_node*, int)'
-   10 |   virtual void do_function_call_node(til::function_call_node *const node, int lvl) = 0;
-      |                ^~~~~~~~~~~~~~~~~~~~~
-./.auto/visitor_decls.h:19:16: error: 'virtual void basic_ast_visitor::do_size_of_node(til::size_of_node*, int)' cannot be overloaded with 'virtual void basic_ast_visitor::do_size_of_node(til::size_of_node*, int)'
-   19 |   virtual void do_size_of_node(til::size_of_node *const node, int lvl) = 0;
+./.auto/visitor_decls.h:14:16: error: 'virtual void basic_ast_visitor::do_function_declaration(til::function_declaration*, int)' cannot be overloaded with 'virtual void basic_ast_visitor::do_function_declaration(til::function_declaration*, int)'
+   14 |   virtual void do_function_declaration(til::function_declaration *const node, int lvl) = 0;
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+./.auto/visitor_decls.h:13:16: note: previous declaration 'virtual void basic_ast_visitor::do_function_declaration(til::function_declaration*, int)'
+   13 |   virtual void do_function_declaration(til::function_declaration *const node, int lvl) = 0;
+      |                ^~~~~~~~~~~~~~~~~~~~~~~
+./.auto/visitor_decls.h:22:16: error: 'virtual void basic_ast_visitor::do_size_of_node(til::size_of_node*, int)' cannot be overloaded with 'virtual void basic_ast_visitor::do_size_of_node(til::size_of_node*, int)'
+   22 |   virtual void do_size_of_node(til::size_of_node *const node, int lvl) = 0;
       |                ^~~~~~~~~~~~~~~
-./.auto/visitor_decls.h:18:16: note: previous declaration 'virtual void basic_ast_visitor::do_size_of_node(til::size_of_node*, int)'
-   18 |   virtual void do_size_of_node(til::size_of_node *const node, int lvl) = 0;
+./.auto/visitor_decls.h:21:16: note: previous declaration 'virtual void basic_ast_visitor::do_size_of_node(til::size_of_node*, int)'
+   21 |   virtual void do_size_of_node(til::size_of_node *const node, int lvl) = 0;
       |                ^~~~~~~~~~~~~~~
-./.auto/visitor_decls.h:21:16: error: 'virtual void basic_ast_visitor::do_variable_declaration_node(til::variable_declaration_node*, int)' cannot be overloaded with 'virtual void basic_ast_visitor::do_variable_declaration_node(til::variable_declaration_node*, int)'
-   21 |   virtual void do_variable_declaration_node(til::variable_declaration_node *const node, int lvl) = 0;
+./.auto/visitor_decls.h:24:16: error: 'virtual void basic_ast_visitor::do_variable_declaration_node(til::variable_declaration_node*, int)' cannot be overloaded with 'virtual void basic_ast_visitor::do_variable_declaration_node(til::variable_declaration_node*, int)'
+   24 |   virtual void do_variable_declaration_node(til::variable_declaration_node *const node, int lvl) = 0;
       |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./.auto/visitor_decls.h:20:16: note: previous declaration 'virtual void basic_ast_visitor::do_variable_declaration_node(til::variable_declaration_node*, int)'
-   20 |   virtual void do_variable_declaration_node(til::variable_declaration_node *const node, int lvl) = 0;
+./.auto/visitor_decls.h:23:16: note: previous declaration 'virtual void basic_ast_visitor::do_variable_declaration_node(til::variable_declaration_node*, int)'
+   23 |   virtual void do_variable_declaration_node(til::variable_declaration_node *const node, int lvl) = 0;
       |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
 make: *** [Makefile:46: til_scanner.o] Error 1
 
