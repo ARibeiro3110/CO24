@@ -1,3 +1,16 @@
 <pre>
 Checking project structure...
+In file included from .auto/all_nodes.h:42,
+                 from til_parser.y:8:
+./ast/indexptr_node.h:17:12: error: ISO C++ forbids declaration of 'pointer_index_node' with no type [-fpermissive]
+   17 |     inline pointer_index_node(int lineno, cdk::expression_node *base, cdk::expression_node *index) :
+      |            ^~~~~~~~~~~~~~~~~~
+./ast/indexptr_node.h: In member function 'int til::indexptr_node::pointer_index_node(int, cdk::expression_node*, cdk::expression_node*)':
+./ast/indexptr_node.h:18:9: error: only constructors take member initializers
+   18 |         cdk::lvalue_node(lineno), _base(base), _index(index) {
+      |         ^~~
+./ast/indexptr_node.h:19:5: warning: no return statement in function returning non-void [-Wreturn-type]
+   19 |     }
+      |     ^
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
