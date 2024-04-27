@@ -1,6 +1,6 @@
 <pre>
 Checking project structure...
-In file included from .auto/all_nodes.h:37,
+In file included from .auto/all_nodes.h:39,
                  from til_parser.y:8:
 ./ast/index_node.h:20:43: error: 'size_t til::index_node::offset()' conflicts with a previous declaration
    20 |     size_t offset() { return _expression; }
@@ -38,7 +38,7 @@ In file included from /usr/include/cdk/ast/binary_operation_node.h:4,
       |                              ^~~~~~~~~~~
       |                              |
       |                              cdk::expression_node*
-In file included from .auto/all_nodes.h:45:
+In file included from .auto/all_nodes.h:47:
 ./ast/sizeof_node.h: In constructor 'til::sizeof_node::sizeof_node(int, cdk::expression_node*)':
 ./ast/sizeof_node.h:16:14: error: type 'cdk::basic_node' is not a direct base of 'til::sizeof_node'
    16 |         cdk::basic_node(lineno), _expression(expression) {
@@ -56,7 +56,7 @@ In file included from .auto/all_nodes.h:45:
 /usr/include/cdk/ast/expression_node.h:11:9: note:   candidate expects 1 argument, 0 provided
 /usr/include/cdk/ast/expression_node.h:11:9: note: candidate: 'cdk::expression_node::expression_node(cdk::expression_node&&)'
 /usr/include/cdk/ast/expression_node.h:11:9: note:   candidate expects 1 argument, 0 provided
-In file included from .auto/all_nodes.h:47:
+In file included from .auto/all_nodes.h:49:
 ./ast/unary_position_node.h: In constructor 'til::unary_position_node::unary_position_node(int, cdk::lvalue_node*)':
 ./ast/unary_position_node.h:16:14: error: type 'cdk::basic_node' is not a direct base of 'til::unary_position_node'
    16 |         cdk::basic_node(lineno), _argument(argument) {
