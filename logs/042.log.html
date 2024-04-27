@@ -1,3 +1,50 @@
 <pre>
 Checking project structure...
+In file included from .auto/all_nodes.h:29,
+                 from til_parser.y:8:
+./ast/function_node.h:23:6: error: expected ';' after class definition
+   23 |     }
+      |      ^
+      |      ;
+./ast/function_node.h:16:55: error: cannot declare parameter 'args' to be of abstract type 'cdk::basic_node'
+   16 |             function_node(int lineno, cdk::basic_node args, cdk::basic_node body) :
+      |                                       ~~~~~~~~~~~~~~~~^~~~
+In file included from /usr/include/cdk/ast/typed_node.h:4,
+                 from /usr/include/cdk/ast/expression_node.h:4,
+                 from /usr/include/cdk/ast/binary_operation_node.h:4,
+                 from /usr/include/cdk/ast/add_node.h:4,
+                 from /usr/include/cdk/ast/all.h:51,
+                 from .auto/all_nodes.h:4:
+/usr/include/cdk/ast/basic_node.h:20:9: note:   because the following virtual functions are pure within 'cdk::basic_node':
+   20 |   class basic_node {
+      |         ^~~~~~~~~~
+/usr/include/cdk/ast/basic_node.h:51:18: note:     'virtual void cdk::basic_node::accept(basic_ast_visitor*, int)'
+   51 |     virtual void accept(basic_ast_visitor *av, int level) = 0;
+      |                  ^~~~~~
+./ast/function_node.h:16:77: error: cannot declare parameter 'body' to be of abstract type 'cdk::basic_node'
+   16 |             function_node(int lineno, cdk::basic_node args, cdk::basic_node body) :
+      |                                                             ~~~~~~~~~~~~~~~~^~~~
+./ast/function_node.h: In constructor 'til::function_node::function_node(int, cdk::basic_node, cdk::basic_node)':
+./ast/function_node.h:17:48: error: cannot convert 'cdk::basic_node' to 'cdk::basic_node*' in initialization
+   17 |                 cdk::basic_node(lineno), _args(args), _body(body) {}
+      |                                                ^~~~
+      |                                                |
+      |                                                cdk::basic_node
+./ast/function_node.h:17:61: error: cannot convert 'cdk::basic_node' to 'cdk::basic_node*' in initialization
+   17 |                 cdk::basic_node(lineno), _args(args), _body(body) {}
+      |                                                             ^~~~
+      |                                                             |
+      |                                                             cdk::basic_node
+./ast/function_node.h: In member function 'virtual void til::function_node::accept(basic_ast_visitor*, int)':
+./ast/function_node.h:22:77: error: cannot convert 'til::function_node*' to 'til::program_node*'
+   22 |         void accept(basic_ast_visitor *sp, int level) { sp->do_program_node(this, level); }
+      |                                                                             ^~~~
+      |                                                                             |
+      |                                                                             til::function_node*
+In file included from ./targets/basic_ast_visitor.h:64,
+                 from /usr/include/cdk/ast/basic_node.h:6:
+./.auto/visitor_decls.h:12:57: note:   initializing argument 1 of 'virtual void basic_ast_visitor::do_program_node(til::program_node*, int)'
+   12 |   virtual void do_program_node(til::program_node *const node, int lvl) = 0;
+      |                                ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
