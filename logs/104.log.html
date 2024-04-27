@@ -1,60 +1,17 @@
 <pre>
 Checking project structure...
-In file included from .auto/all_nodes.h:42,
-                 from til_parser.y:8:
-./ast/index_node.h:20:43: error: 'size_t til::index_node::offset()' conflicts with a previous declaration
-   20 |     size_t offset() { return _expression; }
-      |                                           ^
-./ast/index_node.h:13:12: note: previous declaration 'size_t til::index_node::offset'
-   13 |     size_t offset;
-      |            ^~~~~~
-./ast/index_node.h: In constructor 'til::index_node::index_node(int, cdk::expression_node*)':
-./ast/index_node.h:17:14: error: type 'cdk::basic_node' is not a direct base of 'til::index_node'
-   17 |         cdk::basic_node(lineno), _expression(expression), _offset(offset) {}
-      |              ^~~~~~~~~~
-./ast/index_node.h:17:59: error: class 'til::index_node' does not have any field named '_offset'
-   17 |         cdk::basic_node(lineno), _expression(expression), _offset(offset) {}
-      |                                                           ^~~~~~~
-./ast/index_node.h:17:73: error: no matching function for call to 'cdk::expression_node::expression_node()'
-   17 |         cdk::basic_node(lineno), _expression(expression), _offset(offset) {}
-      |                                                                         ^
-In file included from /usr/include/cdk/ast/binary_operation_node.h:4,
-                 from /usr/include/cdk/ast/add_node.h:4,
-                 from /usr/include/cdk/ast/all.h:51,
-                 from .auto/all_nodes.h:4:
-/usr/include/cdk/ast/expression_node.h:13:5: note: candidate: 'cdk::expression_node::expression_node(int)'
-   13 |     expression_node(int lineno) noexcept:
-      |     ^~~~~~~~~~~~~~~
-/usr/include/cdk/ast/expression_node.h:13:5: note:   candidate expects 1 argument, 0 provided
-/usr/include/cdk/ast/expression_node.h:11:9: note: candidate: 'cdk::expression_node::expression_node(const cdk::expression_node&)'
-   11 |   class expression_node : public typed_node {
-      |         ^~~~~~~~~~~~~~~
-/usr/include/cdk/ast/expression_node.h:11:9: note:   candidate expects 1 argument, 0 provided
-/usr/include/cdk/ast/expression_node.h:11:9: note: candidate: 'cdk::expression_node::expression_node(cdk::expression_node&&)'
-/usr/include/cdk/ast/expression_node.h:11:9: note:   candidate expects 1 argument, 0 provided
-./ast/index_node.h: In member function 'size_t til::index_node::offset()':
-./ast/index_node.h:20:30: error: invalid conversion from 'cdk::expression_node*' to 'size_t' {aka 'long unsigned int'} [-fpermissive]
-   20 |     size_t offset() { return _expression; }
-      |                              ^~~~~~~~~~~
-      |                              |
-      |                              cdk::expression_node*
-In file included from .auto/all_nodes.h:50:
-./ast/sizeof_node.h: In constructor 'til::sizeof_node::sizeof_node(int, cdk::expression_node*)':
-./ast/sizeof_node.h:16:14: error: type 'cdk::basic_node' is not a direct base of 'til::sizeof_node'
-   16 |         cdk::basic_node(lineno), _expression(expression) {
-      |              ^~~~~~~~~~
-./ast/sizeof_node.h:16:56: error: no matching function for call to 'cdk::expression_node::expression_node()'
-   16 |         cdk::basic_node(lineno), _expression(expression) {
-      |                                                        ^
-/usr/include/cdk/ast/expression_node.h:13:5: note: candidate: 'cdk::expression_node::expression_node(int)'
-   13 |     expression_node(int lineno) noexcept:
-      |     ^~~~~~~~~~~~~~~
-/usr/include/cdk/ast/expression_node.h:13:5: note:   candidate expects 1 argument, 0 provided
-/usr/include/cdk/ast/expression_node.h:11:9: note: candidate: 'cdk::expression_node::expression_node(const cdk::expression_node&)'
-   11 |   class expression_node : public typed_node {
-      |         ^~~~~~~~~~~~~~~
-/usr/include/cdk/ast/expression_node.h:11:9: note:   candidate expects 1 argument, 0 provided
-/usr/include/cdk/ast/expression_node.h:11:9: note: candidate: 'cdk::expression_node::expression_node(cdk::expression_node&&)'
-/usr/include/cdk/ast/expression_node.h:11:9: note:   candidate expects 1 argument, 0 provided
-make: *** [Makefile:40: til_parser.tab.o] Error 1
+targets/postfix_writer.cpp:301:6: error: variable or field 'do_void_node' declared void
+  301 | void til::postfix_writer::do_void_node(til::void_node * const node, int lvl){}
+      |      ^~~
+targets/postfix_writer.cpp:301:45: error: 'void_node' is not a member of 'til'; did you mean 'read_node'?
+  301 | void til::postfix_writer::do_void_node(til::void_node * const node, int lvl){}
+      |                                             ^~~~~~~~~
+      |                                             read_node
+targets/postfix_writer.cpp:301:57: error: expected primary-expression before 'const'
+  301 | void til::postfix_writer::do_void_node(til::void_node * const node, int lvl){}
+      |                                                         ^~~~~
+targets/postfix_writer.cpp:301:69: error: expected primary-expression before 'int'
+  301 | void til::postfix_writer::do_void_node(til::void_node * const node, int lvl){}
+      |                                                                     ^~~
+make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
