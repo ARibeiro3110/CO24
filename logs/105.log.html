@@ -1,36 +1,20 @@
 <pre>
 Checking project structure...
-In file included from .auto/all_nodes.h:32,
-                 from til_parser.y:8:
-./ast/address_node.h:23:7: error: ISO C++ forbids declaration of 'accept' with no type [-fpermissive]
-   23 |       accept(basic_ast_visitor *sp, int level) {
-      |       ^~~~~~
-./ast/address_node.h:23:7: error: conflicting return type specified for 'virtual int til::address_node::accept(basic_ast_visitor*, int)'
-In file included from /usr/include/cdk/ast/typed_node.h:4,
-                 from /usr/include/cdk/ast/expression_node.h:4,
-                 from /usr/include/cdk/ast/binary_operation_node.h:4,
-                 from /usr/include/cdk/ast/add_node.h:4,
-                 from /usr/include/cdk/ast/all.h:51,
-                 from .auto/all_nodes.h:4:
-/usr/include/cdk/ast/basic_node.h:51:18: note: overridden function is 'virtual void cdk::basic_node::accept(basic_ast_visitor*, int)'
-   51 |     virtual void accept(basic_ast_visitor *av, int level) = 0;
-      |                  ^~~~~~
-./ast/address_node.h: In member function 'virtual int til::address_node::accept(basic_ast_visitor*, int)':
-./ast/address_node.h:24:13: error: 'class basic_ast_visitor' has no member named 'do_address_of_node'; did you mean 'do_address_node'?
-   24 |         sp->do_address_of_node(this, level);
-      |             ^~~~~~~~~~~~~~~~~~
-      |             do_address_node
-./ast/address_node.h:25:7: warning: no return statement in function returning non-void [-Wreturn-type]
-   25 |       }
-      |       ^
-In file included from .auto/all_nodes.h:40:
-./ast/return_node.h: At global scope:
-./ast/return_node.h:15:15: error: expected unqualified-id before 'int'
-   15 |     read_node(int lineno, cdk::expression_node *expression) :
-      |               ^~~
-./ast/return_node.h:15:15: error: expected ')' before 'int'
-   15 |     read_node(int lineno, cdk::expression_node *expression) :
-      |              ~^~~
-      |               )
-make: *** [Makefile:40: til_parser.tab.o] Error 1
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0xe8): undefined reference to `til::postfix_writer::do_address_node(til::address_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x108): undefined reference to `til::postfix_writer::do_pointer_node(til::pointer_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x128): undefined reference to `til::postfix_writer::do_return_node(til::return_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x130): undefined reference to `til::postfix_writer::do_sizeof_node(til::sizeof_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x138): undefined reference to `til::postfix_writer::do_stop_node(til::stop_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0xe8): undefined reference to `til::type_checker::do_address_node(til::address_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x108): undefined reference to `til::type_checker::do_pointer_node(til::pointer_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x128): undefined reference to `til::type_checker::do_return_node(til::return_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x130): undefined reference to `til::type_checker::do_sizeof_node(til::sizeof_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x138): undefined reference to `til::type_checker::do_stop_node(til::stop_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0xe8): undefined reference to `til::xml_writer::do_address_node(til::address_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x108): undefined reference to `til::xml_writer::do_pointer_node(til::pointer_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x128): undefined reference to `til::xml_writer::do_return_node(til::return_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x130): undefined reference to `til::xml_writer::do_sizeof_node(til::sizeof_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x138): undefined reference to `til::xml_writer::do_stop_node(til::stop_node*, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:72: til] Error 1
 
