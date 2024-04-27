@@ -1,3 +1,61 @@
 <pre>
 Checking project structure...
+In file included from til_scanner.l:12:
+til_parser.y:37:8: error: 'block_node' in namespace 'til' does not name a type
+   37 |   til::block_node        *block;
+      |        ^~~~~~~~~~
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:54:8: error: 'tTYPE_INT' was not declared in this scope
+   54 | "double"                 return tTYPE_DOUBLE; //novo
+      |        ^~~~~~~~~
+til_scanner.l:55:8: error: 'tTYPE_DOUBLE' was not declared in this scope
+   55 | "string"                 return tTYPE_STRING; //novo
+      |        ^~~~~~~~~~~~
+til_scanner.l:56:8: error: 'tTYPE_STRING' was not declared in this scope
+   56 | "void"                   return tTYPE_VOID; //novo
+      |        ^~~~~~~~~~~~
+til_scanner.l:57:8: error: 'tTYPE_VOID' was not declared in this scope
+   57 | [<>]                     return *yytext;
+      |        ^~~~~~~~~~
+til_scanner.l:60:8: error: 'tNULL' was not declared in this scope; did you mean 'NULL'?
+   60 | "sizeof"                 return tSIZEOF; //novo
+      |        ^~~~~
+      |        NULL
+til_scanner.l:61:8: error: 'tSIZEOF' was not declared in this scope
+   61 | 
+      |        ^      
+til_scanner.l:67:8: error: 'tPUBLIC' was not declared in this scope
+   67 | "forward"                return tFORWARD; //novo
+      |        ^~~~~~~
+til_scanner.l:68:8: error: 'tFORWARD' was not declared in this scope
+   68 | 
+      |        ^       
+til_scanner.l:75:8: error: 'tTHEN' was not declared in this scope
+   75 | "while"                return tWHILE;
+      |        ^~~~~
+til_scanner.l:85:8: error: 'tLOOP' was not declared in this scope; did you mean 'ELOOP'?
+   85 | "do"                    return tDO;
+      |        ^~~~~
+      |        ELOOP
+til_scanner.l:86:8: error: 'tDO' was not declared in this scope
+   86 | "stop"                  return tSTOP; //novo
+      |        ^~~
+til_scanner.l:87:8: error: 'tSTOP' was not declared in this scope
+   87 | "next"                  return tNEXT; //novo
+      |        ^~~~~
+til_scanner.l:88:8: error: 'tNEXT' was not declared in this scope; did you mean 'tNE'?
+   88 | 
+      |        ^    
+      |        tNE
+til_scanner.l:96:8: error: 'tAND' was not declared in this scope; did you mean 'tEND'?
+   96 | "||"                   return tOR;
+      |        ^~~~
+      |        tEND
+til_scanner.l:97:8: error: 'tOR' was not declared in this scope
+   97 | ">="                   return tGE;
+      |        ^~~
+til_scanner.l:115:8: error: 'tRETURN' was not declared in this scope
+  115 | 
+      |        ^      
+make: *** [Makefile:46: til_scanner.o] Error 1
 
