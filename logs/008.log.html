@@ -1,3 +1,26 @@
 <pre>
 Checking project structure...
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:66:106: error: no matching function for call to 'til::print_node::print_node(int, cdk::expression_node*&)'
+   66 |      | tPRINT expr ';'                  { $$ = new til::print_node(LINE, $2); }
+      |                                                                                                          ^
+In file included from .auto/all_nodes.h:27,
+                 from til_parser.y:8:
+./ast/print_node.h:16:5: note: candidate: 'til::print_node::print_node(int, cdk::sequence_node*, bool)'
+   16 |     print_node(int lineno, cdk::sequence_node *arguments, bool newline) :
+      |     ^~~~~~~~~~
+./ast/print_node.h:16:5: note:   candidate expects 3 arguments, 2 provided
+./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(const til::print_node&)'
+   11 |   class print_node : public cdk::basic_node {
+      |         ^~~~~~~~~~
+./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(til::print_node&&)'
+./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:68:62: error: expected type-specifier
+   68 |      | tWHILE '(' expr ')' stmt         { $$ = new til::while_node(LINE, $3, $5); }
+      |                                                              ^~~
+til_parser.y:70:62: error: expected type-specifier
+   70 |      | tIF '(' expr ')' stmt tELSE stmt { $$ = new til::if_else_node(LINE, $3, $5, $7); }
+      |                                                              ^~~
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
