@@ -1,63 +1,10 @@
 <pre>
 Checking project structure...
-targets/postfix_writer.cpp:215:11: error: 'til::xml_writer' has not been declared
-  215 | void til::xml_writer::do_return_node(til::return_node * const node, int lvl) {
-      |           ^~~~~~~~~~
-In file included from targets/postfix_writer.cpp:3:
-targets/postfix_writer.cpp: In function 'void do_return_node(til::return_node*, int)':
-./targets/type_checker.h:59:45: error: '_compiler' was not declared in this scope
-   59 | #define ASSERT_SAFE_EXPRESSIONS CHECK_TYPES(_compiler, _symtab, node)
-      |                                             ^~~~~~~~~
-./targets/type_checker.h:50:31: note: in definition of macro 'CHECK_TYPES'
-   50 |     til::type_checker checker(compiler, symtab, this); \
-      |                               ^~~~~~~~
-targets/postfix_writer.cpp:216:3: note: in expansion of macro 'ASSERT_SAFE_EXPRESSIONS'
-  216 |   ASSERT_SAFE_EXPRESSIONS;
-      |   ^~~~~~~~~~~~~~~~~~~~~~~
-./targets/type_checker.h:59:56: error: '_symtab' was not declared in this scope
-   59 | #define ASSERT_SAFE_EXPRESSIONS CHECK_TYPES(_compiler, _symtab, node)
-      |                                                        ^~~~~~~
-./targets/type_checker.h:50:41: note: in definition of macro 'CHECK_TYPES'
-   50 |     til::type_checker checker(compiler, symtab, this); \
-      |                                         ^~~~~~
-targets/postfix_writer.cpp:216:3: note: in expansion of macro 'ASSERT_SAFE_EXPRESSIONS'
-  216 |   ASSERT_SAFE_EXPRESSIONS;
-      |   ^~~~~~~~~~~~~~~~~~~~~~~
-./targets/type_checker.h:50:49: error: invalid use of 'this' in non-member function
-   50 |     til::type_checker checker(compiler, symtab, this); \
-      |                                                 ^~~~
-./targets/type_checker.h:59:33: note: in expansion of macro 'CHECK_TYPES'
-   59 | #define ASSERT_SAFE_EXPRESSIONS CHECK_TYPES(_compiler, _symtab, node)
-      |                                 ^~~~~~~~~~~
-targets/postfix_writer.cpp:216:3: note: in expansion of macro 'ASSERT_SAFE_EXPRESSIONS'
-  216 |   ASSERT_SAFE_EXPRESSIONS;
-      |   ^~~~~~~~~~~~~~~~~~~~~~~
-targets/postfix_writer.cpp: At global scope:
-targets/postfix_writer.cpp:335:6: error: 'mml' has not been declared
-  335 | void mml::postfix_writer::do_pointer_index_node(mml::pointer_index_node * const node, int lvl) {
-      |      ^~~
-targets/postfix_writer.cpp:335:6: error: variable or field 'do_pointer_index_node' declared void
-targets/postfix_writer.cpp:335:49: error: 'mml' has not been declared
-  335 | void mml::postfix_writer::do_pointer_index_node(mml::pointer_index_node * const node, int lvl) {
-      |                                                 ^~~
-targets/postfix_writer.cpp:335:75: error: expected primary-expression before 'const'
-  335 | void mml::postfix_writer::do_pointer_index_node(mml::pointer_index_node * const node, int lvl) {
-      |                                                                           ^~~~~
-targets/postfix_writer.cpp:335:87: error: expected primary-expression before 'int'
-  335 | void mml::postfix_writer::do_pointer_index_node(mml::pointer_index_node * const node, int lvl) {
-      |                                                                                       ^~~
-targets/postfix_writer.cpp:341:6: error: 'mml' has not been declared
-  341 | void mml::postfix_writer::do_sizeof_node(mml::sizeof_node * const node, int lvl) {
-      |      ^~~
-targets/postfix_writer.cpp:341:6: error: variable or field 'do_sizeof_node' declared void
-targets/postfix_writer.cpp:341:42: error: 'mml' has not been declared
-  341 | void mml::postfix_writer::do_sizeof_node(mml::sizeof_node * const node, int lvl) {
-      |                                          ^~~
-targets/postfix_writer.cpp:341:61: error: expected primary-expression before 'const'
-  341 | void mml::postfix_writer::do_sizeof_node(mml::sizeof_node * const node, int lvl) {
-      |                                                             ^~~~~
-targets/postfix_writer.cpp:341:73: error: expected primary-expression before 'int'
-  341 | void mml::postfix_writer::do_sizeof_node(mml::sizeof_node * const node, int lvl) {
-      |                                                                         ^~~
-make: *** [Makefile:46: targets/postfix_writer.o] Error 1
+In file included from .auto/all_nodes.h:53,
+                 from til_parser.y:8:
+./ast/print_node.h: In constructor 'til::print_node::print_node(int, cdk::expression_node*, bool)':
+./ast/print_node.h:18:130: error: class 'til::print_node' does not have any field named 'println'
+   18 |     print_node(int lineno, cdk::expression_node *argument, bool println = false) : cdk::basic_node(lineno), _argument(argument), println(println) {} //
+      |                                                                                                                                  ^~~~~~~
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
