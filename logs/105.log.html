@@ -1,22 +1,24 @@
 <pre>
 Checking project structure...
-targets/postfix_writer.cpp:290:6: error: variable or field 'do_variable_node' declared void
-  290 | void til::postfix_writer::do_variable_node(til::variable_node * const node, int lvl) {
-      |      ^~~
-targets/postfix_writer.cpp:290:49: error: 'variable_node' is not a member of 'til'; did you mean 'cdk::variable_node'?
-  290 | void til::postfix_writer::do_variable_node(til::variable_node * const node, int lvl) {
-      |                                                 ^~~~~~~~~~~~~
-In file included from /usr/include/cdk/ast/all.h:82,
-                 from ./.auto/all_nodes.h:4,
-                 from targets/postfix_writer.cpp:5:
-/usr/include/cdk/ast/variable_node.h:12:9: note: 'cdk::variable_node' declared here
-   12 |   class variable_node : public lvalue_node {
-      |         ^~~~~~~~~~~~~
-targets/postfix_writer.cpp:290:65: error: expected primary-expression before 'const'
-  290 | void til::postfix_writer::do_variable_node(til::variable_node * const node, int lvl) {
-      |                                                                 ^~~~~
-targets/postfix_writer.cpp:290:77: error: expected primary-expression before 'int'
-  290 | void til::postfix_writer::do_variable_node(til::variable_node * const node, int lvl) {
-      |                                                                             ^~~
-make: *** [Makefile:46: targets/postfix_writer.o] Error 1
+In file included from .auto/all_nodes.h:57,
+                 from til_parser.y:8:
+./ast/variable_declaration_node.h: In member function 'virtual void til::variable_node::accept(basic_ast_visitor*, int)':
+./ast/variable_declaration_node.h:32:74: error: cannot convert 'til::variable_node*' to 'cdk::variable_node*'
+   32 |     void accept(basic_ast_visitor *sp, int level) { sp->do_variable_node(this, level); }
+      |                                                                          ^~~~
+      |                                                                          |
+      |                                                                          til::variable_node*
+In file included from ./.auto/visitor_decls.h:3,
+                 from ./targets/basic_ast_visitor.h:64,
+                 from /usr/include/cdk/ast/basic_node.h:6,
+                 from /usr/include/cdk/ast/typed_node.h:4,
+                 from /usr/include/cdk/ast/expression_node.h:4,
+                 from /usr/include/cdk/ast/binary_operation_node.h:4,
+                 from /usr/include/cdk/ast/add_node.h:4,
+                 from /usr/include/cdk/ast/all.h:51,
+                 from .auto/all_nodes.h:4:
+/usr/include/cdk/ast/visitor_decls.h:30:59: note:   initializing argument 1 of 'virtual void basic_ast_visitor::do_variable_node(cdk::variable_node*, int)'
+   30 |   virtual void do_variable_node(cdk::variable_node *const node, int lvl) = 0;
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
