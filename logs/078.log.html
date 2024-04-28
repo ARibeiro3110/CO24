@@ -1,3 +1,47 @@
 <pre>
 Checking project structure...
+In file included from .auto/all_nodes.h:44,
+                 from til_parser.y:8:
+./ast/left_index_node.h: In member function 'virtual void og::left_index_node::accept(basic_ast_visitor*, int)':
+./ast/left_index_node.h:28:30: error: cannot convert 'og::left_index_node*' to 'til::left_index_node*'
+   28 |       sp->do_left_index_node(this, level);
+      |                              ^~~~
+      |                              |
+      |                              og::left_index_node*
+In file included from ./targets/basic_ast_visitor.h:64,
+                 from /usr/include/cdk/ast/basic_node.h:6,
+                 from /usr/include/cdk/ast/typed_node.h:4,
+                 from /usr/include/cdk/ast/expression_node.h:4,
+                 from /usr/include/cdk/ast/binary_operation_node.h:4,
+                 from /usr/include/cdk/ast/add_node.h:4,
+                 from /usr/include/cdk/ast/all.h:51,
+                 from .auto/all_nodes.h:4:
+./.auto/visitor_decls.h:12:63: note:   initializing argument 1 of 'virtual void basic_ast_visitor::do_left_index_node(til::left_index_node*, int)'
+   12 |   virtual void do_left_index_node(til::left_index_node *const node, int lvl) = 0;
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from /usr/include/c++/13/bits/shared_ptr.h:53,
+                 from /usr/include/c++/13/memory:80,
+                 from til_parser.y:4:
+/usr/include/c++/13/bits/shared_ptr_base.h: In instantiation of 'std::__shared_count<_Lp>::__shared_count(_Ptr) [with _Ptr = cdk::basic_type*; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]':
+/usr/include/c++/13/bits/shared_ptr_base.h:928:22:   required from 'std::__shared_count<_Lp>::__shared_count(_Ptr, std::false_type) [with _Ptr = cdk::basic_type*; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic; std::false_type = std::integral_constant<bool, false>]'
+/usr/include/c++/13/bits/shared_ptr_base.h:1469:17:   required from 'std::__shared_ptr<_Tp, _Lp>::__shared_ptr(_Yp*) [with _Yp = cdk::basic_type; <template-parameter-2-2> = void; _Tp = cdk::basic_type; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr.h:214:46:   required from 'std::shared_ptr<_Tp>::shared_ptr(_Yp*) [with _Yp = cdk::basic_type; <template-parameter-2-2> = void; _Tp = cdk::basic_type]'
+./ast/variable_declaration_node.h:18:55:   required from here
+/usr/include/c++/13/bits/shared_ptr_base.h:921:15: error: 'virtual cdk::basic_type::~basic_type()' is protected within this context
+  921 |               delete __p;
+      |               ^~~~~~~~~~
+In file included from /usr/include/cdk/types/types.h:4,
+                 from til_parser.y:7:
+/usr/include/cdk/types/basic_type.h:31:13: note: declared protected here
+   31 |     virtual ~basic_type() noexcept = 0;
+      |             ^
+/usr/include/c++/13/bits/shared_ptr_base.h: In instantiation of 'void std::_Sp_counted_ptr<_Ptr, _Lp>::_M_dispose() [with _Ptr = cdk::basic_type*; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]':
+/usr/include/c++/13/bits/shared_ptr_base.h:427:7:   required from here
+/usr/include/c++/13/bits/shared_ptr_base.h:428:9: error: 'virtual cdk::basic_type::~basic_type()' is protected within this context
+  428 |       { delete _M_ptr; }
+      |         ^~~~~~~~~~~~~
+/usr/include/cdk/types/basic_type.h:31:13: note: declared protected here
+   31 |     virtual ~basic_type() noexcept = 0;
+      |             ^
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
