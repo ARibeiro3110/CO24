@@ -1,17 +1,10 @@
 <pre>
 Checking project structure...
-In file included from .auto/all_nodes.h:29,
+In file included from .auto/all_nodes.h:47,
                  from til_parser.y:8:
-./ast/adress_of_node.h: In member function 'virtual void til::address_of_node::accept(basic_ast_visitor*, int)':
-./ast/adress_of_node.h:21:61: error: 'class basic_ast_visitor' has no member named 'do_address_of_node'; did you mean 'do_adress_of_node'?
-   21 |         void accept(basic_ast_visitor *sp, int level) { sp->do_address_of_node(this, level); }
-      |                                                             ^~~~~~~~~~~~~~~~~~
-      |                                                             do_adress_of_node
-In file included from .auto/all_nodes.h:31:
-./ast/function_call_node.h: In member function 'virtual void til::call_node::accept(basic_ast_visitor*, int)':
-./ast/function_call_node.h:24:61: error: 'class basic_ast_visitor' has no member named 'do_call_node'; did you mean 'do_add_node'?
-   24 |         void accept(basic_ast_visitor *sp, int level) { sp->do_call_node(this, level); }
-      |                                                             ^~~~~~~~~~~~
-      |                                                             do_add_node
+./ast/next_node.h:4:10: fatal error: basic_node.h: No such file or directory
+    4 | #include "basic_node.h"
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
 make: *** [Makefile:40: til_parser.tab.o] Error 1
 
