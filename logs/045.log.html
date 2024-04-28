@@ -1,3 +1,22 @@
 <pre>
 Checking project structure...
+til_parser.y: warning: 12 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:64:119: error: no matching function for call to 'til::block_node::block_node(int, cdk::sequence_node*&, cdk::sequence_node*&)'
+   64 | blk  : '(' tBLOCK list list')'  { $$ = new til::block_node(LINE, $3, $4); }
+      |                                                                                                                       ^
+In file included from .auto/all_nodes.h:30,
+                 from til_parser.y:8:
+./ast/block_node.h:15:5: note: candidate: 'til::block_node::block_node(int, cdk::lvalue_node*)'
+   15 |     block_node(int lineno, cdk::lvalue_node *argument) :
+      |     ^~~~~~~~~~
+./ast/block_node.h:15:5: note:   candidate expects 2 arguments, 3 provided
+./ast/block_node.h:11:9: note: candidate: 'constexpr til::block_node::block_node(const til::block_node&)'
+   11 |   class block_node : public cdk::basic_node {
+      |         ^~~~~~~~~~
+./ast/block_node.h:11:9: note:   candidate expects 1 argument, 3 provided
+./ast/block_node.h:11:9: note: candidate: 'constexpr til::block_node::block_node(til::block_node&&)'
+./ast/block_node.h:11:9: note:   candidate expects 1 argument, 3 provided
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
