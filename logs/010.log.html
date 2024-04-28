@@ -1,3 +1,68 @@
 <pre>
 Checking project structure...
+In file included from .auto/all_nodes.h:44,
+                 from til_parser.y:8:
+./ast/axis_node.h: In member function 'virtual void axis::axis_node::accept(basic_ast_visitor*, int)':
+./ast/axis_node.h:24:24: error: cannot convert 'axis::axis_node*' to 'til::axis_node*'
+   24 |       sp->do_axis_node(this, level);
+      |                        ^~~~
+      |                        |
+      |                        axis::axis_node*
+In file included from ./targets/basic_ast_visitor.h:64,
+                 from /usr/include/cdk/ast/basic_node.h:6,
+                 from /usr/include/cdk/ast/typed_node.h:4,
+                 from /usr/include/cdk/ast/expression_node.h:4,
+                 from /usr/include/cdk/ast/binary_operation_node.h:4,
+                 from /usr/include/cdk/ast/add_node.h:4,
+                 from /usr/include/cdk/ast/all.h:51,
+                 from .auto/all_nodes.h:4:
+./.auto/visitor_decls.h:8:51: note:   initializing argument 1 of 'virtual void basic_ast_visitor::do_axis_node(til::axis_node*, int)'
+    8 |   virtual void do_axis_node(til::axis_node *const node, int lvl) = 0;
+      |                             ~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from .auto/all_nodes.h:51:
+./ast/function_definition_node.h: At global scope:
+./ast/function_definition_node.h:24:5: error: 'og' does not name a type
+   24 |     og::block_node *_block;
+      |     ^~
+./ast/function_definition_node.h:28:30: error: 'og' has not been declared
+   28 |                              og::block_node *block) :
+      |                              ^~
+./ast/function_definition_node.h:28:45: error: expected ',' or '...' before '*' token
+   28 |                              og::block_node *block) :
+      |                                             ^
+./ast/function_definition_node.h:34:61: error: 'og' has not been declared
+   34 |                              cdk::sequence_node *arguments, og::block_node *block) :
+      |                                                             ^~
+./ast/function_definition_node.h:34:76: error: expected ',' or '...' before '*' token
+   34 |                              cdk::sequence_node *arguments, og::block_node *block) :
+      |                                                                            ^
+./ast/function_definition_node.h:52:5: error: 'og' does not name a type
+   52 |     og::block_node* block() {
+      |     ^~
+./ast/function_definition_node.h: In constructor 'til::function_definition_node::function_definition_node(int, int, const std::string&, cdk::sequence_node*, int)':
+./ast/function_definition_node.h:29:105: error: class 'til::function_definition_node' does not have any field named '_block'
+   29 |         cdk::typed_node(lineno), _qualifier(qualifier), _identifier(identifier), _arguments(arguments), _block(block) {
+      |                                                                                                         ^~~~~~
+./ast/function_definition_node.h:29:112: error: 'block' was not declared in this scope; did you mean 'clock'?
+   29 |         cdk::typed_node(lineno), _qualifier(qualifier), _identifier(identifier), _arguments(arguments), _block(block) {
+      |                                                                                                                ^~~~~
+      |                                                                                                                clock
+./ast/function_definition_node.h: In constructor 'til::function_definition_node::function_definition_node(int, int, std::shared_ptr<cdk::basic_type>, const std::string&, cdk::sequence_node*, int)':
+./ast/function_definition_node.h:35:105: error: class 'til::function_definition_node' does not have any field named '_block'
+   35 |         cdk::typed_node(lineno), _qualifier(qualifier), _identifier(identifier), _arguments(arguments), _block(block) {
+      |                                                                                                         ^~~~~~
+./ast/function_definition_node.h:35:112: error: 'block' was not declared in this scope; did you mean 'clock'?
+   35 |         cdk::typed_node(lineno), _qualifier(qualifier), _identifier(identifier), _arguments(arguments), _block(block) {
+      |                                                                                                                ^~~~~
+      |                                                                                                                clock
+In file included from .auto/all_nodes.h:56:
+./ast/objects_node.h: At global scope:
+./ast/objects_node.h:13:29: error: expected ',' or '...' before 'cdk'
+   13 |     objects_node(int lineno cdk::lvalue_node *argument) :
+      |                             ^~~
+./ast/objects_node.h: In constructor 'til::objects_node::objects_node(int)':
+./ast/objects_node.h:14:47: error: 'argument' was not declared in this scope
+   14 |         cdk::expression_node(lineno), _lvalue(argument) {
+      |                                               ^~~~~~~~
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
