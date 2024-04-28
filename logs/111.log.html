@@ -1,10 +1,92 @@
 <pre>
 Checking project structure...
-In file included from .auto/all_nodes.h:51,
+til_parser.y: warning: 13 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:84:123: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'types'; did you mean 'type'?
+   84 |                  | '(' tipe '(' tipes ')' ')'   { $$ = cdk::functional_type::create(*$4, $2); delete $4; }
+      |                                                                                                                           ^    
+      |                                                                                                                           type
+til_parser.y:84:168: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'types'; did you mean 'type'?
+   84 |                  | '(' tipe '(' tipes ')' ')'   { $$ = cdk::functional_type::create(*$4, $2); delete $4; }
+      |                                                                                                                                                                        ^    
+      |                                                                                                                                                                        type
+til_parser.y:95:39: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'types'; did you mean 'type'?
+   95 | tipes : tipes tipe      { $$ = new cdk::sequence_node(LINE, $2, $1); }
+      |                                       ^~~~~
+      |                                       type
+til_parser.y:95:105: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'types'; did you mean 'type'?
+   95 | tipes : tipes tipe      { $$ = new cdk::sequence_node(LINE, $2, $1); }
+      |                                                                                                         ^    
+      |                                                                                                         type
+til_parser.y:96:63: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'types'; did you mean 'type'?
+   96 |           | tipe                { $$ = new cdk::sequence_node(LINE, $1); }
+      |                                                               ^~~~~
+      |                                                               type
+til_parser.y:96:116: error: no matching function for call to 'cdk::sequence_node::sequence_node(int, std::shared_ptr<cdk::basic_type>&)'
+   96 |           | tipe                { $$ = new cdk::sequence_node(LINE, $1); }
+      |                                                                                                                    ^
+In file included from /usr/include/cdk/ast/all.h:75,
+                 from .auto/all_nodes.h:4,
                  from til_parser.y:8:
-./ast/next_node.h:4:10: fatal error: basic_node.h: No such file or directory
-    4 | #include "basic_node.h"
-      |          ^~~~~~~~~~~~~~
-compilation terminated.
+/usr/include/cdk/ast/sequence_node.h:39:5: note: candidate: 'cdk::sequence_node::sequence_node(int, cdk::basic_node*, cdk::sequence_node*)'
+   39 |     sequence_node(int lineno, basic_node *item, sequence_node *sequence = nullptr) :
+      |     ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:39:43: note:   no known conversion for argument 2 from 'std::shared_ptr<cdk::basic_type>' to 'cdk::basic_node*'
+   39 |     sequence_node(int lineno, basic_node *item, sequence_node *sequence = nullptr) :
+      |                               ~~~~~~~~~~~~^~~~
+/usr/include/cdk/ast/sequence_node.h:21:5: note: candidate: 'cdk::sequence_node::sequence_node(int)'
+   21 |     sequence_node(int lineno) : basic_node(lineno) { /* EMPTY */ }
+      |     ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:21:5: note:   candidate expects 1 argument, 2 provided
+/usr/include/cdk/ast/sequence_node.h:13:9: note: candidate: 'constexpr cdk::sequence_node::sequence_node(const cdk::sequence_node&)'
+   13 |   class sequence_node : public basic_node {
+      |         ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:13:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:99:50: error: no match for 'operator=' (operand types are 'std::shared_ptr<cdk::basic_type>' and 'yytokentype')
+   99 | opt_var : tVAR          { $$ = tVAR; }
+      |                                                  ^   
+In file included from /usr/include/c++/13/memory:80,
+                 from til_parser.y:4:
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: 'template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = cdk::basic_type]'
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+til_parser.y:99:50: note:   mismatched types 'const std::shared_ptr<_Tp>' and 'yytokentype'
+   99 | opt_var : tVAR          { $$ = tVAR; }
+      |                                                  ^   
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: 'template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = cdk::basic_type]'
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+til_parser.y:99:50: note:   mismatched types 'std::auto_ptr<_Up>' and 'yytokentype'
+   99 | opt_var : tVAR          { $$ = tVAR; }
+      |                                                  ^   
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: 'template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = cdk::basic_type]'
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+til_parser.y:99:50: note:   mismatched types 'std::shared_ptr<_Tp>' and 'yytokentype'
+   99 | opt_var : tVAR          { $$ = tVAR; }
+      |                                                  ^   
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: 'template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = cdk::basic_type]'
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+til_parser.y:99:50: note:   mismatched types 'std::unique_ptr<_Tp, _Dp>' and 'yytokentype'
+   99 | opt_var : tVAR          { $$ = tVAR; }
+      |                                                  ^   
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: 'std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cdk::basic_type]'
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from 'yytokentype' to 'const std::shared_ptr<cdk::basic_type>&'
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: 'std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cdk::basic_type]'
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from 'yytokentype' to 'std::shared_ptr<cdk::basic_type>&&'
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
 make: *** [Makefile:40: til_parser.tab.o] Error 1
 
