@@ -1,36 +1,22 @@
 <pre>
 Checking project structure...
-In file included from .auto/all_nodes.h:41,
-                 from til_parser.y:8:
-./ast/function_call_node.h:30:47: error: 'function_definition_node' in namespace 'cdk' does not name a type
-   30 |     function_call_node(int lineno, const cdk::function_definition_node *pointer) :
-      |                                               ^~~~~~~~~~~~~~~~~~~~~~~~
-./ast/function_call_node.h:38:47: error: 'function_definition_node' in namespace 'cdk' does not name a type
-   38 |     function_call_node(int lineno, const cdk::function_definition_node *pointer, cdk::sequence_node *arguments) :
-      |                                               ^~~~~~~~~~~~~~~~~~~~~~~~
-./ast/function_call_node.h: In constructor 'til::function_call_node::function_call_node(int, const int*)':
-./ast/function_call_node.h:31:48: error: cannot convert 'const int*' to 'til::function_definition_node*' in initialization
-   31 |         cdk::expression_node(lineno), _pointer(pointer), _arguments(new cdk::sequence_node(lineno)) {
-      |                                                ^~~~~~~
-      |                                                |
-      |                                                const int*
-./ast/function_call_node.h: In constructor 'til::function_call_node::function_call_node(int, const int*, cdk::sequence_node*)':
-./ast/function_call_node.h:39:48: error: cannot convert 'const int*' to 'til::function_definition_node*' in initialization
-   39 |         cdk::expression_node(lineno), _pointer(pointer), _arguments(arguments) {
-      |                                                ^~~~~~~
-      |                                                |
-      |                                                const int*
-In file included from .auto/all_nodes.h:42:
-./ast/function_definition_node.h: At global scope:
-./ast/function_definition_node.h:35:61: error: 'og' has not been declared
-   35 |                              cdk::sequence_node *arguments, og::block_node *block) :
-      |                                                             ^~
-./ast/function_definition_node.h:35:76: error: expected ',' or '...' before '*' token
-   35 |                              cdk::sequence_node *arguments, og::block_node *block) :
-      |                                                                            ^
-./ast/function_definition_node.h: In constructor 'til::function_definition_node::function_definition_node(int, int, std::shared_ptr<cdk::basic_type>, const std::string&, cdk::sequence_node*, int)':
-./ast/function_definition_node.h:36:105: error: cannot convert 'til::function_definition_node::block' from type 'til::block_node* (til::function_definition_node::)()' to type 'til::block_node*'
-   36 |         cdk::typed_node(lineno), _qualifier(qualifier), _identifier(identifier), _arguments(arguments), _block(block) {
-      |                                                                                                         ^~~~~~~~~~~~~
-make: *** [Makefile:40: til_parser.tab.o] Error 1
+targets/postfix_writer.cpp:290:6: error: variable or field 'do_variable_node' declared void
+  290 | void til::postfix_writer::do_variable_node(til::variable_node * const node, int lvl) {
+      |      ^~~
+targets/postfix_writer.cpp:290:49: error: 'variable_node' is not a member of 'til'; did you mean 'cdk::variable_node'?
+  290 | void til::postfix_writer::do_variable_node(til::variable_node * const node, int lvl) {
+      |                                                 ^~~~~~~~~~~~~
+In file included from /usr/include/cdk/ast/all.h:82,
+                 from ./.auto/all_nodes.h:4,
+                 from targets/postfix_writer.cpp:5:
+/usr/include/cdk/ast/variable_node.h:12:9: note: 'cdk::variable_node' declared here
+   12 |   class variable_node : public lvalue_node {
+      |         ^~~~~~~~~~~~~
+targets/postfix_writer.cpp:290:65: error: expected primary-expression before 'const'
+  290 | void til::postfix_writer::do_variable_node(til::variable_node * const node, int lvl) {
+      |                                                                 ^~~~~
+targets/postfix_writer.cpp:290:77: error: expected primary-expression before 'int'
+  290 | void til::postfix_writer::do_variable_node(til::variable_node * const node, int lvl) {
+      |                                                                             ^~~
+make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
