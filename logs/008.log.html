@@ -1,11 +1,39 @@
 <pre>
 Checking project structure...
+In file included from .auto/all_nodes.h:37,
+                 from til_parser.y:8:
+./ast/adress_node.h: In member function 'virtual void til::address_node::accept(basic_ast_visitor*, int)':
+./ast/adress_node.h:26:26: error: cannot convert 'til::address_node*' to 'til::adress_node*'
+   26 |       sp->do_adress_node(this, level);
+      |                          ^~~~
+      |                          |
+      |                          til::address_node*
+In file included from ./targets/basic_ast_visitor.h:64,
+                 from /usr/include/cdk/ast/basic_node.h:6,
+                 from /usr/include/cdk/ast/typed_node.h:4,
+                 from /usr/include/cdk/ast/expression_node.h:4,
+                 from /usr/include/cdk/ast/binary_operation_node.h:4,
+                 from /usr/include/cdk/ast/add_node.h:4,
+                 from /usr/include/cdk/ast/all.h:51,
+                 from .auto/all_nodes.h:4:
+./.auto/visitor_decls.h:7:55: note:   initializing argument 1 of 'virtual void basic_ast_visitor::do_adress_node(til::adress_node*, int)'
+    7 |   virtual void do_adress_node(til::adress_node *const node, int lvl) = 0;
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+In file included from .auto/all_nodes.h:53:
+./ast/var_declaration.h: In member function 'virtual void til::var_declaration_node::accept(basic_ast_visitor*, int)':
+./ast/var_declaration.h:46:30: error: cannot convert 'til::var_declaration_node*' to 'til::var_declaration*'
+   46 |       sp->do_var_declaration(this, level);
+      |                              ^~~~
+      |                              |
+      |                              til::var_declaration_node*
+./.auto/visitor_decls.h:23:63: note:   initializing argument 1 of 'virtual void basic_ast_visitor::do_var_declaration(til::var_declaration*, int)'
+   23 |   virtual void do_var_declaration(til::var_declaration *const node, int lvl) = 0;
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
 til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
 til_parser.y:66:106: error: no matching function for call to 'til::print_node::print_node(int, cdk::expression_node*&)'
    66 |      | tPRINT expr ';'                  { $$ = new til::print_node(LINE, $2); }
       |                                                                                                          ^
-In file included from .auto/all_nodes.h:27,
-                 from til_parser.y:8:
+In file included from .auto/all_nodes.h:47:
 ./ast/print_node.h:16:5: note: candidate: 'til::print_node::print_node(int, cdk::sequence_node*, bool)'
    16 |     print_node(int lineno, cdk::sequence_node *arguments, bool newline) :
       |     ^~~~~~~~~~
