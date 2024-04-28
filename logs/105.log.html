@@ -1,20 +1,36 @@
 <pre>
 Checking project structure...
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0xe8): undefined reference to `til::postfix_writer::do_address_node(til::address_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x108): undefined reference to `til::postfix_writer::do_pointer_node(til::pointer_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x128): undefined reference to `til::postfix_writer::do_return_node(til::return_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x130): undefined reference to `til::postfix_writer::do_sizeof_node(til::sizeof_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x138): undefined reference to `til::postfix_writer::do_stop_node(til::stop_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0xe8): undefined reference to `til::type_checker::do_address_node(til::address_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x108): undefined reference to `til::type_checker::do_pointer_node(til::pointer_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x128): undefined reference to `til::type_checker::do_return_node(til::return_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x130): undefined reference to `til::type_checker::do_sizeof_node(til::sizeof_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x138): undefined reference to `til::type_checker::do_stop_node(til::stop_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0xe8): undefined reference to `til::xml_writer::do_address_node(til::address_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x108): undefined reference to `til::xml_writer::do_pointer_node(til::pointer_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x128): undefined reference to `til::xml_writer::do_return_node(til::return_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x130): undefined reference to `til::xml_writer::do_sizeof_node(til::sizeof_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x138): undefined reference to `til::xml_writer::do_stop_node(til::stop_node*, int)'
-collect2: error: ld returned 1 exit status
-make: *** [Makefile:72: til] Error 1
+In file included from .auto/all_nodes.h:41,
+                 from til_parser.y:8:
+./ast/function_call_node.h:30:47: error: 'function_definition_node' in namespace 'cdk' does not name a type
+   30 |     function_call_node(int lineno, const cdk::function_definition_node *pointer) :
+      |                                               ^~~~~~~~~~~~~~~~~~~~~~~~
+./ast/function_call_node.h:38:47: error: 'function_definition_node' in namespace 'cdk' does not name a type
+   38 |     function_call_node(int lineno, const cdk::function_definition_node *pointer, cdk::sequence_node *arguments) :
+      |                                               ^~~~~~~~~~~~~~~~~~~~~~~~
+./ast/function_call_node.h: In constructor 'til::function_call_node::function_call_node(int, const int*)':
+./ast/function_call_node.h:31:48: error: cannot convert 'const int*' to 'til::function_definition_node*' in initialization
+   31 |         cdk::expression_node(lineno), _pointer(pointer), _arguments(new cdk::sequence_node(lineno)) {
+      |                                                ^~~~~~~
+      |                                                |
+      |                                                const int*
+./ast/function_call_node.h: In constructor 'til::function_call_node::function_call_node(int, const int*, cdk::sequence_node*)':
+./ast/function_call_node.h:39:48: error: cannot convert 'const int*' to 'til::function_definition_node*' in initialization
+   39 |         cdk::expression_node(lineno), _pointer(pointer), _arguments(arguments) {
+      |                                                ^~~~~~~
+      |                                                |
+      |                                                const int*
+In file included from .auto/all_nodes.h:42:
+./ast/function_definition_node.h: At global scope:
+./ast/function_definition_node.h:35:61: error: 'og' has not been declared
+   35 |                              cdk::sequence_node *arguments, og::block_node *block) :
+      |                                                             ^~
+./ast/function_definition_node.h:35:76: error: expected ',' or '...' before '*' token
+   35 |                              cdk::sequence_node *arguments, og::block_node *block) :
+      |                                                                            ^
+./ast/function_definition_node.h: In constructor 'til::function_definition_node::function_definition_node(int, int, std::shared_ptr<cdk::basic_type>, const std::string&, cdk::sequence_node*, int)':
+./ast/function_definition_node.h:36:105: error: cannot convert 'til::function_definition_node::block' from type 'til::block_node* (til::function_definition_node::)()' to type 'til::block_node*'
+   36 |         cdk::typed_node(lineno), _qualifier(qualifier), _identifier(identifier), _arguments(arguments), _block(block) {
+      |                                                                                                         ^~~~~~~~~~~~~
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
