@@ -1,34 +1,10 @@
 <pre>
 Checking project structure...
-In file included from .auto/all_nodes.h:44,
+In file included from .auto/all_nodes.h:47,
                  from til_parser.y:8:
-./ast/function_call_node.h: In constructor 'til::function_call_node::function_call_node(int, cdk::expression_node*)':
-./ast/function_call_node.h:21:44: error: 'd' was not declared in this scope; did you mean 'id'?
-   21 |         cdk::expression_node(lineno), _id(*d), _args(new cdk::sequence_node(lineno)) {}
-      |                                            ^
-      |                                            id
-./ast/function_call_node.h: In constructor 'til::function_call_node::function_call_node(int, cdk::expression_node*, cdk::sequence_node*)':
-./ast/function_call_node.h:27:48: error: class 'til::function_call_node' does not have any field named '_arguments'
-   27 |         cdk::expression_node(lineno), _id(id), _arguments(new cdk::sequence_node(lineno)) {}
-      |                                                ^~~~~~~~~~
-In file included from .auto/all_nodes.h:45:
-./ast/function_def_node.h: At global scope:
-./ast/function_def_node.h:39:1: error: 'til' does not name a type
-   39 | til
-      | ^~~
-In file included from .auto/all_nodes.h:58:
-./ast/stop_node.h:15:39: error: invalid pure specifier (only '= 0' is allowed) before ':' token
-   15 |     stop_node(int lineno, int val) = 1:
-      |                                       ^
-./ast/stop_node.h:17:3: error: expected ';' at end of member declaration
-   17 |   }
-      |   ^
-      |    ;
-./ast/stop_node.h: In member function 'int* til::stop_node::val()':
-./ast/stop_node.h:20:25: error: invalid conversion from 'int' to 'int*' [-fpermissive]
-   20 |     int *val() { return _val; }
-      |                         ^~~~
-      |                         |
-      |                         int
+./ast/function_def_node.h: In constructor 'til::function_def_node::function_def_node(int, cdk::sequence_node*)':
+./ast/function_def_node.h:22:78: error: cannot convert 'til::function_def_node::decls' from type 'cdk::sequence_node* (til::function_def_node::)()' to type 'cdk::sequence_node*'
+   22 |       : cdk::expression_node(lineno), _args(new cdk::sequence_node(lineno)), _decls(decls),
+      |                                                                              ^~~~~~~~~~~~~
 make: *** [Makefile:40: til_parser.tab.o] Error 1
 
