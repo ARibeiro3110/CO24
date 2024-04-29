@@ -1,17 +1,3 @@
 <pre>
 Checking project structure...
-targets/postfix_writer.cpp:288:6: error: variable or field 'do_block_node' declared void
-  288 | void til::postfix_writer::do_block_node(til::block_node * const node, int lvl) {
-      |      ^~~
-targets/postfix_writer.cpp:288:46: error: 'block_node' is not a member of 'til'; did you mean 'loop_node'?
-  288 | void til::postfix_writer::do_block_node(til::block_node * const node, int lvl) {
-      |                                              ^~~~~~~~~~
-      |                                              loop_node
-targets/postfix_writer.cpp:288:59: error: expected primary-expression before 'const'
-  288 | void til::postfix_writer::do_block_node(til::block_node * const node, int lvl) {
-      |                                                           ^~~~~
-targets/postfix_writer.cpp:288:71: error: expected primary-expression before 'int'
-  288 | void til::postfix_writer::do_block_node(til::block_node * const node, int lvl) {
-      |                                                                       ^~~
-make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
