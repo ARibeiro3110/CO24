@@ -18,7 +18,7 @@ done
 
 cp -a checked-out checked-out-ref
 for i in {000..139} {190..200}; do
-  (cd checked-out-ref/$i; git -c advice.detachedHead=false checkout `git rev-list -1 --date=iso --before="2024-04-09T12:30:00+00:00" master`)
+  (cd checked-out-ref/$i; git -c advice.detachedHead=false checkout `git rev-list -1 --date=iso --before="2024-04-29T17:00:00+00:00" master`)
 done
 
 #-- clear histories

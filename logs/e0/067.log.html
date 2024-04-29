@@ -1,0 +1,41 @@
+<pre>
+Checking project structure...
+In file included from .auto/all_nodes.h:38,
+                 from til_parser.y:8:
+./ast/function_node.h:22:5: error: 'mml' does not name a type
+   22 |     mml::block_node *_block;
+      |     ^~~
+./ast/function_node.h:29:11: error: 'mml' has not been declared
+   29 |           mml::block_node *block,
+      |           ^~~
+./ast/function_node.h:29:27: error: expected ',' or '...' before '*' token
+   29 |           mml::block_node *block,
+      |                           ^
+./ast/function_node.h:40:38: error: 'mml' has not been declared
+   40 |     inline function_node(int lineno, mml::block_node *block) :
+      |                                      ^~~
+./ast/function_node.h:40:54: error: expected ',' or '...' before '*' token
+   40 |     inline function_node(int lineno, mml::block_node *block) :
+      |                                                      ^
+./ast/function_node.h: In constructor 'til::function_node::function_node(int, cdk::sequence_node*, std::shared_ptr<cdk::basic_type>, int)':
+./ast/function_node.h:31:62: error: class 'til::function_node' does not have any field named '_block'
+   31 |         cdk::expression_node(lineno), _arguments(arguments), _block(block), _is_main(is_main) {
+      |                                                              ^~~~~~
+./ast/function_node.h:31:77: error: cannot convert 'til::function_node::is_main' from type 'bool (til::function_node::)()' to type 'bool'
+   31 |         cdk::expression_node(lineno), _arguments(arguments), _block(block), _is_main(is_main) {
+      |                                                                             ^~~~~~~~~~~~~~~~~
+./ast/function_node.h: In constructor 'til::function_node::function_node(int, int)':
+./ast/function_node.h:41:83: error: class 'til::function_node' does not have any field named '_block'
+   41 |         cdk::expression_node(lineno), _arguments(new cdk::sequence_node(lineno)), _block(block), _is_main(true) {
+      |                                                                                   ^~~~~~
+./ast/function_node.h: In member function 'cdk::basic_node* til::function_node::block()':
+./ast/function_node.h:50:14: error: '_block' was not declared in this scope; did you mean 'block'?
+   50 |       return _block;
+      |              ^~~~~~
+      |              block
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:68:62: error: expected type-specifier
+   68 |      | tWHILE '(' expr ')' stmt         { $$ = new til::while_node(LINE, $3, $5); }
+      |                                                              ^~~
+make: *** [Makefile:40: til_parser.tab.o] Error 1
+

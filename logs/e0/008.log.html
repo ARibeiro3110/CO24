@@ -1,0 +1,22 @@
+<pre>
+Checking project structure...
+targets/postfix_writer.cpp:306:6: error: variable or field 'do_variable_node' declared void
+  306 | void til::postfix_writer::do_variable_node(til::variable_node * const node , int lvl){
+      |      ^~~
+targets/postfix_writer.cpp:306:49: error: 'variable_node' is not a member of 'til'; did you mean 'cdk::variable_node'?
+  306 | void til::postfix_writer::do_variable_node(til::variable_node * const node , int lvl){
+      |                                                 ^~~~~~~~~~~~~
+In file included from /usr/include/cdk/ast/all.h:82,
+                 from ./.auto/all_nodes.h:4,
+                 from targets/postfix_writer.cpp:5:
+/usr/include/cdk/ast/variable_node.h:12:9: note: 'cdk::variable_node' declared here
+   12 |   class variable_node : public lvalue_node {
+      |         ^~~~~~~~~~~~~
+targets/postfix_writer.cpp:306:65: error: expected primary-expression before 'const'
+  306 | void til::postfix_writer::do_variable_node(til::variable_node * const node , int lvl){
+      |                                                                 ^~~~~
+targets/postfix_writer.cpp:306:78: error: expected primary-expression before 'int'
+  306 | void til::postfix_writer::do_variable_node(til::variable_node * const node , int lvl){
+      |                                                                              ^~~
+make: *** [Makefile:46: targets/postfix_writer.o] Error 1
+
