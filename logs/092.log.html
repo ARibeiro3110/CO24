@@ -1,30 +1,23 @@
 <pre>
 Checking project structure...
-In file included from .auto/all_nodes.h:40,
-                 from til_parser.y:8:
-./ast/stop_node.h:12:15: error: expected unqualified-id before 'int'
-   12 |     stop_node(int lineno, int level = 1) :
-      |               ^~~
-./ast/stop_node.h:12:15: error: expected ')' before 'int'
-   12 |     stop_node(int lineno, int level = 1) :
-      |              ~^~~
-      |               )
-./ast/stop_node.h: In member function 'virtual void til::break_node::accept(basic_ast_visitor*, int)':
-./ast/stop_node.h:22:24: error: cannot convert 'til::break_node*' to 'til::stop_node*'
-   22 |       sp->do_stop_node(this, level);
-      |                        ^~~~
-      |                        |
-      |                        til::break_node*
-In file included from ./targets/basic_ast_visitor.h:64,
-                 from /usr/include/cdk/ast/basic_node.h:6,
-                 from /usr/include/cdk/ast/typed_node.h:4,
-                 from /usr/include/cdk/ast/expression_node.h:4,
-                 from /usr/include/cdk/ast/binary_operation_node.h:4,
-                 from /usr/include/cdk/ast/add_node.h:4,
-                 from /usr/include/cdk/ast/all.h:51,
-                 from .auto/all_nodes.h:4:
-./.auto/visitor_decls.h:16:51: note:   initializing argument 1 of 'virtual void basic_ast_visitor::do_stop_node(til::stop_node*, int)'
-   16 |   virtual void do_stop_node(til::stop_node *const node, int lvl) = 0;
-      |                             ~~~~~~~~~~~~~~~~~~~~~~^~~~
-make: *** [Makefile:40: til_parser.tab.o] Error 1
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0xe8): undefined reference to `til::postfix_writer::do_address_of_node(til::address_of_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0xf0): undefined reference to `til::postfix_writer::do_block_node(til::block_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x100): undefined reference to `til::postfix_writer::do_function_call_node(til::function_call_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x120): undefined reference to `til::postfix_writer::do_next_node(til::next_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x140): undefined reference to `til::postfix_writer::do_return_node(til::return_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x148): undefined reference to `til::postfix_writer::do_stop_node(til::stop_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0xe8): undefined reference to `til::type_checker::do_address_of_node(til::address_of_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0xf0): undefined reference to `til::type_checker::do_block_node(til::block_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x100): undefined reference to `til::type_checker::do_function_call_node(til::function_call_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x120): undefined reference to `til::type_checker::do_next_node(til::next_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x140): undefined reference to `til::type_checker::do_return_node(til::return_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x148): undefined reference to `til::type_checker::do_stop_node(til::stop_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0xe8): undefined reference to `til::xml_writer::do_address_of_node(til::address_of_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0xf0): undefined reference to `til::xml_writer::do_block_node(til::block_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x100): undefined reference to `til::xml_writer::do_function_call_node(til::function_call_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x120): undefined reference to `til::xml_writer::do_next_node(til::next_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x140): undefined reference to `til::xml_writer::do_return_node(til::return_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x148): undefined reference to `til::xml_writer::do_stop_node(til::stop_node*, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:72: til] Error 1
 
