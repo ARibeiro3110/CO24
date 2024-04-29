@@ -1,3 +1,19 @@
 <pre>
 Checking project structure...
+til_scanner.l:71: warning, rule cannot be matched
+til_parser.y: warning: 10 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+targets/xml_writer.cpp:167:6: error: variable or field 'do_while_node' declared void
+  167 | void til::xml_writer::do_while_node(til::while_node * const node, int lvl) {
+      |      ^~~
+targets/xml_writer.cpp:167:42: error: 'while_node' is not a member of 'til'
+  167 | void til::xml_writer::do_while_node(til::while_node * const node, int lvl) {
+      |                                          ^~~~~~~~~~
+targets/xml_writer.cpp:167:55: error: expected primary-expression before 'const'
+  167 | void til::xml_writer::do_while_node(til::while_node * const node, int lvl) {
+      |                                                       ^~~~~
+targets/xml_writer.cpp:167:67: error: expected primary-expression before 'int'
+  167 | void til::xml_writer::do_while_node(til::while_node * const node, int lvl) {
+      |                                                                   ^~~
+make: *** [Makefile:46: targets/xml_writer.o] Error 1
 
