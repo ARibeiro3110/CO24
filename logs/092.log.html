@@ -1,23 +1,27 @@
 <pre>
 Checking project structure...
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0xe8): undefined reference to `til::postfix_writer::do_address_of_node(til::address_of_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0xf0): undefined reference to `til::postfix_writer::do_block_node(til::block_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x100): undefined reference to `til::postfix_writer::do_function_call_node(til::function_call_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x120): undefined reference to `til::postfix_writer::do_next_node(til::next_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x140): undefined reference to `til::postfix_writer::do_return_node(til::return_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/postfix_writer.o:(.rodata._ZTVN3til14postfix_writerE[_ZTVN3til14postfix_writerE]+0x148): undefined reference to `til::postfix_writer::do_stop_node(til::stop_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0xe8): undefined reference to `til::type_checker::do_address_of_node(til::address_of_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0xf0): undefined reference to `til::type_checker::do_block_node(til::block_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x100): undefined reference to `til::type_checker::do_function_call_node(til::function_call_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x120): undefined reference to `til::type_checker::do_next_node(til::next_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x140): undefined reference to `til::type_checker::do_return_node(til::return_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0x148): undefined reference to `til::type_checker::do_stop_node(til::stop_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0xe8): undefined reference to `til::xml_writer::do_address_of_node(til::address_of_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0xf0): undefined reference to `til::xml_writer::do_block_node(til::block_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x100): undefined reference to `til::xml_writer::do_function_call_node(til::function_call_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x120): undefined reference to `til::xml_writer::do_next_node(til::next_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x140): undefined reference to `til::xml_writer::do_return_node(til::return_node*, int)'
-/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/xml_writer.o:(.rodata._ZTVN3til10xml_writerE[_ZTVN3til10xml_writerE]+0x148): undefined reference to `til::xml_writer::do_stop_node(til::stop_node*, int)'
-collect2: error: ld returned 1 exit status
-make: *** [Makefile:72: til] Error 1
+In file included from .auto/all_nodes.h:40,
+                 from til_parser.y:8:
+./ast/function.h:28:19: error: 'till' has not been declared
+   28 |                   till::block_node *block) :
+      |                   ^~~~
+./ast/function.h:28:36: error: expected ',' or '...' before '*' token
+   28 |                   till::block_node *block) :
+      |                                    ^
+./ast/function.h: In constructor 'til::function_node::function_node(int, cdk::sequence_node*, std::shared_ptr<cdk::basic_type>, int)':
+./ast/function.h:29:62: error: cannot convert 'til::function_node::block' from type 'cdk::basic_node* (til::function_node::)()' to type 'til::block_node*'
+   29 |         cdk::expression_node(lineno), _arguments(arguments), _block(block) {
+      |                                                              ^~~~~~~~~~~~~
+./ast/function.h: In member function 'virtual void til::function_node::accept(basic_ast_visitor*, int)':
+./ast/function.h:49:11: error: 'class basic_ast_visitor' has no member named 'do_function_node'; did you mean 'do_function'?
+   49 |       sp->do_function_node(this, level);
+      |           ^~~~~~~~~~~~~~~~
+      |           do_function
+In file included from .auto/all_nodes.h:50:
+./ast/statement_node.h: In member function 'virtual void til::statement_node::accept(basic_ast_visitor*, int)':
+./ast/statement_node.h:40:11: error: 'class basic_ast_visitor' has no member named 'do_declaration_node'; did you mean 'do_evaluation_node'?
+   40 |       sp->do_declaration_node(this, level);
+      |           ^~~~~~~~~~~~~~~~~~~
+      |           do_evaluation_node
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
