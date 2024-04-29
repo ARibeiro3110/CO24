@@ -1,21 +1,3 @@
 <pre>
 Checking project structure...
-In file included from .auto/all_nodes.h:42,
-                 from til_parser.y:8:
-./ast/func_call_node.h: In member function 'virtual void til::function_call_node::accept(basic_ast_visitor*, int)':
-./ast/func_call_node.h:43:17: error: 'class basic_ast_visitor' has no member named 'do_function_call_node'; did you mean 'do_func_call_node'?
-   43 |             sp->do_function_call_node(this, level);
-      |                 ^~~~~~~~~~~~~~~~~~~~~
-      |                 do_func_call_node
-In file included from .auto/all_nodes.h:43:
-./ast/func_def_node.h: In member function 'virtual void til::function_definition_node::accept(basic_ast_visitor*, int)':
-./ast/func_def_node.h:53:17: error: 'class basic_ast_visitor' has no member named 'do_function_definition_node'
-   53 |             sp->do_function_definition_node(this, level);
-      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from .auto/all_nodes.h:56:
-./ast/var_decl_node.h: In member function 'virtual void til::variable_declaration_node::accept(basic_ast_visitor*, int)':
-./ast/var_decl_node.h:40:17: error: 'class basic_ast_visitor' has no member named 'do_variable_declaration_node'
-   40 |             sp->do_variable_declaration_node(this, level);
-      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make: *** [Makefile:40: til_parser.tab.o] Error 1
 
