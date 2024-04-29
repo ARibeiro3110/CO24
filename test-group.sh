@@ -68,7 +68,7 @@ function compile_project() {
   make ROOT= clean > /dev/null
 
   DIFF=`diff -r $PROJDIR $CHECKOUT_DIR_REF/$1 --exclude .git | fgrep -v ist13500 | egrep -v -e '^[0-9]' | fgrep -v -e '---' | fgrep -v diff`
-  #echo "RRR -[$DIFF]- RRR" >> $RESULTS_FILE
+  echo "RRR -[$DIFF]- RRR" >> $RESULTS_FILE
   if [ x$DIFF = "x" ]; then
     echo "!! Bad project (repository contains only the previous delivery)." >> $RESULTS_FILE
     echo >> $RESULTS_FILE
