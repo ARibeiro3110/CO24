@@ -1,3 +1,63 @@
 <pre>
 Checking project structure...
+til_scanner.l:74: undeclared start condition X_HEX_INT
+til_scanner.l:75: undeclared start condition X_HEX_INT
+til_scanner.l:40: warning, rule cannot be matched
+til_scanner.l:41: warning, rule cannot be matched
+til_scanner.l:77: warning, rule cannot be matched
+til_scanner.l:87: warning, rule cannot be matched
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:23:8: error: 'tTYPE_INT' was not declared in this scope
+   23 | "double"               return tTYPE_REAL;
+      |        ^~~~~~~~~
+til_scanner.l:24:8: error: 'tTYPE_REAL' was not declared in this scope
+   24 | "string"               return tTYPE_STRING;
+      |        ^~~~~~~~~~
+til_scanner.l:25:8: error: 'tTYPE_STRING' was not declared in this scope
+   25 | "!"                    return tTYPE_POINTER;
+      |        ^~~~~~~~~~~~
+til_scanner.l:26:8: error: 'tTYPE_POINTER' was not declared in this scope
+   26 | 
+      |        ^            
+til_scanner.l:40:8: error: 'tG' was not declared in this scope; did you mean 'tm'?
+   40 | "<"                    return tL;
+      |        ^~
+      |        tm
+til_scanner.l:41:8: error: 'tL' was not declared in this scope; did you mean 'tm'?
+   41 | ">="                   return tGE;
+      |        ^~
+      |        tm
+til_scanner.l:46:8: error: 'tAND' was not declared in this scope; did you mean 'tEND'?
+   46 | "||"                   return tOR;
+      |        ^~~~
+      |        tEND
+til_scanner.l:47:8: error: 'tOR' was not declared in this scope
+   47 | 
+      |        ^  
+til_scanner.l:51:8: error: 'tLOOP' was not declared in this scope; did you mean 'ELOOP'?
+   51 | "if"                   return tIF;
+      |        ^~~~~
+      |        ELOOP
+til_scanner.l:53:8: error: 'tNEXT' was not declared in this scope; did you mean 'tNE'?
+   53 | "stop"                 return tSTOP;
+      |        ^~~~~
+      |        tNE
+til_scanner.l:54:8: error: 'tSTOP' was not declared in this scope
+   54 | "print"                return tPRINT;
+      |        ^~~~~
+til_scanner.l:56:8: error: 'tPRINTLN' was not declared in this scope; did you mean 'tPRINT'?
+   56 | "read"                 return tREAD;
+      |        ^~~~~~~~
+      |        tPRINT
+til_scanner.l:73:15: error: 'X_HEX_INT' was not declared in this scope
+   73 | <X_HEX_INT>[[:xdigit:]]+      { yylval.i = strtoul(yytext, NULL, 16); yy_pop_state(); return tINTEGER; }
+      |               ^~~~~~~~~
+til_scanner.l:81:10: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+   81 | 
+      |          ^
+til_scanner.l:81:43: error: 'tREAL' was not declared in this scope; did you mean 'tREAD'?
+   81 | 
+      |                                           ^    
+      |                                           tREAD
+make: *** [Makefile:46: til_scanner.o] Error 1
 
