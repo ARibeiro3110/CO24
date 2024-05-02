@@ -1,3 +1,40 @@
 <pre>
 Checking project structure...
+targets/postfix_writer.cpp:377:6: error: variable or field 'do_var_decl_node' declared void
+  377 | void til::postfix_writer::do_var_decl_node(til::variable_declaration_node *const node, int lvl)
+      |      ^~~
+targets/postfix_writer.cpp:377:49: error: 'variable_declaration_node' is not a member of 'til'
+  377 | void til::postfix_writer::do_var_decl_node(til::variable_declaration_node *const node, int lvl)
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp:377:76: error: expected primary-expression before 'const'
+  377 | void til::postfix_writer::do_var_decl_node(til::variable_declaration_node *const node, int lvl)
+      |                                                                            ^~~~~
+targets/postfix_writer.cpp:377:88: error: expected primary-expression before 'int'
+  377 | void til::postfix_writer::do_var_decl_node(til::variable_declaration_node *const node, int lvl)
+      |                                                                                        ^~~
+targets/postfix_writer.cpp:382:6: error: variable or field 'do_func_call_node' declared void
+  382 | void til::postfix_writer::do_func_call_node(til::function_declaration_node *const node, int lvl)
+      |      ^~~
+targets/postfix_writer.cpp:382:50: error: 'function_declaration_node' is not a member of 'til'
+  382 | void til::postfix_writer::do_func_call_node(til::function_declaration_node *const node, int lvl)
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp:382:77: error: expected primary-expression before 'const'
+  382 | void til::postfix_writer::do_func_call_node(til::function_declaration_node *const node, int lvl)
+      |                                                                             ^~~~~
+targets/postfix_writer.cpp:382:89: error: expected primary-expression before 'int'
+  382 | void til::postfix_writer::do_func_call_node(til::function_declaration_node *const node, int lvl)
+      |                                                                                         ^~~
+targets/postfix_writer.cpp:387:6: error: variable or field 'do_func_def_node' declared void
+  387 | void til::postfix_writer::do_func_def_node(til::function_definition_node *const node, int lvl)
+      |      ^~~
+targets/postfix_writer.cpp:387:49: error: 'function_definition_node' is not a member of 'til'
+  387 | void til::postfix_writer::do_func_def_node(til::function_definition_node *const node, int lvl)
+      |                                                 ^~~~~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp:387:75: error: expected primary-expression before 'const'
+  387 | void til::postfix_writer::do_func_def_node(til::function_definition_node *const node, int lvl)
+      |                                                                           ^~~~~
+targets/postfix_writer.cpp:387:87: error: expected primary-expression before 'int'
+  387 | void til::postfix_writer::do_func_def_node(til::function_definition_node *const node, int lvl)
+      |                                                                                       ^~~
+make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
