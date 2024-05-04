@@ -19,9 +19,9 @@ Number of nodes: 18
 ====================      PARSER       ====================
 
 -- Parser specification found.
-
-    $default  reduce using rule 9 (stmt)
--- grammar has no conflics
+    '%'       [reduce using rule 25 (expr)]
+    $default  reduce using rule 25 (expr)
+!! GRAMMAR HAS CONFLICTS
 
 ====================     COMPILING     ====================
 
