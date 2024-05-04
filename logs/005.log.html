@@ -1,3 +1,25 @@
 <pre>
 Checking project structure...
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:58:48: error: expected type-specifier
+   58 | program : tBEGIN list tEND { compiler->ast(new til::program_node(LINE, $2)); }
+      |                                                ^~~
+til_parser.y:66:106: error: no matching function for call to 'til::print_node::print_node(int, cdk::expression_node*&)'
+   66 |      | tPRINT expr ';'                  { $$ = new til::print_node(LINE, $2); }
+      |                                                                                                          ^
+In file included from .auto/all_nodes.h:49,
+                 from til_parser.y:8:
+./ast/print_node.h:16:5: note: candidate: 'til::print_node::print_node(int, cdk::sequence_node*, bool)'
+   16 |     print_node(int lineno, cdk::sequence_node *arguments, bool newline = false) :
+      |     ^~~~~~~~~~
+./ast/print_node.h:16:48: note:   no known conversion for argument 2 from 'cdk::expression_node*' to 'cdk::sequence_node*'
+   16 |     print_node(int lineno, cdk::sequence_node *arguments, bool newline = false) :
+      |                            ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(const til::print_node&)'
+   11 |   class print_node : public cdk::basic_node {
+      |         ^~~~~~~~~~
+./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(til::print_node&&)'
+./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
