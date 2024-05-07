@@ -1,7 +1,5 @@
 <pre>
 Checking project structure...
-til_parser.y: warning: 4 shift/reduce conflicts [-Wconflicts-sr]
-til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -46,8 +44,8 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -68,27 +66,26 @@ Reading a token
 --accepting rule at line 39(""")
 Next token is token tSTRING ()
 Shifting token tSTRING ()
-Entering state 11
-Stack now 0 1 4 6 13 11
-Reducing stack by rule 13 (line 82):
+Entering state 10
+Stack now 0 1 4 6 12 10
+Reducing stack by rule 13 (line 81):
    $1 = token tSTRING ()
 -> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 6 13 23
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46(")")
 Next token is token ')' ()
-Reducing stack by rule 10 (line 77):
-   $1 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token ')' ()
 Shifting token ')' ()
-Entering state 45
-Stack now 0 1 4 6 13 24 45
-Reducing stack by rule 7 (line 72):
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
    $1 = token '(' ()
    $2 = token tPRINTLN ()
    $3 = nterm exprs ()
@@ -96,7 +93,7 @@ Reducing stack by rule 7 (line 72):
 -> $$ = nterm instruction ()
 Entering state 8
 Stack now 0 1 4 8
-Reducing stack by rule 3 (line 66):
+Reducing stack by rule 3 (line 65):
    $1 = nterm instruction ()
 -> $$ = nterm instructions ()
 Entering state 7
@@ -124,8 +121,8 @@ Reading a token
 --accepting rule at line 34("return")
 Next token is token tRETURN ()
 Shifting token tRETURN ()
-Entering state 14
-Stack now 0 1 4 7 6 14
+Entering state 13
+Stack now 0 1 4 7 6 13
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -134,27 +131,27 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 7 6 14 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 26
-Stack now 0 1 4 7 6 14 26
+Entering state 24
+Stack now 0 1 4 7 6 13 24
 Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 46
-Stack now 0 1 4 7 6 14 26 46
-Reducing stack by rule 9 (line 74):
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
    $1 = token '(' ()
    $2 = token tRETURN ()
    $3 = nterm expr ()
    $4 = token ')' ()
 -> $$ = nterm instruction ()
-Entering state 21
-Stack now 0 1 4 7 21
-Reducing stack by rule 4 (line 67):
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
    $1 = nterm instructions ()
    $2 = nterm instruction ()
 -> $$ = nterm instructions ()
@@ -168,9 +165,9 @@ Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 20
-Stack now 0 1 4 7 20
-Reducing stack by rule 2 (line 63):
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
    $3 = nterm instructions ()
@@ -178,7 +175,7 @@ Reducing stack by rule 2 (line 63):
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 59):
+Reducing stack by rule 1 (line 58):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -244,8 +241,8 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -256,13 +253,18 @@ Reading a token
 --accepting rule at line 39(""")
 Next token is token tSTRING ()
 Shifting token tSTRING ()
-Entering state 11
-Stack now 0 1 4 6 13 11
-Reducing stack by rule 13 (line 82):
+Entering state 10
+Stack now 0 1 4 6 12 10
+Reducing stack by rule 13 (line 81):
    $1 = token tSTRING ()
 -> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 6 13 23
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -275,20 +277,20 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 39(""")
 Next token is token tSTRING ()
-Reducing stack by rule 10 (line 77):
-   $1 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token tSTRING ()
 Shifting token tSTRING ()
-Entering state 11
-Stack now 0 1 4 6 13 24 11
-Reducing stack by rule 13 (line 82):
+Entering state 10
+Stack now 0 1 4 6 12 22 10
+Reducing stack by rule 13 (line 81):
    $1 = token tSTRING ()
 -> $$ = nterm expr ()
-Entering state 44
-Stack now 0 1 4 6 13 24 44
+Entering state 40
+Stack now 0 1 4 6 12 22 40
+Reducing stack by rule 11 (line 77):
+   $1 = nterm exprs ()
+   $2 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -299,21 +301,20 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 39(""")
 Next token is token tSTRING ()
-Reducing stack by rule 11 (line 78):
+Shifting token tSTRING ()
+Entering state 10
+Stack now 0 1 4 6 12 22 10
+Reducing stack by rule 13 (line 81):
+   $1 = token tSTRING ()
+-> $$ = nterm expr ()
+Entering state 40
+Stack now 0 1 4 6 12 22 40
+Reducing stack by rule 11 (line 77):
    $1 = nterm exprs ()
    $2 = nterm expr ()
 -> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token tSTRING ()
-Shifting token tSTRING ()
-Entering state 11
-Stack now 0 1 4 6 13 24 11
-Reducing stack by rule 13 (line 82):
-   $1 = token tSTRING ()
--> $$ = nterm expr ()
-Entering state 44
-Stack now 0 1 4 6 13 24 44
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -326,36 +327,28 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 39(""")
 Next token is token tSTRING ()
-Reducing stack by rule 11 (line 78):
+Shifting token tSTRING ()
+Entering state 10
+Stack now 0 1 4 6 12 22 10
+Reducing stack by rule 13 (line 81):
+   $1 = token tSTRING ()
+-> $$ = nterm expr ()
+Entering state 40
+Stack now 0 1 4 6 12 22 40
+Reducing stack by rule 11 (line 77):
    $1 = nterm exprs ()
    $2 = nterm expr ()
 -> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token tSTRING ()
-Shifting token tSTRING ()
-Entering state 11
-Stack now 0 1 4 6 13 24 11
-Reducing stack by rule 13 (line 82):
-   $1 = token tSTRING ()
--> $$ = nterm expr ()
-Entering state 44
-Stack now 0 1 4 6 13 24 44
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46(")")
 Next token is token ')' ()
-Reducing stack by rule 11 (line 78):
-   $1 = nterm exprs ()
-   $2 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token ')' ()
 Shifting token ')' ()
-Entering state 45
-Stack now 0 1 4 6 13 24 45
-Reducing stack by rule 7 (line 72):
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
    $1 = token '(' ()
    $2 = token tPRINTLN ()
    $3 = nterm exprs ()
@@ -363,7 +356,7 @@ Reducing stack by rule 7 (line 72):
 -> $$ = nterm instruction ()
 Entering state 8
 Stack now 0 1 4 8
-Reducing stack by rule 3 (line 66):
+Reducing stack by rule 3 (line 65):
    $1 = nterm instruction ()
 -> $$ = nterm instructions ()
 Entering state 7
@@ -391,8 +384,8 @@ Reading a token
 --accepting rule at line 34("return")
 Next token is token tRETURN ()
 Shifting token tRETURN ()
-Entering state 14
-Stack now 0 1 4 7 6 14
+Entering state 13
+Stack now 0 1 4 7 6 13
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -401,27 +394,27 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 7 6 14 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 26
-Stack now 0 1 4 7 6 14 26
+Entering state 24
+Stack now 0 1 4 7 6 13 24
 Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 46
-Stack now 0 1 4 7 6 14 26 46
-Reducing stack by rule 9 (line 74):
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
    $1 = token '(' ()
    $2 = token tRETURN ()
    $3 = nterm expr ()
    $4 = token ')' ()
 -> $$ = nterm instruction ()
-Entering state 21
-Stack now 0 1 4 7 21
-Reducing stack by rule 4 (line 67):
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
    $1 = nterm instructions ()
    $2 = nterm instruction ()
 -> $$ = nterm instructions ()
@@ -435,9 +428,9 @@ Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 20
-Stack now 0 1 4 7 20
-Reducing stack by rule 2 (line 63):
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
    $3 = nterm instructions ()
@@ -445,7 +438,7 @@ Reducing stack by rule 2 (line 63):
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 59):
+Reducing stack by rule 1 (line 58):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -511,8 +504,8 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -529,13 +522,18 @@ Reading a token
 --accepting rule at line 39(""")
 Next token is token tSTRING ()
 Shifting token tSTRING ()
-Entering state 11
-Stack now 0 1 4 6 13 11
-Reducing stack by rule 13 (line 82):
+Entering state 10
+Stack now 0 1 4 6 12 10
+Reducing stack by rule 13 (line 81):
    $1 = token tSTRING ()
 -> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 6 13 23
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -552,20 +550,20 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 39(""")
 Next token is token tSTRING ()
-Reducing stack by rule 10 (line 77):
-   $1 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token tSTRING ()
 Shifting token tSTRING ()
-Entering state 11
-Stack now 0 1 4 6 13 24 11
-Reducing stack by rule 13 (line 82):
+Entering state 10
+Stack now 0 1 4 6 12 22 10
+Reducing stack by rule 13 (line 81):
    $1 = token tSTRING ()
 -> $$ = nterm expr ()
-Entering state 44
-Stack now 0 1 4 6 13 24 44
+Entering state 40
+Stack now 0 1 4 6 12 22 40
+Reducing stack by rule 11 (line 77):
+   $1 = nterm exprs ()
+   $2 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -576,21 +574,20 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 39(""")
 Next token is token tSTRING ()
-Reducing stack by rule 11 (line 78):
+Shifting token tSTRING ()
+Entering state 10
+Stack now 0 1 4 6 12 22 10
+Reducing stack by rule 13 (line 81):
+   $1 = token tSTRING ()
+-> $$ = nterm expr ()
+Entering state 40
+Stack now 0 1 4 6 12 22 40
+Reducing stack by rule 11 (line 77):
    $1 = nterm exprs ()
    $2 = nterm expr ()
 -> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token tSTRING ()
-Shifting token tSTRING ()
-Entering state 11
-Stack now 0 1 4 6 13 24 11
-Reducing stack by rule 13 (line 82):
-   $1 = token tSTRING ()
--> $$ = nterm expr ()
-Entering state 44
-Stack now 0 1 4 6 13 24 44
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -601,36 +598,28 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 39(""")
 Next token is token tSTRING ()
-Reducing stack by rule 11 (line 78):
+Shifting token tSTRING ()
+Entering state 10
+Stack now 0 1 4 6 12 22 10
+Reducing stack by rule 13 (line 81):
+   $1 = token tSTRING ()
+-> $$ = nterm expr ()
+Entering state 40
+Stack now 0 1 4 6 12 22 40
+Reducing stack by rule 11 (line 77):
    $1 = nterm exprs ()
    $2 = nterm expr ()
 -> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token tSTRING ()
-Shifting token tSTRING ()
-Entering state 11
-Stack now 0 1 4 6 13 24 11
-Reducing stack by rule 13 (line 82):
-   $1 = token tSTRING ()
--> $$ = nterm expr ()
-Entering state 44
-Stack now 0 1 4 6 13 24 44
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46(")")
 Next token is token ')' ()
-Reducing stack by rule 11 (line 78):
-   $1 = nterm exprs ()
-   $2 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token ')' ()
 Shifting token ')' ()
-Entering state 45
-Stack now 0 1 4 6 13 24 45
-Reducing stack by rule 7 (line 72):
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
    $1 = token '(' ()
    $2 = token tPRINTLN ()
    $3 = nterm exprs ()
@@ -638,7 +627,7 @@ Reducing stack by rule 7 (line 72):
 -> $$ = nterm instruction ()
 Entering state 8
 Stack now 0 1 4 8
-Reducing stack by rule 3 (line 66):
+Reducing stack by rule 3 (line 65):
    $1 = nterm instruction ()
 -> $$ = nterm instructions ()
 Entering state 7
@@ -666,8 +655,8 @@ Reading a token
 --accepting rule at line 34("return")
 Next token is token tRETURN ()
 Shifting token tRETURN ()
-Entering state 14
-Stack now 0 1 4 7 6 14
+Entering state 13
+Stack now 0 1 4 7 6 13
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -676,27 +665,27 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 7 6 14 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 26
-Stack now 0 1 4 7 6 14 26
+Entering state 24
+Stack now 0 1 4 7 6 13 24
 Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 46
-Stack now 0 1 4 7 6 14 26 46
-Reducing stack by rule 9 (line 74):
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
    $1 = token '(' ()
    $2 = token tRETURN ()
    $3 = nterm expr ()
    $4 = token ')' ()
 -> $$ = nterm instruction ()
-Entering state 21
-Stack now 0 1 4 7 21
-Reducing stack by rule 4 (line 67):
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
    $1 = nterm instructions ()
    $2 = nterm instruction ()
 -> $$ = nterm instructions ()
@@ -710,9 +699,9 @@ Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 20
-Stack now 0 1 4 7 20
-Reducing stack by rule 2 (line 63):
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
    $3 = nterm instructions ()
@@ -720,7 +709,7 @@ Reducing stack by rule 2 (line 63):
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 59):
+Reducing stack by rule 1 (line 58):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -786,8 +775,8 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -804,31 +793,27 @@ Reading a token
 --accepting rule at line 39(""")
 Next token is token tSTRING ()
 Shifting token tSTRING ()
-Entering state 11
-Stack now 0 1 4 6 13 11
-Reducing stack by rule 13 (line 82):
+Entering state 10
+Stack now 0 1 4 6 12 10
+Reducing stack by rule 13 (line 81):
    $1 = token tSTRING ()
 -> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 6 13 23
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("/")
 Next token is token '/' ()
-Shifting token '/' ()
-Entering state 39
-Stack now 0 1 4 6 13 23 39
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 46("*")
-Next token is token '*' ()
 2: syntax error
-Error: popping token '/' ()
-Stack now 0 1 4 6 13 23
-Error: popping nterm expr ()
-Stack now 0 1 4 6 13
+Error: popping nterm exprs ()
+Stack now 0 1 4 6 12
 Error: popping token tPRINTLN ()
 Stack now 0 1 4 6
 Error: popping token '(' ()
@@ -837,7 +822,7 @@ Error: popping token tPROGRAM ()
 Stack now 0 1
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token '*' ()
+Cleanup: discarding lookahead token '/' ()
 Stack now 0
 ** Syntax errors in A-04-4-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
@@ -885,8 +870,8 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -896,25 +881,24 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 6 13 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 6 12 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 6 13 23
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
-Reducing stack by rule 10 (line 77):
-   $1 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token ')' ()
 Shifting token ')' ()
-Entering state 45
-Stack now 0 1 4 6 13 24 45
-Reducing stack by rule 7 (line 72):
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
    $1 = token '(' ()
    $2 = token tPRINTLN ()
    $3 = nterm exprs ()
@@ -922,7 +906,7 @@ Reducing stack by rule 7 (line 72):
 -> $$ = nterm instruction ()
 Entering state 8
 Stack now 0 1 4 8
-Reducing stack by rule 3 (line 66):
+Reducing stack by rule 3 (line 65):
    $1 = nterm instruction ()
 -> $$ = nterm instructions ()
 Entering state 7
@@ -967,8 +951,8 @@ Reading a token
 --accepting rule at line 34("return")
 Next token is token tRETURN ()
 Shifting token tRETURN ()
-Entering state 14
-Stack now 0 1 4 7 6 14
+Entering state 13
+Stack now 0 1 4 7 6 13
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -977,27 +961,27 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 7 6 14 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 26
-Stack now 0 1 4 7 6 14 26
+Entering state 24
+Stack now 0 1 4 7 6 13 24
 Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 46
-Stack now 0 1 4 7 6 14 26 46
-Reducing stack by rule 9 (line 74):
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
    $1 = token '(' ()
    $2 = token tRETURN ()
    $3 = nterm expr ()
    $4 = token ')' ()
 -> $$ = nterm instruction ()
-Entering state 21
-Stack now 0 1 4 7 21
-Reducing stack by rule 4 (line 67):
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
    $1 = nterm instructions ()
    $2 = nterm instruction ()
 -> $$ = nterm instructions ()
@@ -1012,9 +996,9 @@ Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 20
-Stack now 0 1 4 7 20
-Reducing stack by rule 2 (line 63):
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
    $3 = nterm instructions ()
@@ -1022,7 +1006,7 @@ Reducing stack by rule 2 (line 63):
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 59):
+Reducing stack by rule 1 (line 58):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -1086,8 +1070,8 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -1102,27 +1086,26 @@ Reading a token
 --accepting rule at line 39(""")
 Next token is token tSTRING ()
 Shifting token tSTRING ()
-Entering state 11
-Stack now 0 1 4 6 13 11
-Reducing stack by rule 13 (line 82):
+Entering state 10
+Stack now 0 1 4 6 12 10
+Reducing stack by rule 13 (line 81):
    $1 = token tSTRING ()
 -> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 6 13 23
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46(")")
 Next token is token ')' ()
-Reducing stack by rule 10 (line 77):
-   $1 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token ')' ()
 Shifting token ')' ()
-Entering state 45
-Stack now 0 1 4 6 13 24 45
-Reducing stack by rule 7 (line 72):
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
    $1 = token '(' ()
    $2 = token tPRINTLN ()
    $3 = nterm exprs ()
@@ -1130,7 +1113,7 @@ Reducing stack by rule 7 (line 72):
 -> $$ = nterm instruction ()
 Entering state 8
 Stack now 0 1 4 8
-Reducing stack by rule 3 (line 66):
+Reducing stack by rule 3 (line 65):
    $1 = nterm instruction ()
 -> $$ = nterm instructions ()
 Entering state 7
@@ -1172,8 +1155,8 @@ Reading a token
 --accepting rule at line 34("return")
 Next token is token tRETURN ()
 Shifting token tRETURN ()
-Entering state 14
-Stack now 0 1 4 7 6 14
+Entering state 13
+Stack now 0 1 4 7 6 13
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -1182,27 +1165,27 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 7 6 14 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 26
-Stack now 0 1 4 7 6 14 26
+Entering state 24
+Stack now 0 1 4 7 6 13 24
 Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 46
-Stack now 0 1 4 7 6 14 26 46
-Reducing stack by rule 9 (line 74):
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
    $1 = token '(' ()
    $2 = token tRETURN ()
    $3 = nterm expr ()
    $4 = token ')' ()
 -> $$ = nterm instruction ()
-Entering state 21
-Stack now 0 1 4 7 21
-Reducing stack by rule 4 (line 67):
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
    $1 = nterm instructions ()
    $2 = nterm instruction ()
 -> $$ = nterm instructions ()
@@ -1217,9 +1200,9 @@ Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 20
-Stack now 0 1 4 7 20
-Reducing stack by rule 2 (line 63):
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
    $3 = nterm instructions ()
@@ -1227,7 +1210,7 @@ Reducing stack by rule 2 (line 63):
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 59):
+Reducing stack by rule 1 (line 58):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -1291,8 +1274,8 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -1335,27 +1318,26 @@ Reading a token
 --accepting rule at line 39(""")
 Next token is token tSTRING ()
 Shifting token tSTRING ()
-Entering state 11
-Stack now 0 1 4 6 13 11
-Reducing stack by rule 13 (line 82):
+Entering state 10
+Stack now 0 1 4 6 12 10
+Reducing stack by rule 13 (line 81):
    $1 = token tSTRING ()
 -> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 6 13 23
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46(")")
 Next token is token ')' ()
-Reducing stack by rule 10 (line 77):
-   $1 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token ')' ()
 Shifting token ')' ()
-Entering state 45
-Stack now 0 1 4 6 13 24 45
-Reducing stack by rule 7 (line 72):
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
    $1 = token '(' ()
    $2 = token tPRINTLN ()
    $3 = nterm exprs ()
@@ -1363,7 +1345,7 @@ Reducing stack by rule 7 (line 72):
 -> $$ = nterm instruction ()
 Entering state 8
 Stack now 0 1 4 8
-Reducing stack by rule 3 (line 66):
+Reducing stack by rule 3 (line 65):
    $1 = nterm instruction ()
 -> $$ = nterm instructions ()
 Entering state 7
@@ -1391,8 +1373,8 @@ Reading a token
 --accepting rule at line 34("return")
 Next token is token tRETURN ()
 Shifting token tRETURN ()
-Entering state 14
-Stack now 0 1 4 7 6 14
+Entering state 13
+Stack now 0 1 4 7 6 13
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -1401,27 +1383,27 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 7 6 14 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 26
-Stack now 0 1 4 7 6 14 26
+Entering state 24
+Stack now 0 1 4 7 6 13 24
 Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 46
-Stack now 0 1 4 7 6 14 26 46
-Reducing stack by rule 9 (line 74):
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
    $1 = token '(' ()
    $2 = token tRETURN ()
    $3 = nterm expr ()
    $4 = token ')' ()
 -> $$ = nterm instruction ()
-Entering state 21
-Stack now 0 1 4 7 21
-Reducing stack by rule 4 (line 67):
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
    $1 = nterm instructions ()
    $2 = nterm instruction ()
 -> $$ = nterm instructions ()
@@ -1436,9 +1418,9 @@ Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 20
-Stack now 0 1 4 7 20
-Reducing stack by rule 2 (line 63):
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
    $3 = nterm instructions ()
@@ -1446,7 +1428,7 @@ Reducing stack by rule 2 (line 63):
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 59):
+Reducing stack by rule 1 (line 58):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -1510,8 +1492,8 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -1544,27 +1526,26 @@ Reading a token
 --accepting rule at line 39(""")
 Next token is token tSTRING ()
 Shifting token tSTRING ()
-Entering state 11
-Stack now 0 1 4 6 13 11
-Reducing stack by rule 13 (line 82):
+Entering state 10
+Stack now 0 1 4 6 12 10
+Reducing stack by rule 13 (line 81):
    $1 = token tSTRING ()
 -> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 6 13 23
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46(")")
 Next token is token ')' ()
-Reducing stack by rule 10 (line 77):
-   $1 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token ')' ()
 Shifting token ')' ()
-Entering state 45
-Stack now 0 1 4 6 13 24 45
-Reducing stack by rule 7 (line 72):
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
    $1 = token '(' ()
    $2 = token tPRINTLN ()
    $3 = nterm exprs ()
@@ -1572,7 +1553,7 @@ Reducing stack by rule 7 (line 72):
 -> $$ = nterm instruction ()
 Entering state 8
 Stack now 0 1 4 8
-Reducing stack by rule 3 (line 66):
+Reducing stack by rule 3 (line 65):
    $1 = nterm instruction ()
 -> $$ = nterm instructions ()
 Entering state 7
@@ -1605,8 +1586,8 @@ Reading a token
 --accepting rule at line 34("return")
 Next token is token tRETURN ()
 Shifting token tRETURN ()
-Entering state 14
-Stack now 0 1 4 7 6 14
+Entering state 13
+Stack now 0 1 4 7 6 13
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -1615,27 +1596,27 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 7 6 14 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 26
-Stack now 0 1 4 7 6 14 26
+Entering state 24
+Stack now 0 1 4 7 6 13 24
 Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 46
-Stack now 0 1 4 7 6 14 26 46
-Reducing stack by rule 9 (line 74):
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
    $1 = token '(' ()
    $2 = token tRETURN ()
    $3 = nterm expr ()
    $4 = token ')' ()
 -> $$ = nterm instruction ()
-Entering state 21
-Stack now 0 1 4 7 21
-Reducing stack by rule 4 (line 67):
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
    $1 = nterm instructions ()
    $2 = nterm instruction ()
 -> $$ = nterm instructions ()
@@ -1650,9 +1631,9 @@ Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 20
-Stack now 0 1 4 7 20
-Reducing stack by rule 2 (line 63):
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
    $3 = nterm instructions ()
@@ -1660,7 +1641,7 @@ Reducing stack by rule 2 (line 63):
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 59):
+Reducing stack by rule 1 (line 58):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -1724,23 +1705,23 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46("+")
 Next token is token '+' ()
 Shifting token '+' ()
-Entering state 15
-Stack now 0 1 4 6 13 17 15
+Entering state 33
+Stack now 0 1 4 6 12 16 33
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1750,41 +1731,170 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 6 13 17 15 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 6 12 16 33 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 27
-Stack now 0 1 4 6 13 17 15 27
-Reducing stack by rule 15 (line 84):
-   $1 = token '+' ()
-   $2 = nterm expr ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 17 29
+Entering state 49
+Stack now 0 1 4 6 12 16 33 49
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --(end of buffer or a NUL)
 --accepting rule at line 44("2")
 Next token is token tINTEGER ()
-2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6 13 17
-Error: popping token '(' ()
-Stack now 0 1 4 6 13
-Error: popping token tPRINTLN ()
-Stack now 0 1 4 6
-Error: popping token '(' ()
-Stack now 0 1 4
-Error: popping token tPROGRAM ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token tINTEGER ()
-Stack now 0
-** Syntax errors in B-01-9-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 33 49 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 60
+Stack now 0 1 4 6 12 16 33 49 60
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 71
+Stack now 0 1 4 6 12 16 33 49 60 71
+Reducing stack by rule 16 (line 84):
+   $1 = token '(' ()
+   $2 = token '+' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 8
+Stack now 0 1 4 8
+Reducing stack by rule 3 (line 65):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("       
+	")
+--accepting rule at line 46("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 6
+Stack now 0 1 4 7 6
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 34("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 13
+Stack now 0 1 4 7 6 13
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 24
+Stack now 0 1 4 7 6 13 24
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" 
+")
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
+   $1 = token '(' ()
+   $2 = token tPROGRAM ()
+   $3 = nterm instructions ()
+   $4 = token ')' ()
+-> $$ = nterm program ()
+Entering state 3
+Stack now 0 3
+Reducing stack by rule 1 (line 58):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 5
+Stack now 0 2 5
+Stack now 0 2 5
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-02-10-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -1829,23 +1939,23 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46("+")
 Next token is token '+' ()
 Shifting token '+' ()
-Entering state 15
-Stack now 0 1 4 6 13 17 15
+Entering state 33
+Stack now 0 1 4 6 12 16 33
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1855,40 +1965,210 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 6 13 17 15 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 6 12 16 33 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 27
-Stack now 0 1 4 6 13 17 15 27
-Reducing stack by rule 15 (line 84):
-   $1 = token '+' ()
-   $2 = nterm expr ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 17 29
+Entering state 49
+Stack now 0 1 4 6 12 16 33 49
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
-2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6 13 17
-Error: popping token '(' ()
-Stack now 0 1 4 6 13
-Error: popping token tPRINTLN ()
-Stack now 0 1 4 6
-Error: popping token '(' ()
-Stack now 0 1 4
-Error: popping token tPROGRAM ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token '(' ()
-Stack now 0
-** Syntax errors in B-02-10-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Shifting token '(' ()
+Entering state 16
+Stack now 0 1 4 6 12 16 33 49 16
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46("*")
+Next token is token '*' ()
+Shifting token '*' ()
+Entering state 35
+Stack now 0 1 4 6 12 16 33 49 16 35
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("2")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 33 49 16 35 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 51
+Stack now 0 1 4 6 12 16 33 49 16 35 51
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("3")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 33 49 16 35 51 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 62
+Stack now 0 1 4 6 12 16 33 49 16 35 51 62
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 73
+Stack now 0 1 4 6 12 16 33 49 16 35 51 62 73
+Reducing stack by rule 18 (line 86):
+   $1 = token '(' ()
+   $2 = token '*' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 60
+Stack now 0 1 4 6 12 16 33 49 60
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 71
+Stack now 0 1 4 6 12 16 33 49 60 71
+Reducing stack by rule 16 (line 84):
+   $1 = token '(' ()
+   $2 = token '+' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 8
+Stack now 0 1 4 8
+Reducing stack by rule 3 (line 65):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" 
+	")
+--accepting rule at line 46("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 6
+Stack now 0 1 4 7 6
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 34("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 13
+Stack now 0 1 4 7 6 13
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 24
+Stack now 0 1 4 7 6 13 24
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" 
+")
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
+   $1 = token '(' ()
+   $2 = token tPROGRAM ()
+   $3 = nterm instructions ()
+   $4 = token ')' ()
+-> $$ = nterm program ()
+Entering state 3
+Stack now 0 3
+Reducing stack by rule 1 (line 58):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 5
+Stack now 0 2 5
+Stack now 0 2 5
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-03-11-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -1933,24 +2213,24 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --accepting rule at line 46("-")
 Next token is token '-' ()
 Shifting token '-' ()
-Entering state 16
-Stack now 0 1 4 6 13 17 16
+Entering state 34
+Stack now 0 1 4 6 12 16 34
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -1959,40 +2239,210 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 6 13 17 16 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 6 12 16 34 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 28
-Stack now 0 1 4 6 13 17 16 28
-Reducing stack by rule 14 (line 83):
-   $1 = token '-' ()
-   $2 = nterm expr ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 17 29
+Entering state 50
+Stack now 0 1 4 6 12 16 34 50
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
-2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6 13 17
-Error: popping token '(' ()
-Stack now 0 1 4 6 13
-Error: popping token tPRINTLN ()
-Stack now 0 1 4 6
-Error: popping token '(' ()
-Stack now 0 1 4
-Error: popping token tPROGRAM ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token '(' ()
-Stack now 0
-** Syntax errors in B-03-11-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Shifting token '(' ()
+Entering state 16
+Stack now 0 1 4 6 12 16 34 50 16
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46("*")
+Next token is token '*' ()
+Shifting token '*' ()
+Entering state 35
+Stack now 0 1 4 6 12 16 34 50 16 35
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("2")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 34 50 16 35 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 51
+Stack now 0 1 4 6 12 16 34 50 16 35 51
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("3")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 34 50 16 35 51 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 62
+Stack now 0 1 4 6 12 16 34 50 16 35 51 62
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 73
+Stack now 0 1 4 6 12 16 34 50 16 35 51 62 73
+Reducing stack by rule 18 (line 86):
+   $1 = token '(' ()
+   $2 = token '*' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 61
+Stack now 0 1 4 6 12 16 34 50 61
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 72
+Stack now 0 1 4 6 12 16 34 50 61 72
+Reducing stack by rule 17 (line 85):
+   $1 = token '(' ()
+   $2 = token '-' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 8
+Stack now 0 1 4 8
+Reducing stack by rule 3 (line 65):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" 
+	")
+--accepting rule at line 46("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 6
+Stack now 0 1 4 7 6
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 34("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 13
+Stack now 0 1 4 7 6 13
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 24
+Stack now 0 1 4 7 6 13 24
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" 
+")
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
+   $1 = token '(' ()
+   $2 = token tPROGRAM ()
+   $3 = nterm instructions ()
+   $4 = token ')' ()
+-> $$ = nterm program ()
+Entering state 3
+Stack now 0 3
+Reducing stack by rule 1 (line 58):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 5
+Stack now 0 2 5
+Stack now 0 2 5
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-04-12-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -2037,24 +2487,24 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --accepting rule at line 46("-")
 Next token is token '-' ()
 Shifting token '-' ()
-Entering state 16
-Stack now 0 1 4 6 13 17 16
+Entering state 34
+Stack now 0 1 4 6 12 16 34
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -2063,40 +2513,210 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 6 13 17 16 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 6 12 16 34 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 28
-Stack now 0 1 4 6 13 17 16 28
-Reducing stack by rule 14 (line 83):
-   $1 = token '-' ()
-   $2 = nterm expr ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 17 29
+Entering state 50
+Stack now 0 1 4 6 12 16 34 50
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
-2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6 13 17
-Error: popping token '(' ()
-Stack now 0 1 4 6 13
-Error: popping token tPRINTLN ()
-Stack now 0 1 4 6
-Error: popping token '(' ()
-Stack now 0 1 4
-Error: popping token tPROGRAM ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token '(' ()
-Stack now 0
-** Syntax errors in B-04-12-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Shifting token '(' ()
+Entering state 16
+Stack now 0 1 4 6 12 16 34 50 16
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46("+")
+Next token is token '+' ()
+Shifting token '+' ()
+Entering state 33
+Stack now 0 1 4 6 12 16 34 50 16 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("3")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 34 50 16 33 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 49
+Stack now 0 1 4 6 12 16 34 50 16 33 49
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("5")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 34 50 16 33 49 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 60
+Stack now 0 1 4 6 12 16 34 50 16 33 49 60
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 71
+Stack now 0 1 4 6 12 16 34 50 16 33 49 60 71
+Reducing stack by rule 16 (line 84):
+   $1 = token '(' ()
+   $2 = token '+' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 61
+Stack now 0 1 4 6 12 16 34 50 61
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 72
+Stack now 0 1 4 6 12 16 34 50 61 72
+Reducing stack by rule 17 (line 85):
+   $1 = token '(' ()
+   $2 = token '-' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 8
+Stack now 0 1 4 8
+Reducing stack by rule 3 (line 65):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" 
+	")
+--accepting rule at line 46("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 6
+Stack now 0 1 4 7 6
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 34("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 13
+Stack now 0 1 4 7 6 13
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 24
+Stack now 0 1 4 7 6 13 24
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" 
+")
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
+   $1 = token '(' ()
+   $2 = token tPROGRAM ()
+   $3 = nterm instructions ()
+   $4 = token ')' ()
+-> $$ = nterm program ()
+Entering state 3
+Stack now 0 3
+Reducing stack by rule 1 (line 58):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 5
+Stack now 0 2 5
+Stack now 0 2 5
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-05-13-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -2141,24 +2761,24 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --accepting rule at line 46("-")
 Next token is token '-' ()
 Shifting token '-' ()
-Entering state 16
-Stack now 0 1 4 6 13 17 16
+Entering state 34
+Stack now 0 1 4 6 12 16 34
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -2169,18 +2789,12 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 6 13 17 16 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 6 12 16 34 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 28
-Stack now 0 1 4 6 13 17 16 28
-Reducing stack by rule 14 (line 83):
-   $1 = token '-' ()
-   $2 = nterm expr ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 17 29
+Entering state 50
+Stack now 0 1 4 6 12 16 34 50
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -2189,23 +2803,154 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 44("100")
 Next token is token tINTEGER ()
-2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6 13 17
-Error: popping token '(' ()
-Stack now 0 1 4 6 13
-Error: popping token tPRINTLN ()
-Stack now 0 1 4 6
-Error: popping token '(' ()
-Stack now 0 1 4
-Error: popping token tPROGRAM ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token tINTEGER ()
-Stack now 0
-** Syntax errors in B-05-13-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 34 50 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 61
+Stack now 0 1 4 6 12 16 34 50 61
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 72
+Stack now 0 1 4 6 12 16 34 50 61 72
+Reducing stack by rule 17 (line 85):
+   $1 = token '(' ()
+   $2 = token '-' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 8
+Stack now 0 1 4 8
+Reducing stack by rule 3 (line 65):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("   
+	")
+--accepting rule at line 46("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 6
+Stack now 0 1 4 7 6
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 34("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 13
+Stack now 0 1 4 7 6 13
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 24
+Stack now 0 1 4 7 6 13 24
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" 
+")
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
+   $1 = token '(' ()
+   $2 = token tPROGRAM ()
+   $3 = nterm instructions ()
+   $4 = token ')' ()
+-> $$ = nterm program ()
+Entering state 3
+Stack now 0 3
+Reducing stack by rule 1 (line 58):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 5
+Stack now 0 2 5
+Stack now 0 2 5
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-06-14-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -2250,35 +2995,196 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46("/")
 Next token is token '/' ()
-2: syntax error
-Error: popping token '(' ()
-Stack now 0 1 4 6 13
-Error: popping token tPRINTLN ()
-Stack now 0 1 4 6
-Error: popping token '(' ()
-Stack now 0 1 4
-Error: popping token tPROGRAM ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token '/' ()
-Stack now 0
-** Syntax errors in B-06-14-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Shifting token '/' ()
+Entering state 36
+Stack now 0 1 4 6 12 16 36
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 44("100")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 36 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 52
+Stack now 0 1 4 6 12 16 36 52
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 44("100")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 36 52 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 63
+Stack now 0 1 4 6 12 16 36 52 63
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 74
+Stack now 0 1 4 6 12 16 36 52 63 74
+Reducing stack by rule 19 (line 87):
+   $1 = token '(' ()
+   $2 = token '/' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 8
+Stack now 0 1 4 8
+Reducing stack by rule 3 (line 65):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("   
+	")
+--accepting rule at line 46("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 6
+Stack now 0 1 4 7 6
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 34("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 13
+Stack now 0 1 4 7 6 13
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 24
+Stack now 0 1 4 7 6 13 24
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" 
+")
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
+   $1 = token '(' ()
+   $2 = token tPROGRAM ()
+   $3 = nterm instructions ()
+   $4 = token ')' ()
+-> $$ = nterm program ()
+Entering state 3
+Stack now 0 3
+Reducing stack by rule 1 (line 58):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 5
+Stack now 0 2 5
+Stack now 0 2 5
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-07-15-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -2323,35 +3229,196 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46("%")
 Next token is token '%' ()
-2: syntax error
-Error: popping token '(' ()
-Stack now 0 1 4 6 13
-Error: popping token tPRINTLN ()
-Stack now 0 1 4 6
-Error: popping token '(' ()
-Stack now 0 1 4
-Error: popping token tPROGRAM ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token '%' ()
-Stack now 0
-** Syntax errors in B-07-15-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Shifting token '%' ()
+Entering state 37
+Stack now 0 1 4 6 12 16 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 44("150")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 37 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 53
+Stack now 0 1 4 6 12 16 37 53
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 44("100")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 37 53 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 64
+Stack now 0 1 4 6 12 16 37 53 64
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 75
+Stack now 0 1 4 6 12 16 37 53 64 75
+Reducing stack by rule 20 (line 88):
+   $1 = token '(' ()
+   $2 = token '%' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 8
+Stack now 0 1 4 8
+Reducing stack by rule 3 (line 65):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("   
+	")
+--accepting rule at line 46("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 6
+Stack now 0 1 4 7 6
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 34("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 13
+Stack now 0 1 4 7 6 13
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 24
+Stack now 0 1 4 7 6 13 24
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" 
+")
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
+   $1 = token '(' ()
+   $2 = token tPROGRAM ()
+   $3 = nterm instructions ()
+   $4 = token ')' ()
+-> $$ = nterm program ()
+Entering state 3
+Stack now 0 3
+Reducing stack by rule 1 (line 58):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 5
+Stack now 0 2 5
+Stack now 0 2 5
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-08-16-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -2396,36 +3463,195 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --accepting rule at line 46("<")
 Next token is token '<' ()
-2: syntax error
-Error: popping token '(' ()
-Stack now 0 1 4 6 13
-Error: popping token tPRINTLN ()
-Stack now 0 1 4 6
-Error: popping token '(' ()
-Stack now 0 1 4
-Error: popping token tPROGRAM ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token '<' ()
-Stack now 0
-** Syntax errors in B-08-16-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Shifting token '<' ()
+Entering state 32
+Stack now 0 1 4 6 12 16 32
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 44("10")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 32 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 48
+Stack now 0 1 4 6 12 16 32 48
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("3")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 32 48 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 59
+Stack now 0 1 4 6 12 16 32 48 59
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 70
+Stack now 0 1 4 6 12 16 32 48 59 70
+Reducing stack by rule 21 (line 89):
+   $1 = token '(' ()
+   $2 = token '<' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 8
+Stack now 0 1 4 8
+Reducing stack by rule 3 (line 65):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("     
+	")
+--accepting rule at line 46("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 6
+Stack now 0 1 4 7 6
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 34("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 13
+Stack now 0 1 4 7 6 13
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 24
+Stack now 0 1 4 7 6 13 24
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" 
+")
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
+   $1 = token '(' ()
+   $2 = token tPROGRAM ()
+   $3 = nterm instructions ()
+   $4 = token ')' ()
+-> $$ = nterm program ()
+Entering state 3
+Stack now 0 3
+Reducing stack by rule 1 (line 58):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 5
+Stack now 0 2 5
+Stack now 0 2 5
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-09-17-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -2470,36 +3696,195 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --accepting rule at line 46(">")
 Next token is token '>' ()
-2: syntax error
-Error: popping token '(' ()
-Stack now 0 1 4 6 13
-Error: popping token tPRINTLN ()
-Stack now 0 1 4 6
-Error: popping token '(' ()
-Stack now 0 1 4
-Error: popping token tPROGRAM ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token '>' ()
-Stack now 0
-** Syntax errors in B-09-17-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Shifting token '>' ()
+Entering state 31
+Stack now 0 1 4 6 12 16 31
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("3")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 31 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 47
+Stack now 0 1 4 6 12 16 31 47
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 44("10")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 31 47 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 58
+Stack now 0 1 4 6 12 16 31 47 58
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 69
+Stack now 0 1 4 6 12 16 31 47 58 69
+Reducing stack by rule 22 (line 90):
+   $1 = token '(' ()
+   $2 = token '>' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 8
+Stack now 0 1 4 8
+Reducing stack by rule 3 (line 65):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("     
+	")
+--accepting rule at line 46("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 6
+Stack now 0 1 4 7 6
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 34("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 13
+Stack now 0 1 4 7 6 13
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 24
+Stack now 0 1 4 7 6 13 24
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" 
+")
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
+   $1 = token '(' ()
+   $2 = token tPROGRAM ()
+   $3 = nterm instructions ()
+   $4 = token ')' ()
+-> $$ = nterm program ()
+Entering state 3
+Stack now 0 3
+Reducing stack by rule 1 (line 58):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 5
+Stack now 0 2 5
+Stack now 0 2 5
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-10-18-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -2544,16 +3929,16 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 50("~")
@@ -2603,16 +3988,16 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 50("~")
@@ -2662,36 +4047,195 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --accepting rule at line 23("==")
 Next token is token tEQ ()
-2: syntax error
-Error: popping token '(' ()
-Stack now 0 1 4 6 13
-Error: popping token tPRINTLN ()
-Stack now 0 1 4 6
-Error: popping token '(' ()
-Stack now 0 1 4
-Error: popping token tPROGRAM ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token tEQ ()
-Stack now 0
-** Syntax errors in B-12-20-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Shifting token tEQ ()
+Entering state 29
+Stack now 0 1 4 6 12 16 29
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 44("10")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 29 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 45
+Stack now 0 1 4 6 12 16 29 45
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("3")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 6 12 16 29 45 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 56
+Stack now 0 1 4 6 12 16 29 45 56
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 67
+Stack now 0 1 4 6 12 16 29 45 56 67
+Reducing stack by rule 26 (line 94):
+   $1 = token '(' ()
+   $2 = token tEQ ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 41
+Stack now 0 1 4 6 12 22 41
+Reducing stack by rule 7 (line 71):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 8
+Stack now 0 1 4 8
+Reducing stack by rule 3 (line 65):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("    
+	")
+--accepting rule at line 46("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 6
+Stack now 0 1 4 7 6
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 34("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 13
+Stack now 0 1 4 7 6 13
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 48(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 44("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 9
+Stack now 0 1 4 7 6 13 9
+Reducing stack by rule 12 (line 80):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 24
+Stack now 0 1 4 7 6 13 24
+Reading a token
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 42
+Stack now 0 1 4 7 6 13 24 42
+Reducing stack by rule 9 (line 73):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 19
+Stack now 0 1 4 7 19
+Reducing stack by rule 4 (line 66):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 7
+Stack now 0 1 4 7
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48(" 
+")
+--accepting rule at line 46(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 18
+Stack now 0 1 4 7 18
+Reducing stack by rule 2 (line 62):
+   $1 = token '(' ()
+   $2 = token tPROGRAM ()
+   $3 = nterm instructions ()
+   $4 = token ')' ()
+-> $$ = nterm program ()
+Entering state 3
+Stack now 0 3
+Reducing stack by rule 1 (line 58):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 48("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 5
+Stack now 0 2 5
+Stack now 0 2 5
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-13-21-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -2736,16 +4280,16 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 50("~")
@@ -2795,16 +4339,16 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 50("&")
@@ -2854,16 +4398,16 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 50("|")
@@ -2913,23 +4457,23 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46("+")
 Next token is token '+' ()
 Shifting token '+' ()
-Entering state 15
-Stack now 0 1 4 6 13 17 15
+Entering state 33
+Stack now 0 1 4 6 12 16 33
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2939,159 +4483,34 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 6 13 17 15 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 6 12 16 33 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 27
-Stack now 0 1 4 6 13 17 15 27
-Reducing stack by rule 15 (line 84):
-   $1 = token '+' ()
-   $2 = nterm expr ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 17 29
+Entering state 49
+Stack now 0 1 4 6 12 16 33 49
 Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
-Shifting token ')' ()
-Entering state 47
-Stack now 0 1 4 6 13 17 29 47
-Reducing stack by rule 27 (line 96):
-   $1 = token '(' ()
-   $2 = nterm expr ()
-   $3 = token ')' ()
--> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 6 13 23
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 46(")")
-Next token is token ')' ()
-Reducing stack by rule 10 (line 77):
-   $1 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 45
-Stack now 0 1 4 6 13 24 45
-Reducing stack by rule 7 (line 72):
-   $1 = token '(' ()
-   $2 = token tPRINTLN ()
-   $3 = nterm exprs ()
-   $4 = token ')' ()
--> $$ = nterm instruction ()
-Entering state 8
-Stack now 0 1 4 8
-Reducing stack by rule 3 (line 66):
-   $1 = nterm instruction ()
--> $$ = nterm instructions ()
-Entering state 7
-Stack now 0 1 4 7
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48("     
-	")
---accepting rule at line 46("(")
-Next token is token '(' ()
-Shifting token '(' ()
-Entering state 6
-Stack now 0 1 4 7 6
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 34("return")
-Next token is token tRETURN ()
-Shifting token tRETURN ()
-Entering state 14
-Stack now 0 1 4 7 6 14
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 44("0")
-Next token is token tINTEGER ()
-Shifting token tINTEGER ()
-Entering state 9
-Stack now 0 1 4 7 6 14 9
-Reducing stack by rule 12 (line 81):
-   $1 = token tINTEGER ()
--> $$ = nterm expr ()
-Entering state 26
-Stack now 0 1 4 7 6 14 26
-Reading a token
---accepting rule at line 46(")")
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 46
-Stack now 0 1 4 7 6 14 26 46
-Reducing stack by rule 9 (line 74):
-   $1 = token '(' ()
-   $2 = token tRETURN ()
-   $3 = nterm expr ()
-   $4 = token ')' ()
--> $$ = nterm instruction ()
-Entering state 21
-Stack now 0 1 4 7 21
-Reducing stack by rule 4 (line 67):
-   $1 = nterm instructions ()
-   $2 = nterm instruction ()
--> $$ = nterm instructions ()
-Entering state 7
-Stack now 0 1 4 7
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48(" 
-")
---accepting rule at line 46(")")
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 20
-Stack now 0 1 4 7 20
-Reducing stack by rule 2 (line 63):
-   $1 = token '(' ()
-   $2 = token tPROGRAM ()
-   $3 = nterm instructions ()
-   $4 = token ')' ()
--> $$ = nterm program ()
-Entering state 3
-Stack now 0 3
-Reducing stack by rule 1 (line 59):
-   $1 = nterm program ()
--> $$ = nterm file ()
-Entering state 2
-Stack now 0 2
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48("
-")
---(end of buffer or a NUL)
---EOF (start condition 0)
-Now at end of input.
-Shifting token "end of file" ()
-Entering state 5
-Stack now 0 2 5
-Stack now 0 2 5
-Cleanup: popping token "end of file" ()
-Cleanup: popping nterm file ()
-Compiler: failed (139/0). Generated empty asm file
+2: syntax error
+Error: popping nterm expr ()
+Stack now 0 1 4 6 12 16 33
+Error: popping token '+' ()
+Stack now 0 1 4 6 12 16
+Error: popping token '(' ()
+Stack now 0 1 4 6 12
+Error: popping token tPRINTLN ()
+Stack now 0 1 4 6
+Error: popping token '(' ()
+Stack now 0 1 4
+Error: popping token tPROGRAM ()
+Stack now 0 1
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token ')' ()
+Stack now 0
+** Syntax errors in B-16-24-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-17-25-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -3136,40 +4555,40 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --accepting rule at line 46("-")
 Next token is token '-' ()
 Shifting token '-' ()
-Entering state 16
-Stack now 0 1 4 6 13 17 16
+Entering state 34
+Stack now 0 1 4 6 12 16 34
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17 16 17
+Entering state 16
+Stack now 0 1 4 6 12 16 34 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --accepting rule at line 46("-")
 Next token is token '-' ()
 Shifting token '-' ()
-Entering state 16
-Stack now 0 1 4 6 13 17 16 17 16
+Entering state 34
+Stack now 0 1 4 6 12 16 34 16 34
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -3178,175 +4597,38 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 6 13 17 16 17 16 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 6 12 16 34 16 34 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 28
-Stack now 0 1 4 6 13 17 16 17 16 28
-Reducing stack by rule 14 (line 83):
-   $1 = token '-' ()
-   $2 = nterm expr ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 17 16 17 29
+Entering state 50
+Stack now 0 1 4 6 12 16 34 16 34 50
 Reading a token
 --accepting rule at line 46(")")
 Next token is token ')' ()
-Shifting token ')' ()
-Entering state 47
-Stack now 0 1 4 6 13 17 16 17 29 47
-Reducing stack by rule 27 (line 96):
-   $1 = token '(' ()
-   $2 = nterm expr ()
-   $3 = token ')' ()
--> $$ = nterm expr ()
-Entering state 28
-Stack now 0 1 4 6 13 17 16 28
-Reducing stack by rule 14 (line 83):
-   $1 = token '-' ()
-   $2 = nterm expr ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 17 29
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 46(")")
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 47
-Stack now 0 1 4 6 13 17 29 47
-Reducing stack by rule 27 (line 96):
-   $1 = token '(' ()
-   $2 = nterm expr ()
-   $3 = token ')' ()
--> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 6 13 23
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 46(")")
-Next token is token ')' ()
-Reducing stack by rule 10 (line 77):
-   $1 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 45
-Stack now 0 1 4 6 13 24 45
-Reducing stack by rule 7 (line 72):
-   $1 = token '(' ()
-   $2 = token tPRINTLN ()
-   $3 = nterm exprs ()
-   $4 = token ')' ()
--> $$ = nterm instruction ()
-Entering state 8
-Stack now 0 1 4 8
-Reducing stack by rule 3 (line 66):
-   $1 = nterm instruction ()
--> $$ = nterm instructions ()
-Entering state 7
-Stack now 0 1 4 7
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48(" 
-	")
---accepting rule at line 46("(")
-Next token is token '(' ()
-Shifting token '(' ()
-Entering state 6
-Stack now 0 1 4 7 6
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 34("return")
-Next token is token tRETURN ()
-Shifting token tRETURN ()
-Entering state 14
-Stack now 0 1 4 7 6 14
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 44("0")
-Next token is token tINTEGER ()
-Shifting token tINTEGER ()
-Entering state 9
-Stack now 0 1 4 7 6 14 9
-Reducing stack by rule 12 (line 81):
-   $1 = token tINTEGER ()
--> $$ = nterm expr ()
-Entering state 26
-Stack now 0 1 4 7 6 14 26
-Reading a token
---accepting rule at line 46(")")
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 46
-Stack now 0 1 4 7 6 14 26 46
-Reducing stack by rule 9 (line 74):
-   $1 = token '(' ()
-   $2 = token tRETURN ()
-   $3 = nterm expr ()
-   $4 = token ')' ()
--> $$ = nterm instruction ()
-Entering state 21
-Stack now 0 1 4 7 21
-Reducing stack by rule 4 (line 67):
-   $1 = nterm instructions ()
-   $2 = nterm instruction ()
--> $$ = nterm instructions ()
-Entering state 7
-Stack now 0 1 4 7
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48(" 
-")
---accepting rule at line 46(")")
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 20
-Stack now 0 1 4 7 20
-Reducing stack by rule 2 (line 63):
-   $1 = token '(' ()
-   $2 = token tPROGRAM ()
-   $3 = nterm instructions ()
-   $4 = token ')' ()
--> $$ = nterm program ()
-Entering state 3
-Stack now 0 3
-Reducing stack by rule 1 (line 59):
-   $1 = nterm program ()
--> $$ = nterm file ()
-Entering state 2
-Stack now 0 2
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48("
-")
---(end of buffer or a NUL)
---EOF (start condition 0)
-Now at end of input.
-Shifting token "end of file" ()
-Entering state 5
-Stack now 0 2 5
-Stack now 0 2 5
-Cleanup: popping token "end of file" ()
-Cleanup: popping nterm file ()
-Compiler: failed (139/0). Generated empty asm file
+2: syntax error
+Error: popping nterm expr ()
+Stack now 0 1 4 6 12 16 34 16 34
+Error: popping token '-' ()
+Stack now 0 1 4 6 12 16 34 16
+Error: popping token '(' ()
+Stack now 0 1 4 6 12 16 34
+Error: popping token '-' ()
+Stack now 0 1 4 6 12 16
+Error: popping token '(' ()
+Stack now 0 1 4 6 12
+Error: popping token tPRINTLN ()
+Stack now 0 1 4 6
+Error: popping token '(' ()
+Stack now 0 1 4
+Error: popping token tPROGRAM ()
+Stack now 0 1
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token ')' ()
+Stack now 0
+** Syntax errors in B-17-25-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-20-26-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -3587,8 +4869,8 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -3597,161 +4879,37 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 6 13 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 6 12 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 6 13 23
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --accepting rule at line 36("xF")
 Next token is token tIDENTIFIER ()
-Reducing stack by rule 10 (line 77):
-   $1 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 13 24 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 13 24 19
-Reading a token
---accepting rule at line 46(")")
-Next token is token ')' ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 44
-Stack now 0 1 4 6 13 24 44
-Next token is token ')' ()
-Reducing stack by rule 11 (line 78):
-   $1 = nterm exprs ()
-   $2 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 45
-Stack now 0 1 4 6 13 24 45
-Reducing stack by rule 7 (line 72):
-   $1 = token '(' ()
-   $2 = token tPRINTLN ()
-   $3 = nterm exprs ()
-   $4 = token ')' ()
--> $$ = nterm instruction ()
-Entering state 8
-Stack now 0 1 4 8
-Reducing stack by rule 3 (line 66):
-   $1 = nterm instruction ()
--> $$ = nterm instructions ()
-Entering state 7
-Stack now 0 1 4 7
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48(" 
-	")
---accepting rule at line 46("(")
-Next token is token '(' ()
-Shifting token '(' ()
-Entering state 6
-Stack now 0 1 4 7 6
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 34("return")
-Next token is token tRETURN ()
-Shifting token tRETURN ()
-Entering state 14
-Stack now 0 1 4 7 6 14
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 44("0")
-Next token is token tINTEGER ()
-Shifting token tINTEGER ()
-Entering state 9
-Stack now 0 1 4 7 6 14 9
-Reducing stack by rule 12 (line 81):
-   $1 = token tINTEGER ()
--> $$ = nterm expr ()
-Entering state 26
-Stack now 0 1 4 7 6 14 26
-Reading a token
---accepting rule at line 46(")")
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 46
-Stack now 0 1 4 7 6 14 26 46
-Reducing stack by rule 9 (line 74):
-   $1 = token '(' ()
-   $2 = token tRETURN ()
-   $3 = nterm expr ()
-   $4 = token ')' ()
--> $$ = nterm instruction ()
-Entering state 21
-Stack now 0 1 4 7 21
-Reducing stack by rule 4 (line 67):
-   $1 = nterm instructions ()
-   $2 = nterm instruction ()
--> $$ = nterm instructions ()
-Entering state 7
-Stack now 0 1 4 7
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48(" 
-")
---accepting rule at line 46(")")
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 20
-Stack now 0 1 4 7 20
-Reducing stack by rule 2 (line 63):
-   $1 = token '(' ()
-   $2 = token tPROGRAM ()
-   $3 = nterm instructions ()
-   $4 = token ')' ()
--> $$ = nterm program ()
-Entering state 3
-Stack now 0 3
-Reducing stack by rule 1 (line 59):
-   $1 = nterm program ()
--> $$ = nterm file ()
-Entering state 2
-Stack now 0 2
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48("
-")
---(end of buffer or a NUL)
---EOF (start condition 0)
-Now at end of input.
-Shifting token "end of file" ()
-Entering state 5
-Stack now 0 2 5
-Stack now 0 2 5
-Cleanup: popping token "end of file" ()
-Cleanup: popping nterm file ()
-Compiler: failed (139/0). Generated empty asm file
+2: syntax error
+Error: popping nterm exprs ()
+Stack now 0 1 4 6 12
+Error: popping token tPRINTLN ()
+Stack now 0 1 4 6
+Error: popping token '(' ()
+Stack now 0 1 4
+Error: popping token tPROGRAM ()
+Stack now 0 1
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tIDENTIFIER ()
+Stack now 0
+** Syntax errors in B-24-30-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-25-31-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -3796,8 +4954,8 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -3806,255 +4964,38 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 6 13 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 6 12 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 6 13 23
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --accepting rule at line 36("x2f")
 Next token is token tIDENTIFIER ()
-Reducing stack by rule 10 (line 77):
-   $1 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 13 24 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 13 24 19
-Reading a token
---accepting rule at line 46(")")
-Next token is token ')' ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 44
-Stack now 0 1 4 6 13 24 44
-Next token is token ')' ()
-Reducing stack by rule 11 (line 78):
-   $1 = nterm exprs ()
-   $2 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 45
-Stack now 0 1 4 6 13 24 45
-Reducing stack by rule 7 (line 72):
-   $1 = token '(' ()
-   $2 = token tPRINTLN ()
-   $3 = nterm exprs ()
-   $4 = token ')' ()
--> $$ = nterm instruction ()
-Entering state 8
-Stack now 0 1 4 8
-Reducing stack by rule 3 (line 66):
-   $1 = nterm instruction ()
--> $$ = nterm instructions ()
-Entering state 7
-Stack now 0 1 4 7
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48(" 
-	")
---accepting rule at line 46("(")
-Next token is token '(' ()
-Shifting token '(' ()
-Entering state 6
-Stack now 0 1 4 7 6
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 30("println")
-Next token is token tPRINTLN ()
-Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 7 6 13
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 44("0")
-Next token is token tINTEGER ()
-Shifting token tINTEGER ()
-Entering state 9
-Stack now 0 1 4 7 6 13 9
-Reducing stack by rule 12 (line 81):
-   $1 = token tINTEGER ()
--> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 7 6 13 23
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 36("x2f")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 10 (line 77):
-   $1 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 7 6 13 24
-Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 7 6 13 24 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 7 6 13 24 19
-Reading a token
---accepting rule at line 46(")")
-Next token is token ')' ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 44
-Stack now 0 1 4 7 6 13 24 44
-Next token is token ')' ()
-Reducing stack by rule 11 (line 78):
-   $1 = nterm exprs ()
-   $2 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 7 6 13 24
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 45
-Stack now 0 1 4 7 6 13 24 45
-Reducing stack by rule 7 (line 72):
-   $1 = token '(' ()
-   $2 = token tPRINTLN ()
-   $3 = nterm exprs ()
-   $4 = token ')' ()
--> $$ = nterm instruction ()
-Entering state 21
-Stack now 0 1 4 7 21
-Reducing stack by rule 4 (line 67):
-   $1 = nterm instructions ()
-   $2 = nterm instruction ()
--> $$ = nterm instructions ()
-Entering state 7
-Stack now 0 1 4 7
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48(" 
-	")
---accepting rule at line 46("(")
-Next token is token '(' ()
-Shifting token '(' ()
-Entering state 6
-Stack now 0 1 4 7 6
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 34("return")
-Next token is token tRETURN ()
-Shifting token tRETURN ()
-Entering state 14
-Stack now 0 1 4 7 6 14
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 44("0")
-Next token is token tINTEGER ()
-Shifting token tINTEGER ()
-Entering state 9
-Stack now 0 1 4 7 6 14 9
-Reducing stack by rule 12 (line 81):
-   $1 = token tINTEGER ()
--> $$ = nterm expr ()
-Entering state 26
-Stack now 0 1 4 7 6 14 26
-Reading a token
---accepting rule at line 46(")")
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 46
-Stack now 0 1 4 7 6 14 26 46
-Reducing stack by rule 9 (line 74):
-   $1 = token '(' ()
-   $2 = token tRETURN ()
-   $3 = nterm expr ()
-   $4 = token ')' ()
--> $$ = nterm instruction ()
-Entering state 21
-Stack now 0 1 4 7 21
-Reducing stack by rule 4 (line 67):
-   $1 = nterm instructions ()
-   $2 = nterm instruction ()
--> $$ = nterm instructions ()
-Entering state 7
-Stack now 0 1 4 7
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48(" 
-")
---accepting rule at line 46(")")
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 20
-Stack now 0 1 4 7 20
-Reducing stack by rule 2 (line 63):
-   $1 = token '(' ()
-   $2 = token tPROGRAM ()
-   $3 = nterm instructions ()
-   $4 = token ')' ()
--> $$ = nterm program ()
-Entering state 3
-Stack now 0 3
-Reducing stack by rule 1 (line 59):
-   $1 = nterm program ()
--> $$ = nterm file ()
-Entering state 2
-Stack now 0 2
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48("
-")
---(end of buffer or a NUL)
---EOF (start condition 0)
-Now at end of input.
-Shifting token "end of file" ()
-Entering state 5
-Stack now 0 2 5
-Stack now 0 2 5
-Cleanup: popping token "end of file" ()
-Cleanup: popping nterm file ()
-Compiler: failed (139/0). Generated empty asm file
+2: syntax error
+Error: popping nterm exprs ()
+Stack now 0 1 4 6 12
+Error: popping token tPRINTLN ()
+Stack now 0 1 4 6
+Error: popping token '(' ()
+Stack now 0 1 4
+Error: popping token tPROGRAM ()
+Stack now 0 1
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tIDENTIFIER ()
+Stack now 0
+** Syntax errors in B-25-31-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-01-32-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
@@ -4796,29 +5737,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("int")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 36("x")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 18
-Stack now 0 1 4 6 18
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6
 Error: popping token '(' ()
 Stack now 0 1 4
 Error: popping token tPROGRAM ()
@@ -4868,29 +5787,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("int")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 36("x")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 18
-Stack now 0 1 4 6 18
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6
 Error: popping token '(' ()
 Stack now 0 1 4
 Error: popping token tPROGRAM ()
@@ -4940,29 +5837,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("int")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 36("x")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 18
-Stack now 0 1 4 6 18
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6
 Error: popping token '(' ()
 Stack now 0 1 4
 Error: popping token tPROGRAM ()
@@ -5012,29 +5887,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("var")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 36("x")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 18
-Stack now 0 1 4 6 18
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6
 Error: popping token '(' ()
 Stack now 0 1 4
 Error: popping token tPROGRAM ()
@@ -5084,29 +5937,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("var")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 36("x")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 18
-Stack now 0 1 4 6 18
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6
 Error: popping token '(' ()
 Stack now 0 1 4
 Error: popping token tPROGRAM ()
@@ -5156,29 +5987,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("var")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 36("x")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 18
-Stack now 0 1 4 6 18
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6
 Error: popping token '(' ()
 Stack now 0 1 4
 Error: popping token tPROGRAM ()
@@ -5228,29 +6037,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("int")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 36("y")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 18
-Stack now 0 1 4 6 18
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6
 Error: popping token '(' ()
 Stack now 0 1 4
 Error: popping token tPROGRAM ()
@@ -5300,29 +6087,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("int")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 36("y")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 18
-Stack now 0 1 4 6 18
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6
 Error: popping token '(' ()
 Stack now 0 1 4
 Error: popping token tPROGRAM ()
@@ -5372,29 +6137,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("int")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 36("x")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 18
-Stack now 0 1 4 6 18
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6
 Error: popping token '(' ()
 Stack now 0 1 4
 Error: popping token tPROGRAM ()
@@ -5449,16 +6192,16 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -5469,31 +6212,9 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("sizeof")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 13 17 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 13 17 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 44("1")
-Next token is token tINTEGER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 17 29
-Next token is token tINTEGER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6 13 17
 Error: popping token '(' ()
-Stack now 0 1 4 6 13
+Stack now 0 1 4 6 12
 Error: popping token tPRINTLN ()
 Stack now 0 1 4 6
 Error: popping token '(' ()
@@ -5502,7 +6223,7 @@ Error: popping token tPROGRAM ()
 Stack now 0 1
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tINTEGER ()
+Cleanup: discarding lookahead token tIDENTIFIER ()
 Stack now 0
 ** Syntax errors in G-01-70-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
@@ -5550,16 +6271,16 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -5570,31 +6291,9 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("sizeof")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 13 17 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 13 17 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 44("1")
-Next token is token tINTEGER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 17 29
-Next token is token tINTEGER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6 13 17
 Error: popping token '(' ()
-Stack now 0 1 4 6 13
+Stack now 0 1 4 6 12
 Error: popping token tPRINTLN ()
 Stack now 0 1 4 6
 Error: popping token '(' ()
@@ -5603,7 +6302,7 @@ Error: popping token tPROGRAM ()
 Stack now 0 1
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tINTEGER ()
+Cleanup: discarding lookahead token tIDENTIFIER ()
 Stack now 0
 ** Syntax errors in G-02-71-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
@@ -5651,16 +6350,16 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -5671,34 +6370,9 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("sizeof")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 13 17 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 13 17 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 36("null")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 17 29
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6 13 17
 Error: popping token '(' ()
-Stack now 0 1 4 6 13
+Stack now 0 1 4 6 12
 Error: popping token tPRINTLN ()
 Stack now 0 1 4 6
 Error: popping token '(' ()
@@ -5755,16 +6429,16 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -5775,38 +6449,9 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("sizeof")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 13 17 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 13 17 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---accepting rule at line 38(""")
---(end of buffer or a NUL)
---accepting rule at line 41("o")
---(end of buffer or a NUL)
---accepting rule at line 41("l")
---(end of buffer or a NUL)
---accepting rule at line 41("á")
---(end of buffer or a NUL)
---accepting rule at line 39(""")
-Next token is token tSTRING ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 17 29
-Next token is token tSTRING ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6 13 17
 Error: popping token '(' ()
-Stack now 0 1 4 6 13
+Stack now 0 1 4 6 12
 Error: popping token tPRINTLN ()
 Stack now 0 1 4 6
 Error: popping token '(' ()
@@ -5815,7 +6460,7 @@ Error: popping token tPROGRAM ()
 Stack now 0 1
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tSTRING ()
+Cleanup: discarding lookahead token tIDENTIFIER ()
 Stack now 0
 ** Syntax errors in G-04-73-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
@@ -6734,29 +7379,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("double")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 36("r")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 18
-Stack now 0 1 4 6 18
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6
 Error: popping token '(' ()
 Stack now 0 1 4
 Error: popping token tPROGRAM ()
@@ -6936,8 +7559,8 @@ Reading a token
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 17
+Entering state 16
+Stack now 0 1 4 6 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -6946,42 +7569,8 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("void")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 17 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 17 19
-Reading a token
---accepting rule at line 46(")")
-Next token is token ')' ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 17 29
-Next token is token ')' ()
-Shifting token ')' ()
-Entering state 47
-Stack now 0 1 4 6 17 29 47
-Reducing stack by rule 27 (line 96):
-   $1 = token '(' ()
-   $2 = nterm expr ()
-   $3 = token ')' ()
--> $$ = nterm expr ()
-Entering state 18
-Stack now 0 1 4 6 18
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 36("f")
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
+Error: popping token '(' ()
 Stack now 0 1 4 6
 Error: popping token '(' ()
 Stack now 0 1 4
@@ -7152,29 +7741,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("int")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 36("i")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 18
-Stack now 0 1 4 6 18
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6
 Error: popping token '(' ()
 Stack now 0 1 4
 Error: popping token tPROGRAM ()
@@ -7224,29 +7791,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("int")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---(end of buffer or a NUL)
---accepting rule at line 36("i")
-Next token is token tIDENTIFIER ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 18
-Stack now 0 1 4 6 18
-Next token is token tIDENTIFIER ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6
 Error: popping token '(' ()
 Stack now 0 1 4
 Error: popping token tPROGRAM ()
@@ -7301,8 +7846,8 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
@@ -7311,33 +7856,32 @@ Reading a token
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 9
-Stack now 0 1 4 6 13 9
-Reducing stack by rule 12 (line 81):
+Stack now 0 1 4 6 12 9
+Reducing stack by rule 12 (line 80):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 23
-Stack now 0 1 4 6 13 23
+Entering state 21
+Stack now 0 1 4 6 12 21
+Reducing stack by rule 10 (line 76):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 22
+Stack now 0 1 4 6 12 22
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
-Reducing stack by rule 10 (line 77):
-   $1 = nterm expr ()
--> $$ = nterm exprs ()
-Entering state 24
-Stack now 0 1 4 6 13 24
-Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 24 17
+Entering state 16
+Stack now 0 1 4 6 12 22 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46("+")
 Next token is token '+' ()
 Shifting token '+' ()
-Entering state 15
-Stack now 0 1 4 6 13 24 17 15
+Entering state 33
+Stack now 0 1 4 6 12 22 16 33
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -7345,59 +7889,21 @@ Reading a token
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 24 17 15 17
+Entering state 16
+Stack now 0 1 4 6 12 22 16 33 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
-Next token is token '(' ()
-Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 24 17 15 17 17
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 36("function")
-Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 13 24 17 15 17 17 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 13 24 17 15 17 17 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---accepting rule at line 46("(")
-Next token is token '(' ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 24 17 15 17 17 29
 Next token is token '(' ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6 13 24 17 15 17 17
 Error: popping token '(' ()
-Stack now 0 1 4 6 13 24 17 15 17
-Error: popping token '(' ()
-Stack now 0 1 4 6 13 24 17 15
+Stack now 0 1 4 6 12 22 16 33
 Error: popping token '+' ()
-Stack now 0 1 4 6 13 24 17
+Stack now 0 1 4 6 12 22 16
 Error: popping token '(' ()
-Stack now 0 1 4 6 13 24
+Stack now 0 1 4 6 12 22
 Error: popping nterm exprs ()
-Stack now 0 1 4 6 13
+Stack now 0 1 4 6 12
 Error: popping token tPRINTLN ()
 Stack now 0 1 4 6
 Error: popping token '(' ()
@@ -7454,23 +7960,23 @@ Reading a token
 --accepting rule at line 30("println")
 Next token is token tPRINTLN ()
 Shifting token tPRINTLN ()
-Entering state 13
-Stack now 0 1 4 6 13
+Entering state 12
+Stack now 0 1 4 6 12
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 48(" ")
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17
+Entering state 16
+Stack now 0 1 4 6 12 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46("+")
 Next token is token '+' ()
 Shifting token '+' ()
-Entering state 15
-Stack now 0 1 4 6 13 17 15
+Entering state 33
+Stack now 0 1 4 6 12 16 33
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -7478,57 +7984,19 @@ Reading a token
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17 15 17
+Entering state 16
+Stack now 0 1 4 6 12 16 33 16
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 46("(")
-Next token is token '(' ()
-Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 13 17 15 17 17
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 36("function")
-Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 13 17 15 17 17 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 13 17 15 17 17 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---accepting rule at line 46("(")
-Next token is token '(' ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 13 17 15 17 17 29
 Next token is token '(' ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6 13 17 15 17 17
 Error: popping token '(' ()
-Stack now 0 1 4 6 13 17 15 17
-Error: popping token '(' ()
-Stack now 0 1 4 6 13 17 15
+Stack now 0 1 4 6 12 16 33
 Error: popping token '+' ()
-Stack now 0 1 4 6 13 17
+Stack now 0 1 4 6 12 16
 Error: popping token '(' ()
-Stack now 0 1 4 6 13
+Stack now 0 1 4 6 12
 Error: popping token tPRINTLN ()
 Stack now 0 1 4 6
 Error: popping token '(' ()
@@ -7578,8 +8046,8 @@ Reading a token
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 17
+Entering state 16
+Stack now 0 1 4 6 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -7587,28 +8055,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("int")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 17 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 17 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---accepting rule at line 46("(")
-Next token is token '(' ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 17 29
-Next token is token '(' ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6 17
 Error: popping token '(' ()
 Stack now 0 1 4 6
 Error: popping token '(' ()
@@ -7617,7 +8064,7 @@ Error: popping token tPROGRAM ()
 Stack now 0 1
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token '(' ()
+Cleanup: discarding lookahead token tIDENTIFIER ()
 Stack now 0
 ** Syntax errors in Z-06-131-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
@@ -7658,8 +8105,8 @@ Reading a token
 --accepting rule at line 46("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 17
-Stack now 0 1 4 6 17
+Entering state 16
+Stack now 0 1 4 6 16
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -7667,28 +8114,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 36("int")
 Next token is token tIDENTIFIER ()
-Shifting token tIDENTIFIER ()
-Entering state 10
-Stack now 0 1 4 6 17 10
-Reducing stack by rule 30 (line 101):
-   $1 = token tIDENTIFIER ()
--> $$ = nterm lval ()
-Entering state 19
-Stack now 0 1 4 6 17 19
-Reading a token
---(end of buffer or a NUL)
---accepting rule at line 48(" ")
---accepting rule at line 46("(")
-Next token is token '(' ()
-Reducing stack by rule 28 (line 97):
-   $1 = nterm lval ()
--> $$ = nterm expr ()
-Entering state 29
-Stack now 0 1 4 6 17 29
-Next token is token '(' ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 4 6 17
 Error: popping token '(' ()
 Stack now 0 1 4 6
 Error: popping token '(' ()
@@ -7697,7 +8123,7 @@ Error: popping token tPROGRAM ()
 Stack now 0 1
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token '(' ()
+Cleanup: discarding lookahead token tIDENTIFIER ()
 Stack now 0
 ** Syntax errors in Z-07-132-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
