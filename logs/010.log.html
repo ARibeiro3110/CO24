@@ -1,3 +1,47 @@
 <pre>
 Checking project structure...
+In file included from /usr/include/cdk/ast/basic_node.h:6,
+                 from /usr/include/cdk/ast/sequence_node.h:5,
+                 from til_scanner.l:6:
+./targets/basic_ast_visitor.h:28:24: error: 'symbol' is not a member of 'til'
+   28 |   std::shared_ptr<til::symbol> _new_symbol;
+      |                        ^~~~~~
+./targets/basic_ast_visitor.h:28:30: error: template argument 1 is invalid
+   28 |   std::shared_ptr<til::symbol> _new_symbol;
+      |                              ^
+./targets/basic_ast_visitor.h:28:8: error: '<expression error>' in namespace 'std' does not name a type
+   28 |   std::shared_ptr<til::symbol> _new_symbol;
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+./targets/basic_ast_visitor.h:48:24: error: 'symbol' is not a member of 'til'
+   48 |   std::shared_ptr<til::symbol> new_symbol() {
+      |                        ^~~~~~
+./targets/basic_ast_visitor.h:48:30: error: template argument 1 is invalid
+   48 |   std::shared_ptr<til::symbol> new_symbol() {
+      |                              ^
+./targets/basic_ast_visitor.h:48:8: error: '<expression error>' in namespace 'std' does not name a type
+   48 |   std::shared_ptr<til::symbol> new_symbol() {
+      |        ^~~~~~~~~~~~~~~~~~~~~~~
+./targets/basic_ast_visitor.h:52:44: error: 'symbol' is not a member of 'til'
+   52 |   void set_new_symbol(std::shared_ptr<til::symbol> symbol) {
+      |                                            ^~~~~~
+./targets/basic_ast_visitor.h:52:50: error: template argument 1 is invalid
+   52 |   void set_new_symbol(std::shared_ptr<til::symbol> symbol) {
+      |                                                  ^
+./targets/basic_ast_visitor.h:52:23: error: 'std::symbol' has not been declared
+   52 |   void set_new_symbol(std::shared_ptr<til::symbol> symbol) {
+      |                       ^~~
+./targets/basic_ast_visitor.h: In member function 'void basic_ast_visitor::set_new_symbol(int)':
+./targets/basic_ast_visitor.h:53:5: error: '_new_symbol' was not declared in this scope; did you mean 'set_new_symbol'?
+   53 |     _new_symbol = symbol;
+      |     ^~~~~~~~~~~
+      |     set_new_symbol
+./targets/basic_ast_visitor.h:53:19: error: 'symbol' was not declared in this scope
+   53 |     _new_symbol = symbol;
+      |                   ^~~~~~
+./targets/basic_ast_visitor.h: In member function 'void basic_ast_visitor::reset_new_symbol()':
+./targets/basic_ast_visitor.h:57:5: error: '_new_symbol' was not declared in this scope; did you mean 'set_new_symbol'?
+   57 |     _new_symbol = nullptr;
+      |     ^~~~~~~~~~~
+      |     set_new_symbol
+make: *** [Makefile:46: til_scanner.o] Error 1
 
