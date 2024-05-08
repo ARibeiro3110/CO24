@@ -1,3 +1,22 @@
 <pre>
 Checking project structure...
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:58:92: error: no matching function for call to 'til::program_node::program_node(int, cdk::sequence_node*&)'
+   58 | program : tBEGIN list tEND { compiler->ast(new til::program_node(LINE, $2)); }
+      |                                                                                            ^
+In file included from .auto/all_nodes.h:52,
+                 from til_parser.y:8:
+./ast/program_node.h:16:5: note: candidate: 'til::program_node::program_node(int, til::block_node*)'
+   16 |     program_node(int lineno, til::block_node *block) :
+      |     ^~~~~~~~~~~~
+./ast/program_node.h:16:47: note:   no known conversion for argument 2 from 'cdk::sequence_node*' to 'til::block_node*'
+   16 |     program_node(int lineno, til::block_node *block) :
+      |                              ~~~~~~~~~~~~~~~~~^~~~~
+./ast/program_node.h:12:9: note: candidate: 'constexpr til::program_node::program_node(const til::program_node&)'
+   12 |   class program_node : public cdk::basic_node {
+      |         ^~~~~~~~~~~~
+./ast/program_node.h:12:9: note:   candidate expects 1 argument, 2 provided
+./ast/program_node.h:12:9: note: candidate: 'constexpr til::program_node::program_node(til::program_node&&)'
+./ast/program_node.h:12:9: note:   candidate expects 1 argument, 2 provided
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
