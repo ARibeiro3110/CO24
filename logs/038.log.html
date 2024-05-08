@@ -1,3 +1,42 @@
 <pre>
 Checking project structure...
+til_scanner.l:67: warning, rule cannot be matched
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:25:12: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+   25 |     yylval.d = std::stod(yytext); \
+      |            ^
+til_scanner.l:69:1: note: in expansion of macro 'CHECKED_STOD'
+   69 | [0-9]+\.[0-9]*{EXP}?   CHECKED_STOD;
+      | ^~~~~~~~~~~~
+til_scanner.l:26:12: error: 'tDOUBLE' was not declared in this scope
+   26 |     return tDOUBLE; \
+      |            ^~~~~~~
+til_scanner.l:69:1: note: in expansion of macro 'CHECKED_STOD'
+   69 | [0-9]+\.[0-9]*{EXP}?   CHECKED_STOD;
+      | ^~~~~~~~~~~~
+til_scanner.l:25:12: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+   25 |     yylval.d = std::stod(yytext); \
+      |            ^
+til_scanner.l:70:1: note: in expansion of macro 'CHECKED_STOD'
+   70 | [0-9]+{EXP}            CHECKED_STOD;
+      | ^~~~~~~~~~~~
+til_scanner.l:26:12: error: 'tDOUBLE' was not declared in this scope
+   26 |     return tDOUBLE; \
+      |            ^~~~~~~
+til_scanner.l:70:1: note: in expansion of macro 'CHECKED_STOD'
+   70 | [0-9]+{EXP}            CHECKED_STOD;
+      | ^~~~~~~~~~~~
+til_scanner.l:25:12: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+   25 |     yylval.d = std::stod(yytext); \
+      |            ^
+til_scanner.l:71:1: note: in expansion of macro 'CHECKED_STOD'
+   71 | 
+      | ^           
+til_scanner.l:26:12: error: 'tDOUBLE' was not declared in this scope
+   26 |     return tDOUBLE; \
+      |            ^~~~~~~
+til_scanner.l:71:1: note: in expansion of macro 'CHECKED_STOD'
+   71 | 
+      | ^           
+make: *** [Makefile:46: til_scanner.o] Error 1
 
