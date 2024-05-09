@@ -1,3 +1,16 @@
 <pre>
 Checking project structure...
+til_parser.y:72.8-80: warning: token for %prec is not defined: tIFX [-Wother]
+   72 |      | tIF '(' expr ')' stmt %prec tIFX { $$ = new til::if_node(LINE,...
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+til_parser.y: warning: 11 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:41:8: error: 'tAND' was not declared in this scope
+   41 | "||"                   return tOR;
+      |        ^~~~
+til_scanner.l:42:8: error: 'tOR' was not declared in this scope
+   42 | 
+      |        ^  
+make: *** [Makefile:46: til_scanner.o] Error 1
 
