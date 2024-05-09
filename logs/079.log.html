@@ -1,3 +1,38 @@
 <pre>
 Checking project structure...
+til_scanner.l:67: warning, rule cannot be matched
+til_scanner.l:70: warning, rule cannot be matched
+til_parser.y: warning: 38 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 22 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:69:1: error: 'parseint' was not declared in this scope
+   69 | 0[0-9]+                yyerror("leading zero in integer");
+      | ^~~~~~~~
+til_scanner.l:73:1: error: 'parsedouble' was not declared in this scope
+   73 | [0-9]+[Ee]-?[0-9]+            parsedouble(yytext, yylval.d); return tDOUBLE;
+      | ^~~~~~~~~~~
+til_scanner.l: In function 'void parseint(const std::string&, int, int&)':
+til_scanner.l:87:21: error: 'str' was not declared in this scope; did you mean 'std'?
+   87 |   } catch (std::out_of_range&) {
+      |                     ^~~
+      |                     std
+til_scanner.l:12:17: error: 'LexerError' was not declared in this scope
+   12 | #define yyerror LexerError
+      |                 ^~~~~~~~~~
+til_scanner.l:89:5: note: in expansion of macro 'yyerror'
+   89 |   }
+      |     ^      
+til_scanner.l: In function 'void parsedouble(const std::string&, double&)':
+til_scanner.l:95:21: error: 'str' was not declared in this scope; did you mean 'std'?
+   95 |   } catch (std::out_of_range&) {
+      |                     ^~~
+      |                     std
+til_scanner.l:12:17: error: 'LexerError' was not declared in this scope
+   12 | #define yyerror LexerError
+      |                 ^~~~~~~~~~
+til_scanner.l:97:5: note: in expansion of macro 'yyerror'
+   97 |   }
+      |     ^      
+make: *** [Makefile:46: til_scanner.o] Error 1
 
