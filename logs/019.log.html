@@ -1,58 +1,244 @@
 <pre>
 Checking project structure...
-til_scanner.l:37: warning, rule cannot be matched
-til_parser.y: warning: 8 shift/reduce conflicts [-Wconflicts-sr]
+til_scanner.l:42: warning, rule cannot be matched
+til_parser.y: warning: 7 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: warning: 22 reduce/reduce conflicts [-Wconflicts-rr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
-til_parser.y:62:103: error: no matching function for call to 'til::def_func_node::def_func_node(int, til::block_node*&)'
-   62 | program : '(' tPROGRAM innerblock  ')'  { compiler->ast(new til::def_func_node(LINE, $3)); }
-      |                                                                                                       ^
-In file included from .auto/all_nodes.h:41,
+til_parser.y:103:172: error: no matching function for call to 'til::declaration_node::declaration_node(int, std::shared_ptr<cdk::basic_type>&, std::string&, cdk::expression_node*&)'
+  103 | declaration : '(' var_type tIDENTIFIER expression ')'             { $$ = new til::declaration_node(LINE, $2, *$3, $4); delete $3; }
+      |                                                                                                                                                                            ^
+In file included from .auto/all_nodes.h:40,
                  from til_parser.y:8:
-./ast/def_func_node.h:23:10: note: candidate: 'til::def_func_node::def_func_node(int, cdk::sequence_node*, cdk::sequence_node*)'
-   23 |   inline def_func_node(int lineno, cdk::sequence_node *declaration, cdk::sequence_node *instrs)
-      |          ^~~~~~~~~~~~~
-./ast/def_func_node.h:23:10: note:   candidate expects 3 arguments, 2 provided
-./ast/def_func_node.h:16:10: note: candidate: 'til::def_func_node::def_func_node(int, std::shared_ptr<cdk::basic_type>, cdk::sequence_node*, cdk::sequence_node*, cdk::sequence_node*)'
-   16 |   inline def_func_node(int lineno, std::shared_ptr<cdk::basic_type> outputType,
-      |          ^~~~~~~~~~~~~
-./ast/def_func_node.h:16:10: note:   candidate expects 5 arguments, 2 provided
-./ast/def_func_node.h:9:7: note: candidate: 'til::def_func_node::def_func_node(const til::def_func_node&)'
-    9 | class def_func_node : public cdk::expression_node {
-      |       ^~~~~~~~~~~~~
-./ast/def_func_node.h:9:7: note:   candidate expects 1 argument, 2 provided
-./ast/def_func_node.h:9:7: note: candidate: 'til::def_func_node::def_func_node(til::def_func_node&&)'
-./ast/def_func_node.h:9:7: note:   candidate expects 1 argument, 2 provided
-til_parser.y:97:149: error: no matching function for call to 'til::declaration_node::declaration_node(int, std::shared_ptr<cdk::primitive_type>, std::string*&)'
-   97 | declaration : tINTEGER tIDENTIFIER ';' { $$ = new til::declaration_node(LINE, cdk::primitive_type::create(4, cdk::TYPE_INT), $2); }
-      |                                                                                                                                                     ^
-In file included from .auto/all_nodes.h:40:
-./ast/declaration_node.h:16:5: note: candidate: 'til::declaration_node::declaration_node(int, int, std::shared_ptr<cdk::basic_type>, std::string&, cdk::expression_node*)'
-   16 |     declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> type, std::string &identifier,
-      |     ^~~~~~~~~~~~~~~~
-./ast/declaration_node.h:16:5: note:   candidate expects 5 arguments, 3 provided
+./ast/declaration_node.h:16:12: note: candidate: 'til::declaration_node::declaration_node(int, int, std::shared_ptr<cdk::basic_type>, std::string&, cdk::expression_node*)'
+   16 |     inline declaration_node(int lineno, int qualifier,
+      |            ^~~~~~~~~~~~~~~~
+./ast/declaration_node.h:16:12: note:   candidate expects 5 arguments, 4 provided
+./ast/declaration_node.h:10:9: note: candidate: 'til::declaration_node::declaration_node(const til::declaration_node&)'
+   10 |   class declaration_node: public cdk::typed_node {
+      |         ^~~~~~~~~~~~~~~~
+./ast/declaration_node.h:10:9: note:   candidate expects 1 argument, 4 provided
+./ast/declaration_node.h:10:9: note: candidate: 'til::declaration_node::declaration_node(til::declaration_node&&)'
+./ast/declaration_node.h:10:9: note:   candidate expects 1 argument, 4 provided
+til_parser.y:104:173: error: no matching function for call to 'til::declaration_node::declaration_node(int, std::vector<std::shared_ptr<cdk::basic_type> >*&, std::string&, cdk::expression_node*&)'
+  104 |             | '(' var tIDENTIFIER expression ')'                  { $$ = new til::declaration_node(LINE, $2, *$3, $4); delete $3; }
+      |                                                                                                                                                                             ^
+./ast/declaration_node.h:16:12: note: candidate: 'til::declaration_node::declaration_node(int, int, std::shared_ptr<cdk::basic_type>, std::string&, cdk::expression_node*)'
+   16 |     inline declaration_node(int lineno, int qualifier,
+      |            ^~~~~~~~~~~~~~~~
+./ast/declaration_node.h:16:12: note:   candidate expects 5 arguments, 4 provided
+./ast/declaration_node.h:10:9: note: candidate: 'til::declaration_node::declaration_node(const til::declaration_node&)'
+   10 |   class declaration_node: public cdk::typed_node {
+      |         ^~~~~~~~~~~~~~~~
+./ast/declaration_node.h:10:9: note:   candidate expects 1 argument, 4 provided
+./ast/declaration_node.h:10:9: note: candidate: 'til::declaration_node::declaration_node(til::declaration_node&&)'
+./ast/declaration_node.h:10:9: note:   candidate expects 1 argument, 4 provided
+til_parser.y:105:148: error: no matching function for call to 'til::declaration_node::declaration_node(int, std::shared_ptr<cdk::basic_type>&, std::string&)'
+  105 |             | '(' var_type tIDENTIFIER ')'                        { $$ = new til::declaration_node(LINE, $2, *$3); delete $3; }
+      |                                                                                                                                                    ^
+./ast/declaration_node.h:16:12: note: candidate: 'til::declaration_node::declaration_node(int, int, std::shared_ptr<cdk::basic_type>, std::string&, cdk::expression_node*)'
+   16 |     inline declaration_node(int lineno, int qualifier,
+      |            ^~~~~~~~~~~~~~~~
+./ast/declaration_node.h:16:12: note:   candidate expects 5 arguments, 3 provided
 ./ast/declaration_node.h:10:9: note: candidate: 'til::declaration_node::declaration_node(const til::declaration_node&)'
    10 |   class declaration_node: public cdk::typed_node {
       |         ^~~~~~~~~~~~~~~~
 ./ast/declaration_node.h:10:9: note:   candidate expects 1 argument, 3 provided
 ./ast/declaration_node.h:10:9: note: candidate: 'til::declaration_node::declaration_node(til::declaration_node&&)'
 ./ast/declaration_node.h:10:9: note:   candidate expects 1 argument, 3 provided
-til_parser.y:98:152: error: no matching function for call to 'til::declaration_node::declaration_node(int, std::shared_ptr<cdk::primitive_type>, std::string*&)'
-   98 |             | tSTRING tIDENTIFIER ';'  { $$ = new til::declaration_node(LINE, cdk::primitive_type::create(4, cdk::TYPE_STRING), $2); }
-      |                                                                                                                                                        ^
-./ast/declaration_node.h:16:5: note: candidate: 'til::declaration_node::declaration_node(int, int, std::shared_ptr<cdk::basic_type>, std::string&, cdk::expression_node*)'
-   16 |     declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> type, std::string &identifier,
-      |     ^~~~~~~~~~~~~~~~
-./ast/declaration_node.h:16:5: note:   candidate expects 5 arguments, 3 provided
-./ast/declaration_node.h:10:9: note: candidate: 'til::declaration_node::declaration_node(const til::declaration_node&)'
-   10 |   class declaration_node: public cdk::typed_node {
-      |         ^~~~~~~~~~~~~~~~
-./ast/declaration_node.h:10:9: note:   candidate expects 1 argument, 3 provided
-./ast/declaration_node.h:10:9: note: candidate: 'til::declaration_node::declaration_node(til::declaration_node&&)'
-./ast/declaration_node.h:10:9: note:   candidate expects 1 argument, 3 provided
-til_parser.y:126:135: error: no matching function for call to 'til::print_node::print_node(int, cdk::sequence_node*&)'
-  126 |             | '(' tPRINT exprs ')'                                     { $$ = new til::print_node(LINE, $3); }
+til_parser.y:108:95: error: no match for 'operator=' (operand types are 'std::shared_ptr<cdk::basic_type>' and 'std::vector<std::shared_ptr<cdk::basic_type> >*')
+  108 | var_type : data_type                                          { $$ = $1; }
+      |                                                                                               ^
+In file included from /usr/include/c++/13/memory:80,
+                 from til_parser.y:4:
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: 'template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = cdk::basic_type]'
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+til_parser.y:108:95: note:   mismatched types 'const std::shared_ptr<_Tp>' and 'std::vector<std::shared_ptr<cdk::basic_type> >*'
+  108 | var_type : data_type                                          { $$ = $1; }
+      |                                                                                               ^
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: 'template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = cdk::basic_type]'
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+til_parser.y:108:95: note:   mismatched types 'std::auto_ptr<_Up>' and 'std::vector<std::shared_ptr<cdk::basic_type> >*'
+  108 | var_type : data_type                                          { $$ = $1; }
+      |                                                                                               ^
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: 'template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = cdk::basic_type]'
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+til_parser.y:108:95: note:   mismatched types 'std::shared_ptr<_Tp>' and 'std::vector<std::shared_ptr<cdk::basic_type> >*'
+  108 | var_type : data_type                                          { $$ = $1; }
+      |                                                                                               ^
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: 'template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = cdk::basic_type]'
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+til_parser.y:108:95: note:   mismatched types 'std::unique_ptr<_Tp, _Dp>' and 'std::vector<std::shared_ptr<cdk::basic_type> >*'
+  108 | var_type : data_type                                          { $$ = $1; }
+      |                                                                                               ^
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: 'std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cdk::basic_type]'
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'const std::shared_ptr<cdk::basic_type>&'
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: 'std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cdk::basic_type]'
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'std::shared_ptr<cdk::basic_type>&&'
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+til_parser.y:109:95: error: no match for 'operator=' (operand types are 'std::shared_ptr<cdk::basic_type>' and 'std::vector<std::shared_ptr<cdk::basic_type> >*')
+  109 |          | void_pointer                                       { $$ = $1; }
+      |                                                                                               ^
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: 'template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = cdk::basic_type]'
+  418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
+til_parser.y:109:95: note:   mismatched types 'const std::shared_ptr<_Tp>' and 'std::vector<std::shared_ptr<cdk::basic_type> >*'
+  109 |          | void_pointer                                       { $$ = $1; }
+      |                                                                                               ^
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: 'template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = cdk::basic_type]'
+  429 |         operator=(auto_ptr<_Yp>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
+til_parser.y:109:95: note:   mismatched types 'std::auto_ptr<_Up>' and 'std::vector<std::shared_ptr<cdk::basic_type> >*'
+  109 |          | void_pointer                                       { $$ = $1; }
+      |                                                                                               ^
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: 'template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = cdk::basic_type]'
+  446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
+til_parser.y:109:95: note:   mismatched types 'std::shared_ptr<_Tp>' and 'std::vector<std::shared_ptr<cdk::basic_type> >*'
+  109 |          | void_pointer                                       { $$ = $1; }
+      |                                                                                               ^
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: 'template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = cdk::basic_type]'
+  454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
+      |         ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
+til_parser.y:109:95: note:   mismatched types 'std::unique_ptr<_Tp, _Dp>' and 'std::vector<std::shared_ptr<cdk::basic_type> >*'
+  109 |          | void_pointer                                       { $$ = $1; }
+      |                                                                                               ^
+/usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: 'std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cdk::basic_type]'
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                   ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:414:29: note:   no known conversion for argument 1 from 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'const std::shared_ptr<cdk::basic_type>&'
+  414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+      |                             ^~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:7: note: candidate: 'std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = cdk::basic_type]'
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |       ^~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'std::shared_ptr<cdk::basic_type>&&'
+  438 |       operator=(shared_ptr&& __r) noexcept
+      |                 ~~~~~~~~~~~~~^~~
+til_parser.y:116:96: error: cannot convert 'std::shared_ptr<cdk::primitive_type>' to 'std::vector<std::shared_ptr<cdk::basic_type> >*' in assignment
+  116 | var : tVAR                                        { $$ = cdk::primitive_type::create(0, cdk::TYPE_UNSPEC); }
+      |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~        
+      |                                                                                                |
+      |                                                                                                std::shared_ptr<cdk::primitive_type>
+til_parser.y:120:111: error: cannot convert 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'std::shared_ptr<cdk::basic_type>'
+  120 |              | void_type '!'                      { $$ = cdk::reference_type::create(4, $1); }
+      |                                                                                                               ^     
+      |                                                                                                               |
+      |                                                                                                               std::vector<std::shared_ptr<cdk::basic_type> >*
+In file included from /usr/include/cdk/types/types.h:6,
+                 from til_parser.y:7:
+/usr/include/cdk/types/reference_type.h:33:65: note:   initializing argument 2 of 'static auto cdk::reference_type::create(size_t, std::shared_ptr<cdk::basic_type>)'
+   33 |     static auto create(size_t size, std::shared_ptr<basic_type> referenced) {
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+til_parser.y:123:96: error: cannot convert 'std::shared_ptr<cdk::primitive_type>' to 'std::vector<std::shared_ptr<cdk::basic_type> >*' in assignment
+  123 | data_type : tSTRING_TYPE                          { $$ = cdk::primitive_type::create(4, cdk::TYPE_STRING); }
+      |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~        
+      |                                                                                                |
+      |                                                                                                std::shared_ptr<cdk::primitive_type>
+til_parser.y:124:96: error: cannot convert 'std::shared_ptr<cdk::primitive_type>' to 'std::vector<std::shared_ptr<cdk::basic_type> >*' in assignment
+  124 |           | tINT_TYPE                             { $$ = cdk::primitive_type::create(4, cdk::TYPE_INT); }
+      |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~        
+      |                                                                                                |
+      |                                                                                                std::shared_ptr<cdk::primitive_type>
+til_parser.y:125:96: error: cannot convert 'std::shared_ptr<cdk::primitive_type>' to 'std::vector<std::shared_ptr<cdk::basic_type> >*' in assignment
+  125 |           | tDOUBLE_TYPE                          { $$ = cdk::primitive_type::create(8, cdk::TYPE_DOUBLE); }
+      |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~        
+      |                                                                                                |
+      |                                                                                                std::shared_ptr<cdk::primitive_type>
+til_parser.y:127:111: error: cannot convert 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'std::shared_ptr<cdk::basic_type>'
+  127 |           | data_type '!'                         { $$ = cdk::reference_type::create(4, $1); }
+      |                                                                                                               ^     
+      |                                                                                                               |
+      |                                                                                                               std::vector<std::shared_ptr<cdk::basic_type> >*
+/usr/include/cdk/types/reference_type.h:33:65: note:   initializing argument 2 of 'static auto cdk::reference_type::create(size_t, std::shared_ptr<cdk::basic_type>)'
+   33 |     static auto create(size_t size, std::shared_ptr<basic_type> referenced) {
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+til_parser.y:128:111: error: cannot convert 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'std::shared_ptr<cdk::basic_type>'
+  128 |           | '(' data_type ')' '!'                 { $$ = cdk::reference_type::create(4, $2); }
+      |                                                                                                               ^     
+      |                                                                                                               |
+      |                                                                                                               std::vector<std::shared_ptr<cdk::basic_type> >*
+/usr/include/cdk/types/reference_type.h:33:65: note:   initializing argument 2 of 'static auto cdk::reference_type::create(size_t, std::shared_ptr<cdk::basic_type>)'
+   33 |     static auto create(size_t size, std::shared_ptr<basic_type> referenced) {
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+til_parser.y:131:97: error: no matching function for call to 'cdk::functional_type::create(std::vector<std::shared_ptr<cdk::basic_type> >&, std::vector<std::shared_ptr<cdk::basic_type> >*&)'
+  131 | fun_type : '(' return_type '(' var_types ')' ')'  { $$ = cdk::functional_type::create(*$4, $2); delete $4; }
+      |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~                           
+In file included from /usr/include/cdk/types/types.h:8:
+/usr/include/cdk/types/functional_type.h:58:17: note: candidate: 'static auto cdk::functional_type::create(const std::vector<std::shared_ptr<cdk::basic_type> >&, const std::vector<std::shared_ptr<cdk::basic_type> >&)'
+   58 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::vector<std::shared_ptr<basic_type>> &output_types) {
+      |                 ^~~~~~
+/usr/include/cdk/types/functional_type.h:58:133: note:   no known conversion for argument 2 from 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'const std::vector<std::shared_ptr<cdk::basic_type> >&'
+   58 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::vector<std::shared_ptr<basic_type>> &output_types) {
+      |                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/include/cdk/types/functional_type.h:62:17: note: candidate: 'static auto cdk::functional_type::create(const std::vector<std::shared_ptr<cdk::basic_type> >&, const std::shared_ptr<cdk::basic_type>&)'
+   62 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::shared_ptr<basic_type> &output_type) {
+      |                 ^~~~~~
+/usr/include/cdk/types/functional_type.h:62:120: note:   no known conversion for argument 2 from 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'const std::shared_ptr<cdk::basic_type>&'
+   62 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::shared_ptr<basic_type> &output_type) {
+      |                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/usr/include/cdk/types/functional_type.h:67:17: note: candidate: 'static auto cdk::functional_type::create(const std::vector<std::shared_ptr<cdk::basic_type> >&)'
+   67 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &output_types) {
+      |                 ^~~~~~
+/usr/include/cdk/types/functional_type.h:67:17: note:   candidate expects 1 argument, 2 provided
+/usr/include/cdk/types/functional_type.h:72:17: note: candidate: 'static auto cdk::functional_type::create(const std::shared_ptr<cdk::basic_type>&)'
+   72 |     static auto create(const std::shared_ptr<basic_type> &output_type) {
+      |                 ^~~~~~
+/usr/include/cdk/types/functional_type.h:72:17: note:   candidate expects 1 argument, 2 provided
+til_parser.y:132:97: error: no matching function for call to 'cdk::functional_type::create(std::vector<std::shared_ptr<cdk::basic_type> >*&)'
+  132 |          | '(' return_type ')'                    { $$ = cdk::functional_type::create($2); }
+      |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~    ^                  
+/usr/include/cdk/types/functional_type.h:58:17: note: candidate: 'static auto cdk::functional_type::create(const std::vector<std::shared_ptr<cdk::basic_type> >&, const std::vector<std::shared_ptr<cdk::basic_type> >&)'
+   58 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::vector<std::shared_ptr<basic_type>> &output_types) {
+      |                 ^~~~~~
+/usr/include/cdk/types/functional_type.h:58:17: note:   candidate expects 2 arguments, 1 provided
+/usr/include/cdk/types/functional_type.h:62:17: note: candidate: 'static auto cdk::functional_type::create(const std::vector<std::shared_ptr<cdk::basic_type> >&, const std::shared_ptr<cdk::basic_type>&)'
+   62 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::shared_ptr<basic_type> &output_type) {
+      |                 ^~~~~~
+/usr/include/cdk/types/functional_type.h:62:17: note:   candidate expects 2 arguments, 1 provided
+/usr/include/cdk/types/functional_type.h:67:17: note: candidate: 'static auto cdk::functional_type::create(const std::vector<std::shared_ptr<cdk::basic_type> >&)'
+   67 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &output_types) {
+      |                 ^~~~~~
+/usr/include/cdk/types/functional_type.h:67:72: note:   no known conversion for argument 1 from 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'const std::vector<std::shared_ptr<cdk::basic_type> >&'
+   67 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &output_types) {
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/include/cdk/types/functional_type.h:72:17: note: candidate: 'static auto cdk::functional_type::create(const std::shared_ptr<cdk::basic_type>&)'
+   72 |     static auto create(const std::shared_ptr<basic_type> &output_type) {
+      |                 ^~~~~~
+/usr/include/cdk/types/functional_type.h:72:59: note:   no known conversion for argument 1 from 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'const std::shared_ptr<cdk::basic_type>&'
+   72 |     static auto create(const std::shared_ptr<basic_type> &output_type) {
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+til_parser.y:135:96: error: cannot convert 'std::shared_ptr<cdk::primitive_type>' to 'std::vector<std::shared_ptr<cdk::basic_type> >*' in assignment
+  135 | void_type : tVOID_TYPE                            { $$ = cdk::primitive_type::create(0, cdk::TYPE_VOID); }
+      |                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~        
+      |                                                                                                |
+      |                                                                                                std::shared_ptr<cdk::primitive_type>
+til_parser.y:138:79: error: cannot convert 'std::shared_ptr<cdk::basic_type>' to 'std::vector<std::shared_ptr<cdk::basic_type> >*' in assignment
+  138 | return_type : var_type                            { $$ = $1; }
+      |                                                                               ^    
+      |                                                                               |
+      |                                                                               std::shared_ptr<cdk::basic_type>
+til_parser.y:168:135: error: no matching function for call to 'til::print_node::print_node(int, cdk::sequence_node*&)'
+  168 |             | '(' tPRINT exprs ')'                                     { $$ = new til::print_node(LINE, $3); }
       |                                                                                                                                       ^
 In file included from .auto/all_nodes.h:51:
 ./ast/print_node.h:16:5: note: candidate: 'til::print_node::print_node(int, cdk::expression_node*, bool)'
@@ -67,8 +253,8 @@ In file included from .auto/all_nodes.h:51:
 ./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
 ./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(til::print_node&&)'
 ./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
-til_parser.y:127:141: error: no matching function for call to 'til::print_node::print_node(int, cdk::sequence_node*&, bool)'
-  127 |             | '(' tPRINTLN exprs ')'                                   { $$ = new til::print_node(LINE, $3, true); }
+til_parser.y:169:141: error: no matching function for call to 'til::print_node::print_node(int, cdk::sequence_node*&, bool)'
+  169 |             | '(' tPRINTLN exprs ')'                                   { $$ = new til::print_node(LINE, $3, true); }
       |                                                                                                                                             ^
 ./ast/print_node.h:16:5: note: candidate: 'til::print_node::print_node(int, cdk::expression_node*, bool)'
    16 |     print_node(int lineno, cdk::expression_node *argument,
@@ -82,17 +268,17 @@ til_parser.y:127:141: error: no matching function for call to 'til::print_node::
 ./ast/print_node.h:11:9: note:   candidate expects 1 argument, 3 provided
 ./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(til::print_node&&)'
 ./ast/print_node.h:11:9: note:   candidate expects 1 argument, 3 provided
-til_parser.y:130:125: error: invalid conversion from 'cdk::expression_node*' to 'int' [-fpermissive]
-  130 |             | '(' tNEXT expr ')'                                       { $$ = new til::next_node(LINE, $3); }
-      |                                                                                                                             ^          
-      |                                                                                                                             |
-      |                                                                                                                             cdk::expression_node*
+til_parser.y:172:131: error: invalid conversion from 'cdk::expression_node*' to 'int' [-fpermissive]
+  172 |             | '(' tNEXT expression ')'                                       { $$ = new til::next_node(LINE, $3); }
+      |                                                                                                                                   ^          
+      |                                                                                                                                   |
+      |                                                                                                                                   cdk::expression_node*
 In file included from .auto/all_nodes.h:49:
 ./ast/next_node.h:16:38: note:   initializing argument 2 of 'til::next_node::next_node(int, int)'
    16 |     inline next_node(int lineno, int nvalue = 1) :
       |                                  ~~~~^~~~~~~~~~
-til_parser.y:133:131: error: no matching function for call to 'til::block_node::block_node(int, til::block_node*&)'
-  133 |             | block                                                    { $$ = new til::block_node(LINE, $1); }
+til_parser.y:175:131: error: no matching function for call to 'til::block_node::block_node(int, til::block_node*&)'
+  175 |             | block                                                    { $$ = new til::block_node(LINE, $1); }
       |                                                                                                                                   ^
 In file included from .auto/all_nodes.h:39:
 ./ast/block_node.h:12:12: note: candidate: 'til::block_node::block_node(int, cdk::sequence_node*, cdk::sequence_node*)'
