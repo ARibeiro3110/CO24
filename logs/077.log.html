@@ -1,3 +1,84 @@
 <pre>
 Checking project structure...
+til_scanner.l:59: undeclared start condition X_COMMENT
+til_scanner.l:60: undeclared start condition X_COMMENT
+til_scanner.l:61: undeclared start condition X_COMMENT
+til_scanner.l:59: warning, rule cannot be matched
+til_scanner.l:69: warning, rule cannot be matched
+til_scanner.l:77: warning, rule cannot be matched
+til_scanner.l:81: warning, rule cannot be matched
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:26:8: error: 'tINT' was not declared in this scope; did you mean 'tPRINT'?
+   26 | "double"               return tDOUBLE;
+      |        ^~~~
+      |        tPRINT
+til_scanner.l:27:8: error: 'tDOUBLE' was not declared in this scope
+   27 | "string"               return tSTRING;
+      |        ^~~~~~~
+til_scanner.l:29:8: error: 'tVOID' was not declared in this scope
+   29 | 
+      |        ^    
+til_scanner.l:31:8: error: 'tEXTERNAL' was not declared in this scope
+   31 | "forward"              return tFORWARD;
+      |        ^~~~~~~~~
+til_scanner.l:32:8: error: 'tFORWARD' was not declared in this scope
+   32 | "public"               return tPUBLIC;
+      |        ^~~~~~~~
+til_scanner.l:33:8: error: 'tPUBLIC' was not declared in this scope
+   33 | "var"                  return tVAR;
+      |        ^~~~~~~
+til_scanner.l:34:8: error: 'tVAR' was not declared in this scope
+   34 | 
+      |        ^   
+til_scanner.l:37:8: error: 'tBLOCK' was not declared in this scope; did you mean 'F_LOCK'?
+   37 | "if"                   return tIF;
+      |        ^~~~~~
+      |        F_LOCK
+til_scanner.l:39:8: error: 'tLOOP' was not declared in this scope; did you mean 'ELOOP'?
+   39 | "stop"                 return tSTOP;
+      |        ^~~~~
+      |        ELOOP
+til_scanner.l:40:8: error: 'tSTOP' was not declared in this scope
+   40 | "next"                 return tNEXT;
+      |        ^~~~~
+til_scanner.l:41:8: error: 'tNEXT' was not declared in this scope; did you mean 'tNE'?
+   41 | "return"               return tRETURN;
+      |        ^~~~~
+      |        tNE
+til_scanner.l:42:8: error: 'tRETURN' was not declared in this scope
+   42 | "print"                return tPRINT;
+      |        ^~~~~~~
+til_scanner.l:44:8: error: 'tPRINTLN' was not declared in this scope; did you mean 'tPRINT'?
+   44 | 
+      |        ^       
+      |        tPRINT
+til_scanner.l:48:8: error: 'tNULL' was not declared in this scope; did you mean 'NULL'?
+   48 | "set"                  return tSET;
+      |        ^~~~~
+      |        NULL
+til_scanner.l:49:8: error: 'tSET' was not declared in this scope
+   49 | "index"                return tINDEX;
+      |        ^~~~
+til_scanner.l:50:8: error: 'tINDEX' was not declared in this scope
+   50 | "objects"              return tOBJECTS;
+      |        ^~~~~~
+til_scanner.l:51:8: error: 'tOBJECTS' was not declared in this scope
+   51 | "sizeof"               return tSIZEOF;
+      |        ^~~~~~~~
+til_scanner.l:52:8: error: 'tSIZEOF' was not declared in this scope
+   52 | "function"             return tFUNCTION;
+      |        ^~~~~~~
+til_scanner.l:53:8: error: 'tFUNCTION' was not declared in this scope
+   53 | 
+      |        ^        
+til_scanner.l:56:8: error: 'tPROGRAM' was not declared in this scope
+   56 | 
+      |        ^       
+til_scanner.l:58:17: error: 'X_COMMENT' was not declared in this scope
+   58 | <X_COMMENT>"/*"        { yy_push_state(X_COMMENT);}
+      |                 ^~~~~~~~~
+til_scanner.l:59:17: error: 'X_COMMENT' was not declared in this scope
+   59 | <X_COMMENT>"*/"        { yy_pop_state();}
+      |                 ^~~~~~~~~
+make: *** [Makefile:46: til_scanner.o] Error 1
 
