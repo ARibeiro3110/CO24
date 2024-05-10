@@ -2,12 +2,12 @@
 Checking project structure...
 til_scanner.l:50: warning, rule cannot be matched
 til_parser.y: warning: 10 nonterminals useless in grammar [-Wother]
-til_parser.y: warning: 28 rules useless in grammar [-Wother]
-til_parser.y:82.1-12: warning: nonterminal useless in grammar: instructions [-Wother]
-   82 | instructions : instruction                      { $$ = new cdk::seque...
+til_parser.y: warning: 29 rules useless in grammar [-Wother]
+til_parser.y:81.1-12: warning: nonterminal useless in grammar: instructions [-Wother]
+   81 | instructions : instruction                      { $$ = new cdk::seque...
       | ^~~~~~~~~~~~
-til_parser.y:86.1-11: warning: nonterminal useless in grammar: instruction [-Wother]
-   86 | instruction : '(' expr ')'                             { $$ = new til...
+til_parser.y:85.1-11: warning: nonterminal useless in grammar: instruction [-Wother]
+   85 | instruction : '(' expr ')'                             { $$ = new til...
       | ^~~~~~~~~~~
 til_parser.y:121.1-8: warning: nonterminal useless in grammar: fundecls [-Wother]
   121 | fundecls : fundecls fundecl                     { $$ = new cdk::seque...
@@ -25,14 +25,14 @@ til_parser.y:145.1-15: warning: nonterminal useless in grammar: fun_return_type 
   145 | fun_return_type : type                       { $$ = $1; }
       | ^~~~~~~~~~~~~~~
 til_parser.y:185.1-5: warning: nonterminal useless in grammar: block [-Wother]
-  185 | block : '(' tBLOCK opt_decl opt_instr ')'         { $$ = new til::blo...
+  185 | block : '(' tBLOCK opt_decls opt_instrs ')'         { $$ = new til::b...
       | ^~~~~
-til_parser.y:188.1-8: warning: nonterminal useless in grammar: opt_decl [-Wother]
-  188 | opt_decl : /* empty */        { $$ = NULL; }
-      | ^~~~~~~~
-til_parser.y:192.1-9: warning: nonterminal useless in grammar: opt_instr [-Wother]
-  192 | opt_instr : /* empty */       { $$ = NULL; }
+til_parser.y:188.1-9: warning: nonterminal useless in grammar: opt_decls [-Wother]
+  188 | opt_decls : /* empty */        { $$ = NULL; }
       | ^~~~~~~~~
+til_parser.y:192.1-10: warning: nonterminal useless in grammar: opt_instrs [-Wother]
+  192 | opt_instrs : /* empty */       { $$ = NULL; }
+      | ^~~~~~~~~~
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 74("(")
@@ -197,24 +197,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -466,24 +466,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -743,24 +743,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -1014,24 +1014,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -1222,24 +1222,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -1432,24 +1432,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -1656,24 +1656,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -1875,24 +1875,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -2115,24 +2115,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -2395,24 +2395,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -2675,24 +2675,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -2955,24 +2955,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -3195,24 +3195,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -3435,24 +3435,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -3675,24 +3675,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -3914,24 +3914,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -4153,24 +4153,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -4424,24 +4424,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -4695,24 +4695,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -4934,24 +4934,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -5205,24 +5205,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -5572,24 +5572,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -5907,24 +5907,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -6136,24 +6136,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -6398,24 +6398,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -6785,24 +6785,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
@@ -7046,24 +7046,24 @@ Reading a token
 ")
 --accepting rule at line 74(")")
 Next token is token ')' ()
-Reducing stack by rule 5 (line 78):
+Reducing stack by rule 5 (line 77):
    $1 = nterm instrs ()
--> $$ = nterm opt_instr_decl ()
+-> $$ = nterm opt_instrs_decls ()
 Entering state 7
 Stack now 0 1 4 7
 Next token is token ')' ()
 Shifting token ')' ()
 Entering state 34
 Stack now 0 1 4 7 34
-Reducing stack by rule 2 (line 73):
+Reducing stack by rule 2 (line 72):
    $1 = token '(' ()
    $2 = token tPROGRAM ()
-   $3 = nterm opt_instr_decl ()
+   $3 = nterm opt_instrs_decls ()
    $4 = token ')' ()
 -> $$ = nterm program ()
 Entering state 3
 Stack now 0 3
-Reducing stack by rule 1 (line 69):
+Reducing stack by rule 1 (line 68):
    $1 = nterm program ()
 -> $$ = nterm file ()
 Entering state 2
