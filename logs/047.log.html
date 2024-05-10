@@ -1,3 +1,69 @@
 <pre>
 Checking project structure...
+til_parser.y: warning: 11 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+In file included from .auto/all_nodes.h:40,
+                 from til_parser.y:8:
+./ast/alloc_node.h:11:55: error: expected class-name before '{' token
+   11 |   class alloc_node : public cdk::unary_expression_node{
+      |                                                       ^
+./ast/alloc_node.h: In constructor 'til::alloc_node::alloc_node(int, size_t*)':
+./ast/alloc_node.h:16:9: error: class 'til::alloc_node' does not have any field named 'expression_node'
+   16 |         expression_node(lineno), _memory(memory) {
+      |         ^~~~~~~~~~~~~~~
+./ast/alloc_node.h:16:34: error: class 'til::alloc_node' does not have any field named '_memory'
+   16 |         expression_node(lineno), _memory(memory) {
+      |                                  ^~~~~~~
+./ast/alloc_node.h: In member function 'size_t* til::alloc_node::memory()':
+./ast/alloc_node.h:19:31: error: '_memory' was not declared in this scope; did you mean 'memory'?
+   19 |     size_t *memory() { return _memory; }
+      |                               ^~~~~~~
+      |                               memory
+In file included from .auto/all_nodes.h:42:
+./ast/call_node.h: In constructor 'til::call_node::call_node(int, cdk::lvalue_node*, cdk::sequence_node*)':
+./ast/call_node.h:18:44: error: cannot convert 'cdk::lvalue_node*' to 'cdk::expression_node*' in initialization
+   18 |         expression_node(lineno), _function(function), _statements(statements) {
+      |                                            ^~~~~~~~
+      |                                            |
+      |                                            cdk::lvalue_node*
+In file included from .auto/all_nodes.h:48:
+./ast/index_node.h: In constructor 'til::index_node::index_node(int, cdk::expression_node*, size_t*)':
+./ast/index_node.h:17:61: error: cannot convert 'size_t*' {aka 'long unsigned int*'} to 'cdk::expression_node*' in initialization
+   17 |         cdk::lvalue_node(lineno), _pointer(pointer), _index(index) {
+      |                                                             ^~~~~
+      |                                                             |
+      |                                                             size_t* {aka long unsigned int*}
+./ast/index_node.h: In member function 'size_t* til::index_node::index()':
+./ast/index_node.h:22:30: error: cannot convert 'cdk::expression_node*' to 'size_t*' {aka 'long unsigned int*'} in return
+   22 |     size_t *index() { return _index; }
+      |                              ^~~~~~
+      |                              |
+      |                              cdk::expression_node*
+In file included from .auto/all_nodes.h:49:
+./ast/next_node.h: In constructor 'til::next_node::next_node(int, size_t*)':
+./ast/next_node.h:16:34: error: class 'til::next_node' does not have any field named '_argument'
+   16 |         cdk::basic_node(lineno), _argument(argument) {
+      |                                  ^~~~~~~~~
+./ast/next_node.h: In member function 'size_t* til::next_node::argument()':
+./ast/next_node.h:19:33: error: '_argument' was not declared in this scope; did you mean 'argument'?
+   19 |     size_t *argument() { return _argument; }
+      |                                 ^~~~~~~~~
+      |                                 argument
+In file included from .auto/all_nodes.h:50:
+./ast/null_node.h: In member function 'virtual void til::void_node::accept(basic_ast_visitor*, int)':
+./ast/null_node.h:18:11: error: 'class basic_ast_visitor' has no member named 'do_void_node'; did you mean 'do_mod_node'?
+   18 |       sp->do_void_node(this, level);
+      |           ^~~~~~~~~~~~
+      |           do_mod_node
+In file included from .auto/all_nodes.h:56:
+./ast/stop_node.h: In constructor 'til::stop_node::stop_node(int, size_t*)':
+./ast/stop_node.h:16:34: error: class 'til::stop_node' does not have any field named '_argument'
+   16 |         cdk::basic_node(lineno), _argument(argument) {
+      |                                  ^~~~~~~~~
+./ast/stop_node.h: In member function 'size_t* til::stop_node::argument()':
+./ast/stop_node.h:19:33: error: '_argument' was not declared in this scope; did you mean 'argument'?
+   19 |     size_t *argument() { return _argument; }
+      |                                 ^~~~~~~~~
+      |                                 argument
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
