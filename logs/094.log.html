@@ -1,3 +1,9 @@
 <pre>
 Checking project structure...
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:100:8: error: 'tTERNARY' was not declared in this scope; did you mean 'tUNARY'?
+  100 | ">="                   return tGE;
+      |        ^~~~~~~~
+      |        tUNARY
+make: *** [Makefile:46: til_scanner.o] Error 1
 
