@@ -1,7 +1,7 @@
 <pre>
 Checking project structure...
-til_parser.y: warning: 224 shift/reduce conflicts [-Wconflicts-sr]
-til_parser.y: warning: 44 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: warning: 336 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 64 reduce/reduce conflicts [-Wconflicts-rr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -2037,13 +2037,13 @@ Reading a token
 --accepting rule at line 43("int")
 Next token is token tTYPE_INT ()
 Shifting token tTYPE_INT ()
-Entering state 36
-Stack now 0 2 13 36
-Reducing stack by rule 45 (line 137):
+Entering state 44
+Stack now 0 2 13 44
+Reducing stack by rule 54 (line 146):
    $1 = token tTYPE_INT ()
 -> $$ = nterm type ()
-Entering state 43
-Stack now 0 2 13 43
+Entering state 51
+Stack now 0 2 13 51
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 146(" ")
@@ -2051,8 +2051,8 @@ Reading a token
 --accepting rule at line 93("x")
 Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
-Entering state 71
-Stack now 0 2 13 43 71
+Entering state 85
+Stack now 0 2 13 51 85
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 146(" ")
@@ -2062,7 +2062,7 @@ Reading a token
 Next token is token "invalid token" ()
 1: syntax error
 Error: popping token tIDENTIFIER ()
-Stack now 0 2 13 43
+Stack now 0 2 13 51
 Error: popping nterm type ()
 Stack now 0 2 13
 Error: popping token tPUBLIC ()
