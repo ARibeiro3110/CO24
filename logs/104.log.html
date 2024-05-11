@@ -1,88 +1,262 @@
 <pre>
 Checking project structure...
-til_scanner.l:75: warning, rule cannot be matched
+til_scanner.l:97: warning, rule cannot be matched
 til_parser.y: warning: 11 reduce/reduce conflicts [-Wconflicts-rr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_scanner.l:16:3: error: expected unqualified-id before 'try'
+   16 |   try { \
+      |   ^~~
+til_scanner.l:19:5: error: expected unqualified-id before 'catch'
+   19 |   } catch (const std::out_of_range&) { \
+      |     ^~~~~
+til_scanner.l:22:1: error: expected declaration before '}' token
+   22 | }
+      | ^
 til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
-til_scanner.l:30:8: error: 'tAND' was not declared in this scope; did you mean 'tEND'?
-   30 | "||"                   return tOR;
+til_scanner.l:52:8: error: 'tAND' was not declared in this scope; did you mean 'tEND'?
+   52 | "||"                   return tOR;
       |        ^~~~
       |        tEND
-til_scanner.l:31:8: error: 'tOR' was not declared in this scope
-   31 | 
+til_scanner.l:53:8: error: 'tOR' was not declared in this scope
+   53 | 
       |        ^  
-til_scanner.l:33:8: error: 'tINT' was not declared in this scope; did you mean 'tPRINT'?
-   33 | "double"               return tDOUBLE;
+til_scanner.l:55:8: error: 'tINT' was not declared in this scope; did you mean 'tPRINT'?
+   55 | "double"               return tDOUBLE;
       |        ^~~~
       |        tPRINT
-til_scanner.l:34:8: error: 'tDOUBLE' was not declared in this scope
-   34 | "string"               return tSTRING;
+til_scanner.l:56:8: error: 'tDOUBLE' was not declared in this scope
+   56 | "string"               return tSTRING;
       |        ^~~~~~~
-til_scanner.l:36:8: error: 'tVOID' was not declared in this scope
-   36 | 
+til_scanner.l:58:8: error: 'tVOID' was not declared in this scope
+   58 | 
       |        ^    
-til_scanner.l:38:8: error: 'tEXTERNAL' was not declared in this scope
-   38 | "forward"              return tFORWARD;
+til_scanner.l:60:8: error: 'tEXTERNAL' was not declared in this scope
+   60 | "forward"              return tFORWARD;
       |        ^~~~~~~~~
-til_scanner.l:39:8: error: 'tFORWARD' was not declared in this scope
-   39 | "public"               return tPUBLIC;
+til_scanner.l:61:8: error: 'tFORWARD' was not declared in this scope
+   61 | "public"               return tPUBLIC;
       |        ^~~~~~~~
-til_scanner.l:40:8: error: 'tPUBLIC' was not declared in this scope
-   40 | "var"                  return tVAR;
+til_scanner.l:62:8: error: 'tPUBLIC' was not declared in this scope
+   62 | "var"                  return tVAR;
       |        ^~~~~~~
-til_scanner.l:41:8: error: 'tVAR' was not declared in this scope
-   41 | 
+til_scanner.l:63:8: error: 'tVAR' was not declared in this scope
+   63 | 
       |        ^   
-til_scanner.l:43:8: error: 'tLOOP' was not declared in this scope; did you mean 'ELOOP'?
-   43 | "block"                return tBLOCK;
+til_scanner.l:65:8: error: 'tLOOP' was not declared in this scope; did you mean 'ELOOP'?
+   65 | "block"                return tBLOCK;
       |        ^~~~~
       |        ELOOP
-til_scanner.l:44:8: error: 'tBLOCK' was not declared in this scope; did you mean 'F_LOCK'?
-   44 | "if"                   return tIF;
+til_scanner.l:66:8: error: 'tBLOCK' was not declared in this scope; did you mean 'F_LOCK'?
+   66 | "if"                   return tIF;
       |        ^~~~~~
       |        F_LOCK
-til_scanner.l:47:8: error: 'tPRINTLN' was not declared in this scope; did you mean 'tPRINT'?
-   47 | "stop"                 return tSTOP;
+til_scanner.l:69:8: error: 'tPRINTLN' was not declared in this scope; did you mean 'tPRINT'?
+   69 | "stop"                 return tSTOP;
       |        ^~~~~~~~
       |        tPRINT
-til_scanner.l:48:8: error: 'tSTOP' was not declared in this scope
-   48 | "next"                 return tNEXT;
+til_scanner.l:70:8: error: 'tSTOP' was not declared in this scope
+   70 | "next"                 return tNEXT;
       |        ^~~~~
-til_scanner.l:49:8: error: 'tNEXT' was not declared in this scope; did you mean 'tNE'?
-   49 | "return"               return tRETURN;
+til_scanner.l:71:8: error: 'tNEXT' was not declared in this scope; did you mean 'tNE'?
+   71 | "return"               return tRETURN;
       |        ^~~~~
       |        tNE
-til_scanner.l:50:8: error: 'tRETURN' was not declared in this scope
-   50 | 
+til_scanner.l:72:8: error: 'tRETURN' was not declared in this scope
+   72 | 
       |        ^      
-til_scanner.l:53:8: error: 'tNULL' was not declared in this scope; did you mean 'NULL'?
-   53 | "set"                  return tSET;
+til_scanner.l:75:8: error: 'tNULL' was not declared in this scope; did you mean 'NULL'?
+   75 | "set"                  return tSET;
       |        ^~~~~
       |        NULL
-til_scanner.l:54:8: error: 'tSET' was not declared in this scope
-   54 | "index"                return tINDEX;
+til_scanner.l:76:8: error: 'tSET' was not declared in this scope
+   76 | "index"                return tINDEX;
       |        ^~~~
-til_scanner.l:55:8: error: 'tINDEX' was not declared in this scope
-   55 | "objects"              return tOBJECTS
+til_scanner.l:77:8: error: 'tINDEX' was not declared in this scope
+   77 | "objects"              return tOBJECTS
       |        ^~~~~~
-til_scanner.l:56:8: error: 'tOBJECTS' was not declared in this scope
-   56 | "sizeof"               return tSIZEOF;
+til_scanner.l:78:8: error: 'tOBJECTS' was not declared in this scope
+   78 | "sizeof"               return tSIZEOF;
       |        ^~~~~~~~
-til_scanner.l:56:16: error: expected ';' before 'break'
-   56 | "sizeof"               return tSIZEOF;
+til_scanner.l:78:16: error: expected ';' before 'break'
+   78 | "sizeof"               return tSIZEOF;
       |                ^
       |                ;
-til_scanner.l:57:8: error: 'tSIZEOF' was not declared in this scope
-   57 | "function"             return tFUNCTION;
+til_scanner.l:79:8: error: 'tSIZEOF' was not declared in this scope
+   79 | "function"             return tFUNCTION;
       |        ^~~~~~~
-til_scanner.l:58:8: error: 'tFUNCTION' was not declared in this scope
-   58 | "program"              return tPROGRAM;
+til_scanner.l:80:8: error: 'tFUNCTION' was not declared in this scope
+   80 | "program"              return tPROGRAM;
       |        ^~~~~~~~~
-til_scanner.l:59:8: error: 'tPROGRAM' was not declared in this scope
-   59 | 
+til_scanner.l:81:8: error: 'tPROGRAM' was not declared in this scope
+   81 | 
       |        ^       
-til_scanner.l:72:15: error: void value not ignored as it ought to be
-   72 | 
+til_scanner.l:94:15: error: void value not ignored as it ought to be
+   94 | 
       |               ^                
+til_scanner.l:15:12: error: request for member 'erase' in '((til_scanner_FlexLexer*)this)->til_scanner_FlexLexer::<anonymous>.FlexLexer::yytext', which is of non-class type 'char*'
+   15 |     yytext.erase(0,2);
+      |            ^~~~~
+til_scanner.l:106:1: note: in expansion of macro 'CHECK_INT_OF'
+  106 | 
+      | ^           
+til_scanner.l:15:12: error: request for member 'erase' in '((til_scanner_FlexLexer*)this)->til_scanner_FlexLexer::<anonymous>.FlexLexer::yytext', which is of non-class type 'char*'
+   15 |     yytext.erase(0,2);
+      |            ^~~~~
+til_scanner.l:108:1: note: in expansion of macro 'CHECK_INT_OF'
+  108 | 
+      | ^           
+til_scanner.l:26:12: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+   26 |     yylval.d = std::stod(yytext); \
+      |            ^
+til_scanner.l:110:1: note: in expansion of macro 'CHECK_DOUBLE_OF'
+  110 | [0-9]+\.[0-9]*{EXP}?   CHECK_DOUBLE_OF;   /*maybe tirar*/
+      | ^~~~~~~~~~~~~~~
+til_scanner.l:26:12: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+   26 |     yylval.d = std::stod(yytext); \
+      |            ^
+til_scanner.l:111:1: note: in expansion of macro 'CHECK_DOUBLE_OF'
+  111 | [0-9]+{EXP}            CHECK_DOUBLE_OF;
+      | ^~~~~~~~~~~~~~~
+til_scanner.l:26:12: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+   26 |     yylval.d = std::stod(yytext); \
+      |            ^
+til_scanner.l:112:1: note: in expansion of macro 'CHECK_DOUBLE_OF'
+  112 | 
+      | ^              
+til_scanner.l:114:38: error: expected ';' before 'break'
+  114 | 
+      |                                      ^
+      |                                      ;
+til_scanner.cpp:1446:39: error: expected primary-expression before '*' token
+ 1446 |  */
+      |                                       ^
+til_scanner.cpp:1446:41: error: 'arg_yyin' was not declared in this scope
+ 1446 |  */
+      |                                         ^       
+til_scanner.cpp:1446:63: error: expected primary-expression before '*' token
+ 1446 |  */
+      |                                                               ^
+til_scanner.cpp:1446:65: error: 'arg_yyout' was not declared in this scope
+ 1446 |  */
+      |                                                                 ^        
+til_scanner.cpp:1446:75: error: cannot call constructor 'til_scanner_FlexLexer::til_scanner_FlexLexer' directly [-fpermissive]
+ 1446 |  */
+      |                                                                           ^
+til_scanner.cpp:1446:75: note: for a function-style cast, remove the redundant '::til_scanner_FlexLexer'
+til_scanner.cpp:1455:39: error: expected primary-expression before '&' token
+ 1455 |  */
+      |                                       ^
+til_scanner.cpp:1455:63: error: expected primary-expression before '&' token
+ 1455 |  */
+      |                                                               ^
+til_scanner.cpp:1455:75: error: cannot call constructor 'til_scanner_FlexLexer::til_scanner_FlexLexer' directly [-fpermissive]
+ 1455 |  */
+      |                                                                           ^
+til_scanner.cpp:1455:75: note: for a function-style cast, remove the redundant '::til_scanner_FlexLexer'
+til_scanner.cpp:1464:30: error: qualified-id in declaration before '(' token
+ 1464 |  */
+      |                              ^
+til_scanner.cpp:1492:28: error: expected ';' before '{' token
+ 1492 |  */
+      |                            ^
+      |                            ;
+ 1493 | yyFlexLexer::~yyFlexLexer()
+      | ~                           
+til_scanner.cpp:1502:33: error: qualified-id in declaration before '(' token
+ 1502 |  */
+      |                                 ^
+til_scanner.cpp:1514:33: error: qualified-id in declaration before '(' token
+ 1514 |  */
+      |                                 ^
+til_scanner.cpp:1528:28: error: qualified-id in declaration before '(' token
+ 1528 | #ifdef YY_INTERACTIVE
+      |                            ^
+til_scanner.cpp:1557:30: error: qualified-id in declaration before '(' token
+ 1557 | 
+      |                              ^
+til_scanner.cpp:1575:36: error: qualified-id in declaration before '(' token
+ 1575 | /* %if-c++-only */
+      |                                    ^
+til_scanner.cpp:1718:53: error: qualified-id in declaration before '(' token
+ 1718 | /* %if-c++-only */
+      |                                                     ^
+til_scanner.cpp:1756:48: error: qualified-id in declaration before '(' token
+ 1756 | /* %if-c++-only */
+      |                                                ^
+til_scanner.cpp:1785:30: error: qualified-id in declaration before '(' token
+ 1785 | /* %if-c++-only */
+      |                              ^
+til_scanner.cpp:1835:29: error: qualified-id in declaration before '(' token
+ 1835 | /* %if-c++-only */
+      |                             ^
+til_scanner.cpp:1919:32: error: qualified-id in declaration before '(' token
+ 1919 | /* %if-c++-only */
+      |                                ^
+til_scanner.cpp:1939:28: error: qualified-id in declaration before '(' token
+ 1939 |  */
+      |                            ^
+til_scanner.cpp:1955:42: error: qualified-id in declaration before '(' token
+ 1955 | /* %if-c++-only */
+      |                                          ^
+til_scanner.cpp:1990:43: error: qualified-id in declaration before '(' token
+ 1990 | /* %if-c++-only */
+      |                                           ^
+til_scanner.cpp:2012:50: error: qualified-id in declaration before '(' token
+ 2012 | /* %if-c++-only */
+      |                                                  ^
+til_scanner.cpp:2044:47: error: qualified-id in declaration before '(' token
+ 2044 |  */
+      |                                               ^
+til_scanner.cpp:2057:39: error: qualified-id in declaration before '(' token
+ 2057 | /* %if-c++-only */
+      |                                       ^
+til_scanner.cpp:2080:37: error: qualified-id in declaration before '(' token
+ 2080 | /* %if-c++-only */
+      |                                     ^
+til_scanner.cpp:2119:38: error: qualified-id in declaration before '(' token
+ 2119 | /* %if-c++-only */
+      |                                      ^
+til_scanner.cpp:2153:39: error: qualified-id in declaration before '(' token
+ 2153 | /* %if-c++-only */
+      |                                       ^
+til_scanner.cpp:2189:38: error: qualified-id in declaration before '(' token
+ 2189 | /* %if-c++-only */
+      |                                      ^
+til_scanner.cpp:2214:40: error: qualified-id in declaration before '(' token
+ 2214 | /* %if-c++-only */
+      |                                        ^
+til_scanner.cpp:2271:36: error: qualified-id in declaration before '(' token
+ 2271 | /* %if-c++-only */
+      |                                    ^
+til_scanner.cpp:2300:35: error: qualified-id in declaration before '(' token
+ 2300 | /* %if-c++-only */
+      |                                   ^
+til_scanner.cpp:2312:34: error: qualified-id in declaration before '(' token
+ 2312 | /* %if-c++-only */
+      |                                  ^
+til_scanner.cpp:2325:29: error: qualified-id in declaration before '(' token
+ 2325 | /* %if-c++-only */
+      |                             ^
+til_scanner.cpp:2397:1: error: a function-definition is not allowed here before '{' token
+ 2397 | void *yyalloc (yy_size_t  size )
+      | ^
+til_scanner.cpp:2402:1: error: a function-definition is not allowed here before '{' token
+ 2402 | void *yyrealloc  (void * ptr, yy_size_t  size )
+      | ^
+til_scanner.cpp:2415:1: error: a function-definition is not allowed here before '{' token
+ 2415 | void yyfree (void * ptr )
+      | ^
+til_scanner.cpp:2417:16: error: expected '}' at end of input
+ 2417 |                         free( (char *) ptr );   /* see yyrealloc() for (char *) cast */
+      |         ^       
+til_scanner.cpp:882:2: note: to match this '{'
+  882 | 
+      |  ^
+til_scanner.cpp:2417:16: error: expected '}' at end of input
+ 2417 |                         free( (char *) ptr );   /* see yyrealloc() for (char *) cast */
+      |         ^       
+til_scanner.cpp:843:1: note: to match this '{'
+  843 | YY_DECL
+      | ^
 make: *** [Makefile:46: til_scanner.o] Error 1
 
