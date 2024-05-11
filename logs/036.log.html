@@ -1,81 +1,13 @@
 <pre>
 Checking project structure...
-til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
-til_scanner.l:26:8: error: 'tNOT' was not declared in this scope
-   26 | "&&"                   return tAND;
-      |        ^~~~
-til_scanner.l:27:8: error: 'tAND' was not declared in this scope; did you mean 'tEND'?
-   27 | "||"                   return tOR;
-      |        ^~~~
-      |        tEND
-til_scanner.l:28:8: error: 'tOR' was not declared in this scope
-   28 | 
-      |        ^  
-til_scanner.l:39:8: error: 'tINT' was not declared in this scope; did you mean 'tPRINT'?
-   39 | "double"               return tDOUBLE;
-      |        ^~~~
-      |        tPRINT
-til_scanner.l:40:8: error: 'tDOUBLE' was not declared in this scope
-   40 | "string"               return tSTRING_TYPE;
-      |        ^~~~~~~
-til_scanner.l:41:8: error: 'tSTRING_TYPE' was not declared in this scope
-   41 | "void"                 return tVOID_TYPE;
-      |        ^~~~~~~~~~~~
-til_scanner.l:42:8: error: 'tVOID_TYPE' was not declared in this scope
-   42 | 
-      |        ^         
-til_scanner.l:44:8: error: 'tEXTERNAL' was not declared in this scope
-   44 | "forward"              return tFORWARD;
-      |        ^~~~~~~~~
-til_scanner.l:45:8: error: 'tFORWARD' was not declared in this scope
-   45 | "public"               return tPUBLIC;
-      |        ^~~~~~~~
-til_scanner.l:46:8: error: 'tPUBLIC' was not declared in this scope
-   46 | "var"                  return tVAR;
-      |        ^~~~~~~
-til_scanner.l:47:8: error: 'tVAR' was not declared in this scope
-   47 | 
-      |        ^   
-til_scanner.l:49:8: error: 'tBLOCK' was not declared in this scope; did you mean 'F_LOCK'?
-   49 | "loop"                 return tLOOP;
-      |        ^~~~~~
-      |        F_LOCK
-til_scanner.l:50:8: error: 'tLOOP' was not declared in this scope; did you mean 'ELOOP'?
-   50 | "stop"                 return tSTOP;
-      |        ^~~~~
-      |        ELOOP
-til_scanner.l:51:8: error: 'tSTOP' was not declared in this scope
-   51 | "next"                 return tNEXT;
-      |        ^~~~~
-til_scanner.l:52:8: error: 'tNEXT' was not declared in this scope; did you mean 'tNE'?
-   52 | "return"               return tRETURN;
-      |        ^~~~~
-      |        tNE
-til_scanner.l:53:8: error: 'tRETURN' was not declared in this scope
-   53 | "println"              return tPRINTLN;
-      |        ^~~~~~~
-til_scanner.l:54:8: error: 'tPRINTLN' was not declared in this scope; did you mean 'tPRINT'?
-   54 | 
-      |        ^       
-      |        tPRINT
-til_scanner.l:57:8: error: 'tNULL' was not declared in this scope; did you mean 'NULL'?
-   57 | "set"                  return tSET;
-      |        ^~~~~
-      |        NULL
-til_scanner.l:58:8: error: 'tSET' was not declared in this scope
-   58 | "index"                return tINDEX;
-      |        ^~~~
-til_scanner.l:59:8: error: 'tINDEX' was not declared in this scope
-   59 | "objects"              return tOBJECTS;
-      |        ^~~~~~
-til_scanner.l:60:8: error: 'tOBJECTS' was not declared in this scope
-   60 | "sizeof"               return tSIZEOF;
-      |        ^~~~~~~~
-til_scanner.l:61:8: error: 'tSIZEOF' was not declared in this scope
-   61 | "function"             return tFUNCTION_TYPE;
-      |        ^~~~~~~
-til_scanner.l:62:8: error: 'tFUNCTION_TYPE' was not declared in this scope
-   62 | "program"              return tPROGRAM_TYPE;
-      |        ^~~~~~~~~~~~~~
-make: *** [Makefile:46: til_scanner.o] Error 1
+til_parser.y: warning: 30 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:128:56: error: 'cdk::expression_node' is an inaccessible base of 'til::call_function_node'
+  128 | func_call : '@' '(' exprs ')'   { $$ = new til::call_function_node(LINE, nullptr , $3); }
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                               
+til_parser.y:129:54: error: 'cdk::expression_node' is an inaccessible base of 'til::call_function_node'
+  129 |           | '@' '(' ')'       { $$ = new til::call_function_node(LINE,nullptr , new cdk::sequence_node(LINE)); }
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~             
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
