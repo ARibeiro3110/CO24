@@ -1,10 +1,159 @@
 <pre>
 Checking project structure...
-til_scanner.l:20: unrecognized rule
-til_scanner.l:20: unrecognized rule
-til_scanner.l:20: unrecognized rule
-til_scanner.l:41: unrecognized rule
-til_scanner.l:41: unrecognized rule
-til_scanner.l:41: unrecognized rule
-make: *** [Makefile:55: til_scanner.cpp] Error 1
+til_scanner.l:29:9: warning: ISO C++11 requires whitespace after the macro name
+   29 | #define checkOverflowDouble{ \
+      |         ^~~~~~~~~~~~~~~~~~~
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:58:8: error: 'tAND' was not declared in this scope; did you mean 'tEND'?
+   58 | "||"                   return tOR;
+      |        ^~~~
+      |        tEND
+til_scanner.l:59:8: error: 'tOR' was not declared in this scope
+   59 | 
+      |        ^  
+til_scanner.l:62:8: error: 'tINT' was not declared in this scope; did you mean 'tPRINT'?
+   62 | "double"               return tDOUBLE;
+      |        ^~~~
+      |        tPRINT
+til_scanner.l:63:8: error: 'tDOUBLE' was not declared in this scope
+   63 | "string"               return tSTRING;
+      |        ^~~~~~~
+til_scanner.l:65:8: error: 'tVOID' was not declared in this scope
+   65 | 
+      |        ^    
+til_scanner.l:67:8: error: 'tEXTERNAL' was not declared in this scope
+   67 | "foward"               return tFOWARD;
+      |        ^~~~~~~~~
+til_scanner.l:68:8: error: 'tFOWARD' was not declared in this scope
+   68 | "public"               return tPUBLIC;
+      |        ^~~~~~~
+til_scanner.l:69:8: error: 'tPUBLIC' was not declared in this scope
+   69 | "var"                  return tVAR;
+      |        ^~~~~~~
+til_scanner.l:70:8: error: 'tVAR' was not declared in this scope
+   70 | 
+      |        ^   
+til_scanner.l:72:8: error: 'tBLOCK' was not declared in this scope; did you mean 'F_LOCK'?
+   72 | "loop"                 return tWHILE;
+      |        ^~~~~~
+      |        F_LOCK
+til_scanner.l:77:8: error: 'tSTOP' was not declared in this scope
+   77 | "next"                 return tNEXT;
+      |        ^~~~~
+til_scanner.l:78:8: error: 'tNEXT' was not declared in this scope; did you mean 'tNE'?
+   78 | "return"               return tRETURN;
+      |        ^~~~~
+      |        tNE
+til_scanner.l:79:8: error: 'tRETURN' was not declared in this scope
+   79 | "read"                 return tREAD;
+      |        ^~~~~~~
+til_scanner.l:81:8: error: 'tFUNCTION' was not declared in this scope
+   81 | "null"                 return tNULL;
+      |        ^~~~~~~~~
+til_scanner.l:82:8: error: 'tNULL' was not declared in this scope; did you mean 'NULL'?
+   82 | "set"                  return tSET;
+      |        ^~~~~
+      |        NULL
+til_scanner.l:83:8: error: 'tSET' was not declared in this scope
+   83 | "index"                return tINDEX;
+      |        ^~~~
+til_scanner.l:84:8: error: 'tINDEX' was not declared in this scope
+   84 | "objects"              return tOBJECTS;
+      |        ^~~~~~
+til_scanner.l:85:8: error: 'tOBJECTS' was not declared in this scope
+   85 | "sizeof"               return tSIZEOF;
+      |        ^~~~~~~~
+til_scanner.l:86:8: error: 'tSIZEOF' was not declared in this scope
+   86 | "program"              return tPROGRAM;
+      |        ^~~~~~~
+til_scanner.l:87:8: error: 'tPROGRAM' was not declared in this scope
+   87 | 
+      |        ^       
+til_scanner.l:97:2: error: 'yyval' was not declared in this scope; did you mean 'yylval'?
+   97 | <X_STRING>\\r          *yyval.s  += '\r';
+      |  ^~~~~
+      |  yylval
+til_scanner.l:18:14: error: cannot convert 'std::string' {aka 'std::__cxx11::basic_string<char>'} to 'char*' in assignment
+   18 |     yytext = hexStr; \
+      |              ^~~~~~
+      |              |
+      |              std::string {aka std::__cxx11::basic_string<char>}
+til_scanner.l:122:1: note: in expansion of macro 'checkOverflowInt'
+  122 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
+      | ^~~~~~~~~~~~~~~~
+til_scanner.l:24:11: error: expected '(' before 'catch'
+   24 |   } catch catch (const std::out_of_range& e){ \
+      |           ^~~~~
+til_scanner.l:122:1: note: in expansion of macro 'checkOverflowInt'
+  122 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
+      | ^~~~~~~~~~~~~~~~
+til_scanner.l:24:11: error: expected type-specifier before 'catch'
+   24 |   } catch catch (const std::out_of_range& e){ \
+      |           ^~~~~
+til_scanner.l:122:1: note: in expansion of macro 'checkOverflowInt'
+  122 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
+      | ^~~~~~~~~~~~~~~~
+til_scanner.l:24:11: error: expected ')' before 'catch'
+   24 |   } catch catch (const std::out_of_range& e){ \
+      |           ^~~~~
+til_scanner.l:122:1: note: in expansion of macro 'checkOverflowInt'
+  122 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
+      | ^~~~~~~~~~~~~~~~
+til_scanner.l:24:11: error: expected '{' before 'catch'
+   24 |   } catch catch (const std::out_of_range& e){ \
+      |           ^~~~~
+til_scanner.l:122:1: note: in expansion of macro 'checkOverflowInt'
+  122 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
+      | ^~~~~~~~~~~~~~~~
+til_scanner.l:18:14: error: cannot convert 'std::string' {aka 'std::__cxx11::basic_string<char>'} to 'char*' in assignment
+   18 |     yytext = hexStr; \
+      |              ^~~~~~
+      |              |
+      |              std::string {aka std::__cxx11::basic_string<char>}
+til_scanner.l:123:1: note: in expansion of macro 'checkOverflowInt'
+  123 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
+      | ^~~~~~~~~~~~~~~~
+til_scanner.l:24:11: error: expected '(' before 'catch'
+   24 |   } catch catch (const std::out_of_range& e){ \
+      |           ^~~~~
+til_scanner.l:123:1: note: in expansion of macro 'checkOverflowInt'
+  123 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
+      | ^~~~~~~~~~~~~~~~
+til_scanner.l:24:11: error: expected type-specifier before 'catch'
+   24 |   } catch catch (const std::out_of_range& e){ \
+      |           ^~~~~
+til_scanner.l:123:1: note: in expansion of macro 'checkOverflowInt'
+  123 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
+      | ^~~~~~~~~~~~~~~~
+til_scanner.l:24:11: error: expected ')' before 'catch'
+   24 |   } catch catch (const std::out_of_range& e){ \
+      |           ^~~~~
+til_scanner.l:123:1: note: in expansion of macro 'checkOverflowInt'
+  123 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
+      | ^~~~~~~~~~~~~~~~
+til_scanner.l:24:11: error: expected '{' before 'catch'
+   24 |   } catch catch (const std::out_of_range& e){ \
+      |           ^~~~~
+til_scanner.l:123:1: note: in expansion of macro 'checkOverflowInt'
+  123 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
+      | ^~~~~~~~~~~~~~~~
+til_scanner.l:31:14: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+   31 |       yylval.d = std::stod(yytext); \
+      |              ^
+til_scanner.l:126:1: note: in expansion of macro 'checkOverflowDouble'
+  126 | [0-9]+\.[0-9]*{EXPONENCIAL}?  checkOverflowDouble; /* nao acho que esteja aceitamos 0. */
+      | ^~~~~~~~~~~~~~~~~~~
+til_scanner.l:31:14: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+   31 |       yylval.d = std::stod(yytext); \
+      |              ^
+til_scanner.l:127:1: note: in expansion of macro 'checkOverflowDouble'
+  127 | [0-9]+{EXPONENCIAL}           checkOverflowDouble;
+      | ^~~~~~~~~~~~~~~~~~~
+til_scanner.l:31:14: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+   31 |       yylval.d = std::stod(yytext); \
+      |              ^
+til_scanner.l:128:1: note: in expansion of macro 'checkOverflowDouble'
+  128 | 
+      | ^                  
+make: *** [Makefile:46: til_scanner.o] Error 1
 
