@@ -1,3 +1,17 @@
 <pre>
 Checking project structure...
+targets/postfix_writer.cpp:302:6: error: variable or field 'do_index_node' declared void
+  302 | void til::postfix_writer::do_index_node(til::index_node * const node, int lvl) {
+      |      ^~~
+targets/postfix_writer.cpp:302:46: error: 'index_node' is not a member of 'til'; did you mean 'next_node'?
+  302 | void til::postfix_writer::do_index_node(til::index_node * const node, int lvl) {
+      |                                              ^~~~~~~~~~
+      |                                              next_node
+targets/postfix_writer.cpp:302:59: error: expected primary-expression before 'const'
+  302 | void til::postfix_writer::do_index_node(til::index_node * const node, int lvl) {
+      |                                                           ^~~~~
+targets/postfix_writer.cpp:302:71: error: expected primary-expression before 'int'
+  302 | void til::postfix_writer::do_index_node(til::index_node * const node, int lvl) {
+      |                                                                       ^~~
+make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
