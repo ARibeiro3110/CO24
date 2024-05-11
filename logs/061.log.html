@@ -78,82 +78,76 @@ til_scanner.l:18:14: error: cannot convert 'std::string' {aka 'std::__cxx11::bas
       |              ^~~~~~
       |              |
       |              std::string {aka std::__cxx11::basic_string<char>}
-til_scanner.l:122:1: note: in expansion of macro 'checkOverflowInt'
-  122 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
+til_scanner.l:119:1: note: in expansion of macro 'checkOverflowInt'
+  119 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
       | ^~~~~~~~~~~~~~~~
 til_scanner.l:24:11: error: expected '(' before 'catch'
    24 |   } catch catch (const std::out_of_range& e){ \
       |           ^~~~~
-til_scanner.l:122:1: note: in expansion of macro 'checkOverflowInt'
-  122 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
+til_scanner.l:119:1: note: in expansion of macro 'checkOverflowInt'
+  119 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
       | ^~~~~~~~~~~~~~~~
 til_scanner.l:24:11: error: expected type-specifier before 'catch'
    24 |   } catch catch (const std::out_of_range& e){ \
       |           ^~~~~
-til_scanner.l:122:1: note: in expansion of macro 'checkOverflowInt'
-  122 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
+til_scanner.l:119:1: note: in expansion of macro 'checkOverflowInt'
+  119 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
       | ^~~~~~~~~~~~~~~~
 til_scanner.l:24:11: error: expected ')' before 'catch'
    24 |   } catch catch (const std::out_of_range& e){ \
       |           ^~~~~
-til_scanner.l:122:1: note: in expansion of macro 'checkOverflowInt'
-  122 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
+til_scanner.l:119:1: note: in expansion of macro 'checkOverflowInt'
+  119 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
       | ^~~~~~~~~~~~~~~~
 til_scanner.l:24:11: error: expected '{' before 'catch'
    24 |   } catch catch (const std::out_of_range& e){ \
       |           ^~~~~
-til_scanner.l:122:1: note: in expansion of macro 'checkOverflowInt'
-  122 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
+til_scanner.l:119:1: note: in expansion of macro 'checkOverflowInt'
+  119 | '0'[xX][0-9a-fA-F]+    checkOverflowInt(16);
       | ^~~~~~~~~~~~~~~~
 til_scanner.l:18:14: error: cannot convert 'std::string' {aka 'std::__cxx11::basic_string<char>'} to 'char*' in assignment
    18 |     yytext = hexStr; \
       |              ^~~~~~
       |              |
       |              std::string {aka std::__cxx11::basic_string<char>}
-til_scanner.l:123:1: note: in expansion of macro 'checkOverflowInt'
-  123 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
+til_scanner.l:120:1: note: in expansion of macro 'checkOverflowInt'
+  120 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
       | ^~~~~~~~~~~~~~~~
 til_scanner.l:24:11: error: expected '(' before 'catch'
    24 |   } catch catch (const std::out_of_range& e){ \
       |           ^~~~~
-til_scanner.l:123:1: note: in expansion of macro 'checkOverflowInt'
-  123 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
+til_scanner.l:120:1: note: in expansion of macro 'checkOverflowInt'
+  120 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
       | ^~~~~~~~~~~~~~~~
 til_scanner.l:24:11: error: expected type-specifier before 'catch'
    24 |   } catch catch (const std::out_of_range& e){ \
       |           ^~~~~
-til_scanner.l:123:1: note: in expansion of macro 'checkOverflowInt'
-  123 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
+til_scanner.l:120:1: note: in expansion of macro 'checkOverflowInt'
+  120 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
       | ^~~~~~~~~~~~~~~~
 til_scanner.l:24:11: error: expected ')' before 'catch'
    24 |   } catch catch (const std::out_of_range& e){ \
       |           ^~~~~
-til_scanner.l:123:1: note: in expansion of macro 'checkOverflowInt'
-  123 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
+til_scanner.l:120:1: note: in expansion of macro 'checkOverflowInt'
+  120 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
       | ^~~~~~~~~~~~~~~~
 til_scanner.l:24:11: error: expected '{' before 'catch'
    24 |   } catch catch (const std::out_of_range& e){ \
       |           ^~~~~
-til_scanner.l:123:1: note: in expansion of macro 'checkOverflowInt'
-  123 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
+til_scanner.l:120:1: note: in expansion of macro 'checkOverflowInt'
+  120 | '0'[xX][0-9a-zA-Z]*    yyerror("Invalid hexadecimal number");
       | ^~~~~~~~~~~~~~~~
 til_scanner.l:31:14: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
    31 |       yylval.d = std::stod(yytext); \
       |              ^
-til_scanner.l:126:1: note: in expansion of macro 'checkOverflowDouble'
-  126 | [0-9]+\.[0-9]*{EXPONENCIAL}?  checkOverflowDouble; /* nao acho que esteja aceitamos 0. */
+til_scanner.l:123:1: note: in expansion of macro 'checkOverflowDouble'
+  123 | [0-9]+{EXPONENCIAL}           checkOverflowDouble;
       | ^~~~~~~~~~~~~~~~~~~
 til_scanner.l:31:14: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
    31 |       yylval.d = std::stod(yytext); \
       |              ^
-til_scanner.l:127:1: note: in expansion of macro 'checkOverflowDouble'
-  127 | [0-9]+{EXPONENCIAL}           checkOverflowDouble;
-      | ^~~~~~~~~~~~~~~~~~~
-til_scanner.l:31:14: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
-   31 |       yylval.d = std::stod(yytext); \
-      |              ^
-til_scanner.l:128:1: note: in expansion of macro 'checkOverflowDouble'
-  128 | 
+til_scanner.l:124:1: note: in expansion of macro 'checkOverflowDouble'
+  124 | 
       | ^                  
 make: *** [Makefile:46: til_scanner.o] Error 1
 
