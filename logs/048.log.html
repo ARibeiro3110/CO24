@@ -1,7 +1,30 @@
 <pre>
 Checking project structure...
 til_scanner.l:137: warning, rule cannot be matched
-til_parser.y: warning: 1 shift/reduce conflict [-Wconflicts-sr]
+til_parser.y:59.23-31: warning: symbol 'arguments' is used, but is not defined as a token and has no rules [-Wother]
+   59 | %type <sequence> list arguments delcarations exprs
+      |                       ^~~~~~~~~
+til_parser.y:59.33-44: warning: symbol 'delcarations' is used, but is not defined as a token and has no rules [-Wother]
+   59 | %type <sequence> list arguments delcarations exprs
+      |                                 ^~~~~~~~~~~~
+til_parser.y:62.15-18: warning: symbol 'blck' is used, but is not defined as a token and has no rules [-Wother]
+   62 | %type <block> blck
+      |               ^~~~
+til_parser.y: warning: 4 nonterminals useless in grammar [-Wother]
+til_parser.y: warning: 2 rules useless in grammar [-Wother]
+til_parser.y:59.23-31: warning: nonterminal useless in grammar: arguments [-Wother]
+   59 | %type <sequence> list arguments delcarations exprs
+      |                       ^~~~~~~~~
+til_parser.y:59.33-44: warning: nonterminal useless in grammar: delcarations [-Wother]
+   59 | %type <sequence> list arguments delcarations exprs
+      |                                 ^~~~~~~~~~~~
+til_parser.y:62.15-18: warning: nonterminal useless in grammar: blck [-Wother]
+   62 | %type <block> blck
+      |               ^~~~
+til_parser.y:115.1-5: warning: nonterminal useless in grammar: exprs [-Wother]
+  115 | exprs : exprs expr           { $$ = new cdk::sequence_node(LINE, $2, ...
+      | ^~~~~
+til_parser.y: warning: 105 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 1: syntax error
