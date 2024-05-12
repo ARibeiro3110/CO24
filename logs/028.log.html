@@ -1,15 +1,15 @@
 <pre>
 Checking project structure...
-til_parser.y: warning: 54 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 58 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
-til_parser.y:104:45: error: cannot convert 'std::shared_ptr<cdk::basic_type>' to 'cdk::sequence_node*' in assignment
-  104 | types : _type {$$ = $1;}
-      |                                             ^    
-      |                                             |
-      |                                             std::shared_ptr<cdk::basic_type>
-til_parser.y:105:107: error: no matching function for call to 'cdk::sequence_node::sequence_node(int, std::shared_ptr<cdk::basic_type>&, cdk::sequence_node*&)'
-  105 |       | types _type {$$ = new cdk::sequence_node(LINE, $2, $1);}
+til_parser.y:103:51: error: cannot convert 'std::shared_ptr<cdk::basic_type>' to 'cdk::sequence_node*' in assignment
+  103 | types : _type       {$$ = $1;}
+      |                                                   ^    
+      |                                                   |
+      |                                                   std::shared_ptr<cdk::basic_type>
+til_parser.y:104:107: error: no matching function for call to 'cdk::sequence_node::sequence_node(int, std::shared_ptr<cdk::basic_type>&, cdk::sequence_node*&)'
+  104 |       | types _type {$$ = new cdk::sequence_node(LINE, $2, $1);}
       |                                                                                                           ^
 In file included from /usr/include/cdk/ast/all.h:75,
                  from .auto/all_nodes.h:4,
@@ -28,39 +28,39 @@ In file included from /usr/include/cdk/ast/all.h:75,
    13 |   class sequence_node : public basic_node {
       |         ^~~~~~~~~~~~~
 /usr/include/cdk/ast/sequence_node.h:13:9: note:   candidate expects 1 argument, 3 provided
-til_parser.y:113:57: error: no match for 'operator=' (operand types are 'std::shared_ptr<cdk::basic_type>' and 'cdk::sequence_node*')
-  113 |      | function_type {($$ = $1);}
-      |                                                         ^
+til_parser.y:112:62: error: no match for 'operator=' (operand types are 'std::shared_ptr<cdk::basic_type>' and 'cdk::sequence_node*')
+  112 |      | function_type      {($$ = $1);}
+      |                                                              ^
 In file included from /usr/include/c++/13/memory:80,
                  from til_parser.y:4:
 /usr/include/c++/13/bits/shared_ptr.h:418:9: note: candidate: 'template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Tp = cdk::basic_type]'
   418 |         operator=(const shared_ptr<_Yp>& __r) noexcept
       |         ^~~~~~~~
 /usr/include/c++/13/bits/shared_ptr.h:418:9: note:   template argument deduction/substitution failed:
-til_parser.y:113:57: note:   mismatched types 'const std::shared_ptr<_Tp>' and 'cdk::sequence_node*'
-  113 |      | function_type {($$ = $1);}
-      |                                                         ^
+til_parser.y:112:62: note:   mismatched types 'const std::shared_ptr<_Tp>' and 'cdk::sequence_node*'
+  112 |      | function_type      {($$ = $1);}
+      |                                                              ^
 /usr/include/c++/13/bits/shared_ptr.h:429:9: note: candidate: 'template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Tp = cdk::basic_type]'
   429 |         operator=(auto_ptr<_Yp>&& __r)
       |         ^~~~~~~~
 /usr/include/c++/13/bits/shared_ptr.h:429:9: note:   template argument deduction/substitution failed:
-til_parser.y:113:57: note:   mismatched types 'std::auto_ptr<_Up>' and 'cdk::sequence_node*'
-  113 |      | function_type {($$ = $1);}
-      |                                                         ^
+til_parser.y:112:62: note:   mismatched types 'std::auto_ptr<_Up>' and 'cdk::sequence_node*'
+  112 |      | function_type      {($$ = $1);}
+      |                                                              ^
 /usr/include/c++/13/bits/shared_ptr.h:446:9: note: candidate: 'template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Tp = cdk::basic_type]'
   446 |         operator=(shared_ptr<_Yp>&& __r) noexcept
       |         ^~~~~~~~
 /usr/include/c++/13/bits/shared_ptr.h:446:9: note:   template argument deduction/substitution failed:
-til_parser.y:113:57: note:   mismatched types 'std::shared_ptr<_Tp>' and 'cdk::sequence_node*'
-  113 |      | function_type {($$ = $1);}
-      |                                                         ^
+til_parser.y:112:62: note:   mismatched types 'std::shared_ptr<_Tp>' and 'cdk::sequence_node*'
+  112 |      | function_type      {($$ = $1);}
+      |                                                              ^
 /usr/include/c++/13/bits/shared_ptr.h:454:9: note: candidate: 'template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Del = _Yp; _Tp = cdk::basic_type]'
   454 |         operator=(unique_ptr<_Yp, _Del>&& __r)
       |         ^~~~~~~~
 /usr/include/c++/13/bits/shared_ptr.h:454:9: note:   template argument deduction/substitution failed:
-til_parser.y:113:57: note:   mismatched types 'std::unique_ptr<_Tp, _Dp>' and 'cdk::sequence_node*'
-  113 |      | function_type {($$ = $1);}
-      |                                                         ^
+til_parser.y:112:62: note:   mismatched types 'std::unique_ptr<_Tp, _Dp>' and 'cdk::sequence_node*'
+  112 |      | function_type      {($$ = $1);}
+      |                                                              ^
 /usr/include/c++/13/bits/shared_ptr.h:414:19: note: candidate: 'std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = cdk::basic_type]'
   414 |       shared_ptr& operator=(const shared_ptr&) noexcept = default;
       |                   ^~~~~~~~
@@ -73,13 +73,13 @@ til_parser.y:113:57: note:   mismatched types 'std::unique_ptr<_Tp, _Dp>' and 'c
 /usr/include/c++/13/bits/shared_ptr.h:438:30: note:   no known conversion for argument 1 from 'cdk::sequence_node*' to 'std::shared_ptr<cdk::basic_type>&&'
   438 |       operator=(shared_ptr&& __r) noexcept
       |                 ~~~~~~~~~~~~~^~~
-til_parser.y:116:63: error: cannot convert 'std::shared_ptr<cdk::basic_type>' to 'cdk::sequence_node*' in assignment
-  116 | function_type : "(" _type ")" {($$ = $2);}
-      |                                                               ^    
-      |                                                               |
-      |                                                               std::shared_ptr<cdk::basic_type>
-til_parser.y:117:133: error: no matching function for call to 'cdk::sequence_node::sequence_node(int, std::shared_ptr<cdk::basic_type>&, cdk::sequence_node*&)'
-  117 |               | "(" _type "(" types ")" ")" { $$ = new cdk::sequence_node(LINE, $2, $4); }
+til_parser.y:115:77: error: cannot convert 'std::shared_ptr<cdk::basic_type>' to 'cdk::sequence_node*' in assignment
+  115 | function_type : "(" _type ")"               {($$ = $2);}
+      |                                                                             ^    
+      |                                                                             |
+      |                                                                             std::shared_ptr<cdk::basic_type>
+til_parser.y:116:133: error: no matching function for call to 'cdk::sequence_node::sequence_node(int, std::shared_ptr<cdk::basic_type>&, cdk::sequence_node*&)'
+  116 |               | "(" _type "(" types ")" ")" { $$ = new cdk::sequence_node(LINE, $2, $4); }
       |                                                                                                                                     ^
 /usr/include/cdk/ast/sequence_node.h:39:5: note: candidate: 'cdk::sequence_node::sequence_node(int, cdk::basic_node*, cdk::sequence_node*)'
    39 |     sequence_node(int lineno, basic_node *item, sequence_node *sequence = nullptr) :
@@ -95,75 +95,5 @@ til_parser.y:117:133: error: no matching function for call to 'cdk::sequence_nod
    13 |   class sequence_node : public basic_node {
       |         ^~~~~~~~~~~~~
 /usr/include/cdk/ast/sequence_node.h:13:9: note:   candidate expects 1 argument, 3 provided
-til_parser.y:123:59: error: invalid conversion from 'cdk::basic_node*' to 'cdk::sequence_node*' [-fpermissive]
-  123 | instructions : instruction { $$ = $1;}
-      |                                                           ^    
-      |                                                           |
-      |                                                           cdk::basic_node*
-til_parser.y:124:66: error: expected type-specifier before 'sequence_node'
-  124 |              | instructions instruction { $$ = new sequence_node(LINE, $2, $1);}
-      |                                                                  ^~~~~~~~~~~~~
-til_parser.y:128:112: error: no matching function for call to 'til::print_node::print_node(int, cdk::sequence_node*&, bool)'
-  128 |             | "(" tPRINT expressions ")" { $$ = new til::print_node(LINE, $3, false); }
-      |                                                                                                                ^
-In file included from .auto/all_nodes.h:50:
-./ast/print_node.h:16:5: note: candidate: 'til::print_node::print_node(int, cdk::expression_node*, bool)'
-   16 |     print_node(int lineno, cdk::expression_node *argument, bool newLine) :
-      |     ^~~~~~~~~~
-./ast/print_node.h:16:50: note:   no known conversion for argument 2 from 'cdk::sequence_node*' to 'cdk::expression_node*'
-   16 |     print_node(int lineno, cdk::expression_node *argument, bool newLine) :
-      |                            ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
-./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(const til::print_node&)'
-   11 |   class print_node : public cdk::basic_node {
-      |         ^~~~~~~~~~
-./ast/print_node.h:11:9: note:   candidate expects 1 argument, 3 provided
-./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(til::print_node&&)'
-./ast/print_node.h:11:9: note:   candidate expects 1 argument, 3 provided
-til_parser.y:129:113: error: no matching function for call to 'til::print_node::print_node(int, cdk::sequence_node*&, bool)'
-  129 |             | "(" tPRINTLN expressions ")" { $$ = new til::print_node(LINE, $3, true); }
-      |                                                                                                                 ^
-./ast/print_node.h:16:5: note: candidate: 'til::print_node::print_node(int, cdk::expression_node*, bool)'
-   16 |     print_node(int lineno, cdk::expression_node *argument, bool newLine) :
-      |     ^~~~~~~~~~
-./ast/print_node.h:16:50: note:   no known conversion for argument 2 from 'cdk::sequence_node*' to 'cdk::expression_node*'
-   16 |     print_node(int lineno, cdk::expression_node *argument, bool newLine) :
-      |                            ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
-./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(const til::print_node&)'
-   11 |   class print_node : public cdk::basic_node {
-      |         ^~~~~~~~~~
-./ast/print_node.h:11:9: note:   candidate expects 1 argument, 3 provided
-./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(til::print_node&&)'
-./ast/print_node.h:11:9: note:   candidate expects 1 argument, 3 provided
-til_parser.y:151:51: error: cannot convert 'cdk::expression_node*' to 'cdk::sequence_node*' in assignment
-  151 | expressions : expr { $$ = $1;}
-      |                                                   ^          
-      |                                                   |
-      |                                                   cdk::expression_node*
-til_parser.y:152:58: error: expected type-specifier before 'sequence_node'
-  152 |              | expressions expr { $$ = new sequence_node(LINE, $2, $1);}
-      |                                                          ^~~~~~~~~~~~~
-til_parser.y:179:99: error: invalid conversion from 'int' to 'cdk::expression_node*' [-fpermissive]
-  179 |      | '(' tOBJECTS tINTEGER ')'  { $$ = new til::mem_alloc_node(LINE, $3); }
-      |                                                                                                   ^ 
-      |                                                                                                   |
-      |                                                                                                   int
-In file included from .auto/all_nodes.h:47:
-./ast/mem_alloc_node.h:10:54: note:   initializing argument 2 of 'til::mem_alloc_node::mem_alloc_node(int, cdk::expression_node*)'
-   10 |     mem_alloc_node(int lineno, cdk::expression_node *argument) :
-      |                                ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
-til_parser.y:180:60: error: invalid conversion from 'cdk::basic_node*' to 'cdk::expression_node*' [-fpermissive]
-  180 |      | "(" function ")"  { $$ = $2; }
-      |                                                            ^    
-      |                                                            |
-      |                                                            cdk::basic_node*
-til_parser.y:184:133: error: invalid conversion from 'int' to 'cdk::expression_node*' [-fpermissive]
-  184 |      | tINDEX lval tINTEGER  { $$ = new til::index_node(LINE, new cdk::rvalue_node(LINE, $2), $3); }
-      |                                                                                                                                     ^ 
-      |                                                                                                                                     |
-      |                                                                                                                                     int
-In file included from .auto/all_nodes.h:46:
-./ast/index_node.h:13:78: note:   initializing argument 3 of 'til::index_node::index_node(int, cdk::expression_node*, cdk::expression_node*)'
-   13 |     index_node(int lineno, cdk::expression_node *base, cdk::expression_node *index) :
-      |                                                        ~~~~~~~~~~~~~~~~~~~~~~^~~~~
 make: *** [Makefile:40: til_parser.tab.o] Error 1
 
