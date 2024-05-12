@@ -1,14 +1,11 @@
 <pre>
 Checking project structure...
-til_parser.y: warning: 34 shift/reduce conflicts [-Wconflicts-sr]
-til_parser.y: warning: 44 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: warning: 46 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 48 reduce/reduce conflicts [-Wconflicts-rr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
-til_parser.y:205:56: error: 'cdk::expression_node' is an inaccessible base of 'til::call_function_node'
-  205 | func_call : '@' '(' exprs ')'   { $$ = new til::call_function_node(LINE, nullptr , $3); }
-      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                               
-til_parser.y:206:54: error: 'cdk::expression_node' is an inaccessible base of 'til::call_function_node'
-  206 |           | '@' '(' ')'       { $$ = new til::call_function_node(LINE,nullptr , new cdk::sequence_node(LINE)); }
-      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~             
+til_parser.y:209:57: error: 'cdk::expression_node' is an inaccessible base of 'til::call_function_node'
+  209 |      | '(' '@' '(' expr ')' ')'  { $$ = new til::call_function_node(LINE,$4,nullptr);}
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                  
 make: *** [Makefile:40: til_parser.tab.o] Error 1
 
