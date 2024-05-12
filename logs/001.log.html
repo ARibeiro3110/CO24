@@ -1,3 +1,108 @@
 <pre>
 Checking project structure...
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:53:8: error: 'tAND' was not declared in this scope; did you mean 'tEND'?
+   53 | "||"                   return tOR;
+      |        ^~~~
+      |        tEND
+til_scanner.l:54:8: error: 'tOR' was not declared in this scope
+   54 | 
+      |        ^  
+til_scanner.l:56:8: error: 'tTYPE_INT' was not declared in this scope
+   56 | "double"               return tTYPE_DOUBLE;
+      |        ^~~~~~~~~
+til_scanner.l:57:8: error: 'tTYPE_DOUBLE' was not declared in this scope
+   57 | "string"               return tTYPE_STRING;
+      |        ^~~~~~~~~~~~
+til_scanner.l:58:8: error: 'tTYPE_STRING' was not declared in this scope
+   58 | "void"                 return tTYPE_VOID;
+      |        ^~~~~~~~~~~~
+til_scanner.l:59:8: error: 'tTYPE_VOID' was not declared in this scope
+   59 | 
+      |        ^         
+til_scanner.l:61:8: error: 'tEXTERN' was not declared in this scope
+   61 | "forward"              return tFORWARD;
+      |        ^~~~~~~
+til_scanner.l:62:8: error: 'tFORWARD' was not declared in this scope
+   62 | "public"               return tPUBLIC;
+      |        ^~~~~~~~
+til_scanner.l:63:8: error: 'tPUBLIC' was not declared in this scope
+   63 | "var"                  return tVAR;
+      |        ^~~~~~~
+til_scanner.l:64:8: error: 'tVAR' was not declared in this scope
+   64 | 
+      |        ^   
+til_scanner.l:66:8: error: 'tBLOCK' was not declared in this scope; did you mean 'F_LOCK'?
+   66 | "if"                   return tIF;
+      |        ^~~~~~
+      |        F_LOCK
+til_scanner.l:69:8: error: 'tSTOP' was not declared in this scope
+   69 | "next"                 return tNEXT;
+      |        ^~~~~
+til_scanner.l:70:8: error: 'tNEXT' was not declared in this scope; did you mean 'tNE'?
+   70 | "return"               return tRETURN;
+      |        ^~~~~
+      |        tNE
+til_scanner.l:71:8: error: 'tRETURN' was not declared in this scope
+   71 | "print"                return tPRINT;
+      |        ^~~~~~~
+til_scanner.l:76:8: error: 'tNULL' was not declared in this scope; did you mean 'NULL'?
+   76 | "set"                  return tSET;
+      |        ^~~~~
+      |        NULL
+til_scanner.l:77:8: error: 'tSET' was not declared in this scope
+   77 | "index"                return tINDEX;
+      |        ^~~~
+til_scanner.l:78:8: error: 'tINDEX' was not declared in this scope
+   78 | "objects"              return tOBJECTS;
+      |        ^~~~~~
+til_scanner.l:79:8: error: 'tOBJECTS' was not declared in this scope
+   79 | "sizeof"               return tSIZEOF;
+      |        ^~~~~~~~
+til_scanner.l:80:8: error: 'tSIZEOF' was not declared in this scope
+   80 | "function"             return tFUNCTION;
+      |        ^~~~~~~
+til_scanner.l:81:8: error: 'tFUNCTION' was not declared in this scope
+   81 | 
+      |        ^        
+til_scanner.l:83:8: error: 'tPROGRAM' was not declared in this scope
+   83 | 
+      |        ^       
+til_scanner.l:25:12: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+   25 |     yylval.d = std::stod(yytext); \
+      |            ^
+til_scanner.l:115:1: note: in expansion of macro 'CHECKED_STOD'
+  115 | [0-9]+\.[0-9]*{EXP}?   CHECKED_STOD;
+      | ^~~~~~~~~~~~
+til_scanner.l:26:12: error: 'tDOUBLE' was not declared in this scope
+   26 |     return tDOUBLE; \
+      |            ^~~~~~~
+til_scanner.l:115:1: note: in expansion of macro 'CHECKED_STOD'
+  115 | [0-9]+\.[0-9]*{EXP}?   CHECKED_STOD;
+      | ^~~~~~~~~~~~
+til_scanner.l:25:12: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+   25 |     yylval.d = std::stod(yytext); \
+      |            ^
+til_scanner.l:116:1: note: in expansion of macro 'CHECKED_STOD'
+  116 | [0-9]+{EXP}            CHECKED_STOD;
+      | ^~~~~~~~~~~~
+til_scanner.l:26:12: error: 'tDOUBLE' was not declared in this scope
+   26 |     return tDOUBLE; \
+      |            ^~~~~~~
+til_scanner.l:116:1: note: in expansion of macro 'CHECKED_STOD'
+  116 | [0-9]+{EXP}            CHECKED_STOD;
+      | ^~~~~~~~~~~~
+til_scanner.l:25:12: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+   25 |     yylval.d = std::stod(yytext); \
+      |            ^
+til_scanner.l:117:1: note: in expansion of macro 'CHECKED_STOD'
+  117 | 
+      | ^           
+til_scanner.l:26:12: error: 'tDOUBLE' was not declared in this scope
+   26 |     return tDOUBLE; \
+      |            ^~~~~~~
+til_scanner.l:117:1: note: in expansion of macro 'CHECKED_STOD'
+  117 | 
+      | ^           
+make: *** [Makefile:46: til_scanner.o] Error 1
 
