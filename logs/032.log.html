@@ -7318,9 +7318,94 @@ Entering state 47
 Stack now 0 2 47
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 197("!")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--accepting rule at line 155("!")
+Next token is token '!' ()
+Shifting token '!' ()
+Entering state 86
+Stack now 0 2 47 86
+Reducing stack by rule 24 (line 113):
+   $1 = nterm data_type ()
+   $2 = token '!' ()
+-> $$ = nterm data_type ()
+Entering state 47
+Stack now 0 2 47
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 191(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 185("f")
+Next token is token tID ()
+Reducing stack by rule 18 (line 105):
+   $1 = nterm data_type ()
+-> $$ = nterm type ()
+Entering state 46
+Stack now 0 2 46
+Next token is token tID ()
+Shifting token tID ()
+Entering state 85
+Stack now 0 2 46 85
+Reading a token
+--accepting rule at line 155(")")
+Next token is token ')' ()
+Reducing stack by rule 32 (line 134):
+-> $$ = nterm opt_global_init ()
+Entering state 118
+Stack now 0 2 46 85 118
+Reducing stack by rule 12 (line 91):
+   $1 = nterm type ()
+   $2 = token tID ()
+   $3 = nterm opt_global_init ()
+-> $$ = nterm global_declaration ()
+Entering state 44
+Stack now 0 2 44
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 83
+Stack now 0 2 44 83
+Reducing stack by rule 6 (line 83):
+   $1 = token '(' ()
+   $2 = nterm global_declaration ()
+   $3 = token ')' ()
+-> $$ = nterm global_declarations ()
+Entering state 5
+Stack now 0 5
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 191("
+")
+--accepting rule at line 155("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 53
+Stack now 0 5 53
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 130("program")
+Next token is token tPROGRAM ()
+Reducing stack by rule 14 (line 97):
+-> $$ = nterm var ()
+Entering state 45
+Stack now 0 5 53 45
+Next token is token tPROGRAM ()
+2: syntax error
+Error: popping nterm var ()
+Stack now 0 5 53
+Error: popping token '(' ()
+Stack now 0 5
+Error: popping nterm global_declarations ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in P-01-103-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------P-02-104-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 155("(")
@@ -7345,9 +7430,94 @@ Entering state 47
 Stack now 0 2 47
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 197("!")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--accepting rule at line 155("!")
+Next token is token '!' ()
+Shifting token '!' ()
+Entering state 86
+Stack now 0 2 47 86
+Reducing stack by rule 24 (line 113):
+   $1 = nterm data_type ()
+   $2 = token '!' ()
+-> $$ = nterm data_type ()
+Entering state 47
+Stack now 0 2 47
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 191(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 185("f")
+Next token is token tID ()
+Reducing stack by rule 18 (line 105):
+   $1 = nterm data_type ()
+-> $$ = nterm type ()
+Entering state 46
+Stack now 0 2 46
+Next token is token tID ()
+Shifting token tID ()
+Entering state 85
+Stack now 0 2 46 85
+Reading a token
+--accepting rule at line 155(")")
+Next token is token ')' ()
+Reducing stack by rule 32 (line 134):
+-> $$ = nterm opt_global_init ()
+Entering state 118
+Stack now 0 2 46 85 118
+Reducing stack by rule 12 (line 91):
+   $1 = nterm type ()
+   $2 = token tID ()
+   $3 = nterm opt_global_init ()
+-> $$ = nterm global_declaration ()
+Entering state 44
+Stack now 0 2 44
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 83
+Stack now 0 2 44 83
+Reducing stack by rule 6 (line 83):
+   $1 = token '(' ()
+   $2 = nterm global_declaration ()
+   $3 = token ')' ()
+-> $$ = nterm global_declarations ()
+Entering state 5
+Stack now 0 5
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 191("
+")
+--accepting rule at line 155("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 53
+Stack now 0 5 53
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 130("program")
+Next token is token tPROGRAM ()
+Reducing stack by rule 14 (line 97):
+-> $$ = nterm var ()
+Entering state 45
+Stack now 0 5 53 45
+Next token is token tPROGRAM ()
+2: syntax error
+Error: popping nterm var ()
+Stack now 0 5 53
+Error: popping token '(' ()
+Stack now 0 5
+Error: popping nterm global_declarations ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in P-02-104-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------P-03-105-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 155("(")
@@ -7372,9 +7542,94 @@ Entering state 47
 Stack now 0 2 47
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 197("!")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--accepting rule at line 155("!")
+Next token is token '!' ()
+Shifting token '!' ()
+Entering state 86
+Stack now 0 2 47 86
+Reducing stack by rule 24 (line 113):
+   $1 = nterm data_type ()
+   $2 = token '!' ()
+-> $$ = nterm data_type ()
+Entering state 47
+Stack now 0 2 47
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 191(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 185("f")
+Next token is token tID ()
+Reducing stack by rule 18 (line 105):
+   $1 = nterm data_type ()
+-> $$ = nterm type ()
+Entering state 46
+Stack now 0 2 46
+Next token is token tID ()
+Shifting token tID ()
+Entering state 85
+Stack now 0 2 46 85
+Reading a token
+--accepting rule at line 155(")")
+Next token is token ')' ()
+Reducing stack by rule 32 (line 134):
+-> $$ = nterm opt_global_init ()
+Entering state 118
+Stack now 0 2 46 85 118
+Reducing stack by rule 12 (line 91):
+   $1 = nterm type ()
+   $2 = token tID ()
+   $3 = nterm opt_global_init ()
+-> $$ = nterm global_declaration ()
+Entering state 44
+Stack now 0 2 44
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 83
+Stack now 0 2 44 83
+Reducing stack by rule 6 (line 83):
+   $1 = token '(' ()
+   $2 = nterm global_declaration ()
+   $3 = token ')' ()
+-> $$ = nterm global_declarations ()
+Entering state 5
+Stack now 0 5
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 191("
+")
+--accepting rule at line 155("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 53
+Stack now 0 5 53
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 130("program")
+Next token is token tPROGRAM ()
+Reducing stack by rule 14 (line 97):
+-> $$ = nterm var ()
+Entering state 45
+Stack now 0 5 53 45
+Next token is token tPROGRAM ()
+2: syntax error
+Error: popping nterm var ()
+Stack now 0 5 53
+Error: popping token '(' ()
+Stack now 0 5
+Error: popping nterm global_declarations ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in P-03-105-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------P-04-106-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 155("(")
@@ -7402,9 +7657,182 @@ Entering state 47
 Stack now 0 2 47
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 197("!")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--accepting rule at line 155("!")
+Next token is token '!' ()
+Shifting token '!' ()
+Entering state 86
+Stack now 0 2 47 86
+Reducing stack by rule 24 (line 113):
+   $1 = nterm data_type ()
+   $2 = token '!' ()
+-> $$ = nterm data_type ()
+Entering state 47
+Stack now 0 2 47
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 191(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 185("f")
+Next token is token tID ()
+Reducing stack by rule 18 (line 105):
+   $1 = nterm data_type ()
+-> $$ = nterm type ()
+Entering state 46
+Stack now 0 2 46
+Next token is token tID ()
+Shifting token tID ()
+Entering state 85
+Stack now 0 2 46 85
+Reading a token
+--accepting rule at line 155(")")
+Next token is token ')' ()
+Reducing stack by rule 32 (line 134):
+-> $$ = nterm opt_global_init ()
+Entering state 118
+Stack now 0 2 46 85 118
+Reducing stack by rule 12 (line 91):
+   $1 = nterm type ()
+   $2 = token tID ()
+   $3 = nterm opt_global_init ()
+-> $$ = nterm global_declaration ()
+Entering state 44
+Stack now 0 2 44
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 83
+Stack now 0 2 44 83
+Reducing stack by rule 6 (line 83):
+   $1 = token '(' ()
+   $2 = nterm global_declaration ()
+   $3 = token ')' ()
+-> $$ = nterm global_declarations ()
+Entering state 5
+Stack now 0 5
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 191("
+")
+--accepting rule at line 155("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 53
+Stack now 0 5 53
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 30("double")
+Next token is token tDOUBLE_TYPE ()
+Shifting token tDOUBLE_TYPE ()
+Entering state 37
+Stack now 0 5 53 37
+Reducing stack by rule 21 (line 110):
+   $1 = token tDOUBLE_TYPE ()
+-> $$ = nterm data_type ()
+Entering state 47
+Stack now 0 5 53 47
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 191(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 185("d")
+Next token is token tID ()
+Reducing stack by rule 18 (line 105):
+   $1 = nterm data_type ()
+-> $$ = nterm type ()
+Entering state 46
+Stack now 0 5 53 46
+Next token is token tID ()
+Shifting token tID ()
+Entering state 85
+Stack now 0 5 53 46 85
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 191(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 64("4")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 6
+Stack now 0 5 53 46 85 6
+Reducing stack by rule 67 (line 199):
+   $1 = token tINTEGER ()
+-> $$ = nterm literal ()
+Entering state 117
+Stack now 0 5 53 46 85 117
+Reducing stack by rule 34 (line 137):
+   $1 = nterm literal ()
+-> $$ = nterm global_init ()
+Entering state 119
+Stack now 0 5 53 46 85 119
+Reducing stack by rule 33 (line 135):
+   $1 = nterm global_init ()
+-> $$ = nterm opt_global_init ()
+Entering state 118
+Stack now 0 5 53 46 85 118
+Reducing stack by rule 12 (line 91):
+   $1 = nterm type ()
+   $2 = token tID ()
+   $3 = nterm opt_global_init ()
+-> $$ = nterm global_declaration ()
+Entering state 90
+Stack now 0 5 53 90
+Reading a token
+--accepting rule at line 155(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 123
+Stack now 0 5 53 90 123
+Reducing stack by rule 7 (line 84):
+   $1 = nterm global_declarations ()
+   $2 = token '(' ()
+   $3 = nterm global_declaration ()
+   $4 = token ')' ()
+-> $$ = nterm global_declarations ()
+Entering state 5
+Stack now 0 5
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 191("
+")
+--accepting rule at line 155("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 53
+Stack now 0 5 53
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 130("program")
+Next token is token tPROGRAM ()
+Reducing stack by rule 14 (line 97):
+-> $$ = nterm var ()
+Entering state 45
+Stack now 0 5 53 45
+Next token is token tPROGRAM ()
+3: syntax error
+Error: popping nterm var ()
+Stack now 0 5 53
+Error: popping token '(' ()
+Stack now 0 5
+Error: popping nterm global_declarations ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in P-04-106-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------P-05-107-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 155("(")
