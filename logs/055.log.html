@@ -1,10 +1,7 @@
 <pre>
 Checking project structure...
-til_parser.y: warning: 1 nonterminal useless in grammar [-Wother]
-til_parser.y: warning: 2 rules useless in grammar [-Wother]
-til_parser.y:133.1-6: warning: nonterminal useless in grammar: fundef [-Wother]
-  133 | fundef : '(' tFUNCTION '(' data_type       ')' blck ')' { $$ = new ti...
-      | ^~~~~~
+til_parser.y: warning: 2 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 80("(")
