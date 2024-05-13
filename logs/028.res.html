@@ -19,8 +19,8 @@ Number of nodes: 19
 ====================      PARSER       ====================
 
 -- Parser specification found.
-    cond_instruction  go to state 65
-    it_instruction    go to state 66
+    expr              go to state 67
+    lval              go to state 48
 !! GRAMMAR HAS CONFLICTS
 
 ====================     COMPILING     ====================
@@ -148,7 +148,7 @@ P-02-104-N-ok................. OK
 P-03-105-N-ok................. OK
 P-04-106-N-ok................. KO
 P-05-107-N-ok................. OK
-P-06-108-N-ok................. KO
+P-06-108-N-ok................. OK
 P-07-109-N-ok................. KO
 Q-01-110-N-ok................. KO
 Q-02-111-N-ok................. KO
@@ -197,5 +197,5 @@ X: 0. (.50000000000000000000000000000000000000000000000000)
 Z: 0. (.14285714285714285714285714285714285714285714285714)
 Total: 0
 
-Number of at least "OK" tests: 70/132
+Number of at least "OK" tests: 71/132
 
