@@ -1,3 +1,20 @@
 <pre>
 Checking project structure...
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:184:87: error: no matching function for call to 'til::read_node::read_node(int)'
+  184 |      | '(' tREAD ')'                    { $$ = new til::read_node(LINE); }
+      |                                                                                       ^
+In file included from .auto/all_nodes.h:53,
+                 from til_parser.y:8:
+./ast/read_node.h:15:5: note: candidate: 'til::read_node::read_node(int, cdk::lvalue_node*)'
+   15 |     read_node(int lineno, cdk::lvalue_node *argument) :
+      |     ^~~~~~~~~
+./ast/read_node.h:15:5: note:   candidate expects 2 arguments, 1 provided
+./ast/read_node.h:11:9: note: candidate: 'constexpr til::read_node::read_node(const til::read_node&)'
+   11 |   class read_node : public cdk::basic_node {
+      |         ^~~~~~~~~
+./ast/read_node.h:11:9: note:   no known conversion for argument 1 from 'int' to 'const til::read_node&'
+./ast/read_node.h:11:9: note: candidate: 'constexpr til::read_node::read_node(til::read_node&&)'
+./ast/read_node.h:11:9: note:   no known conversion for argument 1 from 'int' to 'til::read_node&&'
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
