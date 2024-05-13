@@ -4,16 +4,13 @@ til_scanner.l:59: warning, rule cannot be matched
 til_scanner.l:69: warning, rule cannot be matched
 til_scanner.l:92: warning, rule cannot be matched
 til_scanner.l:93: warning, rule cannot be matched
-til_parser.y: warning: 2 nonterminals useless in grammar [-Wother]
-til_parser.y: warning: 3 rules useless in grammar [-Wother]
-til_parser.y:172.12-20: warning: nonterminal useless in grammar: plus_expr [-Wother]
-  172 |            plus_expr :
-      |            ^~~~~~~~~
-til_parser.y:189.1-20: warning: nonterminal useless in grammar: function_declaration [-Wother]
-  189 | function_declaration : tFUNCTION_DECLARATION '(' function_type ')' li...
+til_parser.y: warning: 1 nonterminal useless in grammar [-Wother]
+til_parser.y: warning: 2 rules useless in grammar [-Wother]
+til_parser.y:184.1-20: warning: nonterminal useless in grammar: function_declaration [-Wother]
+  184 | function_declaration : tFUNCTION '(' function_type ')' list          ...
       | ^~~~~~~~~~~~~~~~~~~~
 til_parser.y: warning: 1292 shift/reduce conflicts [-Wconflicts-sr]
-til_parser.y: warning: 1029 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: warning: 979 reduce/reduce conflicts [-Wconflicts-rr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 til_parser.y:95.24-99: warning: rule useless in parser due to conflicts [-Wother]
    95 |                types : types type                                   {...
@@ -21,59 +18,18 @@ til_parser.y:95.24-99: warning: rule useless in parser due to conflicts [-Wother
 til_parser.y:96.24-134: warning: rule useless in parser due to conflicts [-Wother]
    96 |                      | type                                         {...
       |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-til_parser.y:184.24-145: warning: rule useless in parser due to conflicts [-Wother]
-  184 |                      | expr                                         {...
+til_parser.y:147.24-109: warning: rule useless in parser due to conflicts [-Wother]
+  147 |                      | '+' expr expr                                {...
       |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
-til_parser.y:144:134: error: invalid conversion from 'int' to 'cdk::expression_node*' [-fpermissive]
-  144 |                      | '-' tINTEGER                                 { $$ = new cdk::unary_minus_node(LINE, $2); }
-      |                                                                                                                                      ^ 
-      |                                                                                                                                      |
-      |                                                                                                                                      int
-In file included from /usr/include/cdk/ast/all.h:79,
-                 from .auto/all_nodes.h:4,
-                 from til_parser.y:8:
-/usr/include/cdk/ast/unary_minus_node.h:13:51: note:   initializing argument 2 of 'cdk::unary_minus_node::unary_minus_node(int, cdk::expression_node*)'
-   13 |     unary_minus_node(int lineno, expression_node *arg) noexcept:
-      |                                  ~~~~~~~~~~~~~~~~~^~~
-til_parser.y:145:136: error: no matching function for call to 'cdk::unary_minus_node::unary_minus_node(int, double&)'
-  145 |                      | '-' tDOUBLE                                  { $$ = new cdk::unary_minus_node(LINE, $2); }
-      |                                                                                                                                        ^
-/usr/include/cdk/ast/unary_minus_node.h:13:5: note: candidate: 'cdk::unary_minus_node::unary_minus_node(int, cdk::expression_node*)'
-   13 |     unary_minus_node(int lineno, expression_node *arg) noexcept:
-      |     ^~~~~~~~~~~~~~~~
-/usr/include/cdk/ast/unary_minus_node.h:13:51: note:   no known conversion for argument 2 from 'double' to 'cdk::expression_node*'
-   13 |     unary_minus_node(int lineno, expression_node *arg) noexcept:
-      |                                  ~~~~~~~~~~~~~~~~~^~~
-/usr/include/cdk/ast/unary_minus_node.h:11:9: note: candidate: 'cdk::unary_minus_node::unary_minus_node(const cdk::unary_minus_node&)'
-   11 |   class unary_minus_node : public unary_operation_node {
-      |         ^~~~~~~~~~~~~~~~
-/usr/include/cdk/ast/unary_minus_node.h:11:9: note:   candidate expects 1 argument, 2 provided
-/usr/include/cdk/ast/unary_minus_node.h:11:9: note: candidate: 'cdk::unary_minus_node::unary_minus_node(cdk::unary_minus_node&&)'
-/usr/include/cdk/ast/unary_minus_node.h:11:9: note:   candidate expects 1 argument, 2 provided
-til_parser.y:146:133: error: invalid conversion from 'int' to 'cdk::expression_node*' [-fpermissive]
-  146 |                      | '+' tINTEGER                                 { $$ = new cdk::unary_plus_node(LINE, $2); }
-      |                                                                                                                                     ^ 
-      |                                                                                                                                     |
-      |                                                                                                                                     int
-In file included from /usr/include/cdk/ast/all.h:81:
-/usr/include/cdk/ast/unary_plus_node.h:13:50: note:   initializing argument 2 of 'cdk::unary_plus_node::unary_plus_node(int, cdk::expression_node*)'
-   13 |     unary_plus_node(int lineno, expression_node *arg) noexcept:
-      |                                 ~~~~~~~~~~~~~~~~~^~~
-til_parser.y:147:135: error: no matching function for call to 'cdk::unary_plus_node::unary_plus_node(int, double&)'
-  147 |                      | '+' tDOUBLE                                  { $$ = new cdk::unary_plus_node(LINE, $2); }
-      |                                                                                                                                       ^
-/usr/include/cdk/ast/unary_plus_node.h:13:5: note: candidate: 'cdk::unary_plus_node::unary_plus_node(int, cdk::expression_node*)'
-   13 |     unary_plus_node(int lineno, expression_node *arg) noexcept:
-      |     ^~~~~~~~~~~~~~~
-/usr/include/cdk/ast/unary_plus_node.h:13:50: note:   no known conversion for argument 2 from 'double' to 'cdk::expression_node*'
-   13 |     unary_plus_node(int lineno, expression_node *arg) noexcept:
-      |                                 ~~~~~~~~~~~~~~~~~^~~
-/usr/include/cdk/ast/unary_plus_node.h:11:9: note: candidate: 'cdk::unary_plus_node::unary_plus_node(const cdk::unary_plus_node&)'
-   11 |   class unary_plus_node : public unary_operation_node {
-      |         ^~~~~~~~~~~~~~~
-/usr/include/cdk/ast/unary_plus_node.h:11:9: note:   candidate expects 1 argument, 2 provided
-/usr/include/cdk/ast/unary_plus_node.h:11:9: note: candidate: 'cdk::unary_plus_node::unary_plus_node(cdk::unary_plus_node&&)'
-/usr/include/cdk/ast/unary_plus_node.h:11:9: note:   candidate expects 1 argument, 2 provided
-make: *** [Makefile:40: til_parser.tab.o] Error 1
+til_parser.y:148.24-109: warning: rule useless in parser due to conflicts [-Wother]
+  148 |                      | '-' expr expr                                {...
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+til_parser.y:179.24-145: warning: rule useless in parser due to conflicts [-Wother]
+  179 |                      | expr                                         {...
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:60:8: error: 'tFUNCTION_DECLARATION' was not declared in this scope
+   60 | 
+      |        ^                    
+make: *** [Makefile:46: til_scanner.o] Error 1
 
