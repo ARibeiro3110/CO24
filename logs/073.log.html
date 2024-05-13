@@ -2,24 +2,381 @@
 Checking project structure...
 til_parser.y: warning: 2 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
-til_scanner.l:87:44: error: 'tIDENTIFIER' was not declared in this scope
-   87 | 
-      |                                            ^          
-til_scanner.l:16:5: error: 'yyval' was not declared in this scope; did you mean 'yylval'?
-   16 |     yyval.i = std::stoi(yytext, nullptr, base); \
-      |     ^~~~~
-til_scanner.l:114:1: note: in expansion of macro 'CHECKED_STOI'
-  114 | 0x[0-9a-fA-F]+         CHECKED_STOI(16);
-      | ^~~~~~~~~~~~
-til_scanner.l:16:5: error: 'yyval' was not declared in this scope; did you mean 'yylval'?
-   16 |     yyval.i = std::stoi(yytext, nullptr, base); \
-      |     ^~~~~
-til_scanner.l:115:1: note: in expansion of macro 'CHECKED_STOI'
-  115 | 0x[0-9a-zA-Z]+
-      | ^~~~~~~~~~~~
-til_scanner.l:118:1: error: 'CHECKED_STOD' was not declared in this scope
-  118 | [0-9]*\.[0-9]*{EXP}?   CHECKED_STOD;
-      | ^~~~~~~~~~~~
-make: *** [Makefile:46: til_scanner.o] Error 1
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:133:90: error: no matching function for call to 'cdk::functional_type::create(cdk::sequence_node*&, std::shared_ptr<cdk::basic_type>&)'
+  133 |          | '(' data_type '(' types ')' ')'  { $$ = cdk::functional_type::create($4, $2); }
+      |                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^                                       
+In file included from /usr/include/cdk/types/types.h:8,
+                 from til_parser.y:7:
+/usr/include/cdk/types/functional_type.h:58:17: note: candidate: 'static auto cdk::functional_type::create(const std::vector<std::shared_ptr<cdk::basic_type> >&, const std::vector<std::shared_ptr<cdk::basic_type> >&)'
+   58 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::vector<std::shared_ptr<basic_type>> &output_types) {
+      |                 ^~~~~~
+/usr/include/cdk/types/functional_type.h:58:72: note:   no known conversion for argument 1 from 'cdk::sequence_node*' to 'const std::vector<std::shared_ptr<cdk::basic_type> >&'
+   58 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::vector<std::shared_ptr<basic_type>> &output_types) {
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/usr/include/cdk/types/functional_type.h:62:17: note: candidate: 'static auto cdk::functional_type::create(const std::vector<std::shared_ptr<cdk::basic_type> >&, const std::shared_ptr<cdk::basic_type>&)'
+   62 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::shared_ptr<basic_type> &output_type) {
+      |                 ^~~~~~
+/usr/include/cdk/types/functional_type.h:62:72: note:   no known conversion for argument 1 from 'cdk::sequence_node*' to 'const std::vector<std::shared_ptr<cdk::basic_type> >&'
+   62 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::shared_ptr<basic_type> &output_type) {
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/usr/include/cdk/types/functional_type.h:67:17: note: candidate: 'static auto cdk::functional_type::create(const std::vector<std::shared_ptr<cdk::basic_type> >&)'
+   67 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &output_types) {
+      |                 ^~~~~~
+/usr/include/cdk/types/functional_type.h:67:17: note:   candidate expects 1 argument, 2 provided
+/usr/include/cdk/types/functional_type.h:72:17: note: candidate: 'static auto cdk::functional_type::create(const std::shared_ptr<cdk::basic_type>&)'
+   72 |     static auto create(const std::shared_ptr<basic_type> &output_type) {
+      |                 ^~~~~~
+/usr/include/cdk/types/functional_type.h:72:17: note:   candidate expects 1 argument, 2 provided
+til_parser.y:136:91: error: no matching function for call to 'cdk::sequence_node::sequence_node(int, std::shared_ptr<cdk::basic_type>&)'
+  136 | types : data_type        { $$ = new cdk::sequence_node(LINE, $1); }
+      |                                                                                           ^
+In file included from /usr/include/cdk/ast/all.h:75,
+                 from .auto/all_nodes.h:4,
+                 from til_parser.y:8:
+/usr/include/cdk/ast/sequence_node.h:39:5: note: candidate: 'cdk::sequence_node::sequence_node(int, cdk::basic_node*, cdk::sequence_node*)'
+   39 |     sequence_node(int lineno, basic_node *item, sequence_node *sequence = nullptr) :
+      |     ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:39:43: note:   no known conversion for argument 2 from 'std::shared_ptr<cdk::basic_type>' to 'cdk::basic_node*'
+   39 |     sequence_node(int lineno, basic_node *item, sequence_node *sequence = nullptr) :
+      |                               ~~~~~~~~~~~~^~~~
+/usr/include/cdk/ast/sequence_node.h:21:5: note: candidate: 'cdk::sequence_node::sequence_node(int)'
+   21 |     sequence_node(int lineno) : basic_node(lineno) { /* EMPTY */ }
+      |     ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:21:5: note:   candidate expects 1 argument, 2 provided
+/usr/include/cdk/ast/sequence_node.h:13:9: note: candidate: 'constexpr cdk::sequence_node::sequence_node(const cdk::sequence_node&)'
+   13 |   class sequence_node : public basic_node {
+      |         ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:13:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:137:113: error: no matching function for call to 'cdk::sequence_node::sequence_node(int, cdk::sequence_node*&, std::shared_ptr<cdk::basic_type>&)'
+  137 |       | data_type types  { $$ = new cdk::sequence_node(LINE, $2, $1);}
+      |                                                                                                                 ^
+/usr/include/cdk/ast/sequence_node.h:39:5: note: candidate: 'cdk::sequence_node::sequence_node(int, cdk::basic_node*, cdk::sequence_node*)'
+   39 |     sequence_node(int lineno, basic_node *item, sequence_node *sequence = nullptr) :
+      |     ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:39:64: note:   no known conversion for argument 3 from 'std::shared_ptr<cdk::basic_type>' to 'cdk::sequence_node*'
+   39 |     sequence_node(int lineno, basic_node *item, sequence_node *sequence = nullptr) :
+      |                                                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:21:5: note: candidate: 'cdk::sequence_node::sequence_node(int)'
+   21 |     sequence_node(int lineno) : basic_node(lineno) { /* EMPTY */ }
+      |     ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:21:5: note:   candidate expects 1 argument, 3 provided
+/usr/include/cdk/ast/sequence_node.h:13:9: note: candidate: 'constexpr cdk::sequence_node::sequence_node(const cdk::sequence_node&)'
+   13 |   class sequence_node : public basic_node {
+      |         ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:13:9: note:   candidate expects 1 argument, 3 provided
+til_parser.y:151:108: error: no matching function for call to 'til::print_node::print_node(cdk::sequence_node*&, bool)'
+  151 |       | '(' tPRINT exprs ')'               { $$ = new til::print_node($3, false); }
+      |                                                                                                            ^
+In file included from .auto/all_nodes.h:52:
+./ast/print_node.h:16:5: note: candidate: 'til::print_node::print_node(int, cdk::sequence_node*, bool)'
+   16 |     print_node(int lineno, cdk::sequence_node *arguments, bool newline) :
+      |     ^~~~~~~~~~
+./ast/print_node.h:16:5: note:   candidate expects 3 arguments, 2 provided
+./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(const til::print_node&)'
+   11 |   class print_node : public cdk::basic_node {
+      |         ^~~~~~~~~~
+./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(til::print_node&&)'
+./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:152:107: error: no matching function for call to 'til::print_node::print_node(cdk::sequence_node*&, bool)'
+  152 |       | '(' tPRINTLN exprs ')'             { $$ = new til::print_node($3, true); }
+      |                                                                                                           ^
+./ast/print_node.h:16:5: note: candidate: 'til::print_node::print_node(int, cdk::sequence_node*, bool)'
+   16 |     print_node(int lineno, cdk::sequence_node *arguments, bool newline) :
+      |     ^~~~~~~~~~
+./ast/print_node.h:16:5: note:   candidate expects 3 arguments, 2 provided
+./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(const til::print_node&)'
+   11 |   class print_node : public cdk::basic_node {
+      |         ^~~~~~~~~~
+./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(til::print_node&&)'
+./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:153:102: error: no matching function for call to 'til::stop_node::stop_node(cdk::expression_node*&)'
+  153 |       | '(' tSTOP integer ')'              { $$ = new til::stop_node($3); }
+      |                                                                                                      ^
+In file included from .auto/all_nodes.h:57:
+./ast/stop_node.h:15:5: note: candidate: 'til::stop_node::stop_node(int, int)'
+   15 |     stop_node(int lineno, int level) :
+      |     ^~~~~~~~~
+./ast/stop_node.h:15:5: note:   candidate expects 2 arguments, 1 provided
+./ast/stop_node.h:11:9: note: candidate: 'constexpr til::stop_node::stop_node(const til::stop_node&)'
+   11 |   class stop_node: public cdk::basic_node {
+      |         ^~~~~~~~~
+./ast/stop_node.h:11:9: note:   no known conversion for argument 1 from 'cdk::expression_node*' to 'const til::stop_node&'
+./ast/stop_node.h:11:9: note: candidate: 'constexpr til::stop_node::stop_node(til::stop_node&&)'
+./ast/stop_node.h:11:9: note:   no known conversion for argument 1 from 'cdk::expression_node*' to 'til::stop_node&&'
+til_parser.y:154:87: error: no matching function for call to 'til::stop_node::stop_node(std::nullptr_t)'
+  154 |       | '(' tSTOP         ')'              { $$ = new til::stop_node(nullptr); }
+      |                                                                                       ^
+./ast/stop_node.h:15:5: note: candidate: 'til::stop_node::stop_node(int, int)'
+   15 |     stop_node(int lineno, int level) :
+      |     ^~~~~~~~~
+./ast/stop_node.h:15:5: note:   candidate expects 2 arguments, 1 provided
+./ast/stop_node.h:11:9: note: candidate: 'constexpr til::stop_node::stop_node(const til::stop_node&)'
+   11 |   class stop_node: public cdk::basic_node {
+      |         ^~~~~~~~~
+./ast/stop_node.h:11:9: note:   no known conversion for argument 1 from 'std::nullptr_t' to 'const til::stop_node&'
+./ast/stop_node.h:11:9: note: candidate: 'constexpr til::stop_node::stop_node(til::stop_node&&)'
+./ast/stop_node.h:11:9: note:   no known conversion for argument 1 from 'std::nullptr_t' to 'til::stop_node&&'
+til_parser.y:155:102: error: no matching function for call to 'til::next_node::next_node(cdk::expression_node*&)'
+  155 |       | '(' tNEXT integer ')'              { $$ = new til::next_node($3); }
+      |                                                                                                      ^
+In file included from .auto/all_nodes.h:50:
+./ast/next_node.h:15:5: note: candidate: 'til::next_node::next_node(int, int)'
+   15 |     next_node(int lineno, int level) :
+      |     ^~~~~~~~~
+./ast/next_node.h:15:5: note:   candidate expects 2 arguments, 1 provided
+./ast/next_node.h:11:9: note: candidate: 'constexpr til::next_node::next_node(const til::next_node&)'
+   11 |   class next_node: public cdk::basic_node {
+      |         ^~~~~~~~~
+./ast/next_node.h:11:9: note:   no known conversion for argument 1 from 'cdk::expression_node*' to 'const til::next_node&'
+./ast/next_node.h:11:9: note: candidate: 'constexpr til::next_node::next_node(til::next_node&&)'
+./ast/next_node.h:11:9: note:   no known conversion for argument 1 from 'cdk::expression_node*' to 'til::next_node&&'
+til_parser.y:156:87: error: no matching function for call to 'til::next_node::next_node(std::nullptr_t)'
+  156 |       | '(' tNEXT         ')'              { $$ = new til::next_node(nullptr); }
+      |                                                                                       ^
+./ast/next_node.h:15:5: note: candidate: 'til::next_node::next_node(int, int)'
+   15 |     next_node(int lineno, int level) :
+      |     ^~~~~~~~~
+./ast/next_node.h:15:5: note:   candidate expects 2 arguments, 1 provided
+./ast/next_node.h:11:9: note: candidate: 'constexpr til::next_node::next_node(const til::next_node&)'
+   11 |   class next_node: public cdk::basic_node {
+      |         ^~~~~~~~~
+./ast/next_node.h:11:9: note:   no known conversion for argument 1 from 'std::nullptr_t' to 'const til::next_node&'
+./ast/next_node.h:11:9: note: candidate: 'constexpr til::next_node::next_node(til::next_node&&)'
+./ast/next_node.h:11:9: note:   no known conversion for argument 1 from 'std::nullptr_t' to 'til::next_node&&'
+til_parser.y:157:104: error: no matching function for call to 'til::return_node::return_node(cdk::expression_node*&)'
+  157 |       | '(' tRETURN expr ')'               { $$ = new til::return_node($3); }
+      |                                                                                                        ^
+In file included from .auto/all_nodes.h:55:
+./ast/return_node.h:15:12: note: candidate: 'til::return_node::return_node(int, cdk::expression_node*)'
+   15 |     inline return_node(int lineno, cdk::expression_node *argument) :
+      |            ^~~~~~~~~~~
+./ast/return_node.h:15:12: note:   candidate expects 2 arguments, 1 provided
+./ast/return_node.h:11:9: note: candidate: 'constexpr til::return_node::return_node(const til::return_node&)'
+   11 |   class return_node: public cdk::basic_node {
+      |         ^~~~~~~~~~~
+./ast/return_node.h:11:9: note:   no known conversion for argument 1 from 'cdk::expression_node*' to 'const til::return_node&'
+./ast/return_node.h:11:9: note: candidate: 'constexpr til::return_node::return_node(til::return_node&&)'
+./ast/return_node.h:11:9: note:   no known conversion for argument 1 from 'cdk::expression_node*' to 'til::return_node&&'
+til_parser.y:158:118: error: no matching function for call to 'til::if_node::if_node(cdk::expression_node*&, cdk::basic_node*&)'
+  158 |       | '(' tIF expr instr ')'             { $$ = new til::if_node($3, $4); }
+      |                                                                                                                      ^
+In file included from .auto/all_nodes.h:47:
+./ast/if_node.h:16:5: note: candidate: 'til::if_node::if_node(int, cdk::expression_node*, cdk::basic_node*)'
+   16 |     if_node(int lineno, cdk::expression_node *condition, cdk::basic_node *block) :
+      |     ^~~~~~~
+./ast/if_node.h:16:5: note:   candidate expects 3 arguments, 2 provided
+./ast/if_node.h:11:9: note: candidate: 'constexpr til::if_node::if_node(const til::if_node&)'
+   11 |   class if_node : public cdk::basic_node {
+      |         ^~~~~~~
+./ast/if_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+./ast/if_node.h:11:9: note: candidate: 'constexpr til::if_node::if_node(til::if_node&&)'
+./ast/if_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:159:141: error: no matching function for call to 'til::if_else_node::if_else_node(cdk::expression_node*&, cdk::basic_node*&, cdk::basic_node*&)'
+  159 |       | '(' tIF expr instr instr ')'       { $$ = new til::if_else_node($3, $4, $5); }
+      |                                                                                                                                             ^
+In file included from .auto/all_nodes.h:46:
+./ast/if_else_node.h:16:5: note: candidate: 'til::if_else_node::if_else_node(int, cdk::expression_node*, cdk::basic_node*, cdk::basic_node*)'
+   16 |     if_else_node(int lineno, cdk::expression_node *condition, cdk::basic_node *thenblock,
+      |     ^~~~~~~~~~~~
+./ast/if_else_node.h:16:5: note:   candidate expects 4 arguments, 3 provided
+./ast/if_else_node.h:11:9: note: candidate: 'constexpr til::if_else_node::if_else_node(const til::if_else_node&)'
+   11 |   class if_else_node : public cdk::basic_node {
+      |         ^~~~~~~~~~~~
+./ast/if_else_node.h:11:9: note:   candidate expects 1 argument, 3 provided
+./ast/if_else_node.h:11:9: note: candidate: 'constexpr til::if_else_node::if_else_node(til::if_else_node&&)'
+./ast/if_else_node.h:11:9: note:   candidate expects 1 argument, 3 provided
+til_parser.y:160:120: error: no matching function for call to 'til::loop_node::loop_node(cdk::expression_node*&, cdk::basic_node*&)'
+  160 |       | '(' tLOOP expr instr ')'           { $$ = new til::loop_node($3, $4); }
+      |                                                                                                                        ^
+In file included from .auto/all_nodes.h:49:
+./ast/loop_node.h:16:5: note: candidate: 'til::loop_node::loop_node(int, cdk::expression_node*, cdk::basic_node*)'
+   16 |     loop_node(int lineno, cdk::expression_node *condition, cdk::basic_node *block) :
+      |     ^~~~~~~~~
+./ast/loop_node.h:16:5: note:   candidate expects 3 arguments, 2 provided
+./ast/loop_node.h:11:9: note: candidate: 'constexpr til::loop_node::loop_node(const til::loop_node&)'
+   11 |   class loop_node : public cdk::basic_node {
+      |         ^~~~~~~~~
+./ast/loop_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+./ast/loop_node.h:11:9: note: candidate: 'constexpr til::loop_node::loop_node(til::loop_node&&)'
+./ast/loop_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:169:63: error: invalid conversion from 'cdk::basic_node*' to 'cdk::expression_node*' [-fpermissive]
+  169 |      | fundef                { $$ = $1; }
+      |                                                               ^    
+      |                                                               |
+      |                                                               cdk::basic_node*
+til_parser.y:172:110: error: no matching function for call to 'til::function_call_node::function_call_node(int, cdk::expression_node*&)'
+  172 |      | '(' expr       ')'     { $$ = new til::function_call_node(LINE, $2); }
+      |                                                                                                              ^
+In file included from .auto/all_nodes.h:44:
+./ast/function_call_node.h:16:5: note: candidate: 'til::function_call_node::function_call_node(int, cdk::expression_node*, cdk::sequence_node*)'
+   16 |     function_call_node(int lineno, cdk::expression_node *function, cdk::sequence_node *arguments) :
+      |     ^~~~~~~~~~~~~~~~~~
+./ast/function_call_node.h:16:5: note:   candidate expects 3 arguments, 2 provided
+./ast/function_call_node.h:11:9: note: candidate: 'til::function_call_node::function_call_node(const til::function_call_node&)'
+   11 |   class function_call_node : public cdk::expression_node {
+      |         ^~~~~~~~~~~~~~~~~~
+./ast/function_call_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+./ast/function_call_node.h:11:9: note: candidate: 'til::function_call_node::function_call_node(til::function_call_node&&)'
+./ast/function_call_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:196:100: error: no matching function for call to 'til::sizeof_node::sizeof_node(int, cdk::sequence_node*&)'
+  196 |      | '(' tSIZEOF exprs ')' { $$ = new til::sizeof_node(LINE, $3); }
+      |                                                                                                    ^
+In file included from .auto/all_nodes.h:56:
+./ast/sizeof_node.h:15:12: note: candidate: 'til::sizeof_node::sizeof_node(int, cdk::expression_node*)'
+   15 |     inline sizeof_node(int lineno, cdk::expression_node *argument) :
+      |            ^~~~~~~~~~~
+./ast/sizeof_node.h:15:58: note:   no known conversion for argument 2 from 'cdk::sequence_node*' to 'cdk::expression_node*'
+   15 |     inline sizeof_node(int lineno, cdk::expression_node *argument) :
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+./ast/sizeof_node.h:11:9: note: candidate: 'til::sizeof_node::sizeof_node(const til::sizeof_node&)'
+   11 |   class sizeof_node: public cdk::expression_node {
+      |         ^~~~~~~~~~~
+./ast/sizeof_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+./ast/sizeof_node.h:11:9: note: candidate: 'til::sizeof_node::sizeof_node(til::sizeof_node&&)'
+./ast/sizeof_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:198:99: error: no matching function for call to 'til::alloc_node::alloc_node(int, cdk::sequence_node*&)'
+  198 |      | '(' tOBJECTS exprs ')'{ $$ = new til::alloc_node(LINE, $3); }
+      |                                                                                                   ^
+In file included from .auto/all_nodes.h:40:
+./ast/alloc_node.h:13:12: note: candidate: 'til::alloc_node::alloc_node(int, cdk::expression_node*)'
+   13 |     inline alloc_node(int lineno, cdk::expression_node *argument) :
+      |            ^~~~~~~~~~
+./ast/alloc_node.h:13:57: note:   no known conversion for argument 2 from 'cdk::sequence_node*' to 'cdk::expression_node*'
+   13 |     inline alloc_node(int lineno, cdk::expression_node *argument) :
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+./ast/alloc_node.h:11:9: note: candidate: 'til::alloc_node::alloc_node(const til::alloc_node&)'
+   11 |   class alloc_node: public cdk::unary_operation_node {
+      |         ^~~~~~~~~~
+./ast/alloc_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+./ast/alloc_node.h:11:9: note: candidate: 'til::alloc_node::alloc_node(til::alloc_node&&)'
+./ast/alloc_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:210:115: error: no matching function for call to 'cdk::rvalue_node::rvalue_node(int, std::string*&)'
+  210 |      | tINDEX tID expr       { $$ = new til::index_node(LINE, new cdk::rvalue_node(LINE, $2), $3); }
+      |                                                                                                                   ^
+In file included from /usr/include/cdk/ast/all.h:74:
+/usr/include/cdk/ast/rvalue_node.h:16:5: note: candidate: 'cdk::rvalue_node::rvalue_node(int, cdk::lvalue_node*)'
+   16 |     rvalue_node(int lineno, lvalue_node *lvalue) noexcept:
+      |     ^~~~~~~~~~~
+/usr/include/cdk/ast/rvalue_node.h:16:42: note:   no known conversion for argument 2 from 'std::string*' {aka 'std::__cxx11::basic_string<char>*'} to 'cdk::lvalue_node*'
+   16 |     rvalue_node(int lineno, lvalue_node *lvalue) noexcept:
+      |                             ~~~~~~~~~~~~~^~~~~~
+/usr/include/cdk/ast/rvalue_node.h:12:9: note: candidate: 'cdk::rvalue_node::rvalue_node(const cdk::rvalue_node&)'
+   12 |   class rvalue_node : public cdk::expression_node {
+      |         ^~~~~~~~~~~
+/usr/include/cdk/ast/rvalue_node.h:12:9: note:   candidate expects 1 argument, 2 provided
+/usr/include/cdk/ast/rvalue_node.h:12:9: note: candidate: 'cdk::rvalue_node::rvalue_node(cdk::rvalue_node&&)'
+/usr/include/cdk/ast/rvalue_node.h:12:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:213:167: error: no matching function for call to 'til::function_node::function_node(int, std::shared_ptr<cdk::basic_type>&, std::nullptr_t, cdk::sequence_node*&, cdk::sequence_node*&)'
+  213 | fundef : '(' tFUNCTION '(' return_type           ')' decls instrs ')' { til::function_node(LINE, $4, nullptr, $6, $7); }
+      |                                                                                                                                                                       ^
+In file included from .auto/all_nodes.h:45:
+./ast/function_node.h:33:5: note: candidate: 'til::function_node::function_node(int, std::shared_ptr<cdk::basic_type>, cdk::sequence_node*, til::block_node*)'
+   33 |     function_node(int lineno,
+      |     ^~~~~~~~~~~~~
+./ast/function_node.h:33:5: note:   candidate expects 4 arguments, 5 provided
+./ast/function_node.h:23:5: note: candidate: 'til::function_node::function_node(int, cdk::sequence_node*, til::block_node*)'
+   23 |     function_node(int lineno,
+      |     ^~~~~~~~~~~~~
+./ast/function_node.h:23:5: note:   candidate expects 3 arguments, 5 provided
+./ast/function_node.h:15:9: note: candidate: 'til::function_node::function_node(const til::function_node&)'
+   15 |   class function_node : public cdk::expression_node {
+      |         ^~~~~~~~~~~~~
+./ast/function_node.h:15:9: note:   candidate expects 1 argument, 5 provided
+./ast/function_node.h:15:9: note: candidate: 'til::function_node::function_node(til::function_node&&)'
+./ast/function_node.h:15:9: note:   candidate expects 1 argument, 5 provided
+til_parser.y:214:175: error: no matching function for call to 'til::function_node::function_node(int, std::shared_ptr<cdk::basic_type>&, std::nullptr_t, cdk::sequence_node*, cdk::sequence_node*&)'
+  214 |        | '(' tFUNCTION '(' return_type           ')'       instrs ')' { til::function_node(LINE, $4, nullptr, new cdk::sequence_node(LINE), $6); }
+      |                                                                                                                                                                               ^
+./ast/function_node.h:33:5: note: candidate: 'til::function_node::function_node(int, std::shared_ptr<cdk::basic_type>, cdk::sequence_node*, til::block_node*)'
+   33 |     function_node(int lineno,
+      |     ^~~~~~~~~~~~~
+./ast/function_node.h:33:5: note:   candidate expects 4 arguments, 5 provided
+./ast/function_node.h:23:5: note: candidate: 'til::function_node::function_node(int, cdk::sequence_node*, til::block_node*)'
+   23 |     function_node(int lineno,
+      |     ^~~~~~~~~~~~~
+./ast/function_node.h:23:5: note:   candidate expects 3 arguments, 5 provided
+./ast/function_node.h:15:9: note: candidate: 'til::function_node::function_node(const til::function_node&)'
+   15 |   class function_node : public cdk::expression_node {
+      |         ^~~~~~~~~~~~~
+./ast/function_node.h:15:9: note:   candidate expects 1 argument, 5 provided
+./ast/function_node.h:15:9: note: candidate: 'til::function_node::function_node(til::function_node&&)'
+./ast/function_node.h:15:9: note:   candidate expects 1 argument, 5 provided
+til_parser.y:215:175: error: no matching function for call to 'til::function_node::function_node(int, std::shared_ptr<cdk::basic_type>&, std::nullptr_t, cdk::sequence_node*&, cdk::sequence_node*)'
+  215 |        | '(' tFUNCTION '(' return_type           ')' decls        ')' { til::function_node(LINE, $4, nullptr, $6, new cdk::sequence_node(LINE)); }
+      |                                                                                                                                                                               ^
+./ast/function_node.h:33:5: note: candidate: 'til::function_node::function_node(int, std::shared_ptr<cdk::basic_type>, cdk::sequence_node*, til::block_node*)'
+   33 |     function_node(int lineno,
+      |     ^~~~~~~~~~~~~
+./ast/function_node.h:33:5: note:   candidate expects 4 arguments, 5 provided
+./ast/function_node.h:23:5: note: candidate: 'til::function_node::function_node(int, cdk::sequence_node*, til::block_node*)'
+   23 |     function_node(int lineno,
+      |     ^~~~~~~~~~~~~
+./ast/function_node.h:23:5: note:   candidate expects 3 arguments, 5 provided
+./ast/function_node.h:15:9: note: candidate: 'til::function_node::function_node(const til::function_node&)'
+   15 |   class function_node : public cdk::expression_node {
+      |         ^~~~~~~~~~~~~
+./ast/function_node.h:15:9: note:   candidate expects 1 argument, 5 provided
+./ast/function_node.h:15:9: note: candidate: 'til::function_node::function_node(til::function_node&&)'
+./ast/function_node.h:15:9: note:   candidate expects 1 argument, 5 provided
+til_parser.y:217:180: error: no matching function for call to 'til::function_node::function_node(int, std::shared_ptr<cdk::basic_type>&, cdk::sequence_node*&, cdk::sequence_node*&, cdk::sequence_node*&)'
+  217 |        | '(' tFUNCTION '(' return_type func_args ')' decls instrs ')' { til::function_node(LINE, $4, $5, $7, $8); }
+      |                                                                                                                                                                                    ^
+./ast/function_node.h:33:5: note: candidate: 'til::function_node::function_node(int, std::shared_ptr<cdk::basic_type>, cdk::sequence_node*, til::block_node*)'
+   33 |     function_node(int lineno,
+      |     ^~~~~~~~~~~~~
+./ast/function_node.h:33:5: note:   candidate expects 4 arguments, 5 provided
+./ast/function_node.h:23:5: note: candidate: 'til::function_node::function_node(int, cdk::sequence_node*, til::block_node*)'
+   23 |     function_node(int lineno,
+      |     ^~~~~~~~~~~~~
+./ast/function_node.h:23:5: note:   candidate expects 3 arguments, 5 provided
+./ast/function_node.h:15:9: note: candidate: 'til::function_node::function_node(const til::function_node&)'
+   15 |   class function_node : public cdk::expression_node {
+      |         ^~~~~~~~~~~~~
+./ast/function_node.h:15:9: note:   candidate expects 1 argument, 5 provided
+./ast/function_node.h:15:9: note: candidate: 'til::function_node::function_node(til::function_node&&)'
+./ast/function_node.h:15:9: note:   candidate expects 1 argument, 5 provided
+til_parser.y:218:188: error: no matching function for call to 'til::function_node::function_node(int, std::shared_ptr<cdk::basic_type>&, cdk::sequence_node*&, cdk::sequence_node*, cdk::sequence_node*&)'
+  218 |        | '(' tFUNCTION '(' return_type func_args ')'       instrs ')' { til::function_node(LINE, $4, $5, new cdk::sequence_node(LINE), $7); }
+      |                                                                                                                                                                                            ^
+./ast/function_node.h:33:5: note: candidate: 'til::function_node::function_node(int, std::shared_ptr<cdk::basic_type>, cdk::sequence_node*, til::block_node*)'
+   33 |     function_node(int lineno,
+      |     ^~~~~~~~~~~~~
+./ast/function_node.h:33:5: note:   candidate expects 4 arguments, 5 provided
+./ast/function_node.h:23:5: note: candidate: 'til::function_node::function_node(int, cdk::sequence_node*, til::block_node*)'
+   23 |     function_node(int lineno,
+      |     ^~~~~~~~~~~~~
+./ast/function_node.h:23:5: note:   candidate expects 3 arguments, 5 provided
+./ast/function_node.h:15:9: note: candidate: 'til::function_node::function_node(const til::function_node&)'
+   15 |   class function_node : public cdk::expression_node {
+      |         ^~~~~~~~~~~~~
+./ast/function_node.h:15:9: note:   candidate expects 1 argument, 5 provided
+./ast/function_node.h:15:9: note: candidate: 'til::function_node::function_node(til::function_node&&)'
+./ast/function_node.h:15:9: note:   candidate expects 1 argument, 5 provided
+til_parser.y:219:188: error: no matching function for call to 'til::function_node::function_node(int, std::shared_ptr<cdk::basic_type>&, cdk::sequence_node*&, cdk::sequence_node*&, cdk::sequence_node*)'
+  219 |        | '(' tFUNCTION '(' return_type func_args ')' decls        ')' { til::function_node(LINE, $4, $5, $7, new cdk::sequence_node(LINE)); }
+      |                                                                                                                                                                                            ^
+./ast/function_node.h:33:5: note: candidate: 'til::function_node::function_node(int, std::shared_ptr<cdk::basic_type>, cdk::sequence_node*, til::block_node*)'
+   33 |     function_node(int lineno,
+      |     ^~~~~~~~~~~~~
+./ast/function_node.h:33:5: note:   candidate expects 4 arguments, 5 provided
+./ast/function_node.h:23:5: note: candidate: 'til::function_node::function_node(int, cdk::sequence_node*, til::block_node*)'
+   23 |     function_node(int lineno,
+      |     ^~~~~~~~~~~~~
+./ast/function_node.h:23:5: note:   candidate expects 3 arguments, 5 provided
+./ast/function_node.h:15:9: note: candidate: 'til::function_node::function_node(const til::function_node&)'
+   15 |   class function_node : public cdk::expression_node {
+      |         ^~~~~~~~~~~~~
+./ast/function_node.h:15:9: note:   candidate expects 1 argument, 5 provided
+./ast/function_node.h:15:9: note: candidate: 'til::function_node::function_node(til::function_node&&)'
+./ast/function_node.h:15:9: note:   candidate expects 1 argument, 5 provided
+til_parser.y:223:48: error: expected type-specifier
+  223 |             | tTYPE_VOID  { $$ = new cdk::primitive_type::create(0, cdk::TYPE_VOID); }
+      |                                                ^~~
+til_parser.y:230:162: error: type 'class std::shared_ptr<cdk::basic_type>' argument given to 'delete', expected pointer
+  230 | func_arg : '(' data_type tID ')'        { $$ = new til::declaration_node(LINE, tPRIVATE, $2, *$3, nullptr); delete $2; }
+      |                                                                                                                                                                  ^    
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
