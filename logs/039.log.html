@@ -1,6 +1,6 @@
 <pre>
 Checking project structure...
-til_parser.y: warning: 7 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 9 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: warning: 2 reduce/reduce conflicts [-Wconflicts-rr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
@@ -1896,20 +1896,15 @@ Reading a token
 --accepting rule at line 62("forward")
 Next token is token tFORWARD ()
 Shifting token tFORWARD ()
-Entering state 22
-Stack now 0 2 22
-Reducing stack by rule 15 (line 106):
-   $1 = token tFORWARD ()
--> $$ = nterm qualifier ()
-Entering state 25
-Stack now 0 2 25
+Entering state 23
+Stack now 0 2 23
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 1: syntax error
-Error: popping nterm qualifier ()
+Error: popping token tFORWARD ()
 Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
@@ -1958,20 +1953,15 @@ Reading a token
 --accepting rule at line 61("external")
 Next token is token tEXTERNAL ()
 Shifting token tEXTERNAL ()
-Entering state 21
-Stack now 0 2 21
-Reducing stack by rule 14 (line 105):
-   $1 = token tEXTERNAL ()
--> $$ = nterm qualifier ()
-Entering state 25
-Stack now 0 2 25
+Entering state 22
+Stack now 0 2 22
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 1: syntax error
-Error: popping nterm qualifier ()
+Error: popping token tEXTERNAL ()
 Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
@@ -2012,8 +2002,8 @@ Reading a token
 --accepting rule at line 53("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 24
-Stack now 0 2 24
+Entering state 25
+Stack now 0 2 25
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2023,30 +2013,30 @@ Reading a token
 Next token is token tTYPE_INT ()
 Shifting token tTYPE_INT ()
 Entering state 31
-Stack now 0 2 24 31
-Reducing stack by rule 19 (line 114):
+Stack now 0 2 25 31
+Reducing stack by rule 18 (line 110):
    $1 = token tTYPE_INT ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 24 65
+Stack now 0 2 25 65
 Reading a token
 --accepting rule at line 54(")")
 Next token is token ')' ()
-Reducing stack by rule 17 (line 110):
+Reducing stack by rule 16 (line 106):
    $1 = nterm referable_type ()
 -> $$ = nterm type ()
 Entering state 64
-Stack now 0 2 24 64
+Stack now 0 2 25 64
 Next token is token ')' ()
-Reducing stack by rule 26 (line 125):
+Reducing stack by rule 25 (line 121):
    $1 = nterm type ()
 -> $$ = nterm func_return_type ()
 Entering state 67
-Stack now 0 2 24 67
+Stack now 0 2 25 67
 Next token is token ')' ()
 1: syntax error
 Error: popping nterm func_return_type ()
-Stack now 0 2 24
+Stack now 0 2 25
 Error: popping token '(' ()
 Stack now 0 2
 Error: popping token '(' ()
@@ -2073,69 +2063,63 @@ Reading a token
 --accepting rule at line 63("public")
 Next token is token tPUBLIC ()
 Shifting token tPUBLIC ()
-Entering state 23
-Stack now 0 2 23
+Entering state 24
+Stack now 0 2 24
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --accepting rule at line 56("int")
 Next token is token tTYPE_INT ()
-Reducing stack by rule 16 (line 107):
-   $1 = token tPUBLIC ()
--> $$ = nterm qualifier ()
-Entering state 25
-Stack now 0 2 25
-Next token is token tTYPE_INT ()
 Shifting token tTYPE_INT ()
 Entering state 31
-Stack now 0 2 25 31
-Reducing stack by rule 19 (line 114):
+Stack now 0 2 24 31
+Reducing stack by rule 18 (line 110):
    $1 = token tTYPE_INT ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 25 65
+Stack now 0 2 24 65
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --(end of buffer or a NUL)
 --accepting rule at line 86("x")
 Next token is token tIDENTIFIER ()
-Reducing stack by rule 17 (line 110):
+Reducing stack by rule 16 (line 106):
    $1 = nterm referable_type ()
 -> $$ = nterm type ()
-Entering state 84
-Stack now 0 2 25 84
+Entering state 86
+Stack now 0 2 24 86
 Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
-Entering state 132
-Stack now 0 2 25 84 132
+Entering state 137
+Stack now 0 2 24 86 137
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 112("10")
+--accepting rule at line 114("10")
 Next token is token tINTEGER ()
 Shifting token tINTEGER ()
 Entering state 7
-Stack now 0 2 25 84 132 7
-Reducing stack by rule 60 (line 186):
+Stack now 0 2 24 86 137 7
+Reducing stack by rule 61 (line 184):
    $1 = token tINTEGER ()
 -> $$ = nterm expr ()
-Entering state 178
-Stack now 0 2 25 84 132 178
+Entering state 185
+Stack now 0 2 24 86 137 185
 Reading a token
 --accepting rule at line 54(")")
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 206
-Stack now 0 2 25 84 132 178 206
-Reducing stack by rule 10 (line 99):
+Entering state 213
+Stack now 0 2 24 86 137 185 213
+Reducing stack by rule 12 (line 100):
    $1 = token '(' ()
-   $2 = nterm qualifier ()
+   $2 = token tPUBLIC ()
    $3 = nterm type ()
    $4 = token tIDENTIFIER ()
    $5 = nterm expr ()
@@ -2143,7 +2127,7 @@ Reducing stack by rule 10 (line 99):
 -> $$ = nterm fdecl ()
 Entering state 5
 Stack now 0 5
-Reducing stack by rule 6 (line 91):
+Reducing stack by rule 6 (line 90):
    $1 = nterm fdecl ()
 -> $$ = nterm fdecls ()
 Entering state 4
@@ -2151,7 +2135,7 @@ Stack now 0 4
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 122("
+--accepting rule at line 124("
 ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
@@ -2319,20 +2303,15 @@ Reading a token
 --accepting rule at line 62("forward")
 Next token is token tFORWARD ()
 Shifting token tFORWARD ()
-Entering state 22
-Stack now 0 2 22
-Reducing stack by rule 15 (line 106):
-   $1 = token tFORWARD ()
--> $$ = nterm qualifier ()
-Entering state 25
-Stack now 0 2 25
+Entering state 23
+Stack now 0 2 23
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 1: syntax error
-Error: popping nterm qualifier ()
+Error: popping token tFORWARD ()
 Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
@@ -2359,20 +2338,15 @@ Reading a token
 --accepting rule at line 62("forward")
 Next token is token tFORWARD ()
 Shifting token tFORWARD ()
-Entering state 22
-Stack now 0 2 22
-Reducing stack by rule 15 (line 106):
-   $1 = token tFORWARD ()
--> $$ = nterm qualifier ()
-Entering state 25
-Stack now 0 2 25
+Entering state 23
+Stack now 0 2 23
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 1: syntax error
-Error: popping nterm qualifier ()
+Error: popping token tFORWARD ()
 Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
@@ -2399,20 +2373,15 @@ Reading a token
 --accepting rule at line 62("forward")
 Next token is token tFORWARD ()
 Shifting token tFORWARD ()
-Entering state 22
-Stack now 0 2 22
-Reducing stack by rule 15 (line 106):
-   $1 = token tFORWARD ()
--> $$ = nterm qualifier ()
-Entering state 25
-Stack now 0 2 25
+Entering state 23
+Stack now 0 2 23
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 1: syntax error
-Error: popping nterm qualifier ()
+Error: popping token tFORWARD ()
 Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
@@ -2439,20 +2408,15 @@ Reading a token
 --accepting rule at line 62("forward")
 Next token is token tFORWARD ()
 Shifting token tFORWARD ()
-Entering state 22
-Stack now 0 2 22
-Reducing stack by rule 15 (line 106):
-   $1 = token tFORWARD ()
--> $$ = nterm qualifier ()
-Entering state 25
-Stack now 0 2 25
+Entering state 23
+Stack now 0 2 23
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 1: syntax error
-Error: popping nterm qualifier ()
+Error: popping token tFORWARD ()
 Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
@@ -2500,20 +2464,15 @@ Reading a token
 --accepting rule at line 62("forward")
 Next token is token tFORWARD ()
 Shifting token tFORWARD ()
-Entering state 22
-Stack now 0 2 22
-Reducing stack by rule 15 (line 106):
-   $1 = token tFORWARD ()
--> $$ = nterm qualifier ()
-Entering state 25
-Stack now 0 2 25
+Entering state 23
+Stack now 0 2 23
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 1: syntax error
-Error: popping nterm qualifier ()
+Error: popping token tFORWARD ()
 Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
@@ -2540,20 +2499,15 @@ Reading a token
 --accepting rule at line 62("forward")
 Next token is token tFORWARD ()
 Shifting token tFORWARD ()
-Entering state 22
-Stack now 0 2 22
-Reducing stack by rule 15 (line 106):
-   $1 = token tFORWARD ()
--> $$ = nterm qualifier ()
-Entering state 25
-Stack now 0 2 25
+Entering state 23
+Stack now 0 2 23
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 1: syntax error
-Error: popping nterm qualifier ()
+Error: popping token tFORWARD ()
 Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
@@ -2801,11 +2755,11 @@ Reading a token
 --accepting rule at line 63("public")
 Next token is token tPUBLIC ()
 Shifting token tPUBLIC ()
-Entering state 23
-Stack now 0 2 23
+Entering state 24
+Stack now 0 2 24
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2813,16 +2767,16 @@ Reading a token
 --accepting rule at line 86("main")
 Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
-Entering state 82
-Stack now 0 2 23 82
+Entering state 84
+Stack now 0 2 24 84
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 88
-Stack now 0 2 23 82 88
+Entering state 90
+Stack now 0 2 24 84 90
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2837,15 +2791,15 @@ Reading a token
 Next token is token tFUNCTION ()
 Shifting token tFUNCTION ()
 Entering state 49
-Stack now 0 2 23 82 88 49
+Stack now 0 2 24 84 90 49
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 106
-Stack now 0 2 23 82 88 49 106
+Entering state 108
+Stack now 0 2 24 84 90 49 108
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2858,15 +2812,15 @@ Reading a token
 Next token is token tTYPE_DOUBLE ()
 Shifting token tTYPE_DOUBLE ()
 Entering state 32
-Stack now 0 2 23 82 88 49 106 32
-Reducing stack by rule 20 (line 115):
+Stack now 0 2 24 84 90 49 108 32
+Reducing stack by rule 19 (line 111):
    $1 = token tTYPE_DOUBLE ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 23 82 88 49 106 65
+Stack now 0 2 24 84 90 49 108 65
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 124("!")
+--accepting rule at line 126("!")
 Unknown character
 Compiler: failed (2/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-02-111-N-ok.til---------------------------</font>
@@ -2887,11 +2841,11 @@ Reading a token
 --accepting rule at line 63("public")
 Next token is token tPUBLIC ()
 Shifting token tPUBLIC ()
-Entering state 23
-Stack now 0 2 23
+Entering state 24
+Stack now 0 2 24
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2899,16 +2853,16 @@ Reading a token
 --accepting rule at line 86("main")
 Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
-Entering state 82
-Stack now 0 2 23 82
+Entering state 84
+Stack now 0 2 24 84
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 88
-Stack now 0 2 23 82 88
+Entering state 90
+Stack now 0 2 24 84 90
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2923,15 +2877,15 @@ Reading a token
 Next token is token tFUNCTION ()
 Shifting token tFUNCTION ()
 Entering state 49
-Stack now 0 2 23 82 88 49
+Stack now 0 2 24 84 90 49
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 106
-Stack now 0 2 23 82 88 49 106
+Entering state 108
+Stack now 0 2 24 84 90 49 108
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2944,15 +2898,15 @@ Reading a token
 Next token is token tTYPE_DOUBLE ()
 Shifting token tTYPE_DOUBLE ()
 Entering state 32
-Stack now 0 2 23 82 88 49 106 32
-Reducing stack by rule 20 (line 115):
+Stack now 0 2 24 84 90 49 108 32
+Reducing stack by rule 19 (line 111):
    $1 = token tTYPE_DOUBLE ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 23 82 88 49 106 65
+Stack now 0 2 24 84 90 49 108 65
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 124("!")
+--accepting rule at line 126("!")
 Unknown character
 Compiler: failed (2/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-03-112-N-ok.til---------------------------</font>
@@ -3046,11 +3000,11 @@ Reading a token
 --accepting rule at line 63("public")
 Next token is token tPUBLIC ()
 Shifting token tPUBLIC ()
-Entering state 23
-Stack now 0 2 23
+Entering state 24
+Stack now 0 2 24
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -3058,16 +3012,16 @@ Reading a token
 --accepting rule at line 86("main")
 Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
-Entering state 82
-Stack now 0 2 23 82
+Entering state 84
+Stack now 0 2 24 84
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 88
-Stack now 0 2 23 82 88
+Entering state 90
+Stack now 0 2 24 84 90
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -3082,15 +3036,15 @@ Reading a token
 Next token is token tFUNCTION ()
 Shifting token tFUNCTION ()
 Entering state 49
-Stack now 0 2 23 82 88 49
+Stack now 0 2 24 84 90 49
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 106
-Stack now 0 2 23 82 88 49 106
+Entering state 108
+Stack now 0 2 24 84 90 49 108
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -3103,31 +3057,31 @@ Reading a token
 Next token is token tTYPE_DOUBLE ()
 Shifting token tTYPE_DOUBLE ()
 Entering state 32
-Stack now 0 2 23 82 88 49 106 32
-Reducing stack by rule 20 (line 115):
+Stack now 0 2 24 84 90 49 108 32
+Reducing stack by rule 19 (line 111):
    $1 = token tTYPE_DOUBLE ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 23 82 88 49 106 65
+Stack now 0 2 24 84 90 49 108 65
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
-Reducing stack by rule 17 (line 110):
+Reducing stack by rule 16 (line 106):
    $1 = nterm referable_type ()
 -> $$ = nterm type ()
-Entering state 148
-Stack now 0 2 23 82 88 49 106 148
-Reducing stack by rule 26 (line 125):
+Entering state 153
+Stack now 0 2 24 84 90 49 108 153
+Reducing stack by rule 25 (line 121):
    $1 = nterm type ()
 -> $$ = nterm func_return_type ()
-Entering state 149
-Stack now 0 2 23 82 88 49 106 149
+Entering state 154
+Stack now 0 2 24 84 90 49 108 154
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 185
-Stack now 0 2 23 82 88 49 106 149 185
+Entering state 192
+Stack now 0 2 24 84 90 49 108 154 192
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -3140,15 +3094,15 @@ Reading a token
 Next token is token tTYPE_DOUBLE ()
 Shifting token tTYPE_DOUBLE ()
 Entering state 32
-Stack now 0 2 23 82 88 49 106 149 185 32
-Reducing stack by rule 20 (line 115):
+Stack now 0 2 24 84 90 49 108 154 192 32
+Reducing stack by rule 19 (line 111):
    $1 = token tTYPE_DOUBLE ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 23 82 88 49 106 149 185 65
+Stack now 0 2 24 84 90 49 108 154 192 65
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 124("!")
+--accepting rule at line 126("!")
 Unknown character
 Compiler: failed (2/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-07-116-N-ok.til---------------------------</font>
@@ -3169,11 +3123,11 @@ Reading a token
 --accepting rule at line 63("public")
 Next token is token tPUBLIC ()
 Shifting token tPUBLIC ()
-Entering state 23
-Stack now 0 2 23
+Entering state 24
+Stack now 0 2 24
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -3181,16 +3135,16 @@ Reading a token
 --accepting rule at line 86("main")
 Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
-Entering state 82
-Stack now 0 2 23 82
+Entering state 84
+Stack now 0 2 24 84
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 88
-Stack now 0 2 23 82 88
+Entering state 90
+Stack now 0 2 24 84 90
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -3205,15 +3159,15 @@ Reading a token
 Next token is token tFUNCTION ()
 Shifting token tFUNCTION ()
 Entering state 49
-Stack now 0 2 23 82 88 49
+Stack now 0 2 24 84 90 49
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 106
-Stack now 0 2 23 82 88 49 106
+Entering state 108
+Stack now 0 2 24 84 90 49 108
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -3226,31 +3180,31 @@ Reading a token
 Next token is token tTYPE_DOUBLE ()
 Shifting token tTYPE_DOUBLE ()
 Entering state 32
-Stack now 0 2 23 82 88 49 106 32
-Reducing stack by rule 20 (line 115):
+Stack now 0 2 24 84 90 49 108 32
+Reducing stack by rule 19 (line 111):
    $1 = token tTYPE_DOUBLE ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 23 82 88 49 106 65
+Stack now 0 2 24 84 90 49 108 65
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
-Reducing stack by rule 17 (line 110):
+Reducing stack by rule 16 (line 106):
    $1 = nterm referable_type ()
 -> $$ = nterm type ()
-Entering state 148
-Stack now 0 2 23 82 88 49 106 148
-Reducing stack by rule 26 (line 125):
+Entering state 153
+Stack now 0 2 24 84 90 49 108 153
+Reducing stack by rule 25 (line 121):
    $1 = nterm type ()
 -> $$ = nterm func_return_type ()
-Entering state 149
-Stack now 0 2 23 82 88 49 106 149
+Entering state 154
+Stack now 0 2 24 84 90 49 108 154
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 185
-Stack now 0 2 23 82 88 49 106 149 185
+Entering state 192
+Stack now 0 2 24 84 90 49 108 154 192
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -3263,15 +3217,15 @@ Reading a token
 Next token is token tTYPE_DOUBLE ()
 Shifting token tTYPE_DOUBLE ()
 Entering state 32
-Stack now 0 2 23 82 88 49 106 149 185 32
-Reducing stack by rule 20 (line 115):
+Stack now 0 2 24 84 90 49 108 154 192 32
+Reducing stack by rule 19 (line 111):
    $1 = token tTYPE_DOUBLE ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 23 82 88 49 106 149 185 65
+Stack now 0 2 24 84 90 49 108 154 192 65
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 124("!")
+--accepting rule at line 126("!")
 Unknown character
 Compiler: failed (2/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------R-01-117-N-ok.til---------------------------</font>
@@ -3328,8 +3282,8 @@ Reading a token
 --accepting rule at line 53("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 24
-Stack now 0 2 24
+Entering state 25
+Stack now 0 2 25
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -3340,19 +3294,19 @@ Reading a token
 Next token is token tTYPE_VOID ()
 Shifting token tTYPE_VOID ()
 Entering state 34
-Stack now 0 2 24 34
+Stack now 0 2 25 34
 Reading a token
 --accepting rule at line 54(")")
 Next token is token ')' ()
-Reducing stack by rule 27 (line 126):
+Reducing stack by rule 26 (line 122):
    $1 = token tTYPE_VOID ()
 -> $$ = nterm func_return_type ()
 Entering state 67
-Stack now 0 2 24 67
+Stack now 0 2 25 67
 Next token is token ')' ()
 1: syntax error
 Error: popping nterm func_return_type ()
-Stack now 0 2 24
+Stack now 0 2 25
 Error: popping token '(' ()
 Stack now 0 2
 Error: popping token '(' ()
@@ -3461,8 +3415,8 @@ Reading a token
 --accepting rule at line 53("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 24
-Stack now 0 2 24
+Entering state 25
+Stack now 0 2 25
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -3475,32 +3429,32 @@ Reading a token
 Next token is token tTYPE_DOUBLE ()
 Shifting token tTYPE_DOUBLE ()
 Entering state 32
-Stack now 0 2 24 32
-Reducing stack by rule 20 (line 115):
+Stack now 0 2 25 32
+Reducing stack by rule 19 (line 111):
    $1 = token tTYPE_DOUBLE ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 24 65
+Stack now 0 2 25 65
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
-Reducing stack by rule 17 (line 110):
+Reducing stack by rule 16 (line 106):
    $1 = nterm referable_type ()
 -> $$ = nterm type ()
 Entering state 64
-Stack now 0 2 24 64
+Stack now 0 2 25 64
 Next token is token '(' ()
-Reducing stack by rule 26 (line 125):
+Reducing stack by rule 25 (line 121):
    $1 = nterm type ()
 -> $$ = nterm func_return_type ()
 Entering state 67
-Stack now 0 2 24 67
+Stack now 0 2 25 67
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 123
-Stack now 0 2 24 67 123
+Entering state 125
+Stack now 0 2 25 67 125
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -3510,62 +3464,62 @@ Reading a token
 Next token is token tTYPE_INT ()
 Shifting token tTYPE_INT ()
 Entering state 31
-Stack now 0 2 24 67 123 31
-Reducing stack by rule 19 (line 114):
+Stack now 0 2 25 67 125 31
+Reducing stack by rule 18 (line 110):
    $1 = token tTYPE_INT ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 24 67 123 65
+Stack now 0 2 25 67 125 65
 Reading a token
 --accepting rule at line 54(")")
 Next token is token ')' ()
-Reducing stack by rule 17 (line 110):
+Reducing stack by rule 16 (line 106):
    $1 = nterm referable_type ()
 -> $$ = nterm type ()
-Entering state 170
-Stack now 0 2 24 67 123 170
+Entering state 175
+Stack now 0 2 25 67 125 175
 Next token is token ')' ()
-Reducing stack by rule 29 (line 130):
+Reducing stack by rule 28 (line 126):
    $1 = nterm type ()
 -> $$ = nterm types ()
-Entering state 171
-Stack now 0 2 24 67 123 171
+Entering state 176
+Stack now 0 2 25 67 125 176
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 201
-Stack now 0 2 24 67 123 171 201
-Reducing stack by rule 25 (line 122):
+Entering state 208
+Stack now 0 2 25 67 125 176 208
+Reducing stack by rule 24 (line 118):
    $1 = nterm func_return_type ()
    $2 = token '(' ()
    $3 = nterm types ()
    $4 = token ')' ()
 -> $$ = nterm func_type ()
 Entering state 66
-Stack now 0 2 24 66
-Reducing stack by rule 22 (line 117):
+Stack now 0 2 25 66
+Reducing stack by rule 21 (line 113):
    $1 = nterm func_type ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 24 65
+Stack now 0 2 25 65
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 54(")")
 Next token is token ')' ()
-Reducing stack by rule 17 (line 110):
+Reducing stack by rule 16 (line 106):
    $1 = nterm referable_type ()
 -> $$ = nterm type ()
 Entering state 64
-Stack now 0 2 24 64
+Stack now 0 2 25 64
 Next token is token ')' ()
-Reducing stack by rule 26 (line 125):
+Reducing stack by rule 25 (line 121):
    $1 = nterm type ()
 -> $$ = nterm func_return_type ()
 Entering state 67
-Stack now 0 2 24 67
+Stack now 0 2 25 67
 Next token is token ')' ()
 1: syntax error
 Error: popping nterm func_return_type ()
-Stack now 0 2 24
+Stack now 0 2 25
 Error: popping token '(' ()
 Stack now 0 2
 Error: popping token '(' ()
@@ -3586,8 +3540,8 @@ Reading a token
 --accepting rule at line 53("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 24
-Stack now 0 2 24
+Entering state 25
+Stack now 0 2 25
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -3600,32 +3554,32 @@ Reading a token
 Next token is token tTYPE_DOUBLE ()
 Shifting token tTYPE_DOUBLE ()
 Entering state 32
-Stack now 0 2 24 32
-Reducing stack by rule 20 (line 115):
+Stack now 0 2 25 32
+Reducing stack by rule 19 (line 111):
    $1 = token tTYPE_DOUBLE ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 24 65
+Stack now 0 2 25 65
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 122(" ")
+--accepting rule at line 124(" ")
 --accepting rule at line 53("(")
 Next token is token '(' ()
-Reducing stack by rule 17 (line 110):
+Reducing stack by rule 16 (line 106):
    $1 = nterm referable_type ()
 -> $$ = nterm type ()
 Entering state 64
-Stack now 0 2 24 64
+Stack now 0 2 25 64
 Next token is token '(' ()
-Reducing stack by rule 26 (line 125):
+Reducing stack by rule 25 (line 121):
    $1 = nterm type ()
 -> $$ = nterm func_return_type ()
 Entering state 67
-Stack now 0 2 24 67
+Stack now 0 2 25 67
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 123
-Stack now 0 2 24 67 123
+Entering state 125
+Stack now 0 2 25 67 125
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -3635,62 +3589,62 @@ Reading a token
 Next token is token tTYPE_INT ()
 Shifting token tTYPE_INT ()
 Entering state 31
-Stack now 0 2 24 67 123 31
-Reducing stack by rule 19 (line 114):
+Stack now 0 2 25 67 125 31
+Reducing stack by rule 18 (line 110):
    $1 = token tTYPE_INT ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 24 67 123 65
+Stack now 0 2 25 67 125 65
 Reading a token
 --accepting rule at line 54(")")
 Next token is token ')' ()
-Reducing stack by rule 17 (line 110):
+Reducing stack by rule 16 (line 106):
    $1 = nterm referable_type ()
 -> $$ = nterm type ()
-Entering state 170
-Stack now 0 2 24 67 123 170
+Entering state 175
+Stack now 0 2 25 67 125 175
 Next token is token ')' ()
-Reducing stack by rule 29 (line 130):
+Reducing stack by rule 28 (line 126):
    $1 = nterm type ()
 -> $$ = nterm types ()
-Entering state 171
-Stack now 0 2 24 67 123 171
+Entering state 176
+Stack now 0 2 25 67 125 176
 Next token is token ')' ()
 Shifting token ')' ()
-Entering state 201
-Stack now 0 2 24 67 123 171 201
-Reducing stack by rule 25 (line 122):
+Entering state 208
+Stack now 0 2 25 67 125 176 208
+Reducing stack by rule 24 (line 118):
    $1 = nterm func_return_type ()
    $2 = token '(' ()
    $3 = nterm types ()
    $4 = token ')' ()
 -> $$ = nterm func_type ()
 Entering state 66
-Stack now 0 2 24 66
-Reducing stack by rule 22 (line 117):
+Stack now 0 2 25 66
+Reducing stack by rule 21 (line 113):
    $1 = nterm func_type ()
 -> $$ = nterm referable_type ()
 Entering state 65
-Stack now 0 2 24 65
+Stack now 0 2 25 65
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 54(")")
 Next token is token ')' ()
-Reducing stack by rule 17 (line 110):
+Reducing stack by rule 16 (line 106):
    $1 = nterm referable_type ()
 -> $$ = nterm type ()
 Entering state 64
-Stack now 0 2 24 64
+Stack now 0 2 25 64
 Next token is token ')' ()
-Reducing stack by rule 26 (line 125):
+Reducing stack by rule 25 (line 121):
    $1 = nterm type ()
 -> $$ = nterm func_return_type ()
 Entering state 67
-Stack now 0 2 24 67
+Stack now 0 2 25 67
 Next token is token ')' ()
 1: syntax error
 Error: popping nterm func_return_type ()
-Stack now 0 2 24
+Stack now 0 2 25
 Error: popping token '(' ()
 Stack now 0 2
 Error: popping token '(' ()
