@@ -1,20 +1,14 @@
 <pre>
 Checking project structure...
-til_parser.y:59.52-56: warning: symbol 'stmts' is used, but is not defined as a token and has no rules [-Wother]
-   59 | %type <sequence> list exprs declarations func_args stmts
-      |                                                    ^~~~~
-til_parser.y: warning: 3 nonterminals useless in grammar [-Wother]
+til_parser.y: warning: 2 nonterminals useless in grammar [-Wother]
 til_parser.y: warning: 2 rules useless in grammar [-Wother]
-til_parser.y:59.52-56: warning: nonterminal useless in grammar: stmts [-Wother]
-   59 | %type <sequence> list exprs declarations func_args stmts
-      |                                                    ^~~~~
 til_parser.y:95.1-7: warning: nonterminal useless in grammar: program [-Wother]
-   95 | program : tBEGIN list tEND { compiler->ast(new til::program_node(LINE...
+   95 | program : tPROGRAM block  { $$ = new til::function_definition_node(LI...
       | ^~~~~~~
 til_parser.y:119.1-6: warning: nonterminal useless in grammar: return [-Wother]
   119 | return  : '(' tRETURN expr ')'       { $$ = new til::return_node(LINE...
       | ^~~~~~
-til_parser.y: warning: 25 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 23 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -2946,7 +2940,7 @@ Entering state 14
 Stack now 0 1 3 14
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 120(" ")
+--accepting rule at line 121(" ")
 --accepting rule at line 63("(")
 Next token is token '(' ()
 1: syntax error
@@ -2994,7 +2988,7 @@ Entering state 14
 Stack now 0 1 3 14
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 120(" ")
+--accepting rule at line 121(" ")
 --accepting rule at line 63("(")
 Next token is token '(' ()
 1: syntax error
