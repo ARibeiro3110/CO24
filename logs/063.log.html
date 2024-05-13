@@ -1,5 +1,12 @@
 <pre>
 Checking project structure...
+til_parser.y:60.24-30: warning: symbol 'program' is used, but is not defined as a token and has no rules [-Wother]
+   60 | %type <node> stmt decl program
+      |                        ^~~~~~~
+til_parser.y: warning: 1 nonterminal useless in grammar [-Wother]
+til_parser.y:60.24-30: warning: nonterminal useless in grammar: program [-Wother]
+   60 | %type <node> stmt decl program
+      |                        ^~~~~~~
 til_parser.y: warning: 17 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: warning: 26 reduce/reduce conflicts [-Wconflicts-rr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
