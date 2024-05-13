@@ -1,3 +1,20 @@
 <pre>
 Checking project structure...
+til_parser.y: warning: 2 nonterminals useless in grammar [-Wother]
+til_parser.y: warning: 7 rules useless in grammar [-Wother]
+til_parser.y:80.1-4: warning: nonterminal useless in grammar: list [-Wother]
+   80 | list : stmt      { $$ = new cdk::sequence_node(LINE, $1); }
+      | ^~~~
+til_parser.y:84.1-4: warning: nonterminal useless in grammar: stmt [-Wother]
+   84 | stmt : expr ';'                         { $$ = new til::evaluation_no...
+      | ^~~~
+til_parser.y: warning: 36 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 32 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:96:1: error: 'CHECKED_STOD' was not declared in this scope; did you mean 'CHECKED_STOI'?
+   96 | [0-9]+\.[0-9]*{EXP}?   CHECKED_STOD;
+      | ^~~~~~~~~~~~
+      | CHECKED_STOI
+make: *** [Makefile:46: til_scanner.o] Error 1
 
