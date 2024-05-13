@@ -1,56 +1,17 @@
 <pre>
 Checking project structure...
-til_parser.y: warning: 7 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 8 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: warning: 40 reduce/reduce conflicts [-Wconflicts-rr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
-til_parser.y:106:91: error: no matching function for call to 'cdk::functional_type::create(cdk::sequence_node&, std::shared_ptr<cdk::basic_type>&)'
-  106 |           | func_return_type '(' types ')'   { $$ = cdk::functional_type::create(*$3, $1); delete $3; }
-      |                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~                            
-In file included from /usr/include/cdk/types/types.h:8,
-                 from til_parser.y:7:
-/usr/include/cdk/types/functional_type.h:58:17: note: candidate: 'static auto cdk::functional_type::create(const std::vector<std::shared_ptr<cdk::basic_type> >&, const std::vector<std::shared_ptr<cdk::basic_type> >&)'
-   58 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::vector<std::shared_ptr<basic_type>> &output_types) {
-      |                 ^~~~~~
-/usr/include/cdk/types/functional_type.h:58:72: note:   no known conversion for argument 1 from 'cdk::sequence_node' to 'const std::vector<std::shared_ptr<cdk::basic_type> >&'
-   58 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::vector<std::shared_ptr<basic_type>> &output_types) {
-      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/usr/include/cdk/types/functional_type.h:62:17: note: candidate: 'static auto cdk::functional_type::create(const std::vector<std::shared_ptr<cdk::basic_type> >&, const std::shared_ptr<cdk::basic_type>&)'
-   62 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::shared_ptr<basic_type> &output_type) {
-      |                 ^~~~~~
-/usr/include/cdk/types/functional_type.h:62:72: note:   no known conversion for argument 1 from 'cdk::sequence_node' to 'const std::vector<std::shared_ptr<cdk::basic_type> >&'
-   62 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &input_types, const std::shared_ptr<basic_type> &output_type) {
-      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-/usr/include/cdk/types/functional_type.h:67:17: note: candidate: 'static auto cdk::functional_type::create(const std::vector<std::shared_ptr<cdk::basic_type> >&)'
-   67 |     static auto create(const std::vector<std::shared_ptr<basic_type>> &output_types) {
-      |                 ^~~~~~
-/usr/include/cdk/types/functional_type.h:67:17: note:   candidate expects 1 argument, 2 provided
-/usr/include/cdk/types/functional_type.h:72:17: note: candidate: 'static auto cdk::functional_type::create(const std::shared_ptr<cdk::basic_type>&)'
-   72 |     static auto create(const std::shared_ptr<basic_type> &output_type) {
-      |                 ^~~~~~
-/usr/include/cdk/types/functional_type.h:72:17: note:   candidate expects 1 argument, 2 provided
-til_parser.y:113:107: error: 'class cdk::sequence_node' has no member named 'push_back'
-  113 | types : types ',' type                       { $$ = $1; $$->push_back($3); } // TODO confirmar
-      |                                                                                                           ^        
-til_parser.y:114:67: error: cannot convert 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'cdk::sequence_node*' in assignment
-  114 |       | type                                 { $$ = new std::vector<std::shared_ptr<cdk::basic_type>>(1, $1); }
-      |                                                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                        
-      |                                                                   |
-      |                                                                   std::vector<std::shared_ptr<cdk::basic_type> >*
-til_parser.y:132:104: error: 'tPRIVATE' was not declared in this scope; did you mean 'tPRINT'?
+til_parser.y:132:67: error: expected type-specifier
   132 | decl : '(' type tIDENTIFIER ')'              { $$ = new til::variable_declaration_node(LINE, tPRIVATE, $2, *$3, nullptr); delete $3; }
-      |                                                                                                        ^~~~~~~~
-      |                                                                                                        tPRINT
-til_parser.y:133:104: error: 'tPRIVATE' was not declared in this scope; did you mean 'tPRINT'?
+      |                                                                   ^~~
+til_parser.y:133:67: error: expected type-specifier
   133 |      | '(' type tIDENTIFIER expr ')'         { $$ = new til::variable_declaration_node(LINE, tPRIVATE, $2, *$3, $4); delete $3; }
-      |                                                                                                        ^~~~~~~~
-      |                                                                                                        tPRINT
-til_parser.y:134:104: error: 'tPRIVATE' was not declared in this scope; did you mean 'tPRINT'?
+      |                                                                   ^~~
+til_parser.y:134:67: error: expected type-specifier
   134 |      | '(' tVAR tIDENTIFIER expr ')'         { $$ = new til::variable_declaration_node(LINE, tPRIVATE, nullptr, *$3, $4); delete $3; }
-      |                                                                                                        ^~~~~~~~
-      |                                                                                                        tPRINT
-til_parser.y:203:76: error: expected type-specifier
-  203 | blck : '(' tBLOCK decls instrs ')'                   { $$ = new cdk::block_node(LINE, $3, $4); }
-      |                                                                            ^~~
+      |                                                                   ^~~
 make: *** [Makefile:40: til_parser.tab.o] Error 1
 
