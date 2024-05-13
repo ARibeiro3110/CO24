@@ -1,3 +1,25 @@
 <pre>
 Checking project structure...
+til_parser.y: warning: 2 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:87:44: error: 'tIDENTIFIER' was not declared in this scope
+   87 | 
+      |                                            ^          
+til_scanner.l:16:5: error: 'yyval' was not declared in this scope; did you mean 'yylval'?
+   16 |     yyval.i = std::stoi(yytext, nullptr, base); \
+      |     ^~~~~
+til_scanner.l:114:1: note: in expansion of macro 'CHECKED_STOI'
+  114 | 0x[0-9a-fA-F]+         CHECKED_STOI(16);
+      | ^~~~~~~~~~~~
+til_scanner.l:16:5: error: 'yyval' was not declared in this scope; did you mean 'yylval'?
+   16 |     yyval.i = std::stoi(yytext, nullptr, base); \
+      |     ^~~~~
+til_scanner.l:115:1: note: in expansion of macro 'CHECKED_STOI'
+  115 | 0x[0-9a-zA-Z]+
+      | ^~~~~~~~~~~~
+til_scanner.l:118:1: error: 'CHECKED_STOD' was not declared in this scope
+  118 | [0-9]*\.[0-9]*{EXP}?   CHECKED_STOD;
+      | ^~~~~~~~~~~~
+make: *** [Makefile:46: til_scanner.o] Error 1
 
