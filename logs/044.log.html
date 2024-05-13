@@ -1,3 +1,100 @@
 <pre>
 Checking project structure...
+til_scanner.l:164: warning, rule cannot be matched
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:36:8: error: 'tKINT' was not declared in this scope; did you mean 'tPRINT'?
+   36 | "double"                    return tKDOUBLE;
+      |        ^~~~~
+      |        tPRINT
+til_scanner.l:37:8: error: 'tKDOUBLE' was not declared in this scope
+   37 | "string"                    return tKSTRING;
+      |        ^~~~~~~~
+til_scanner.l:38:8: error: 'tKSTRING' was not declared in this scope; did you mean 'tSTRING'?
+   38 | "void"                      return tKVOID;
+      |        ^~~~~~~~
+      |        tSTRING
+til_scanner.l:39:8: error: 'tKVOID' was not declared in this scope
+   39 | 
+      |        ^     
+til_scanner.l:48:8: error: 'tEXTERNAL' was not declared in this scope
+   48 | "forward"                   return tFORWARD;
+      |        ^~~~~~~~~
+til_scanner.l:49:8: error: 'tFORWARD' was not declared in this scope
+   49 | "public"                    return tPUBLIC;
+      |        ^~~~~~~~
+til_scanner.l:50:8: error: 'tPUBLIC' was not declared in this scope
+   50 | "var"                       return tVAR;
+      |        ^~~~~~~
+til_scanner.l:51:8: error: 'tVAR' was not declared in this scope
+   51 | 
+      |        ^   
+til_scanner.l:62:8: error: 'tSTOP' was not declared in this scope
+   62 | "next"                      return tNEXT;
+      |        ^~~~~
+til_scanner.l:63:8: error: 'tNEXT' was not declared in this scope; did you mean 'tNE'?
+   63 | 
+      |        ^    
+      |        tNE
+til_scanner.l:71:8: error: 'tNULL' was not declared in this scope; did you mean 'NULL'?
+   71 | "index"                     return tINDEX;
+      |        ^~~~~
+      |        NULL
+til_scanner.l:72:8: error: 'tINDEX' was not declared in this scope
+   72 | "objects"                   return tOBJECTS;
+      |        ^~~~~~
+til_scanner.l:73:8: error: 'tOBJECTS' was not declared in this scope
+   73 | 
+      |        ^       
+til_scanner.l:83:8: error: 'tBLOCK' was not declared in this scope; did you mean 'F_LOCK'?
+   83 | "begin"                     return tBEGIN;
+      |        ^~~~~~
+      |        F_LOCK
+til_scanner.l:86:8: error: 'tRETURN' was not declared in this scope
+   86 | "print"                     return tPRINT;
+      |        ^~~~~~~
+til_scanner.l:88:8: error: 'tPRINTLN' was not declared in this scope; did you mean 'tPRINT'?
+   88 | "read"                      return tREAD;
+      |        ^~~~~~~~
+      |        tPRINT
+til_scanner.l:90:8: error: 'tSET' was not declared in this scope
+   90 | "function"                  return tFUNCTION;
+      |        ^~~~
+til_scanner.l:91:8: error: 'tFUNCTION' was not declared in this scope
+   91 | "if"                        return tIF;
+      |        ^~~~~~~~~
+til_scanner.l:103:8: error: 'tSIZEOF' was not declared in this scope
+  103 | "program"                   return tPROGRAM;
+      |        ^~~~~~~
+til_scanner.l:104:8: error: 'tPROGRAM' was not declared in this scope
+  104 | 
+      |        ^       
+til_scanner.l:119:8: error: 'tAND' was not declared in this scope; did you mean 'tEND'?
+  119 | "||"                   return tOR;
+      |        ^~~~
+      |        tEND
+til_scanner.l:120:8: error: 'tOR' was not declared in this scope
+  120 | 
+      |        ^  
+til_scanner.l:211:43: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+  211 |                                    return tREAL;
+      |                                           ^
+til_scanner.l:212:43: error: 'tREAL' was not declared in this scope; did you mean 'tREAD'?
+  212 |                                 } catch (const std::out_of_range&) {yyerror("real overflow");}
+      |                                           ^~~~~
+      |                                           tREAD
+til_scanner.l:218:43: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+  218 |                                    return tREAL;
+      |                                           ^
+til_scanner.l:219:43: error: 'tREAL' was not declared in this scope; did you mean 'tREAD'?
+  219 |                                 } catch (const std::out_of_range&) {yyerror("real overflow");}
+      |                                           ^~~~~
+      |                                           tREAD
+til_scanner.l:225:43: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'd'
+  225 |                                    return tREAL;
+      |                                           ^
+til_scanner.l:226:43: error: 'tREAL' was not declared in this scope; did you mean 'tREAD'?
+  226 |                                 } catch (const std::out_of_range&) {yyerror("real overflow");}
+      |                                           ^~~~~
+      |                                           tREAD
+make: *** [Makefile:46: til_scanner.o] Error 1
 
