@@ -1,3 +1,31 @@
 <pre>
 Checking project structure...
+targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_program_node(til::program_node*, int)':
+targets/xml_writer.cpp:137:9: error: 'class til::program_node' has no member named 'block'
+  137 |   node->block()->accept(this, lvl + 2);
+      |         ^~~~~
+targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_stack_alloc_node(til::stack_alloc_node*, int)':
+targets/xml_writer.cpp:276:9: error: 'class til::stack_alloc_node' has no member named 'expression'; did you mean 'cdk::expression_node* til::stack_alloc_node::_expression'? (accessible via 'cdk::expression_node* til::stack_alloc_node::argument() const')
+  276 |   node->expression()->accept(this, lvl + 4);
+      |         ^~~~~~~~~~
+      |         argument()
+targets/xml_writer.cpp: At global scope:
+targets/xml_writer.cpp:329:50: error: 'tPUBLIC' was not declared in this scope
+  329 | const std::map<int, std::string> _qualifiers = {{tPUBLIC, "public"},
+      |                                                  ^~~~~~~
+targets/xml_writer.cpp:330:50: error: 'tFOREIGN' was not declared in this scope
+  330 |                                                 {tFOREIGN, "foreign"},
+      |                                                  ^~~~~~~~
+targets/xml_writer.cpp:331:50: error: 'tFORWARD' was not declared in this scope
+  331 |                                                 {tFORWARD, "forward"},
+      |                                                  ^~~~~~~~
+targets/xml_writer.cpp:332:50: error: 'tVAR' was not declared in this scope
+  332 |                                                 {tVAR, "var"}};
+      |                                                  ^~~~
+targets/xml_writer.cpp:332:62: error: could not convert '{{<expression error>, "public"}, {<expression error>, "foreign"}, {<expression error>, "forward"}, {<expression error>, "var"}}' from '<brace-enclosed initializer list>' to 'const std::map<int, std::__cxx11::basic_string<char> >'
+  332 |                                                 {tVAR, "var"}};
+      |                                                              ^
+      |                                                              |
+      |                                                              <brace-enclosed initializer list>
+make: *** [Makefile:46: targets/xml_writer.o] Error 1
 
