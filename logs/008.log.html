@@ -4,12 +4,9 @@ til_parser.y: warning: 7 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: warning: 1 reduce/reduce conflict [-Wconflicts-rr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_var_declaration_node(til::var_declaration_node*, int)':
-targets/xml_writer.cpp:316:29: error: 'qualifier' was not declared in this scope
-  316 |        << " qualifier='" << qualifier(node->qualifier())
-      |                             ^~~~~~~~~
-targets/xml_writer.cpp:317:36: error: 'class til::var_declaration_node' has no member named 'identifier'
-  317 |        << "' identifier='"<< node->identifier()
-      |                                    ^~~~~~~~~~
+targets/xml_writer.cpp:316:29: error: 'qualifier_name' was not declared in this scope
+  316 |        << " qualifier='" << qualifier_name(node->qualifier())
+      |                             ^~~~~~~~~~~~~~
 targets/xml_writer.cpp:318:41: error: 'type' was not declared in this scope; did you mean 'std::__cmp_cat::type'?
   318 |        << "' type='" << (node->type() ? type(cdk::to_string(node->type())) : "variable")
       |                                         ^~~~
@@ -20,11 +17,5 @@ In file included from /usr/include/c++/13/bits/char_traits.h:56,
 /usr/include/c++/13/compare:49:11: note: 'std::__cmp_cat::type' declared here
    49 |     using type = signed char;
       |           ^~~~
-targets/xml_writer.cpp:321:13: error: 'class til::var_declaration_node' has no member named 'rvalue'
-  321 |   if (node->rvalue()) {
-      |             ^~~~~~
-targets/xml_writer.cpp:323:11: error: 'class til::var_declaration_node' has no member named 'rvalue'
-  323 |     node->rvalue()->accept(this, lvl + 4);
-      |           ^~~~~~
 make: *** [Makefile:46: targets/xml_writer.o] Error 1
 
