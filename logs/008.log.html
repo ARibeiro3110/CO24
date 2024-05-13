@@ -1,3 +1,13 @@
 <pre>
 Checking project structure...
+til_parser.y: warning: 7 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 1 reduce/reduce conflict [-Wconflicts-rr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+In file included from .auto/all_nodes.h:43,
+                 from til_parser.y:8:
+./ast/function_node.h: In constructor 'til::function_node::function_node(int, cdk::sequence_node*, til::block_node*, std::shared_ptr<cdk::basic_type>)':
+./ast/function_node.h:22:26: error: cannot 'dynamic_cast' 'node' (of type 'class cdk::basic_node*') to type 'class til::var_declaration_node*' (target is not pointer or reference to complete type)
+   22 |         auto* argument = dynamic_cast<til::var_declaration_node*>(node);
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
