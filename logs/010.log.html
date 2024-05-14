@@ -2,49 +2,22 @@
 Checking project structure...
 til_parser.y: warning: 58 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-In file included from .auto/all_nodes.h:44,
-                 from til_parser.y:8:
-./ast/function_call_node.h: In member function 'const std::string* til::function_call_node::identifier()':
-./ast/function_call_node.h:32:14: error: cannot convert 'cdk::expression_node*' to 'const std::string*' {aka 'const std::__cxx11::basic_string<char>*'} in return
-   32 |       return _identifier;
-      |              ^~~~~~~~~~~
-      |              |
-      |              cdk::expression_node*
-til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
-til_parser.y:89:64: error: cannot convert 'til::variable_declaration_node*' to 'cdk::sequence_node*' in assignment
-   89 | fdecl : tPUBLIC   dtype  tID              { $$ = new til::variable_declaration_node(LINE, tPUBLIC, $2, *$3, nullptr); delete $3; }
-      |                                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                        
-      |                                                                |
-      |                                                                til::variable_declaration_node*
-til_parser.y:90:64: error: cannot convert 'til::variable_declaration_node*' to 'cdk::sequence_node*' in assignment
-   90 |       | tPUBLIC   dtype  tID expr         { $$ = new til::variable_declaration_node(LINE, tPUBLIC, $2, *$3, $4); delete $3; }
-      |                                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                            
-      |                                                                |
-      |                                                                til::variable_declaration_node*
-til_parser.y:91:63: error: cannot convert 'til::variable_declaration_node*' to 'cdk::sequence_node*' in assignment
-   91 |       | tPUBLIC   tVAR  tID expr         { $$ = new til::variable_declaration_node(LINE, tPUBLIC, nullptr, *$3, $4); delete $3; }
-      |                                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                              
-      |                                                               |
-      |                                                               til::variable_declaration_node*
-til_parser.y:92:63: error: cannot convert 'til::variable_declaration_node*' to 'cdk::sequence_node*' in assignment
-   92 |       | tPUBLIC         tID expr         { $$ = new til::variable_declaration_node(LINE, tPUBLIC, nullptr, *$2, $3); delete $2; }
-      |                                                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                              
-      |                                                               |
-      |                                                               til::variable_declaration_node*
-til_parser.y:93:64: error: cannot convert 'til::variable_declaration_node*' to 'cdk::sequence_node*' in assignment
-   93 |       | tEXTERNAL dtype  tID              { $$ = new til::variable_declaration_node(LINE, tEXTERNAL, $2, *$3, nullptr); delete $3; }
-      |                                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                        
-      |                                                                |
-      |                                                                til::variable_declaration_node*
-til_parser.y:94:64: error: cannot convert 'til::variable_declaration_node*' to 'cdk::sequence_node*' in assignment
-   94 |       | tFORWARD  dtype  tID              { $$ = new til::variable_declaration_node(LINE, tFORWARD, $2, *$3, nullptr); delete $3; }
-      |                                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                        
-      |                                                                |
-      |                                                                til::variable_declaration_node*
-til_parser.y:95:74: error: invalid conversion from 'cdk::basic_node*' to 'cdk::sequence_node*' [-fpermissive]
-   95 |       | decl                              { $$ = $1; }
-      |                                                                          ^    
-      |                                                                          |
-      |                                                                          cdk::basic_node*
-make: *** [Makefile:40: til_parser.tab.o] Error 1
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_print_node(til::print_node*, int)':
+targets/postfix_writer.cpp:217:9: error: 'class til::print_node' has no member named 'argument'; did you mean 'arguments'?
+  217 |   node->argument()->accept(this, lvl); // determine the value to print
+      |         ^~~~~~~~
+      |         arguments
+targets/postfix_writer.cpp:218:13: error: 'class til::print_node' has no member named 'argument'; did you mean 'arguments'?
+  218 |   if (node->argument()->is_typed(cdk::TYPE_INT)) {
+      |             ^~~~~~~~
+      |             arguments
+targets/postfix_writer.cpp:221:20: error: 'class til::print_node' has no member named 'argument'; did you mean 'arguments'?
+  221 |   } else if (node->argument()->is_typed(cdk::TYPE_STRING)) {
+      |                    ^~~~~~~~
+      |                    arguments
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_read_node(til::read_node*, int)':
+targets/postfix_writer.cpp:237:9: error: 'class til::read_node' has no member named 'argument'
+  237 |   node->argument()->accept(this, lvl);
+      |         ^~~~~~~~
+make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
