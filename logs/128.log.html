@@ -1,61 +1,44 @@
 <pre>
 Checking project structure...
 til_scanner.l:118: warning, rule cannot be matched
-til_parser.y: warning: 8 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 7 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
-til_parser.y:122:156: error: no matching function for call to 'til::function_node::function_node(int, std::vector<std::shared_ptr<cdk::basic_type> >*&, std::nullptr_t, til::block_node*&)'
-  122 | func_def  : '(' tFUNCTION '(' types ')'  dec_instr ')' { $$ = new til::function_node(LINE, $4, nullptr, $6); }
-      |                                                                                                                                                            ^
+til_parser.y:122:177: error: no matching function for call to 'til::function_node::function_node(int, cdk::sequence_node*, std::vector<std::shared_ptr<cdk::basic_type> >*&, til::block_node*&)'
+  122 | func_def  : '(' tFUNCTION '(' types ')'  dec_instr ')' { $$ = new til::function_node(LINE, new cdk::sequence_node(LINE), $4, $6); }
+      |                                                                                                                                                                                 ^
 In file included from .auto/all_nodes.h:45,
                  from til_parser.y:8:
-./ast/function_node.h:40:12: note: candidate: 'til::function_node::function_node(int, til::block_node*)'
-   40 |     inline function_node(int lineno, til::block_node *block) :
+./ast/function_node.h:25:12: note: candidate: 'til::function_node::function_node(int, cdk::sequence_node*, std::shared_ptr<cdk::basic_type>, til::block_node*)'
+   25 |     inline function_node(int lineno,
       |            ^~~~~~~~~~~~~
-./ast/function_node.h:40:12: note:   candidate expects 2 arguments, 4 provided
-./ast/function_node.h:26:12: note: candidate: 'til::function_node::function_node(int, cdk::sequence_node*, std::shared_ptr<cdk::basic_type>, til::block_node*, bool)'
-   26 |     inline function_node(int lineno,
-      |            ^~~~~~~~~~~~~
-./ast/function_node.h:27:31: note:   no known conversion for argument 2 from 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'cdk::sequence_node*'
-   27 |           cdk::sequence_node *arguments,
-      |           ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+./ast/function_node.h:27:44: note:   no known conversion for argument 3 from 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'std::shared_ptr<cdk::basic_type>'
+   27 |           std::shared_ptr<cdk::basic_type> return_type,
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
 ./ast/function_node.h:20:9: note: candidate: 'til::function_node::function_node(const til::function_node&)'
    20 |   class function_node: public cdk::expression_node {
       |         ^~~~~~~~~~~~~
 ./ast/function_node.h:20:9: note:   candidate expects 1 argument, 4 provided
 ./ast/function_node.h:20:9: note: candidate: 'til::function_node::function_node(til::function_node&&)'
 ./ast/function_node.h:20:9: note:   candidate expects 1 argument, 4 provided
-til_parser.y:123:182: error: no matching function for call to 'til::function_node::function_node(int, std::vector<std::shared_ptr<cdk::basic_type> >*&, cdk::sequence_node*&, til::block_node*&)'
-  123 |           | '(' tFUNCTION '(' types declarations ')'  dec_instr ')' { $$ = new til::function_node(LINE, $4, $5, $7);}
+til_parser.y:123:182: error: no matching function for call to 'til::function_node::function_node(int, cdk::sequence_node*&, std::vector<std::shared_ptr<cdk::basic_type> >*&, til::block_node*&)'
+  123 |           | '(' tFUNCTION '(' types declarations ')'  dec_instr ')' { $$ = new til::function_node(LINE, $5, $4, $7);}
       |                                                                                                                                                                                      ^
-./ast/function_node.h:40:12: note: candidate: 'til::function_node::function_node(int, til::block_node*)'
-   40 |     inline function_node(int lineno, til::block_node *block) :
+./ast/function_node.h:25:12: note: candidate: 'til::function_node::function_node(int, cdk::sequence_node*, std::shared_ptr<cdk::basic_type>, til::block_node*)'
+   25 |     inline function_node(int lineno,
       |            ^~~~~~~~~~~~~
-./ast/function_node.h:40:12: note:   candidate expects 2 arguments, 4 provided
-./ast/function_node.h:26:12: note: candidate: 'til::function_node::function_node(int, cdk::sequence_node*, std::shared_ptr<cdk::basic_type>, til::block_node*, bool)'
-   26 |     inline function_node(int lineno,
-      |            ^~~~~~~~~~~~~
-./ast/function_node.h:27:31: note:   no known conversion for argument 2 from 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'cdk::sequence_node*'
-   27 |           cdk::sequence_node *arguments,
-      |           ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+./ast/function_node.h:27:44: note:   no known conversion for argument 3 from 'std::vector<std::shared_ptr<cdk::basic_type> >*' to 'std::shared_ptr<cdk::basic_type>'
+   27 |           std::shared_ptr<cdk::basic_type> return_type,
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
 ./ast/function_node.h:20:9: note: candidate: 'til::function_node::function_node(const til::function_node&)'
    20 |   class function_node: public cdk::expression_node {
       |         ^~~~~~~~~~~~~
 ./ast/function_node.h:20:9: note:   candidate expects 1 argument, 4 provided
 ./ast/function_node.h:20:9: note: candidate: 'til::function_node::function_node(til::function_node&&)'
 ./ast/function_node.h:20:9: note:   candidate expects 1 argument, 4 provided
-til_parser.y:126:55: error: expected type-specifier
-  126 | dec_instr : declarations instrs  {$$ = new cdk::block_node(LINE, $1, $2); }
-      |                                                       ^~~
-til_parser.y:127:53: error: expected type-specifier
-  127 |           | instrs            { $$ = new cdk::block_node(LINE, new cdk::sequence_node(LINE)), $1; }
-      |                                                     ^~~
-til_parser.y:128:53: error: expected type-specifier
-  128 |           | declarations      { $$ = new cdk::block_node(LINE, $1, new cdk::sequence_node(LINE)); }
-      |                                                     ^~~
-til_parser.y:183:102: error: invalid use of incomplete type 'class til::sizeof_node'
-  183 |      | '(' tSIZEOF expr ')'  { $$ = new til::sizeof_node(LINE, $3); }
-      |                                                                                                      ^
+til_parser.y:183:109: error: invalid use of incomplete type 'class til::sizeof_node'
+  183 |      | '(' tSIZEOF expr   ')'       { $$ = new til::sizeof_node(LINE, $3); }
+      |                                                                                                             ^
 In file included from ./targets/basic_ast_visitor.h:13,
                  from /usr/include/cdk/ast/basic_node.h:6,
                  from /usr/include/cdk/ast/typed_node.h:4,
