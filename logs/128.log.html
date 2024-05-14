@@ -1,3 +1,190 @@
 <pre>
 Checking project structure...
+til_scanner.l:118: warning, rule cannot be matched
+til_parser.y:164.8-74: warning: token for %prec is not defined: tUNARY [-Wother]
+  164 |      | '-' expr %prec tUNARY { $$ = new cdk::unary_minus_node(LINE, $...
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+til_parser.y:165.8-73: warning: token for %prec is not defined: tUNARY [-Wother]
+  165 |      | '+' expr %prec tUNARY { $$ = new cdk::unary_plus_node(LINE, $2...
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+til_parser.y: warning: 1 nonterminal useless in grammar [-Wother]
+til_parser.y: warning: 6 rules useless in grammar [-Wother]
+til_parser.y:122.1-8: warning: nonterminal useless in grammar: func_def [-Wother]
+  122 | func_def  : '(' tFUNCTION '(' types ')'  declaration instr ')' { $$ =...
+      | ^~~~~~~~
+til_parser.y: warning: 254 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 90 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_parser.y:160.8-69: warning: rule useless in parser due to conflicts [-Wother]
+  160 |      | tSTRING               { $$ = new cdk::string_node(LINE, $1); }
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+til_parser.y:183.8-69: warning: rule useless in parser due to conflicts [-Wother]
+  183 |      | lval                  { $$ = new cdk::rvalue_node(LINE, $1); }
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:93:110: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'type_vec'
+   93 |           | '('  func_return_type  '(' types ')'    { $$ = cdk::functional_type::create($4, $2); }
+      |                                                                                                              ^       
+til_parser.y:100:32: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'type_vec'
+  100 | types : types type    { $$ = $1; $$->push_back($2); }
+      |                                ^~~~~~~~
+til_parser.y:100:55: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'type_vec'
+  100 | types : types type    { $$ = $1; $$->push_back($2); }
+      |                                                       ^       
+til_parser.y:100:73: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'type_vec'
+  100 | types : types type    { $$ = $1; $$->push_back($2); }
+      |                                                                         ^       
+til_parser.y:101:33: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'type_vec'
+  101 |       | type           { $$ = new std::vector<std::shared_ptr<cdk::basic_type>>(1, $1); }
+      |                                 ^~~~~~~~
+til_parser.y:116:129: error: no matching function for call to 'til::program_node::program_node(int, cdk::basic_node*&, cdk::sequence_node*&)'
+  116 | program : '(' tPROGRAM declaration instr ')' { $$ = new til::program_node(LINE, $3, $4);  }
+      |                                                                                                                                 ^
+In file included from .auto/all_nodes.h:52,
+                 from til_parser.y:8:
+./ast/program_node.h:15:5: note: candidate: 'til::program_node::program_node(int, cdk::basic_node*)'
+   15 |     program_node(int lineno, cdk::basic_node *statements) :
+      |     ^~~~~~~~~~~~
+./ast/program_node.h:15:5: note:   candidate expects 2 arguments, 3 provided
+./ast/program_node.h:11:9: note: candidate: 'constexpr til::program_node::program_node(const til::program_node&)'
+   11 |   class program_node : public cdk::basic_node {
+      |         ^~~~~~~~~~~~
+./ast/program_node.h:11:9: note:   candidate expects 1 argument, 3 provided
+./ast/program_node.h:11:9: note: candidate: 'constexpr til::program_node::program_node(til::program_node&&)'
+./ast/program_node.h:11:9: note:   candidate expects 1 argument, 3 provided
+til_parser.y:117:116: error: no matching function for call to 'til::program_node::program_node(int, cdk::basic_node*&, std::nullptr_t)'
+  117 |         | '(' tPROGRAM declaration       ')' { $$ = new til::program_node(LINE, $3, nullptr); }
+      |                                                                                                                    ^
+./ast/program_node.h:15:5: note: candidate: 'til::program_node::program_node(int, cdk::basic_node*)'
+   15 |     program_node(int lineno, cdk::basic_node *statements) :
+      |     ^~~~~~~~~~~~
+./ast/program_node.h:15:5: note:   candidate expects 2 arguments, 3 provided
+./ast/program_node.h:11:9: note: candidate: 'constexpr til::program_node::program_node(const til::program_node&)'
+   11 |   class program_node : public cdk::basic_node {
+      |         ^~~~~~~~~~~~
+./ast/program_node.h:11:9: note:   candidate expects 1 argument, 3 provided
+./ast/program_node.h:11:9: note: candidate: 'constexpr til::program_node::program_node(til::program_node&&)'
+./ast/program_node.h:11:9: note:   candidate expects 1 argument, 3 provided
+til_parser.y:118:120: error: no matching function for call to 'til::program_node::program_node(int, std::nullptr_t, cdk::sequence_node*&)'
+  118 |         | '(' tPROGRAM             instr ')' { $$ = new til::program_node(LINE, nullptr, $3); }
+      |                                                                                                                        ^
+./ast/program_node.h:15:5: note: candidate: 'til::program_node::program_node(int, cdk::basic_node*)'
+   15 |     program_node(int lineno, cdk::basic_node *statements) :
+      |     ^~~~~~~~~~~~
+./ast/program_node.h:15:5: note:   candidate expects 2 arguments, 3 provided
+./ast/program_node.h:11:9: note: candidate: 'constexpr til::program_node::program_node(const til::program_node&)'
+   11 |   class program_node : public cdk::basic_node {
+      |         ^~~~~~~~~~~~
+./ast/program_node.h:11:9: note:   candidate expects 1 argument, 3 provided
+./ast/program_node.h:11:9: note: candidate: 'constexpr til::program_node::program_node(til::program_node&&)'
+./ast/program_node.h:11:9: note:   candidate expects 1 argument, 3 provided
+til_parser.y:119:107: error: no matching function for call to 'til::program_node::program_node(int, std::nullptr_t, std::nullptr_t)'
+  119 |         | '(' tPROGRAM                   ')' { $$ = new til::program_node(LINE, nullptr, nullptr); }
+      |                                                                                                           ^
+./ast/program_node.h:15:5: note: candidate: 'til::program_node::program_node(int, cdk::basic_node*)'
+   15 |     program_node(int lineno, cdk::basic_node *statements) :
+      |     ^~~~~~~~~~~~
+./ast/program_node.h:15:5: note:   candidate expects 2 arguments, 3 provided
+./ast/program_node.h:11:9: note: candidate: 'constexpr til::program_node::program_node(const til::program_node&)'
+   11 |   class program_node : public cdk::basic_node {
+      |         ^~~~~~~~~~~~
+./ast/program_node.h:11:9: note:   candidate expects 1 argument, 3 provided
+./ast/program_node.h:11:9: note: candidate: 'constexpr til::program_node::program_node(til::program_node&&)'
+./ast/program_node.h:11:9: note:   candidate expects 1 argument, 3 provided
+til_parser.y:130:68: error: cannot convert 'til::evaluation_node*' to 'cdk::sequence_node*' in assignment
+  130 | instr : expr                                  { $$ = new til::evaluation_node(LINE, $1); }
+      |                                                                    ^~~~~~~~~~~~~~~~~~~~~~~                              
+      |                                                                    |
+      |                                                                    til::evaluation_node*
+til_parser.y:131:68: error: cannot convert 'til::print_node*' to 'cdk::sequence_node*' in assignment
+  131 |       | '(' tPRINT exprs   ')'                { $$ = new til::print_node(LINE, $3, false); }
+      |                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~                             
+      |                                                                    |
+      |                                                                    til::print_node*
+til_parser.y:132:68: error: cannot convert 'til::print_node*' to 'cdk::sequence_node*' in assignment
+  132 |       | '(' tPRINTLN exprs ')'                { $$ = new til::print_node(LINE, $3, true); }
+      |                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~                             
+      |                                                                    |
+      |                                                                    til::print_node*
+til_parser.y:133:68: error: cannot convert 'til::if_node*' to 'cdk::sequence_node*' in assignment
+  133 |       | '(' tIF expr  instr  tIF ')'          { $$ = new til::if_node(LINE, $3, $4); }
+      |                                                                    ^~~~~~~~~~~~~~~~~~~                                                 
+      |                                                                    |
+      |                                                                    til::if_node*
+til_parser.y:134:68: error: cannot convert 'til::if_else_node*' to 'cdk::sequence_node*' in assignment
+  134 |       | '(' tIF  expr instr ifotherwise ')'   { $$ = new til::if_else_node(LINE, $3, $4, $5); }
+      |                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                               
+      |                                                                    |
+      |                                                                    til::if_else_node*
+til_parser.y:135:68: error: cannot convert 'til::while_node*' to 'cdk::sequence_node*' in assignment
+  135 |       | '(' tWHILE  expr  instr ')'           { $$ = new til::while_node(LINE, $3, $4); }
+      |                                                                    ^~~~~~~~~~~~~~~~~~~~~~                                                 
+      |                                                                    |
+      |                                                                    til::while_node*
+til_parser.y:136:93: error: invalid type argument of unary '*' (have 'int')
+  136 |       | '(' tSTOP tINTEGER ')'                { $$ = new til::stop_node(LINE, *$3); delete $3; }
+      |                                                                                             ^~~~          
+til_parser.y:136:128: error: type 'int' argument given to 'delete', expected pointer
+  136 |       | '(' tSTOP tINTEGER ')'                { $$ = new til::stop_node(LINE, *$3); delete $3; }
+      |                                                                                                                                ^ 
+til_parser.y:137:68: error: cannot convert 'til::stop_node*' to 'cdk::sequence_node*' in assignment
+  137 |       | '(' tSTOP ')'                         { $$ = new til::stop_node(LINE, 1); }
+      |                                                                    ^~~~~~~~~~~~~~~~           
+      |                                                                    |
+      |                                                                    til::stop_node*
+til_parser.y:138:93: error: invalid type argument of unary '*' (have 'int')
+  138 |       | '(' tNEXT tINTEGER ')'                { $$ = new til::next_node(LINE, *$3); delete $3;}
+      |                                                                                             ^~~           
+til_parser.y:138:128: error: type 'int' argument given to 'delete', expected pointer
+  138 |       | '(' tNEXT tINTEGER ')'                { $$ = new til::next_node(LINE, *$3); delete $3;}
+      |                                                                                                                                ^ 
+til_parser.y:139:68: error: cannot convert 'til::next_node*' to 'cdk::sequence_node*' in assignment
+  139 |       | '(' tNEXT ')'                         { $$ = new til::next_node(LINE, 1); }
+      |                                                                    ^~~~~~~~~~~~~~~~           
+      |                                                                    |
+      |                                                                    til::next_node*
+til_parser.y:140:68: error: cannot convert 'til::return_node*' to 'cdk::sequence_node*' in assignment
+  140 |       | '(' tRETURN expr ')'                  { $$ = new til::return_node(LINE, $3); }
+      |                                                                    ^~~~~~~~~~~~~~~~~~~                               
+      |                                                                    |
+      |                                                                    til::return_node*
+til_parser.y:141:68: error: cannot convert 'til::return_node*' to 'cdk::sequence_node*' in assignment
+  141 |       | '(' tRETURN ')'                       { $$ = new til::return_node(LINE, nullptr); }
+      |                                                                    ^~~~~~~~~~~~~~~~~~~~~~~~           
+      |                                                                    |
+      |                                                                    til::return_node*
+til_parser.y:142:78: error: cannot convert 'til::block_node*' to 'cdk::sequence_node*' in assignment
+  142 |       | block                                 { $$ = $1; }
+      |                                                                              ^     
+      |                                                                              |
+      |                                                                              til::block_node*
+til_parser.y:152:84: error: no matching function for call to 'til::block_node::block_node(int)'
+  152 |       | '(' tBLOCK                   ')' { $$ = new til::block_node(LINE); }
+      |                                                                                    ^
+In file included from .auto/all_nodes.h:41:
+./ast/block_node.h:16:12: note: candidate: 'til::block_node::block_node(int, cdk::sequence_node*, cdk::sequence_node*)'
+   16 |     inline block_node(int lineno, cdk::sequence_node *declarations, cdk::sequence_node *instructions) :
+      |            ^~~~~~~~~~
+./ast/block_node.h:16:12: note:   candidate expects 3 arguments, 1 provided
+./ast/block_node.h:12:9: note: candidate: 'constexpr til::block_node::block_node(const til::block_node&)'
+   12 |   class block_node: public cdk::basic_node {
+      |         ^~~~~~~~~~
+./ast/block_node.h:12:9: note:   no known conversion for argument 1 from 'int' to 'const til::block_node&'
+./ast/block_node.h:12:9: note: candidate: 'constexpr til::block_node::block_node(til::block_node&&)'
+./ast/block_node.h:12:9: note:   no known conversion for argument 1 from 'int' to 'til::block_node&&'
+til_parser.y:180:102: error: invalid use of incomplete type 'class til::sizeof_node'
+  180 |      | '(' tSIZEOF expr ')'  { $$ = new til::sizeof_node(LINE, $3); }
+      |                                                                                                      ^
+In file included from ./targets/basic_ast_visitor.h:13,
+                 from /usr/include/cdk/ast/basic_node.h:6,
+                 from /usr/include/cdk/ast/typed_node.h:4,
+                 from /usr/include/cdk/ast/expression_node.h:4,
+                 from /usr/include/cdk/ast/binary_operation_node.h:4,
+                 from /usr/include/cdk/ast/add_node.h:4,
+                 from /usr/include/cdk/ast/all.h:51,
+                 from .auto/all_nodes.h:4:
+./.auto/all_nodes.h:27:7: note: forward declaration of 'class til::sizeof_node'
+   27 | class sizeof_node;
+      |       ^~~~~~~~~~~
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
