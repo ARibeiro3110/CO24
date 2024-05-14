@@ -1,3 +1,195 @@
 <pre>
 Checking project structure...
+til_scanner.l:142: warning, rule cannot be matched
+til_scanner.l:168: warning, rule cannot be matched
+til_parser.y:52.12-18: warning: symbol tPUBLIC redeclared [-Wother]
+   52 | %token <i> tPUBLIC tFORWARD tEXTERNAL
+      |            ^~~~~~~
+til_parser.y:40.13-19: note: previous declaration
+   40 | %token tVAR tPUBLIC tFORWARD tEXTERNAL
+      |             ^~~~~~~
+til_parser.y:52.20-27: warning: symbol tFORWARD redeclared [-Wother]
+   52 | %token <i> tPUBLIC tFORWARD tEXTERNAL
+      |                    ^~~~~~~~
+til_parser.y:40.21-28: note: previous declaration
+   40 | %token tVAR tPUBLIC tFORWARD tEXTERNAL
+      |                     ^~~~~~~~
+til_parser.y:52.29-37: warning: symbol tEXTERNAL redeclared [-Wother]
+   52 | %token <i> tPUBLIC tFORWARD tEXTERNAL
+      |                             ^~~~~~~~~
+til_parser.y:40.30-38: note: previous declaration
+   40 | %token tVAR tPUBLIC tFORWARD tEXTERNAL
+      |                              ^~~~~~~~~
+til_parser.y: warning: 5 nonterminals useless in grammar [-Wother]
+til_parser.y: warning: 14 rules useless in grammar [-Wother]
+til_parser.y:110.1-15: warning: nonterminal useless in grammar: opt_declaration [-Wother]
+  110 | opt_declaration  : /* empty */      { $$ = NULL; }
+      | ^~~~~~~~~~~~~~~
+til_parser.y:122.1-8: warning: nonterminal useless in grammar: function [-Wother]
+  122 | function        : '(' tFUNCTION '(' data_type_func ')' opt_declaratio...
+      | ^~~~~~~~
+til_parser.y:132.1-14: warning: nonterminal useless in grammar: data_type_func [-Wother]
+  132 | data_type_func  : tTYPE_STRING                     { $$ = cdk::primit...
+      | ^~~~~~~~~~~~~~
+til_parser.y:140.1-12: warning: nonterminal useless in grammar: type_of_func [-Wother]
+  140 | type_of_func    : '(' data_type_func ')'                { $$ = $2; }
+      | ^~~~~~~~~~~~
+til_parser.y:144.1-5: warning: nonterminal useless in grammar: types [-Wother]
+  144 | types           : data_type_func             { $$ = new cdk::sequence...
+      | ^~~~~
+til_parser.y: warning: 729 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 698 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_parser.y:163.19-132: warning: rule useless in parser due to conflicts [-Wother]
+  163 | instruction     : tIF expression instruction                         ...
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from .auto/all_nodes.h:51,
+                 from til_parser.y:8:
+./ast/read_node.h: In constructor 'til::read_node::read_node(int)':
+./ast/read_node.h:14:14: error: type 'cdk::basic_node' is not a direct base of 'til::read_node'
+   14 |         cdk::basic_node(lineno) {
+      |              ^~~~~~~~~~
+./ast/read_node.h:14:31: error: no matching function for call to 'cdk::expression_node::expression_node()'
+   14 |         cdk::basic_node(lineno) {
+      |                               ^
+In file included from /usr/include/cdk/ast/binary_operation_node.h:4,
+                 from /usr/include/cdk/ast/add_node.h:4,
+                 from /usr/include/cdk/ast/all.h:51,
+                 from .auto/all_nodes.h:4:
+/usr/include/cdk/ast/expression_node.h:13:5: note: candidate: 'cdk::expression_node::expression_node(int)'
+   13 |     expression_node(int lineno) noexcept:
+      |     ^~~~~~~~~~~~~~~
+/usr/include/cdk/ast/expression_node.h:13:5: note:   candidate expects 1 argument, 0 provided
+/usr/include/cdk/ast/expression_node.h:11:9: note: candidate: 'cdk::expression_node::expression_node(const cdk::expression_node&)'
+   11 |   class expression_node : public typed_node {
+      |         ^~~~~~~~~~~~~~~
+/usr/include/cdk/ast/expression_node.h:11:9: note:   candidate expects 1 argument, 0 provided
+/usr/include/cdk/ast/expression_node.h:11:9: note: candidate: 'cdk::expression_node::expression_node(cdk::expression_node&&)'
+/usr/include/cdk/ast/expression_node.h:11:9: note:   candidate expects 1 argument, 0 provided
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:87:157: error: expected ')' before ';' token
+   87 |              | opt_declarations opt_main_program  { compiler->ast($$ = new cdk::sequence_node(LINE, $2, $1); }
+      |                                                                  ~                                                                                          ^
+      |                                                                                                                                                             )
+til_parser.y:90:94: error: cannot convert 'til::program_node' to 'cdk::basic_node*' in assignment
+   90 | main_program    : '(' tPROGRAM  opt_declarations opt_instructions ')'  { $$ = til::program_node(LINE, $3, $4); }
+      |                                                                                              ^~~~~~~~~~~~~~~~~~~                                           
+      |                                                                                              |
+      |                                                                                              til::program_node
+til_parser.y:94:69: error: invalid conversion from 'cdk::basic_node*' to 'cdk::sequence_node*' [-fpermissive]
+   94 |                   | main_program     { $$ = $1; }
+      |                                                                     ^    
+      |                                                                     |
+      |                                                                     cdk::basic_node*
+til_parser.y:97:209: error: no matching function for call to 'til::variable_declaration_node::variable_declaration_node(int, int&, std::shared_ptr<cdk::basic_type>&, std::string&, cdk::sequence_node*&)'
+   97 | declaration     : '(' tPUBLIC data_type_var tIDENTIFIER opt_expression ')'      { $$ = new til::variable_declaration_node(LINE, $2,  $3, *$4, $5); delete $4; }
+      |                                                                                                                                                                                                                 ^
+In file included from .auto/all_nodes.h:56:
+./ast/variable_declaration_node.h:16:5: note: candidate: 'til::variable_declaration_node::variable_declaration_node(int, int, std::shared_ptr<cdk::basic_type>, const std::string&, cdk::expression_node*)'
+   16 |     variable_declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> varType, const std::string &identifier,
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+./ast/variable_declaration_node.h:17:53: note:   no known conversion for argument 5 from 'cdk::sequence_node*' to 'cdk::expression_node*'
+   17 |                               cdk::expression_node *initializer) :
+      |                               ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+./ast/variable_declaration_node.h:10:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(const til::variable_declaration_node&)'
+   10 |   class variable_declaration_node: public cdk::typed_node {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+./ast/variable_declaration_node.h:10:9: note:   candidate expects 1 argument, 5 provided
+./ast/variable_declaration_node.h:10:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(til::variable_declaration_node&&)'
+./ast/variable_declaration_node.h:10:9: note:   candidate expects 1 argument, 5 provided
+til_parser.y:98:209: error: no matching function for call to 'til::variable_declaration_node::variable_declaration_node(int, int&, std::shared_ptr<cdk::basic_type>&, std::string&, cdk::sequence_node*&)'
+   98 |                 | '(' tFORWARD data_type_var tIDENTIFIER opt_expression ')'     { $$ = new til::variable_declaration_node(LINE, $2,  $3, *$4, $5); delete $4; }
+      |                                                                                                                                                                                                                 ^
+./ast/variable_declaration_node.h:16:5: note: candidate: 'til::variable_declaration_node::variable_declaration_node(int, int, std::shared_ptr<cdk::basic_type>, const std::string&, cdk::expression_node*)'
+   16 |     variable_declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> varType, const std::string &identifier,
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+./ast/variable_declaration_node.h:17:53: note:   no known conversion for argument 5 from 'cdk::sequence_node*' to 'cdk::expression_node*'
+   17 |                               cdk::expression_node *initializer) :
+      |                               ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+./ast/variable_declaration_node.h:10:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(const til::variable_declaration_node&)'
+   10 |   class variable_declaration_node: public cdk::typed_node {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+./ast/variable_declaration_node.h:10:9: note:   candidate expects 1 argument, 5 provided
+./ast/variable_declaration_node.h:10:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(til::variable_declaration_node&&)'
+./ast/variable_declaration_node.h:10:9: note:   candidate expects 1 argument, 5 provided
+til_parser.y:99:209: error: no matching function for call to 'til::variable_declaration_node::variable_declaration_node(int, int&, std::shared_ptr<cdk::basic_type>&, std::string&, cdk::sequence_node*&)'
+   99 |                 | '(' tEXTERNAL data_type_var tIDENTIFIER opt_expression ')'    { $$ = new til::variable_declaration_node(LINE, $2,  $3, *$4, $5); delete $4; }
+      |                                                                                                                                                                                                                 ^
+./ast/variable_declaration_node.h:16:5: note: candidate: 'til::variable_declaration_node::variable_declaration_node(int, int, std::shared_ptr<cdk::basic_type>, const std::string&, cdk::expression_node*)'
+   16 |     variable_declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> varType, const std::string &identifier,
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+./ast/variable_declaration_node.h:17:53: note:   no known conversion for argument 5 from 'cdk::sequence_node*' to 'cdk::expression_node*'
+   17 |                               cdk::expression_node *initializer) :
+      |                               ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+./ast/variable_declaration_node.h:10:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(const til::variable_declaration_node&)'
+   10 |   class variable_declaration_node: public cdk::typed_node {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+./ast/variable_declaration_node.h:10:9: note:   candidate expects 1 argument, 5 provided
+./ast/variable_declaration_node.h:10:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(til::variable_declaration_node&&)'
+./ast/variable_declaration_node.h:10:9: note:   candidate expects 1 argument, 5 provided
+til_parser.y:100:203: error: no matching function for call to 'til::variable_declaration_node::variable_declaration_node(int, std::nullptr_t, std::shared_ptr<cdk::basic_type>&, std::string&, cdk::sequence_node*&)'
+  100 |                 | '(' data_type_var tIDENTIFIER opt_expression ')'              { $$ = new til::variable_declaration_node(LINE, nullptr,  $2, *$3, $4); delete $3; }
+      |                                                                                                                                                                                                           ^
+./ast/variable_declaration_node.h:16:5: note: candidate: 'til::variable_declaration_node::variable_declaration_node(int, int, std::shared_ptr<cdk::basic_type>, const std::string&, cdk::expression_node*)'
+   16 |     variable_declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> varType, const std::string &identifier,
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+./ast/variable_declaration_node.h:16:47: note:   no known conversion for argument 2 from 'std::nullptr_t' to 'int'
+   16 |     variable_declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> varType, const std::string &identifier,
+      |                                           ~~~~^~~~~~~~~
+./ast/variable_declaration_node.h:10:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(const til::variable_declaration_node&)'
+   10 |   class variable_declaration_node: public cdk::typed_node {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+./ast/variable_declaration_node.h:10:9: note:   candidate expects 1 argument, 5 provided
+./ast/variable_declaration_node.h:10:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(til::variable_declaration_node&&)'
+./ast/variable_declaration_node.h:10:9: note:   candidate expects 1 argument, 5 provided
+til_parser.y:104:196: error: no matching function for call to 'til::variable_declaration_node::variable_declaration_node(int, std::nullptr_t, std::nullptr_t, std::string&, cdk::expression_node*&)'
+  104 |                 | '(' tVAR tIDENTIFIER expression ')'                           { $$ = new til::variable_declaration_node(LINE, nullptr,  nullptr, *$3, $4); delete $3; }
+      |                                                                                                                                                                                                    ^
+./ast/variable_declaration_node.h:16:5: note: candidate: 'til::variable_declaration_node::variable_declaration_node(int, int, std::shared_ptr<cdk::basic_type>, const std::string&, cdk::expression_node*)'
+   16 |     variable_declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> varType, const std::string &identifier,
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+./ast/variable_declaration_node.h:16:47: note:   no known conversion for argument 2 from 'std::nullptr_t' to 'int'
+   16 |     variable_declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> varType, const std::string &identifier,
+      |                                           ~~~~^~~~~~~~~
+./ast/variable_declaration_node.h:10:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(const til::variable_declaration_node&)'
+   10 |   class variable_declaration_node: public cdk::typed_node {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+./ast/variable_declaration_node.h:10:9: note:   candidate expects 1 argument, 5 provided
+./ast/variable_declaration_node.h:10:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(til::variable_declaration_node&&)'
+./ast/variable_declaration_node.h:10:9: note:   candidate expects 1 argument, 5 provided
+til_parser.y:152:62: error: invalid conversion from 'cdk::basic_node*' to 'cdk::sequence_node*' [-fpermissive]
+  152 |                 | instruction { $$ = $1; }
+      |                                                              ^    
+      |                                                              |
+      |                                                              cdk::basic_node*
+til_parser.y:183:61: error: cannot convert 'cdk::expression_node*' to 'cdk::sequence_node*' in assignment
+  183 |                 | expression { $$ = $1; }
+      |                                                             ^          
+      |                                                             |
+      |                                                             cdk::expression_node*
+til_parser.y:211:76: error: expected type-specifier
+  211 |                 | '-' expression %prec tUMINUS  { $$ = new cdk::neg_node(LINE, $2); }
+      |                                                                            ^~~
+til_parser.y:215:72: error: cannot convert 'til::index_node*' to 'cdk::expression_node*' in assignment
+  215 |                 | tINDEX expression expression  { $$ = new til::index_node(LINE,$2,$3); }
+      |                                                                        ^~~~~~~~~~~~~~~~~~                                                    
+      |                                                                        |
+      |                                                                        til::index_node*
+til_parser.y:218:120: error: no matching function for call to 'til::sizeof_node::sizeof_node(int, cdk::sequence_node*&)'
+  218 |                 | '(' tSIZEOF expressions ')'    { $$ = new til::sizeof_node(LINE, $3); }
+      |                                                                                                                        ^
+In file included from .auto/all_nodes.h:53:
+./ast/sizeof_node.h:13:5: note: candidate: 'til::sizeof_node::sizeof_node(int, cdk::expression_node*)'
+   13 |     sizeof_node(int lineno, cdk::expression_node *expression = nullptr) :
+      |     ^~~~~~~~~~~
+./ast/sizeof_node.h:13:51: note:   no known conversion for argument 2 from 'cdk::sequence_node*' to 'cdk::expression_node*'
+   13 |     sizeof_node(int lineno, cdk::expression_node *expression = nullptr) :
+      |                             ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+./ast/sizeof_node.h:9:9: note: candidate: 'til::sizeof_node::sizeof_node(const til::sizeof_node&)'
+    9 |   class sizeof_node: public cdk::expression_node {
+      |         ^~~~~~~~~~~
+./ast/sizeof_node.h:9:9: note:   candidate expects 1 argument, 2 provided
+./ast/sizeof_node.h:9:9: note: candidate: 'til::sizeof_node::sizeof_node(til::sizeof_node&&)'
+./ast/sizeof_node.h:9:9: note:   candidate expects 1 argument, 2 provided
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
