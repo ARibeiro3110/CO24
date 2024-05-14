@@ -2,11 +2,114 @@
 Checking project structure...
 til_parser.y: warning: 58 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-In file included from .auto/all_nodes.h:53,
+In file included from .auto/all_nodes.h:44,
                  from til_parser.y:8:
-./ast/read_node.h:4:10: fatal error: cdk/ast/expression_node_node.h: No such file or directory
-    4 | #include <cdk/ast/expression_node_node.h>
-      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-compilation terminated.
+./ast/function_call_node.h:19:10: error: 'expression_node' in namespace 'std' does not name a type
+   19 |     std::expression_node *_identifier;
+      |          ^~~~~~~~~~~~~~~
+./ast/function_call_node.h: In constructor 'til::function_call_node::function_call_node(int, cdk::expression_node*, cdk::sequence_node*)':
+./ast/function_call_node.h:27:39: error: class 'til::function_call_node' does not have any field named '_identifier'
+   27 |         cdk::expression_node(lineno), _identifier(identifier), _arguments(arguments) {
+      |                                       ^~~~~~~~~~~
+./ast/function_call_node.h: In member function 'const std::string* til::function_call_node::identifier()':
+./ast/function_call_node.h:32:14: error: '_identifier' was not declared in this scope; did you mean 'identifier'?
+   32 |       return _identifier;
+      |              ^~~~~~~~~~~
+      |              identifier
+In file included from .auto/all_nodes.h:45:
+./ast/function_definition_node.h: At global scope:
+./ast/function_definition_node.h:19:5: error: 'mml' does not name a type
+   19 |     mml::block_node *_block;
+      |     ^~~
+./ast/function_definition_node.h:23:115: error: 'mml' has not been declared
+   23 |     inline function_node(int lineno, std::shared_ptr<cdk::basic_type> return_type, cdk::sequence_node *arguments, mml::block_node *block, bool is_main = false) :
+      |                                                                                                                   ^~~
+./ast/function_definition_node.h:23:131: error: expected ',' or '...' before '*' token
+   23 |     inline function_node(int lineno, std::shared_ptr<cdk::basic_type> return_type, cdk::sequence_node *arguments, mml::block_node *block, bool is_main = false) :
+      |                                                                                                                                   ^
+./ast/function_definition_node.h:23:12: error: ISO C++ forbids declaration of 'function_node' with no type [-fpermissive]
+   23 |     inline function_node(int lineno, std::shared_ptr<cdk::basic_type> return_type, cdk::sequence_node *arguments, mml::block_node *block, bool is_main = false) :
+      |            ^~~~~~~~~~~~~
+./ast/function_definition_node.h:33:38: error: 'mml' has not been declared
+   33 |     inline function_node(int lineno, mml::block_node *block) :
+      |                                      ^~~
+./ast/function_definition_node.h:33:54: error: expected ',' or '...' before '*' token
+   33 |     inline function_node(int lineno, mml::block_node *block) :
+      |                                                      ^
+./ast/function_definition_node.h:33:12: error: ISO C++ forbids declaration of 'function_node' with no type [-fpermissive]
+   33 |     inline function_node(int lineno, mml::block_node *block) :
+      |            ^~~~~~~~~~~~~
+./ast/function_definition_node.h: In member function 'int til::function_definition_node::function_node(int, std::shared_ptr<cdk::basic_type>, cdk::sequence_node*, int)':
+./ast/function_definition_node.h:24:9: error: only constructors take member initializers
+   24 |         cdk::expression_node(lineno), _arguments(arguments), _block(block), _is_main(is_main) {
+      |         ^~~
+./ast/function_definition_node.h:24:62: error: class 'til::function_definition_node' does not have any field named '_block'
+   24 |         cdk::expression_node(lineno), _arguments(arguments), _block(block), _is_main(is_main) {
+      |                                                              ^~~~~~
+./ast/function_definition_node.h:31:5: warning: no return statement in function returning non-void [-Wreturn-type]
+   31 |     }
+      |     ^
+./ast/function_definition_node.h: In member function 'int til::function_definition_node::function_node(int, int)':
+./ast/function_definition_node.h:34:9: error: only constructors take member initializers
+   34 |         cdk::expression_node(lineno), _arguments(new cdk::sequence_node(lineno)), _block(block), _is_main(true) {
+      |         ^~~
+./ast/function_definition_node.h:34:83: error: class 'til::function_definition_node' does not have any field named '_block'
+   34 |         cdk::expression_node(lineno), _arguments(new cdk::sequence_node(lineno)), _block(block), _is_main(true) {
+      |                                                                                   ^~~~~~
+./ast/function_definition_node.h:36:5: warning: no return statement in function returning non-void [-Wreturn-type]
+   36 |     }
+      |     ^
+./ast/function_definition_node.h: In member function 'til::block_node* til::function_definition_node::block()':
+./ast/function_definition_node.h:46:14: error: '_block' was not declared in this scope; did you mean 'block'?
+   46 |       return _block;
+      |              ^~~~~~
+      |              block
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:96:100: error: 'tFOREIGN' was not declared in this scope
+   96 |      | tEXTERNAL dtype  tID              { $$ = new til::variable_declaration_node(LINE, tFOREIGN, $2, *$3, nullptr); delete $3; }
+      |                                                                                                    ^~~~~~~~
+til_parser.y:130:118: error: no matching function for call to 'til::function_definition_node::function_definition_node(int, til::block_node*&)'
+  130 | program : '(' tPROGRAM decls_instrs ')'    { $$ = new til::function_definition_node(LINE, $3); }
+      |                                                                                                                      ^
+./ast/function_definition_node.h:17:9: note: candidate: 'til::function_definition_node::function_definition_node(const til::function_definition_node&)'
+   17 |   class function_definition_node: public cdk::expression_node {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+./ast/function_definition_node.h:17:9: note:   candidate expects 1 argument, 2 provided
+./ast/function_definition_node.h:17:9: note: candidate: 'til::function_definition_node::function_definition_node(til::function_definition_node&&)'
+./ast/function_definition_node.h:17:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:156:68: error: expected type-specifier
+  156 |       | tNEXT                                 { $$ = new til::contimue_node(LINE, 1); }
+      |                                                                    ^~~
+til_parser.y:173:78: error: expected ';' before '}' token
+  173 |      | '+' expr %prec tUMINUS    { $$ = $2 }
+      |                                                                              ^ 
+      |                                                                              ;
+til_parser.y:174:61: error: expected type-specifier
+  174 |      | '-' expr %prec tUMINUS    { $$ = new cdk::neg_node(LINE, $2); }
+      |                                                             ^~~
+til_parser.y:189:60: error: expected type-specifier
+  189 |      | '(' tOBJECTS expr ')'    { $$ = new til::objects(LINE, $3); }
+      |                                                            ^~~
+til_parser.y:195:60: error: expected type-specifier
+  195 |      | tREAD                    { $$ = new til::read(LINE); }
+      |                                                            ^~ 
+til_parser.y:211:199: error: no matching function for call to 'til::function_definition_node::function_definition_node(int, std::shared_ptr<cdk::basic_type>&, cdk::sequence_node*&, til::block_node*&)'
+  211 | func_definition : '(' tFUNCTION '(' func_return_type func_args ')' blok ')'   { $$ = new til::function_definition_node(LINE, $4, $5, $7); }
+      |                                                                                                                                                                                                       ^
+./ast/function_definition_node.h:17:9: note: candidate: 'til::function_definition_node::function_definition_node(const til::function_definition_node&)'
+   17 |   class function_definition_node: public cdk::expression_node {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+./ast/function_definition_node.h:17:9: note:   candidate expects 1 argument, 4 provided
+./ast/function_definition_node.h:17:9: note: candidate: 'til::function_definition_node::function_definition_node(til::function_definition_node&&)'
+./ast/function_definition_node.h:17:9: note:   candidate expects 1 argument, 4 provided
+til_parser.y:212:207: error: no matching function for call to 'til::function_definition_node::function_definition_node(int, std::shared_ptr<cdk::basic_type>&, cdk::sequence_node*, til::block_node*&)'
+  212 |                 | '(' tFUNCTION '(' func_return_type ')' blok ')'             { $$ = new til::function_definition_node(LINE, $4, new cdk::sequence_node(LINE), $6); }
+      |                                                                                                                                                                                                               ^
+./ast/function_definition_node.h:17:9: note: candidate: 'til::function_definition_node::function_definition_node(const til::function_definition_node&)'
+   17 |   class function_definition_node: public cdk::expression_node {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+./ast/function_definition_node.h:17:9: note:   candidate expects 1 argument, 4 provided
+./ast/function_definition_node.h:17:9: note: candidate: 'til::function_definition_node::function_definition_node(til::function_definition_node&&)'
+./ast/function_definition_node.h:17:9: note:   candidate expects 1 argument, 4 provided
 make: *** [Makefile:40: til_parser.tab.o] Error 1
 
