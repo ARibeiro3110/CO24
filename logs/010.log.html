@@ -1,3 +1,96 @@
 <pre>
 Checking project structure...
+til_parser.y: warning: 54 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+In file included from ./targets/xml_target.h:6,
+                 from targets/xml_target.cpp:1:
+./targets/xml_writer.h: In member function 'std::string til::xml_writer::type_to_str(std::shared_ptr<cdk::basic_type>)':
+./targets/xml_writer.h:84:51: error: 'functional_type' is not a member of 'cdk'
+   84 |       auto ftype = std::dynamic_pointer_cast<cdk::functional_type>(type);
+      |                                                   ^~~~~~~~~~~~~~~
+./targets/xml_writer.h:84:67: error: no matching function for call to 'dynamic_pointer_cast<<expression error> >(std::shared_ptr<cdk::basic_type>&)'
+   84 |       auto ftype = std::dynamic_pointer_cast<cdk::functional_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from /usr/include/c++/13/bits/shared_ptr.h:53,
+                 from /usr/include/c++/13/memory:80,
+                 from /usr/include/cdk/targets/basic_target.h:4,
+                 from ./targets/xml_target.h:4:
+/usr/include/c++/13/bits/shared_ptr_base.h:1955:5: note: candidate: 'template<class _Tp, class _Tp1, __gnu_cxx::_Lock_policy _Lp> std::__shared_ptr<_Tp1, _Lp> std::dynamic_pointer_cast(const __shared_ptr<_Tp2, _Lp>&)'
+ 1955 |     dynamic_pointer_cast(const __shared_ptr<_Tp1, _Lp>& __r) noexcept
+      |     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr_base.h:1955:5: note:   template argument deduction/substitution failed:
+./targets/xml_writer.h:84:67: error: template argument 1 is invalid
+   84 |       auto ftype = std::dynamic_pointer_cast<cdk::functional_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:718:5: note: candidate: 'template<class _Tp, class _Up> std::shared_ptr<_Tp> std::dynamic_pointer_cast(const shared_ptr<_Tp>&)'
+  718 |     dynamic_pointer_cast(const shared_ptr<_Up>& __r) noexcept
+      |     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:718:5: note:   template argument deduction/substitution failed:
+./targets/xml_writer.h:84:67: error: template argument 1 is invalid
+   84 |       auto ftype = std::dynamic_pointer_cast<cdk::functional_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:767:5: note: candidate: 'template<class _Tp, class _Up> std::shared_ptr<_Tp> std::dynamic_pointer_cast(shared_ptr<_Tp>&&)'
+  767 |     dynamic_pointer_cast(shared_ptr<_Up>&& __r) noexcept
+      |     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:767:5: note:   template argument deduction/substitution failed:
+./targets/xml_writer.h:84:67: error: template argument 1 is invalid
+   84 |       auto ftype = std::dynamic_pointer_cast<cdk::functional_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+./targets/xml_writer.h:89:51: error: 'structured_type' is not a member of 'cdk'
+   89 |       auto stype = std::dynamic_pointer_cast<cdk::structured_type>(type);
+      |                                                   ^~~~~~~~~~~~~~~
+./targets/xml_writer.h:89:67: error: no matching function for call to 'dynamic_pointer_cast<<expression error> >(std::shared_ptr<cdk::basic_type>&)'
+   89 |       auto stype = std::dynamic_pointer_cast<cdk::structured_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/13/bits/shared_ptr_base.h:1955:5: note: candidate: 'template<class _Tp, class _Tp1, __gnu_cxx::_Lock_policy _Lp> std::__shared_ptr<_Tp1, _Lp> std::dynamic_pointer_cast(const __shared_ptr<_Tp2, _Lp>&)'
+ 1955 |     dynamic_pointer_cast(const __shared_ptr<_Tp1, _Lp>& __r) noexcept
+      |     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr_base.h:1955:5: note:   template argument deduction/substitution failed:
+./targets/xml_writer.h:89:67: error: template argument 1 is invalid
+   89 |       auto stype = std::dynamic_pointer_cast<cdk::structured_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:718:5: note: candidate: 'template<class _Tp, class _Up> std::shared_ptr<_Tp> std::dynamic_pointer_cast(const shared_ptr<_Tp>&)'
+  718 |     dynamic_pointer_cast(const shared_ptr<_Up>& __r) noexcept
+      |     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:718:5: note:   template argument deduction/substitution failed:
+./targets/xml_writer.h:89:67: error: template argument 1 is invalid
+   89 |       auto stype = std::dynamic_pointer_cast<cdk::structured_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:767:5: note: candidate: 'template<class _Tp, class _Up> std::shared_ptr<_Tp> std::dynamic_pointer_cast(shared_ptr<_Tp>&&)'
+  767 |     dynamic_pointer_cast(shared_ptr<_Up>&& __r) noexcept
+      |     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:767:5: note:   template argument deduction/substitution failed:
+./targets/xml_writer.h:89:67: error: template argument 1 is invalid
+   89 |       auto stype = std::dynamic_pointer_cast<cdk::structured_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+./targets/xml_writer.h:93:21: error: 'accumulate' is not a member of 'std'
+   93 |         return std::accumulate(components.begin(), components.end(), result,
+      |                     ^~~~~~~~~~
+./targets/xml_writer.h:99:19: error: 'to_string' is not a member of 'cdk'; did you mean 'std::__cxx11::to_string'?
+   99 |       return cdk::to_string(type);
+      |                   ^~~~~~~~~
+In file included from /usr/include/c++/13/string:54,
+                 from /usr/include/c++/13/bits/locale_classes.h:40,
+                 from /usr/include/c++/13/bits/ios_base.h:41,
+                 from /usr/include/c++/13/ios:44,
+                 from /usr/include/c++/13/ostream:40,
+                 from /usr/include/c++/13/bits/unique_ptr.h:42,
+                 from /usr/include/c++/13/memory:78:
+/usr/include/c++/13/bits/basic_string.h:4261:3: note: 'std::__cxx11::to_string' declared here
+ 4261 |   to_string(long double __val)
+      |   ^~~~~~~~~
+./targets/xml_writer.h: In member function 'const char* til::xml_writer::qualifier_to_str(int)':
+./targets/xml_writer.h:103:14: error: 'tFOREIGN' was not declared in this scope
+  103 |         case tFOREIGN: return "foreign";
+      |              ^~~~~~~~
+./targets/xml_writer.h:104:14: error: 'tFORWARD' was not declared in this scope
+  104 |         case tFORWARD: return "forward";
+      |              ^~~~~~~~
+./targets/xml_writer.h:105:14: error: 'tPUBLIC' was not declared in this scope
+  105 |         case tPUBLIC: return "public";
+      |              ^~~~~~~
+./targets/xml_writer.h:106:14: error: 'tPRIVATE' was not declared in this scope
+  106 |         case tPRIVATE: return "private";
+      |              ^~~~~~~~
+make: *** [Makefile:46: targets/xml_target.o] Error 1
 
