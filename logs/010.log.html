@@ -65,9 +65,6 @@ In file included from .auto/all_nodes.h:45:
       |              ^~~~~~
       |              block
 til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
-til_parser.y:96:100: error: 'tFOREIGN' was not declared in this scope
-   96 |      | tEXTERNAL dtype  tID              { $$ = new til::variable_declaration_node(LINE, tFOREIGN, $2, *$3, nullptr); delete $3; }
-      |                                                                                                    ^~~~~~~~
 til_parser.y:130:118: error: no matching function for call to 'til::function_definition_node::function_definition_node(int, til::block_node*&)'
   130 | program : '(' tPROGRAM decls_instrs ')'    { $$ = new til::function_definition_node(LINE, $3); }
       |                                                                                                                      ^
@@ -77,19 +74,10 @@ til_parser.y:130:118: error: no matching function for call to 'til::function_def
 ./ast/function_definition_node.h:17:9: note:   candidate expects 1 argument, 2 provided
 ./ast/function_definition_node.h:17:9: note: candidate: 'til::function_definition_node::function_definition_node(til::function_definition_node&&)'
 ./ast/function_definition_node.h:17:9: note:   candidate expects 1 argument, 2 provided
-til_parser.y:156:68: error: expected type-specifier
-  156 |       | tNEXT                                 { $$ = new til::contimue_node(LINE, 1); }
-      |                                                                    ^~~
 til_parser.y:173:78: error: expected ';' before '}' token
   173 |      | '+' expr %prec tUMINUS    { $$ = $2 }
       |                                                                              ^ 
       |                                                                              ;
-til_parser.y:174:61: error: expected type-specifier
-  174 |      | '-' expr %prec tUMINUS    { $$ = new cdk::neg_node(LINE, $2); }
-      |                                                             ^~~
-til_parser.y:189:60: error: expected type-specifier
-  189 |      | '(' tOBJECTS expr ')'    { $$ = new til::objects(LINE, $3); }
-      |                                                            ^~~
 til_parser.y:195:60: error: expected type-specifier
   195 |      | tREAD                    { $$ = new til::read(LINE); }
       |                                                            ^~ 
