@@ -3,11 +3,7 @@ Checking project structure...
 til_scanner.l:84: warning, rule cannot be matched
 til_scanner.l:114: warning, rule cannot be matched
 til_parser.y: warning: 239 shift/reduce conflicts [-Wconflicts-sr]
-til_parser.y: warning: 37 reduce/reduce conflicts [-Wconflicts-rr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-til_parser.y:170.8-78: warning: rule useless in parser due to conflicts [-Wother]
-  170 |      | tREAD                                { $$ = new til::read_node...
-      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 125("(")
@@ -1973,7 +1969,7 @@ Next token is token tSTRING ()
 Shifting token tSTRING ()
 Entering state 30
 Stack now 0 1 16 71 30
-Reducing stack by rule 85 (line 188):
+Reducing stack by rule 84 (line 187):
    $1 = token tSTRING ()
 -> $$ = nterm string ()
 Entering state 68
@@ -2189,7 +2185,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -2436,7 +2432,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -2511,7 +2507,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 66 117 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -2541,7 +2537,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 66 117 41 92 75 54 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 67
@@ -2599,7 +2595,7 @@ Reducing stack by rule 71 (line 168):
 Entering state 89
 Stack now 0 3 1 14 66 117 89
 Next token is token ')' ()
-Reducing stack by rule 81 (line 180):
+Reducing stack by rule 80 (line 179):
    $1 = nterm expr ()
 -> $$ = nterm exprs ()
 Entering state 159
@@ -2608,7 +2604,7 @@ Next token is token ')' ()
 Shifting token ')' ()
 Entering state 170
 Stack now 0 3 1 14 66 117 159 170
-Reducing stack by rule 75 (line 172):
+Reducing stack by rule 74 (line 171):
    $1 = nterm expr ()
    $2 = token '(' ()
    $3 = nterm exprs ()
@@ -2775,7 +2771,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -2976,7 +2972,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -5044,7 +5040,7 @@ Next token is token tSTRING ()
 Shifting token tSTRING ()
 Entering state 30
 Stack now 0 1 16 71 30
-Reducing stack by rule 85 (line 188):
+Reducing stack by rule 84 (line 187):
    $1 = token tSTRING ()
 -> $$ = nterm string ()
 Entering state 68
@@ -5394,7 +5390,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -5573,7 +5569,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -5861,7 +5857,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -12735,7 +12731,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -12981,7 +12977,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 61 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -13356,7 +13352,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 61 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -13734,7 +13730,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 61 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -13975,7 +13971,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 61 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -14300,7 +14296,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 61 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -15034,7 +15030,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 61 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -15290,7 +15286,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 1 14 61 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -16164,7 +16160,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 13 26 75 110 154 168 175 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -16564,7 +16560,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 13 26 75 110 154 168 175 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -16781,7 +16777,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 3 1 14 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -17090,7 +17086,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 1 14 61 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -18989,7 +18985,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 1 14 61 59 16 71 75 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -19396,7 +19392,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 1 14 61 59 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
@@ -19428,7 +19424,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 29
 Stack now 0 1 14 61 59 41 92 75 41 29
-Reducing stack by rule 82 (line 183):
+Reducing stack by rule 81 (line 182):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 92
