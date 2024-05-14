@@ -32873,30 +32873,373 @@ Reading a token
 --accepting rule at line 39("void")
 Next token is token tTYPE_VOID ()
 Shifting token tTYPE_VOID ()
-Entering state 6
-Stack now 0 1 7 22 48 68 122 6
+Entering state 41
+Stack now 0 1 7 22 48 68 122 41
 Reading a token
 --accepting rule at line 159(")")
 Next token is token ')' ()
-1: syntax error
-Error: popping token tTYPE_VOID ()
-Stack now 0 1 7 22 48 68 122
-Error: popping token '(' ()
-Stack now 0 1 7 22 48 68
-Error: popping token tFUNCTION ()
-Stack now 0 1 7 22 48
-Error: popping token '(' ()
-Stack now 0 1 7 22
-Error: popping token tIDENTIFIER ()
-Stack now 0 1 7
-Error: popping token tTYPE_VAR ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token ')' ()
-Stack now 0
-** Syntax errors in G-07-76-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Reducing stack by rule 36 (line 117):
+   $1 = token tTYPE_VOID ()
+-> $$ = nterm function_return_type ()
+Entering state 162
+Stack now 0 1 7 22 48 68 122 162
+Next token is token ')' ()
+Reducing stack by rule 16 (line 82):
+-> $$ = nterm opt_declarations ()
+Entering state 190
+Stack now 0 1 7 22 48 68 122 162 190
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 207
+Stack now 0 1 7 22 48 68 122 162 190 207
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 7 22 48 68 122 162 190 207 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 53("println")
+Next token is token tPRINTLN ()
+Shifting token tPRINTLN ()
+Entering state 62
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 96("1.1")
+Next token is token tREAL ()
+Shifting token tREAL ()
+Entering state 29
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 29
+Reducing stack by rule 58 (line 149):
+   $1 = token tREAL ()
+-> $$ = nterm expr ()
+Entering state 114
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 114
+Reducing stack by rule 55 (line 145):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 115
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 115
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 115 157
+Reducing stack by rule 44 (line 132):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 7 22 48 68 122 162 190 207 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 7 22 48 68 122 162 190 207 37
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 21 (line 91):
+   $1 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 209
+Stack now 0 1 7 22 48 68 122 162 190 207 209
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 210
+Stack now 0 1 7 22 48 68 122 162 190 207 209 210
+Reducing stack by rule 23 (line 95):
+   $1 = token '(' ()
+   $2 = token tFUNCTION ()
+   $3 = token '(' ()
+   $4 = nterm function_return_type ()
+   $5 = nterm opt_declarations ()
+   $6 = token ')' ()
+   $7 = nterm implicit_block ()
+   $8 = token ')' ()
+-> $$ = nterm function ()
+Entering state 35
+Stack now 0 1 7 22 35
+Reducing stack by rule 62 (line 153):
+   $1 = nterm function ()
+-> $$ = nterm expr ()
+Entering state 49
+Stack now 0 1 7 22 49
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 97
+Stack now 0 1 7 22 49 97
+Reducing stack by rule 13 (line 76):
+   $1 = token tTYPE_VAR ()
+   $2 = token tIDENTIFIER ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 13
+Stack now 0 1 13
+Reducing stack by rule 14 (line 79):
+   $1 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 14
+Stack now 0 1 14
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 44
+Stack now 0 1 14 44
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 63("program")
+Next token is token tPROGRAM ()
+Shifting token tPROGRAM ()
+Entering state 11
+Stack now 0 1 14 44 11
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 14 44 11 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 53("println")
+Next token is token tPRINTLN ()
+Shifting token tPRINTLN ()
+Entering state 62
+Stack now 0 1 14 44 11 33 62
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 48
+Stack now 0 1 14 44 11 33 62 48
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 60("sizeof")
+Next token is token tSIZEOF ()
+Shifting token tSIZEOF ()
+Entering state 67
+Stack now 0 1 14 44 11 33 62 48 67
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("f")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 14 44 11 33 62 48 67 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 14 44 11 33 62 48 67 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 121
+Stack now 0 1 14 44 11 33 62 48 67 121
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 161
+Stack now 0 1 14 44 11 33 62 48 67 121 161
+Reducing stack by rule 83 (line 174):
+   $1 = token '(' ()
+   $2 = token tSIZEOF ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 114
+Stack now 0 1 14 44 11 33 62 114
+Reducing stack by rule 55 (line 145):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 115
+Stack now 0 1 14 44 11 33 62 115
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 14 44 11 33 62 115 157
+Reducing stack by rule 44 (line 132):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 14 44 11 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 89
+Stack now 0 1 14 44 11 37 89
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 51("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 60
+Stack now 0 1 14 44 11 37 89 60
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 11 37 89 60 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 112
+Stack now 0 1 14 44 11 37 89 60 112
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 154
+Stack now 0 1 14 44 11 37 89 60 112 154
+Reducing stack by rule 50 (line 138):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 90
+Stack now 0 1 14 44 11 37 90
+Reducing stack by rule 41 (line 127):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 21 (line 91):
+   $1 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 34
+Stack now 0 1 14 44 11 34
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 88
+Stack now 0 1 14 44 11 34 88
+Reducing stack by rule 18 (line 86):
+   $1 = token tPROGRAM ()
+   $2 = nterm implicit_block ()
+   $3 = token ')' ()
+-> $$ = nterm program ()
+Entering state 94
+Stack now 0 1 14 44 94
+Reducing stack by rule 1 (line 63):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = token '(' ()
+   $4 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 20
+Stack now 0 2 20
+Stack now 0 2 20
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: ok (0/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------G-08-77-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 159("(")
@@ -32978,6 +33321,11 @@ Next token is token ')' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token ')' ()
@@ -33063,7 +33411,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -33418,30 +33766,327 @@ Reading a token
 --accepting rule at line 39("void")
 Next token is token tTYPE_VOID ()
 Shifting token tTYPE_VOID ()
-Entering state 6
-Stack now 0 1 7 22 48 68 122 6
+Entering state 41
+Stack now 0 1 7 22 48 68 122 41
 Reading a token
 --accepting rule at line 159(")")
 Next token is token ')' ()
-1: syntax error
-Error: popping token tTYPE_VOID ()
-Stack now 0 1 7 22 48 68 122
-Error: popping token '(' ()
-Stack now 0 1 7 22 48 68
-Error: popping token tFUNCTION ()
-Stack now 0 1 7 22 48
-Error: popping token '(' ()
-Stack now 0 1 7 22
-Error: popping token tIDENTIFIER ()
-Stack now 0 1 7
-Error: popping token tTYPE_VAR ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token ')' ()
-Stack now 0
-** Syntax errors in J-01-78-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Reducing stack by rule 36 (line 117):
+   $1 = token tTYPE_VOID ()
+-> $$ = nterm function_return_type ()
+Entering state 162
+Stack now 0 1 7 22 48 68 122 162
+Next token is token ')' ()
+Reducing stack by rule 16 (line 82):
+-> $$ = nterm opt_declarations ()
+Entering state 190
+Stack now 0 1 7 22 48 68 122 162 190
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 207
+Stack now 0 1 7 22 48 68 122 162 190 207
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 7 22 48 68 122 162 190 207 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 53("println")
+Next token is token tPRINTLN ()
+Shifting token tPRINTLN ()
+Entering state 62
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 120(""")
+--(end of buffer or a NUL)
+--accepting rule at line 130("o")
+--(end of buffer or a NUL)
+--accepting rule at line 130("l")
+--(end of buffer or a NUL)
+--accepting rule at line 130("a")
+--(end of buffer or a NUL)
+--accepting rule at line 121(""")
+Next token is token tSTRING ()
+Shifting token tSTRING ()
+Entering state 31
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 31
+Reducing stack by rule 59 (line 150):
+   $1 = token tSTRING ()
+-> $$ = nterm expr ()
+Entering state 114
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 114
+Reducing stack by rule 55 (line 145):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 115
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 115
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 115 157
+Reducing stack by rule 44 (line 132):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 7 22 48 68 122 162 190 207 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 7 22 48 68 122 162 190 207 37
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 21 (line 91):
+   $1 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 209
+Stack now 0 1 7 22 48 68 122 162 190 207 209
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 210
+Stack now 0 1 7 22 48 68 122 162 190 207 209 210
+Reducing stack by rule 23 (line 95):
+   $1 = token '(' ()
+   $2 = token tFUNCTION ()
+   $3 = token '(' ()
+   $4 = nterm function_return_type ()
+   $5 = nterm opt_declarations ()
+   $6 = token ')' ()
+   $7 = nterm implicit_block ()
+   $8 = token ')' ()
+-> $$ = nterm function ()
+Entering state 35
+Stack now 0 1 7 22 35
+Reducing stack by rule 62 (line 153):
+   $1 = nterm function ()
+-> $$ = nterm expr ()
+Entering state 49
+Stack now 0 1 7 22 49
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 97
+Stack now 0 1 7 22 49 97
+Reducing stack by rule 13 (line 76):
+   $1 = token tTYPE_VAR ()
+   $2 = token tIDENTIFIER ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 13
+Stack now 0 1 13
+Reducing stack by rule 14 (line 79):
+   $1 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 14
+Stack now 0 1 14
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 44
+Stack now 0 1 14 44
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 63("program")
+Next token is token tPROGRAM ()
+Shifting token tPROGRAM ()
+Entering state 11
+Stack now 0 1 14 44 11
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 14 44 11 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 116("f")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 14 44 11 33 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 14 44 11 33 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 87
+Stack now 0 1 14 44 11 33 87
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 142
+Stack now 0 1 14 44 11 33 87 142
+Reducing stack by rule 85 (line 176):
+   $1 = token '(' ()
+   $2 = nterm expr ()
+   $3 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 39
+Stack now 0 1 14 44 11 39
+Reducing stack by rule 42 (line 130):
+   $1 = nterm expr ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 14 44 11 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 89
+Stack now 0 1 14 44 11 37 89
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 51("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 60
+Stack now 0 1 14 44 11 37 89 60
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 11 37 89 60 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 112
+Stack now 0 1 14 44 11 37 89 60 112
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 154
+Stack now 0 1 14 44 11 37 89 60 112 154
+Reducing stack by rule 50 (line 138):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 90
+Stack now 0 1 14 44 11 37 90
+Reducing stack by rule 41 (line 127):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 21 (line 91):
+   $1 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 34
+Stack now 0 1 14 44 11 34
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 88
+Stack now 0 1 14 44 11 34 88
+Reducing stack by rule 18 (line 86):
+   $1 = token tPROGRAM ()
+   $2 = nterm implicit_block ()
+   $3 = token ')' ()
+-> $$ = nterm program ()
+Entering state 94
+Stack now 0 1 14 44 94
+Reducing stack by rule 1 (line 63):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = token '(' ()
+   $4 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 20
+Stack now 0 2 20
+Stack now 0 2 20
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: ok (0/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------J-02-79-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 159("(")
@@ -33520,6 +34165,11 @@ Next token is token ')' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token ')' ()
@@ -33603,7 +34253,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -33937,6 +34587,11 @@ Next token is token ')' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token ')' ()
@@ -34028,7 +34683,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -34452,34 +35107,400 @@ Reading a token
 --accepting rule at line 39("void")
 Next token is token tTYPE_VOID ()
 Shifting token tTYPE_VOID ()
-Entering state 6
-Stack now 0 1 14 44 10 25 48 68 122 6
+Entering state 41
+Stack now 0 1 14 44 10 25 48 68 122 41
 Reading a token
 --accepting rule at line 159(")")
 Next token is token ')' ()
-2: syntax error
-Error: popping token tTYPE_VOID ()
-Stack now 0 1 14 44 10 25 48 68 122
-Error: popping token '(' ()
-Stack now 0 1 14 44 10 25 48 68
-Error: popping token tFUNCTION ()
-Stack now 0 1 14 44 10 25 48
-Error: popping token '(' ()
-Stack now 0 1 14 44 10 25
-Error: popping token tIDENTIFIER ()
-Stack now 0 1 14 44 10
-Error: popping token tPUBLIC ()
-Stack now 0 1 14 44
-Error: popping token '(' ()
+Reducing stack by rule 36 (line 117):
+   $1 = token tTYPE_VOID ()
+-> $$ = nterm function_return_type ()
+Entering state 162
+Stack now 0 1 14 44 10 25 48 68 122 162
+Next token is token ')' ()
+Reducing stack by rule 16 (line 82):
+-> $$ = nterm opt_declarations ()
+Entering state 190
+Stack now 0 1 14 44 10 25 48 68 122 162 190
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 207
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 36("int")
+Next token is token tTYPE_INT ()
+Shifting token tTYPE_INT ()
+Entering state 3
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 3
+Reducing stack by rule 28 (line 106):
+   $1 = token tTYPE_INT ()
+-> $$ = nterm normal_type ()
+Entering state 18
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 18
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("x")
+Next token is token tIDENTIFIER ()
+Reducing stack by rule 24 (line 98):
+   $1 = nterm normal_type ()
+-> $$ = nterm type ()
+Entering state 16
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 16
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 45
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 16 45
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("3")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 16 45 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 96
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 16 45 96
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 146
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 16 45 96 146
+Reducing stack by rule 12 (line 75):
+   $1 = nterm type ()
+   $2 = token tIDENTIFIER ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 13
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 13
+Reducing stack by rule 14 (line 79):
+   $1 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 86
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 86
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 140
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 86 140
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 53("println")
+Next token is token tPRINTLN ()
+Shifting token tPRINTLN ()
+Entering state 62
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 86 140 62
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("x")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 86 140 62 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 86 140 62 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 114
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 86 140 62 114
+Reducing stack by rule 55 (line 145):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 115
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 86 140 62 115
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 86 140 62 115 157
+Reducing stack by rule 44 (line 132):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 86 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 141
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 33 86 141
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 19 (line 89):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 209
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 209
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 210
+Stack now 0 1 14 44 10 25 48 68 122 162 190 207 209 210
+Reducing stack by rule 23 (line 95):
+   $1 = token '(' ()
+   $2 = token tFUNCTION ()
+   $3 = token '(' ()
+   $4 = nterm function_return_type ()
+   $5 = nterm opt_declarations ()
+   $6 = token ')' ()
+   $7 = nterm implicit_block ()
+   $8 = token ')' ()
+-> $$ = nterm function ()
+Entering state 35
+Stack now 0 1 14 44 10 25 35
+Reducing stack by rule 62 (line 153):
+   $1 = nterm function ()
+-> $$ = nterm expr ()
+Entering state 52
+Stack now 0 1 14 44 10 25 52
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 100
+Stack now 0 1 14 44 10 25 52 100
+Reducing stack by rule 8 (line 71):
+   $1 = token tPUBLIC ()
+   $2 = token tIDENTIFIER ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 93
+Stack now 0 1 14 44 93
+Reducing stack by rule 15 (line 80):
+   $1 = nterm declarations ()
+   $2 = token '(' ()
+   $3 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 14
 Stack now 0 1 14
-Error: popping nterm declarations ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token ')' ()
-Stack now 0
-** Syntax errors in J-04-81-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 44
+Stack now 0 1 14 44
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 63("program")
+Next token is token tPROGRAM ()
+Shifting token tPROGRAM ()
+Entering state 11
+Stack now 0 1 14 44 11
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 14 44 11 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 116("f")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 14 44 11 33 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 14 44 11 33 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 87
+Stack now 0 1 14 44 11 33 87
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 142
+Stack now 0 1 14 44 11 33 87 142
+Reducing stack by rule 85 (line 176):
+   $1 = token '(' ()
+   $2 = nterm expr ()
+   $3 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 39
+Stack now 0 1 14 44 11 39
+Reducing stack by rule 42 (line 130):
+   $1 = nterm expr ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 14 44 11 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 89
+Stack now 0 1 14 44 11 37 89
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 51("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 60
+Stack now 0 1 14 44 11 37 89 60
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 11 37 89 60 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 112
+Stack now 0 1 14 44 11 37 89 60 112
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 154
+Stack now 0 1 14 44 11 37 89 60 112 154
+Reducing stack by rule 50 (line 138):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 90
+Stack now 0 1 14 44 11 37 90
+Reducing stack by rule 41 (line 127):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 21 (line 91):
+   $1 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 34
+Stack now 0 1 14 44 11 34
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 88
+Stack now 0 1 14 44 11 34 88
+Reducing stack by rule 18 (line 86):
+   $1 = token tPROGRAM ()
+   $2 = nterm implicit_block ()
+   $3 = token ')' ()
+-> $$ = nterm program ()
+Entering state 94
+Stack now 0 1 14 44 94
+Reducing stack by rule 1 (line 63):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = token '(' ()
+   $4 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 20
+Stack now 0 2 20
+Stack now 0 2 20
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: ok (0/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------J-05-82-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 159("(")
@@ -34559,6 +35580,11 @@ Next token is token ')' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token ')' ()
@@ -34644,7 +35670,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -35299,30 +36325,504 @@ Reading a token
 --accepting rule at line 39("void")
 Next token is token tTYPE_VOID ()
 Shifting token tTYPE_VOID ()
-Entering state 6
-Stack now 0 1 7 22 48 68 122 6
+Entering state 41
+Stack now 0 1 7 22 48 68 122 41
 Reading a token
 --accepting rule at line 159(")")
 Next token is token ')' ()
-1: syntax error
-Error: popping token tTYPE_VOID ()
-Stack now 0 1 7 22 48 68 122
-Error: popping token '(' ()
-Stack now 0 1 7 22 48 68
-Error: popping token tFUNCTION ()
-Stack now 0 1 7 22 48
-Error: popping token '(' ()
-Stack now 0 1 7 22
-Error: popping token tIDENTIFIER ()
-Stack now 0 1 7
-Error: popping token tTYPE_VAR ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token ')' ()
-Stack now 0
-** Syntax errors in J-07-84-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Reducing stack by rule 36 (line 117):
+   $1 = token tTYPE_VOID ()
+-> $$ = nterm function_return_type ()
+Entering state 162
+Stack now 0 1 7 22 48 68 122 162
+Next token is token ')' ()
+Reducing stack by rule 16 (line 82):
+-> $$ = nterm opt_declarations ()
+Entering state 190
+Stack now 0 1 7 22 48 68 122 162 190
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 207
+Stack now 0 1 7 22 48 68 122 162 190 207
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 7 22 48 68 122 162 190 207 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 36("int")
+Next token is token tTYPE_INT ()
+Shifting token tTYPE_INT ()
+Entering state 3
+Stack now 0 1 7 22 48 68 122 162 190 207 33 3
+Reducing stack by rule 28 (line 106):
+   $1 = token tTYPE_INT ()
+-> $$ = nterm normal_type ()
+Entering state 18
+Stack now 0 1 7 22 48 68 122 162 190 207 33 18
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 116("main")
+Next token is token tIDENTIFIER ()
+Reducing stack by rule 24 (line 98):
+   $1 = nterm normal_type ()
+-> $$ = nterm type ()
+Entering state 16
+Stack now 0 1 7 22 48 68 122 162 190 207 33 16
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 45
+Stack now 0 1 7 22 48 68 122 162 190 207 33 16 45
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("1")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 7 22 48 68 122 162 190 207 33 16 45 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 96
+Stack now 0 1 7 22 48 68 122 162 190 207 33 16 45 96
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 146
+Stack now 0 1 7 22 48 68 122 162 190 207 33 16 45 96 146
+Reducing stack by rule 12 (line 75):
+   $1 = nterm type ()
+   $2 = token tIDENTIFIER ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 13
+Stack now 0 1 7 22 48 68 122 162 190 207 33 13
+Reducing stack by rule 14 (line 79):
+   $1 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 86
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 140
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 53("println")
+Next token is token tPRINTLN ()
+Shifting token tPRINTLN ()
+Entering state 62
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 48
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159("+")
+Next token is token '+' ()
+Shifting token '+' ()
+Entering state 77
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 48
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77 48
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159("*")
+Next token is token '*' ()
+Shifting token '*' ()
+Entering state 79
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77 48 79
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("2")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77 48 79 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 132
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77 48 79 132
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 116("main")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77 48 79 132 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77 48 79 132 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 174
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77 48 79 132 174
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 199
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77 48 79 132 174 199
+Reducing stack by rule 68 (line 159):
+   $1 = token '(' ()
+   $2 = token '*' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 130
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77 130
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 116("main")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77 130 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77 130 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 172
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77 130 172
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 198
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 48 77 130 172 198
+Reducing stack by rule 66 (line 157):
+   $1 = token '(' ()
+   $2 = token '+' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 114
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 114
+Reducing stack by rule 55 (line 145):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 115
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 115
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 140 62 115 157
+Reducing stack by rule 44 (line 132):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 141
+Stack now 0 1 7 22 48 68 122 162 190 207 33 86 141
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 19 (line 89):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 209
+Stack now 0 1 7 22 48 68 122 162 190 207 209
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 210
+Stack now 0 1 7 22 48 68 122 162 190 207 209 210
+Reducing stack by rule 23 (line 95):
+   $1 = token '(' ()
+   $2 = token tFUNCTION ()
+   $3 = token '(' ()
+   $4 = nterm function_return_type ()
+   $5 = nterm opt_declarations ()
+   $6 = token ')' ()
+   $7 = nterm implicit_block ()
+   $8 = token ')' ()
+-> $$ = nterm function ()
+Entering state 35
+Stack now 0 1 7 22 35
+Reducing stack by rule 62 (line 153):
+   $1 = nterm function ()
+-> $$ = nterm expr ()
+Entering state 49
+Stack now 0 1 7 22 49
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 97
+Stack now 0 1 7 22 49 97
+Reducing stack by rule 13 (line 76):
+   $1 = token tTYPE_VAR ()
+   $2 = token tIDENTIFIER ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 13
+Stack now 0 1 13
+Reducing stack by rule 14 (line 79):
+   $1 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 14
+Stack now 0 1 14
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 44
+Stack now 0 1 14 44
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 63("program")
+Next token is token tPROGRAM ()
+Shifting token tPROGRAM ()
+Entering state 11
+Stack now 0 1 14 44 11
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 14 44 11 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 116("f")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 14 44 11 33 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 14 44 11 33 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 87
+Stack now 0 1 14 44 11 33 87
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 142
+Stack now 0 1 14 44 11 33 87 142
+Reducing stack by rule 85 (line 176):
+   $1 = token '(' ()
+   $2 = nterm expr ()
+   $3 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 39
+Stack now 0 1 14 44 11 39
+Reducing stack by rule 42 (line 130):
+   $1 = nterm expr ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 14 44 11 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 89
+Stack now 0 1 14 44 11 37 89
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 51("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 60
+Stack now 0 1 14 44 11 37 89 60
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 11 37 89 60 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 112
+Stack now 0 1 14 44 11 37 89 60 112
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 154
+Stack now 0 1 14 44 11 37 89 60 112 154
+Reducing stack by rule 50 (line 138):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 90
+Stack now 0 1 14 44 11 37 90
+Reducing stack by rule 41 (line 127):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 21 (line 91):
+   $1 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 34
+Stack now 0 1 14 44 11 34
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 88
+Stack now 0 1 14 44 11 34 88
+Reducing stack by rule 18 (line 86):
+   $1 = token tPROGRAM ()
+   $2 = nterm implicit_block ()
+   $3 = token ')' ()
+-> $$ = nterm program ()
+Entering state 94
+Stack now 0 1 14 44 94
+Reducing stack by rule 1 (line 63):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = token '(' ()
+   $4 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 20
+Stack now 0 2 20
+Stack now 0 2 20
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: ok (0/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------J-08-85-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 159("(")
@@ -35449,6 +36949,11 @@ Next token is token ')' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 16 45 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 16 45 48 68 122 162
 Next token is token ')' ()
@@ -35532,7 +37037,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -35940,34 +37445,470 @@ Reading a token
 --accepting rule at line 39("void")
 Next token is token tTYPE_VOID ()
 Shifting token tTYPE_VOID ()
-Entering state 6
-Stack now 0 1 14 44 7 22 48 68 122 6
+Entering state 41
+Stack now 0 1 14 44 7 22 48 68 122 41
 Reading a token
 --accepting rule at line 159(")")
 Next token is token ')' ()
-2: syntax error
-Error: popping token tTYPE_VOID ()
-Stack now 0 1 14 44 7 22 48 68 122
-Error: popping token '(' ()
-Stack now 0 1 14 44 7 22 48 68
-Error: popping token tFUNCTION ()
-Stack now 0 1 14 44 7 22 48
-Error: popping token '(' ()
-Stack now 0 1 14 44 7 22
-Error: popping token tIDENTIFIER ()
-Stack now 0 1 14 44 7
-Error: popping token tTYPE_VAR ()
-Stack now 0 1 14 44
-Error: popping token '(' ()
+Reducing stack by rule 36 (line 117):
+   $1 = token tTYPE_VOID ()
+-> $$ = nterm function_return_type ()
+Entering state 162
+Stack now 0 1 14 44 7 22 48 68 122 162
+Next token is token ')' ()
+Reducing stack by rule 16 (line 82):
+-> $$ = nterm opt_declarations ()
+Entering state 190
+Stack now 0 1 14 44 7 22 48 68 122 162 190
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 207
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 36("int")
+Next token is token tTYPE_INT ()
+Shifting token tTYPE_INT ()
+Entering state 3
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 3
+Reducing stack by rule 28 (line 106):
+   $1 = token tTYPE_INT ()
+-> $$ = nterm normal_type ()
+Entering state 18
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 18
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("x")
+Next token is token tIDENTIFIER ()
+Reducing stack by rule 24 (line 98):
+   $1 = nterm normal_type ()
+-> $$ = nterm type ()
+Entering state 16
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 16
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 45
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 16 45
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("3")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 16 45 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 96
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 16 45 96
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 146
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 16 45 96 146
+Reducing stack by rule 12 (line 75):
+   $1 = nterm type ()
+   $2 = token tIDENTIFIER ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 13
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 13
+Reducing stack by rule 14 (line 79):
+   $1 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 86
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 86
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 140
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 86 140
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 53("println")
+Next token is token tPRINTLN ()
+Shifting token tPRINTLN ()
+Entering state 62
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 86 140 62
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("x")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 86 140 62 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 86 140 62 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 114
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 86 140 62 114
+Reducing stack by rule 55 (line 145):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 115
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 86 140 62 115
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 86 140 62 115 157
+Reducing stack by rule 44 (line 132):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 86 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 141
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 33 86 141
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 19 (line 89):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 209
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 209
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 210
+Stack now 0 1 14 44 7 22 48 68 122 162 190 207 209 210
+Reducing stack by rule 23 (line 95):
+   $1 = token '(' ()
+   $2 = token tFUNCTION ()
+   $3 = token '(' ()
+   $4 = nterm function_return_type ()
+   $5 = nterm opt_declarations ()
+   $6 = token ')' ()
+   $7 = nterm implicit_block ()
+   $8 = token ')' ()
+-> $$ = nterm function ()
+Entering state 35
+Stack now 0 1 14 44 7 22 35
+Reducing stack by rule 62 (line 153):
+   $1 = nterm function ()
+-> $$ = nterm expr ()
+Entering state 49
+Stack now 0 1 14 44 7 22 49
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 97
+Stack now 0 1 14 44 7 22 49 97
+Reducing stack by rule 13 (line 76):
+   $1 = token tTYPE_VAR ()
+   $2 = token tIDENTIFIER ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 93
+Stack now 0 1 14 44 93
+Reducing stack by rule 15 (line 80):
+   $1 = nterm declarations ()
+   $2 = token '(' ()
+   $3 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 14
 Stack now 0 1 14
-Error: popping nterm declarations ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token ')' ()
-Stack now 0
-** Syntax errors in K-01-86-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 44
+Stack now 0 1 14 44
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 63("program")
+Next token is token tPROGRAM ()
+Shifting token tPROGRAM ()
+Entering state 11
+Stack now 0 1 14 44 11
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 14 44 11 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 116("f")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 14 44 11 33 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 14 44 11 33 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 87
+Stack now 0 1 14 44 11 33 87
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 142
+Stack now 0 1 14 44 11 33 87 142
+Reducing stack by rule 85 (line 176):
+   $1 = token '(' ()
+   $2 = nterm expr ()
+   $3 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 39
+Stack now 0 1 14 44 11 39
+Reducing stack by rule 42 (line 130):
+   $1 = nterm expr ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 14 44 11 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 89
+Stack now 0 1 14 44 11 37 89
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 53("println")
+Next token is token tPRINTLN ()
+Shifting token tPRINTLN ()
+Entering state 62
+Stack now 0 1 14 44 11 37 89 62
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("x")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 14 44 11 37 89 62 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 14 44 11 37 89 62 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 114
+Stack now 0 1 14 44 11 37 89 62 114
+Reducing stack by rule 55 (line 145):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 115
+Stack now 0 1 14 44 11 37 89 62 115
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 14 44 11 37 89 62 115 157
+Reducing stack by rule 44 (line 132):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 90
+Stack now 0 1 14 44 11 37 90
+Reducing stack by rule 41 (line 127):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 89
+Stack now 0 1 14 44 11 37 89
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 51("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 60
+Stack now 0 1 14 44 11 37 89 60
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 11 37 89 60 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 112
+Stack now 0 1 14 44 11 37 89 60 112
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 154
+Stack now 0 1 14 44 11 37 89 60 112 154
+Reducing stack by rule 50 (line 138):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 90
+Stack now 0 1 14 44 11 37 90
+Reducing stack by rule 41 (line 127):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 21 (line 91):
+   $1 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 34
+Stack now 0 1 14 44 11 34
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 88
+Stack now 0 1 14 44 11 34 88
+Reducing stack by rule 18 (line 86):
+   $1 = token tPROGRAM ()
+   $2 = nterm implicit_block ()
+   $3 = token ')' ()
+-> $$ = nterm program ()
+Entering state 94
+Stack now 0 1 14 44 94
+Reducing stack by rule 1 (line 63):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = token '(' ()
+   $4 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 20
+Stack now 0 2 20
+Stack now 0 2 20
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: ok (0/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-02-87-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 159("(")
@@ -36034,32 +37975,403 @@ Reading a token
 --accepting rule at line 39("void")
 Next token is token tTYPE_VOID ()
 Shifting token tTYPE_VOID ()
-Entering state 6
-Stack now 0 1 7 22 48 68 122 6
+Entering state 41
+Stack now 0 1 7 22 48 68 122 41
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 161(" ")
 --accepting rule at line 159("(")
 Next token is token '(' ()
-1: syntax error
-Error: popping token tTYPE_VOID ()
-Stack now 0 1 7 22 48 68 122
-Error: popping token '(' ()
-Stack now 0 1 7 22 48 68
-Error: popping token tFUNCTION ()
-Stack now 0 1 7 22 48
-Error: popping token '(' ()
-Stack now 0 1 7 22
-Error: popping token tIDENTIFIER ()
-Stack now 0 1 7
-Error: popping token tTYPE_VAR ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token '(' ()
-Stack now 0
-** Syntax errors in K-02-87-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Reducing stack by rule 36 (line 117):
+   $1 = token tTYPE_VOID ()
+-> $$ = nterm function_return_type ()
+Entering state 162
+Stack now 0 1 7 22 48 68 122 162
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 189
+Stack now 0 1 7 22 48 68 122 162 189
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 36("int")
+Next token is token tTYPE_INT ()
+Shifting token tTYPE_INT ()
+Entering state 3
+Stack now 0 1 7 22 48 68 122 162 189 3
+Reducing stack by rule 28 (line 106):
+   $1 = token tTYPE_INT ()
+-> $$ = nterm normal_type ()
+Entering state 18
+Stack now 0 1 7 22 48 68 122 162 189 18
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("x")
+Next token is token tIDENTIFIER ()
+Reducing stack by rule 24 (line 98):
+   $1 = nterm normal_type ()
+-> $$ = nterm type ()
+Entering state 16
+Stack now 0 1 7 22 48 68 122 162 189 16
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 45
+Stack now 0 1 7 22 48 68 122 162 189 16 45
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 95
+Stack now 0 1 7 22 48 68 122 162 189 16 45 95
+Reducing stack by rule 11 (line 74):
+   $1 = nterm type ()
+   $2 = token tIDENTIFIER ()
+   $3 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 13
+Stack now 0 1 7 22 48 68 122 162 189 13
+Reducing stack by rule 14 (line 79):
+   $1 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 206
+Stack now 0 1 7 22 48 68 122 162 189 206
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 17 (line 83):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+-> $$ = nterm opt_declarations ()
+Entering state 190
+Stack now 0 1 7 22 48 68 122 162 190
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 207
+Stack now 0 1 7 22 48 68 122 162 190 207
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 7 22 48 68 122 162 190 207 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 53("println")
+Next token is token tPRINTLN ()
+Shifting token tPRINTLN ()
+Entering state 62
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("x")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 114
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 114
+Reducing stack by rule 55 (line 145):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 115
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 115
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 115 157
+Reducing stack by rule 44 (line 132):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 7 22 48 68 122 162 190 207 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 7 22 48 68 122 162 190 207 37
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 21 (line 91):
+   $1 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 209
+Stack now 0 1 7 22 48 68 122 162 190 207 209
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 210
+Stack now 0 1 7 22 48 68 122 162 190 207 209 210
+Reducing stack by rule 23 (line 95):
+   $1 = token '(' ()
+   $2 = token tFUNCTION ()
+   $3 = token '(' ()
+   $4 = nterm function_return_type ()
+   $5 = nterm opt_declarations ()
+   $6 = token ')' ()
+   $7 = nterm implicit_block ()
+   $8 = token ')' ()
+-> $$ = nterm function ()
+Entering state 35
+Stack now 0 1 7 22 35
+Reducing stack by rule 62 (line 153):
+   $1 = nterm function ()
+-> $$ = nterm expr ()
+Entering state 49
+Stack now 0 1 7 22 49
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 97
+Stack now 0 1 7 22 49 97
+Reducing stack by rule 13 (line 76):
+   $1 = token tTYPE_VAR ()
+   $2 = token tIDENTIFIER ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 13
+Stack now 0 1 13
+Reducing stack by rule 14 (line 79):
+   $1 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 14
+Stack now 0 1 14
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 44
+Stack now 0 1 14 44
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 63("program")
+Next token is token tPROGRAM ()
+Shifting token tPROGRAM ()
+Entering state 11
+Stack now 0 1 14 44 11
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 14 44 11 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 116("f")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 14 44 11 33 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 14 44 11 33 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 87
+Stack now 0 1 14 44 11 33 87
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("3")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 11 33 87 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 114
+Stack now 0 1 14 44 11 33 87 114
+Reducing stack by rule 55 (line 145):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 143
+Stack now 0 1 14 44 11 33 87 143
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 181
+Stack now 0 1 14 44 11 33 87 143 181
+Reducing stack by rule 84 (line 175):
+   $1 = token '(' ()
+   $2 = nterm expr ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 39
+Stack now 0 1 14 44 11 39
+Reducing stack by rule 42 (line 130):
+   $1 = nterm expr ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 14 44 11 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 89
+Stack now 0 1 14 44 11 37 89
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 51("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 60
+Stack now 0 1 14 44 11 37 89 60
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 11 37 89 60 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 112
+Stack now 0 1 14 44 11 37 89 60 112
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 154
+Stack now 0 1 14 44 11 37 89 60 112 154
+Reducing stack by rule 50 (line 138):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 90
+Stack now 0 1 14 44 11 37 90
+Reducing stack by rule 41 (line 127):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 21 (line 91):
+   $1 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 34
+Stack now 0 1 14 44 11 34
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 88
+Stack now 0 1 14 44 11 34 88
+Reducing stack by rule 18 (line 86):
+   $1 = token tPROGRAM ()
+   $2 = nterm implicit_block ()
+   $3 = token ')' ()
+-> $$ = nterm program ()
+Entering state 94
+Stack now 0 1 14 44 94
+Reducing stack by rule 1 (line 63):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = token '(' ()
+   $4 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 20
+Stack now 0 2 20
+Stack now 0 2 20
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: ok (0/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-03-88-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 159("(")
@@ -36126,32 +38438,533 @@ Reading a token
 --accepting rule at line 39("void")
 Next token is token tTYPE_VOID ()
 Shifting token tTYPE_VOID ()
-Entering state 6
-Stack now 0 1 7 22 48 68 122 6
+Entering state 41
+Stack now 0 1 7 22 48 68 122 41
 Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 161(" ")
 --accepting rule at line 159("(")
 Next token is token '(' ()
-1: syntax error
-Error: popping token tTYPE_VOID ()
-Stack now 0 1 7 22 48 68 122
-Error: popping token '(' ()
-Stack now 0 1 7 22 48 68
-Error: popping token tFUNCTION ()
-Stack now 0 1 7 22 48
-Error: popping token '(' ()
-Stack now 0 1 7 22
-Error: popping token tIDENTIFIER ()
-Stack now 0 1 7
-Error: popping token tTYPE_VAR ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token '(' ()
-Stack now 0
-** Syntax errors in K-03-88-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Reducing stack by rule 36 (line 117):
+   $1 = token tTYPE_VOID ()
+-> $$ = nterm function_return_type ()
+Entering state 162
+Stack now 0 1 7 22 48 68 122 162
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 189
+Stack now 0 1 7 22 48 68 122 162 189
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 36("int")
+Next token is token tTYPE_INT ()
+Shifting token tTYPE_INT ()
+Entering state 3
+Stack now 0 1 7 22 48 68 122 162 189 3
+Reducing stack by rule 28 (line 106):
+   $1 = token tTYPE_INT ()
+-> $$ = nterm normal_type ()
+Entering state 18
+Stack now 0 1 7 22 48 68 122 162 189 18
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("x")
+Next token is token tIDENTIFIER ()
+Reducing stack by rule 24 (line 98):
+   $1 = nterm normal_type ()
+-> $$ = nterm type ()
+Entering state 16
+Stack now 0 1 7 22 48 68 122 162 189 16
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 45
+Stack now 0 1 7 22 48 68 122 162 189 16 45
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 95
+Stack now 0 1 7 22 48 68 122 162 189 16 45 95
+Reducing stack by rule 11 (line 74):
+   $1 = nterm type ()
+   $2 = token tIDENTIFIER ()
+   $3 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 13
+Stack now 0 1 7 22 48 68 122 162 189 13
+Reducing stack by rule 14 (line 79):
+   $1 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 206
+Stack now 0 1 7 22 48 68 122 162 189 206
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 208
+Stack now 0 1 7 22 48 68 122 162 189 206 208
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 36("int")
+Next token is token tTYPE_INT ()
+Shifting token tTYPE_INT ()
+Entering state 3
+Stack now 0 1 7 22 48 68 122 162 189 206 208 3
+Reducing stack by rule 28 (line 106):
+   $1 = token tTYPE_INT ()
+-> $$ = nterm normal_type ()
+Entering state 18
+Stack now 0 1 7 22 48 68 122 162 189 206 208 18
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("y")
+Next token is token tIDENTIFIER ()
+Reducing stack by rule 24 (line 98):
+   $1 = nterm normal_type ()
+-> $$ = nterm type ()
+Entering state 16
+Stack now 0 1 7 22 48 68 122 162 189 206 208 16
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 45
+Stack now 0 1 7 22 48 68 122 162 189 206 208 16 45
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 95
+Stack now 0 1 7 22 48 68 122 162 189 206 208 16 45 95
+Reducing stack by rule 11 (line 74):
+   $1 = nterm type ()
+   $2 = token tIDENTIFIER ()
+   $3 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 93
+Stack now 0 1 7 22 48 68 122 162 189 206 208 93
+Reducing stack by rule 15 (line 80):
+   $1 = nterm declarations ()
+   $2 = token '(' ()
+   $3 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 206
+Stack now 0 1 7 22 48 68 122 162 189 206
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 17 (line 83):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+-> $$ = nterm opt_declarations ()
+Entering state 190
+Stack now 0 1 7 22 48 68 122 162 190
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 207
+Stack now 0 1 7 22 48 68 122 162 190 207
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 7 22 48 68 122 162 190 207 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 53("println")
+Next token is token tPRINTLN ()
+Shifting token tPRINTLN ()
+Entering state 62
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 48
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 48
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159("+")
+Next token is token '+' ()
+Shifting token '+' ()
+Entering state 77
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 48 77
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("x")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 48 77 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 48 77 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 130
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 48 77 130
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("y")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 48 77 130 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 48 77 130 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 172
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 48 77 130 172
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 198
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 48 77 130 172 198
+Reducing stack by rule 66 (line 157):
+   $1 = token '(' ()
+   $2 = token '+' ()
+   $3 = nterm expr ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 114
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 114
+Reducing stack by rule 55 (line 145):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 115
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 115
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 7 22 48 68 122 162 190 207 33 62 115 157
+Reducing stack by rule 44 (line 132):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 7 22 48 68 122 162 190 207 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 7 22 48 68 122 162 190 207 37
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 21 (line 91):
+   $1 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 209
+Stack now 0 1 7 22 48 68 122 162 190 207 209
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 210
+Stack now 0 1 7 22 48 68 122 162 190 207 209 210
+Reducing stack by rule 23 (line 95):
+   $1 = token '(' ()
+   $2 = token tFUNCTION ()
+   $3 = token '(' ()
+   $4 = nterm function_return_type ()
+   $5 = nterm opt_declarations ()
+   $6 = token ')' ()
+   $7 = nterm implicit_block ()
+   $8 = token ')' ()
+-> $$ = nterm function ()
+Entering state 35
+Stack now 0 1 7 22 35
+Reducing stack by rule 62 (line 153):
+   $1 = nterm function ()
+-> $$ = nterm expr ()
+Entering state 49
+Stack now 0 1 7 22 49
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 97
+Stack now 0 1 7 22 49 97
+Reducing stack by rule 13 (line 76):
+   $1 = token tTYPE_VAR ()
+   $2 = token tIDENTIFIER ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 13
+Stack now 0 1 13
+Reducing stack by rule 14 (line 79):
+   $1 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 14
+Stack now 0 1 14
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 44
+Stack now 0 1 14 44
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 63("program")
+Next token is token tPROGRAM ()
+Shifting token tPROGRAM ()
+Entering state 11
+Stack now 0 1 14 44 11
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 14 44 11 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 116("f")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 14 44 11 33 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 14 44 11 33 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 87
+Stack now 0 1 14 44 11 33 87
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("3")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 11 33 87 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 114
+Stack now 0 1 14 44 11 33 87 114
+Reducing stack by rule 55 (line 145):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 143
+Stack now 0 1 14 44 11 33 87 143
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("4")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 11 33 87 143 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 156
+Stack now 0 1 14 44 11 33 87 143 156
+Reducing stack by rule 56 (line 146):
+   $1 = nterm exprs ()
+   $2 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 143
+Stack now 0 1 14 44 11 33 87 143
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 181
+Stack now 0 1 14 44 11 33 87 143 181
+Reducing stack by rule 84 (line 175):
+   $1 = token '(' ()
+   $2 = nterm expr ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 39
+Stack now 0 1 14 44 11 39
+Reducing stack by rule 42 (line 130):
+   $1 = nterm expr ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 14 44 11 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 89
+Stack now 0 1 14 44 11 37 89
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 51("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 60
+Stack now 0 1 14 44 11 37 89 60
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 11 37 89 60 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 112
+Stack now 0 1 14 44 11 37 89 60 112
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 154
+Stack now 0 1 14 44 11 37 89 60 112 154
+Reducing stack by rule 50 (line 138):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 90
+Stack now 0 1 14 44 11 37 90
+Reducing stack by rule 41 (line 127):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 21 (line 91):
+   $1 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 34
+Stack now 0 1 14 44 11 34
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 88
+Stack now 0 1 14 44 11 34 88
+Reducing stack by rule 18 (line 86):
+   $1 = token tPROGRAM ()
+   $2 = nterm implicit_block ()
+   $3 = token ')' ()
+-> $$ = nterm program ()
+Entering state 94
+Stack now 0 1 14 44 94
+Reducing stack by rule 1 (line 63):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = token '(' ()
+   $4 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 20
+Stack now 0 2 20
+Stack now 0 2 20
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: ok (0/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-04-89-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 159("(")
@@ -36232,6 +39045,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token '(' ()
@@ -36423,7 +39241,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -36776,6 +39594,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token '(' ()
@@ -37040,7 +39863,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -37393,6 +40216,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token '(' ()
@@ -37767,7 +40595,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -38140,6 +40968,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token '(' ()
@@ -38351,7 +41184,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -38833,6 +41666,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 10 25 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 10 25 48 68 122 162
 Next token is token '(' ()
@@ -39044,7 +41882,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -39165,6 +42003,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 10 25 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 10 25 48 68 122 162
 Next token is token '(' ()
@@ -39373,7 +42216,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -39857,6 +42700,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 7 22 48 68 122 162
 Next token is token '(' ()
@@ -40077,7 +42925,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -40198,6 +43046,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 10 25 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 10 25 48 68 122 162
 Next token is token '(' ()
@@ -40409,7 +43262,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -40930,6 +43783,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 7 22 48 68 122 162
 Next token is token '(' ()
@@ -41150,7 +44008,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -41268,6 +44126,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 7 22 48 68 122 162
 Next token is token '(' ()
@@ -41479,7 +44342,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -41997,6 +44860,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 7 22 48 68 122 162
 Next token is token '(' ()
@@ -42208,7 +45076,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -42326,6 +45194,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 7 22 48 68 122 162
 Next token is token '(' ()
@@ -42534,7 +45407,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -42860,6 +45733,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token '(' ()
@@ -43598,7 +46476,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -44109,6 +46987,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 10 25 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 10 25 48 68 122 162
 Next token is token '(' ()
@@ -44742,7 +47625,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -44863,6 +47746,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 10 25 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 10 25 48 68 122 162
 Next token is token '(' ()
@@ -45496,7 +48384,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -46006,6 +48894,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 7 22 48 68 122 162
 Next token is token '(' ()
@@ -46640,7 +49533,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -46758,6 +49651,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 7 22 48 68 122 162
 Next token is token '(' ()
@@ -47391,7 +50289,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -47749,6 +50647,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token '(' ()
@@ -48007,7 +50910,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -48516,6 +51419,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token '(' ()
@@ -48664,7 +51572,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -49132,6 +52040,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token '(' ()
@@ -49275,7 +52188,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -58362,6 +61275,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token '(' ()
@@ -58657,7 +61575,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -59730,6 +62648,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 10 25 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 10 25 48 68 122 162
 Next token is token '(' ()
@@ -59937,7 +62860,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -61162,6 +64085,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 10 25 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 10 25 48 68 122 162
 Next token is token '(' ()
@@ -61369,7 +64297,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -63780,6 +66708,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 10 25 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 10 25 48 68 122 162
 Next token is token '(' ()
@@ -63996,7 +66929,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -64394,6 +67327,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 10 25 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 10 25 48 68 122 162
 Next token is token '(' ()
@@ -64610,7 +67548,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -65090,6 +68028,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 10 25 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 10 25 48 68 122 162
 Next token is token '(' ()
@@ -65306,7 +68249,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -66581,6 +69524,11 @@ Next token is token ')' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 7 22 48 68 122 162
 Next token is token ')' ()
@@ -66742,7 +69690,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -67437,6 +70385,11 @@ Next token is token ')' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 7 22 48 68 122 162
 Next token is token ')' ()
@@ -67598,7 +70551,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -68203,38 +71156,382 @@ Reading a token
 --accepting rule at line 39("void")
 Next token is token tTYPE_VOID ()
 Shifting token tTYPE_VOID ()
-Entering state 6
-Stack now 0 1 14 44 11 33 64 118 48 68 122 6
+Entering state 41
+Stack now 0 1 14 44 11 33 64 118 48 68 122 41
 Reading a token
 --accepting rule at line 159(")")
 Next token is token ')' ()
-3: syntax error
-Error: popping token tTYPE_VOID ()
-Stack now 0 1 14 44 11 33 64 118 48 68 122
-Error: popping token '(' ()
-Stack now 0 1 14 44 11 33 64 118 48 68
-Error: popping token tFUNCTION ()
-Stack now 0 1 14 44 11 33 64 118 48
-Error: popping token '(' ()
-Stack now 0 1 14 44 11 33 64 118
-Error: popping nterm lval ()
-Stack now 0 1 14 44 11 33 64
-Error: popping token tSET ()
-Stack now 0 1 14 44 11 33
-Error: popping token '(' ()
-Stack now 0 1 14 44 11
-Error: popping token tPROGRAM ()
-Stack now 0 1 14 44
-Error: popping token '(' ()
-Stack now 0 1 14
-Error: popping nterm declarations ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token ')' ()
-Stack now 0
-** Syntax errors in S-01-119-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Reducing stack by rule 36 (line 117):
+   $1 = token tTYPE_VOID ()
+-> $$ = nterm function_return_type ()
+Entering state 162
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162
+Next token is token ')' ()
+Reducing stack by rule 16 (line 82):
+-> $$ = nterm opt_declarations ()
+Entering state 190
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 207
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 36("int")
+Next token is token tTYPE_INT ()
+Shifting token tTYPE_INT ()
+Entering state 3
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 3
+Reducing stack by rule 28 (line 106):
+   $1 = token tTYPE_INT ()
+-> $$ = nterm normal_type ()
+Entering state 18
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 18
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("x")
+Next token is token tIDENTIFIER ()
+Reducing stack by rule 24 (line 98):
+   $1 = nterm normal_type ()
+-> $$ = nterm type ()
+Entering state 16
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 16
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 45
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 16 45
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("3")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 16 45 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 96
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 16 45 96
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 146
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 16 45 96 146
+Reducing stack by rule 12 (line 75):
+   $1 = nterm type ()
+   $2 = token tIDENTIFIER ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 13
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 13
+Reducing stack by rule 14 (line 79):
+   $1 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 86
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 86
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 140
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 86 140
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 53("println")
+Next token is token tPRINTLN ()
+Shifting token tPRINTLN ()
+Entering state 62
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 86 140 62
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("x")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 86 140 62 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 86 140 62 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 114
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 86 140 62 114
+Reducing stack by rule 55 (line 145):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 115
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 86 140 62 115
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 86 140 62 115 157
+Reducing stack by rule 44 (line 132):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 86 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 141
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 33 86 141
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 19 (line 89):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 209
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 209
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 210
+Stack now 0 1 14 44 11 33 64 118 48 68 122 162 190 207 209 210
+Reducing stack by rule 23 (line 95):
+   $1 = token '(' ()
+   $2 = token tFUNCTION ()
+   $3 = token '(' ()
+   $4 = nterm function_return_type ()
+   $5 = nterm opt_declarations ()
+   $6 = token ')' ()
+   $7 = nterm implicit_block ()
+   $8 = token ')' ()
+-> $$ = nterm function ()
+Entering state 35
+Stack now 0 1 14 44 11 33 64 118 35
+Reducing stack by rule 62 (line 153):
+   $1 = nterm function ()
+-> $$ = nterm expr ()
+Entering state 158
+Stack now 0 1 14 44 11 33 64 118 158
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 187
+Stack now 0 1 14 44 11 33 64 118 158 187
+Reducing stack by rule 79 (line 170):
+   $1 = token '(' ()
+   $2 = token tSET ()
+   $3 = nterm lval ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 39
+Stack now 0 1 14 44 11 39
+Reducing stack by rule 42 (line 130):
+   $1 = nterm expr ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 14 44 11 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 89
+Stack now 0 1 14 44 11 37 89
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 116("f")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 14 44 11 37 89 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 14 44 11 37 89 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 87
+Stack now 0 1 14 44 11 37 89 87
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 142
+Stack now 0 1 14 44 11 37 89 87 142
+Reducing stack by rule 85 (line 176):
+   $1 = token '(' ()
+   $2 = nterm expr ()
+   $3 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 39
+Stack now 0 1 14 44 11 37 39
+Reducing stack by rule 42 (line 130):
+   $1 = nterm expr ()
+-> $$ = nterm instruction ()
+Entering state 90
+Stack now 0 1 14 44 11 37 90
+Reducing stack by rule 41 (line 127):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 89
+Stack now 0 1 14 44 11 37 89
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 51("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 60
+Stack now 0 1 14 44 11 37 89 60
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 14 44 11 37 89 60 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 112
+Stack now 0 1 14 44 11 37 89 60 112
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 154
+Stack now 0 1 14 44 11 37 89 60 112 154
+Reducing stack by rule 50 (line 138):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 90
+Stack now 0 1 14 44 11 37 90
+Reducing stack by rule 41 (line 127):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 37
+Stack now 0 1 14 44 11 37
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 21 (line 91):
+   $1 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 34
+Stack now 0 1 14 44 11 34
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 88
+Stack now 0 1 14 44 11 34 88
+Reducing stack by rule 18 (line 86):
+   $1 = token tPROGRAM ()
+   $2 = nterm implicit_block ()
+   $3 = token ')' ()
+-> $$ = nterm program ()
+Entering state 94
+Stack now 0 1 14 44 94
+Reducing stack by rule 1 (line 63):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = token '(' ()
+   $4 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 20
+Stack now 0 2 20
+Stack now 0 2 20
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: ok (0/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------S-01-120-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 159("(")
@@ -68419,38 +71716,382 @@ Reading a token
 --accepting rule at line 39("void")
 Next token is token tTYPE_VOID ()
 Shifting token tTYPE_VOID ()
-Entering state 6
-Stack now 0 1 11 33 86 140 64 118 48 68 122 6
+Entering state 41
+Stack now 0 1 11 33 86 140 64 118 48 68 122 41
 Reading a token
 --accepting rule at line 159(")")
 Next token is token ')' ()
-3: syntax error
-Error: popping token tTYPE_VOID ()
-Stack now 0 1 11 33 86 140 64 118 48 68 122
-Error: popping token '(' ()
-Stack now 0 1 11 33 86 140 64 118 48 68
-Error: popping token tFUNCTION ()
-Stack now 0 1 11 33 86 140 64 118 48
-Error: popping token '(' ()
-Stack now 0 1 11 33 86 140 64 118
-Error: popping nterm lval ()
-Stack now 0 1 11 33 86 140 64
-Error: popping token tSET ()
-Stack now 0 1 11 33 86 140
-Error: popping token '(' ()
-Stack now 0 1 11 33 86
-Error: popping nterm declarations ()
-Stack now 0 1 11 33
-Error: popping token '(' ()
-Stack now 0 1 11
-Error: popping token tPROGRAM ()
-Stack now 0 1
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token ')' ()
-Stack now 0
-** Syntax errors in S-01-120-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Reducing stack by rule 36 (line 117):
+   $1 = token tTYPE_VOID ()
+-> $$ = nterm function_return_type ()
+Entering state 162
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162
+Next token is token ')' ()
+Reducing stack by rule 16 (line 82):
+-> $$ = nterm opt_declarations ()
+Entering state 190
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 207
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 33
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 36("int")
+Next token is token tTYPE_INT ()
+Shifting token tTYPE_INT ()
+Entering state 3
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 3
+Reducing stack by rule 28 (line 106):
+   $1 = token tTYPE_INT ()
+-> $$ = nterm normal_type ()
+Entering state 18
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 18
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("x")
+Next token is token tIDENTIFIER ()
+Reducing stack by rule 24 (line 98):
+   $1 = nterm normal_type ()
+-> $$ = nterm type ()
+Entering state 16
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 16
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 45
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 16 45
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("3")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 16 45 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 96
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 16 45 96
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 146
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 16 45 96 146
+Reducing stack by rule 12 (line 75):
+   $1 = nterm type ()
+   $2 = token tIDENTIFIER ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm declaration ()
+Entering state 13
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 13
+Reducing stack by rule 14 (line 79):
+   $1 = nterm declaration ()
+-> $$ = nterm declarations ()
+Entering state 86
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 86
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 140
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 86 140
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 53("println")
+Next token is token tPRINTLN ()
+Shifting token tPRINTLN ()
+Entering state 62
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 86 140 62
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 116("x")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 86 140 62 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 86 140 62 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 114
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 86 140 62 114
+Reducing stack by rule 55 (line 145):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 115
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 86 140 62 115
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 86 140 62 115 157
+Reducing stack by rule 44 (line 132):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 86 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 141
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 33 86 141
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 19 (line 89):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 209
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 209
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 210
+Stack now 0 1 11 33 86 140 64 118 48 68 122 162 190 207 209 210
+Reducing stack by rule 23 (line 95):
+   $1 = token '(' ()
+   $2 = token tFUNCTION ()
+   $3 = token '(' ()
+   $4 = nterm function_return_type ()
+   $5 = nterm opt_declarations ()
+   $6 = token ')' ()
+   $7 = nterm implicit_block ()
+   $8 = token ')' ()
+-> $$ = nterm function ()
+Entering state 35
+Stack now 0 1 11 33 86 140 64 118 35
+Reducing stack by rule 62 (line 153):
+   $1 = nterm function ()
+-> $$ = nterm expr ()
+Entering state 158
+Stack now 0 1 11 33 86 140 64 118 158
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 187
+Stack now 0 1 11 33 86 140 64 118 158 187
+Reducing stack by rule 79 (line 170):
+   $1 = token '(' ()
+   $2 = token tSET ()
+   $3 = nterm lval ()
+   $4 = nterm expr ()
+   $5 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 39
+Stack now 0 1 11 33 86 39
+Reducing stack by rule 42 (line 130):
+   $1 = nterm expr ()
+-> $$ = nterm instruction ()
+Entering state 38
+Stack now 0 1 11 33 86 38
+Reducing stack by rule 40 (line 126):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 141
+Stack now 0 1 11 33 86 141
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 89
+Stack now 0 1 11 33 86 141 89
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 116("f")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 30
+Stack now 0 1 11 33 86 141 89 30
+Reducing stack by rule 88 (line 181):
+   $1 = token tIDENTIFIER ()
+-> $$ = nterm lval ()
+Entering state 40
+Stack now 0 1 11 33 86 141 89 40
+Reducing stack by rule 61 (line 152):
+   $1 = nterm lval ()
+-> $$ = nterm expr ()
+Entering state 87
+Stack now 0 1 11 33 86 141 89 87
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 142
+Stack now 0 1 11 33 86 141 89 87 142
+Reducing stack by rule 85 (line 176):
+   $1 = token '(' ()
+   $2 = nterm expr ()
+   $3 = token ')' ()
+-> $$ = nterm expr ()
+Entering state 39
+Stack now 0 1 11 33 86 141 39
+Reducing stack by rule 42 (line 130):
+   $1 = nterm expr ()
+-> $$ = nterm instruction ()
+Entering state 90
+Stack now 0 1 11 33 86 141 90
+Reducing stack by rule 41 (line 127):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 141
+Stack now 0 1 11 33 86 141
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+  ")
+--accepting rule at line 159("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 89
+Stack now 0 1 11 33 86 141 89
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 51("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 60
+Stack now 0 1 11 33 86 141 89 60
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 161(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 85("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 28
+Stack now 0 1 11 33 86 141 89 60 28
+Reducing stack by rule 57 (line 148):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 112
+Stack now 0 1 11 33 86 141 89 60 112
+Reading a token
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 154
+Stack now 0 1 11 33 86 141 89 60 112 154
+Reducing stack by rule 50 (line 138):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instruction ()
+Entering state 90
+Stack now 0 1 11 33 86 141 90
+Reducing stack by rule 41 (line 127):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 141
+Stack now 0 1 11 33 86 141
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+")
+--accepting rule at line 159(")")
+Next token is token ')' ()
+Reducing stack by rule 19 (line 89):
+   $1 = token '(' ()
+   $2 = nterm declarations ()
+   $3 = nterm instructions ()
+-> $$ = nterm implicit_block ()
+Entering state 34
+Stack now 0 1 11 34
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 88
+Stack now 0 1 11 34 88
+Reducing stack by rule 18 (line 86):
+   $1 = token tPROGRAM ()
+   $2 = nterm implicit_block ()
+   $3 = token ')' ()
+-> $$ = nterm program ()
+Entering state 15
+Stack now 0 1 15
+Reducing stack by rule 3 (line 65):
+   $1 = token '(' ()
+   $2 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 161("
+
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 20
+Stack now 0 2 20
+Stack now 0 2 20
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: ok (0/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------U-01-121-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 159("(")
@@ -68531,6 +72172,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token '(' ()
@@ -68722,7 +72368,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -68838,6 +72484,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 7 22 48 68 122 162
 Next token is token '(' ()
@@ -69173,7 +72824,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -69507,6 +73158,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 162
 Next token is token '(' ()
@@ -69698,7 +73354,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -69961,6 +73617,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token '(' ()
@@ -70152,7 +73813,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -70268,6 +73929,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 7 22 48 68 122 162
 Next token is token '(' ()
@@ -70603,7 +74269,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -70937,6 +74603,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 162
 Next token is token '(' ()
@@ -71128,7 +74799,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -71317,6 +74988,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 11 37 89 62 48 87 48 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 11 37 89 62 48 87 48 48 68 122 162
 Next token is token '(' ()
@@ -71508,7 +75184,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -71615,6 +75291,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 162
 Next token is token '(' ()
@@ -71806,7 +75487,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -72070,6 +75751,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token '(' ()
@@ -72261,7 +75947,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -72377,6 +76063,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 7 22 48 68 122 162
 Next token is token '(' ()
@@ -72712,7 +76403,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -72830,6 +76521,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 7 22 48 68 122 162
 Next token is token '(' ()
@@ -73351,7 +77047,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -73685,6 +77381,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 162
 Next token is token '(' ()
@@ -73876,7 +77577,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -74065,6 +77766,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 11 37 89 62 48 87 48 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 11 37 89 62 48 87 48 48 68 122 162
 Next token is token '(' ()
@@ -74256,7 +77962,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -74363,6 +78069,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 162
 Next token is token '(' ()
@@ -74554,7 +78265,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -74756,6 +78467,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 162
 Next token is token '(' ()
@@ -74947,7 +78663,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -75021,6 +78737,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 11 37 89 62 48 87 143 48 68 122 162
 Next token is token '(' ()
@@ -75212,7 +78933,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -75574,6 +79295,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 16 45 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 16 45 48 68 122 162
 Next token is token '(' ()
@@ -75767,7 +79493,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -75978,6 +79704,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 16 45 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 16 45 48 68 122 162
 Next token is token '(' ()
@@ -76152,7 +79883,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -76480,6 +80211,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 16 45 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 16 45 48 68 122 162
 Next token is token '(' ()
@@ -76814,7 +80550,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -77948,6 +81684,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 16 45 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 16 45 48 68 122 162
 Next token is token '(' ()
@@ -78141,7 +81882,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -78467,6 +82208,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 16 45 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 16 45 48 68 122 162
 Next token is token '(' ()
@@ -78801,7 +82547,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -79040,6 +82786,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 11 33 16 45 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 11 33 16 45 48 68 122 162
 Next token is token '(' ()
@@ -79183,7 +82934,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -79434,6 +83185,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 11 33 86 141 89 64 118 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 11 33 86 141 89 64 118 48 68 122 162
 Next token is token '(' ()
@@ -79608,7 +83364,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -80011,6 +83767,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 14 44 11 33 86 141 89 62 48 87 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 14 44 11 33 86 141 89 62 48 87 48 68 122 162
 Next token is token '(' ()
@@ -80185,7 +83946,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -80549,6 +84310,11 @@ Next token is token ')' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162
 Next token is token ')' ()
@@ -80636,6 +84402,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 7 22 48 68 122 162 190 207 33 60 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 7 22 48 68 122 162 190 207 33 60 48 68 122 162
 Next token is token '(' ()
@@ -80827,7 +84598,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -80877,7 +84648,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -81487,6 +85258,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 11 33 16 45 48 77 130 48 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 11 33 16 45 48 77 130 48 48 68 122 162
 Next token is token '(' ()
@@ -81678,7 +85454,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -82076,6 +85852,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 11 33 16 45 48 77 48 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 11 33 16 45 48 77 48 48 68 122 162
 Next token is token '(' ()
@@ -82267,7 +86048,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -82682,6 +86463,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 11 33 62 115 48 77 48 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 11 33 62 115 48 77 48 48 68 122 162
 Next token is token '(' ()
@@ -82873,7 +86659,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -83204,6 +86990,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 11 33 62 48 77 48 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 11 33 62 48 77 48 48 68 122 162
 Next token is token '(' ()
@@ -83395,7 +87186,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -83992,6 +87783,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 11 33 86 140 16 45 48 64 118 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 11 33 86 140 16 45 48 64 118 48 68 122 162
 Next token is token '(' ()
@@ -84183,7 +87979,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
@@ -84988,6 +88784,11 @@ Next token is token '(' ()
 Reducing stack by rule 24 (line 98):
    $1 = nterm normal_type ()
 -> $$ = nterm type ()
+Entering state 42
+Stack now 0 1 11 33 86 140 64 118 48 64 118 48 68 122 42
+Reducing stack by rule 35 (line 116):
+   $1 = nterm type ()
+-> $$ = nterm function_return_type ()
 Entering state 162
 Stack now 0 1 11 33 86 140 64 118 48 64 118 48 68 122 162
 Next token is token '(' ()
@@ -85179,7 +88980,7 @@ Reducing stack by rule 23 (line 95):
    $1 = token '(' ()
    $2 = token tFUNCTION ()
    $3 = token '(' ()
-   $4 = nterm type ()
+   $4 = nterm function_return_type ()
    $5 = nterm opt_declarations ()
    $6 = token ')' ()
    $7 = nterm implicit_block ()
