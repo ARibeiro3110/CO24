@@ -1,3 +1,23 @@
 <pre>
 Checking project structure...
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:58:48: error: expected type-specifier
+   58 | program : tBEGIN list tEND { compiler->ast(new til::program_node(LINE, $2)); }
+      |                                                ^~~
+til_parser.y:68:101: error: no matching function for call to 'til::read_node::read_node(int, cdk::lvalue_node*&)'
+   68 |      | tREAD lval ';'                   { $$ = new til::read_node(LINE, $2); }
+      |                                                                                                     ^
+In file included from .auto/all_nodes.h:51,
+                 from til_parser.y:8:
+./ast/read_node.h:15:7: note: candidate: 'til::read_node::read_node(int)'
+   15 |       read_node(int lineno) :
+      |       ^~~~~~~~~
+./ast/read_node.h:15:7: note:   candidate expects 1 argument, 2 provided
+./ast/read_node.h:12:9: note: candidate: 'til::read_node::read_node(const til::read_node&)'
+   12 |   class read_node: public cdk::expression_node {
+      |         ^~~~~~~~~
+./ast/read_node.h:12:9: note:   candidate expects 1 argument, 2 provided
+./ast/read_node.h:12:9: note: candidate: 'til::read_node::read_node(til::read_node&&)'
+./ast/read_node.h:12:9: note:   candidate expects 1 argument, 2 provided
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
