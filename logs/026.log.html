@@ -2,212 +2,107 @@
 Checking project structure...
 til_scanner.l:71: warning, rule cannot be matched
 til_scanner.l:83: warning, rule cannot be matched
-til_parser.y: warning: 3 nonterminals useless in grammar [-Wother]
-til_parser.y: warning: 6 rules useless in grammar [-Wother]
-til_parser.y:118.1-9: warning: nonterminal useless in grammar: funcDecls [-Wother]
-  118 | funcDecls : funcDecls funcDecl     { $$ = new cdk::sequence_node(LINE...
+til_parser.y: warning: 2 nonterminals useless in grammar [-Wother]
+til_parser.y: warning: 4 rules useless in grammar [-Wother]
+til_parser.y:122.1-9: warning: nonterminal useless in grammar: funcDecls [-Wother]
+  122 | funcDecls : funcDecls funcDecl     { $$ = new cdk::sequence_node(LINE...
       | ^~~~~~~~~
-til_parser.y:195.1-5: warning: nonterminal useless in grammar: exprs [-Wother]
-  195 | exprs : exprs expr    { $$ = new cdk::sequence_node(LINE, $2, $1); }
-      | ^~~~~
-til_parser.y:199.1-6: warning: nonterminal useless in grammar: string [-Wother]
-  199 | string : string tSTRING     { $$ = $1; $$->append(*$2); delete $2; }
+til_parser.y:206.1-6: warning: nonterminal useless in grammar: string [-Wother]
+  206 | string : string tSTRING     { $$ = $1; $$->append(*$2); delete $2; }
       | ^~~~~~
-til_parser.y: warning: 62 shift/reduce conflicts [-Wconflicts-sr]
-til_parser.y: warning: 28 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: warning: 79 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 184 reduce/reduce conflicts [-Wconflicts-rr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-til_parser.y:122.12-95: warning: rule useless in parser due to conflicts [-Wother]
-  122 | funcDecl : declaration                                               ...
+til_parser.y:126.12-95: warning: rule useless in parser due to conflicts [-Wother]
+  126 | funcDecl : declaration                                               ...
       |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
-til_parser.y:69:71: error: expected type-specifier
-   69 | program : '(' tPROG declarations_and_instr ')'    { compiler->ast(new til::program_node(LINE, $3)); }
-      |                                                                       ^~~
-til_parser.y:91:121: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'type_vec'
-   91 |              | '(' function_return_type '(' types ')' ')'     { $$ = cdk::functional_type::create(*$4, $2); delete $4; }
-      |                                                                                                                         ^       
-til_parser.y:91:169: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'type_vec'
-   91 |              | '(' function_return_type '(' types ')' ')'     { $$ = cdk::functional_type::create(*$4, $2); delete $4; }
-      |                                                                                                                                                                         ^       
-til_parser.y:102:33: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'type_vec'
-  102 | types : types type     { $$ = $1; $$->push_back($2); }
-      |                                 ^~~~~~~~
-til_parser.y:102:56: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'type_vec'
-  102 | types : types type     { $$ = $1; $$->push_back($2); }
-      |                                                        ^       
-til_parser.y:102:74: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'type_vec'
-  102 | types : types type     { $$ = $1; $$->push_back($2); }
-      |                                                                          ^       
-til_parser.y:103:33: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'type_vec'
-  103 |       | type           { $$ = new std::vector<std::shared_ptr<cdk::basic_type>>(1, $1); }
-      |                                 ^~~~~~~~
-til_parser.y:110:66: error: invalid conversion from 'int' to 'cdk::basic_node*' [-fpermissive]
-  110 |             | funcDecl                          { $$ = 1; }
-      |                                                                  ^
-      |                                                                  |
-      |                                                                  int
-til_parser.y:111:65: error: invalid conversion from 'int' to 'cdk::basic_node*' [-fpermissive]
-  111 |             | funcDef                          { $$ = 1; }
-      |                                                                 ^
-      |                                                                 |
-      |                                                                 int
-til_parser.y:125:206: error: no matching function for call to 'til::variable_declaration_node::variable_declaration_node(int, yytokentype, std::shared_ptr<cdk::basic_type>&, std::string&, cdk::sequence_node*&)'
-  125 |          | '(' tIDENTIFIER '(' tFUNCTION '('type argdecs ')' ')' ')'               { $$ = new til::variable_declaration_node(LINE, tPRIVATE, $6, *$2, $7); delete $2; }
-      |                                                                                                                                                                                                              ^
-In file included from .auto/all_nodes.h:55,
-                 from til_parser.y:8:
-./ast/variable_declaration_node.h:18:5: note: candidate: 'til::variable_declaration_node::variable_declaration_node(int, int, std::shared_ptr<cdk::basic_type>, std::string&, cdk::expression_node*)'
-   18 |     variable_declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> var_type, std::string &identifier ,
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
-./ast/variable_declaration_node.h:19:33: note:   no known conversion for argument 5 from 'cdk::sequence_node*' to 'cdk::expression_node*'
-   19 |           cdk::expression_node *expression) :
-      |           ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
-./ast/variable_declaration_node.h:12:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(const til::variable_declaration_node&)'
-   12 |   class variable_declaration_node: public cdk::typed_node {
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
-./ast/variable_declaration_node.h:12:9: note:   candidate expects 1 argument, 5 provided
-./ast/variable_declaration_node.h:12:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(til::variable_declaration_node&&)'
-./ast/variable_declaration_node.h:12:9: note:   candidate expects 1 argument, 5 provided
-til_parser.y:126:197: error: no matching function for call to 'til::variable_declaration_node::variable_declaration_node(int, yytokentype, std::nullptr_t, std::string&, cdk::sequence_node*&)'
-  126 |          | '(' tVAR tIDENTIFIER '(' tFUNCTION '('type argdecs ')' ')' ')'          { $$ = new til::variable_declaration_node(LINE, tPRIVATE, nullptr, *$3, $8); delete $3; }
-      |                                                                                                                                                                                                     ^
-./ast/variable_declaration_node.h:18:5: note: candidate: 'til::variable_declaration_node::variable_declaration_node(int, int, std::shared_ptr<cdk::basic_type>, std::string&, cdk::expression_node*)'
-   18 |     variable_declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> var_type, std::string &identifier ,
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
-./ast/variable_declaration_node.h:19:33: note:   no known conversion for argument 5 from 'cdk::sequence_node*' to 'cdk::expression_node*'
-   19 |           cdk::expression_node *expression) :
-      |           ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
-./ast/variable_declaration_node.h:12:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(const til::variable_declaration_node&)'
-   12 |   class variable_declaration_node: public cdk::typed_node {
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
-./ast/variable_declaration_node.h:12:9: note:   candidate expects 1 argument, 5 provided
-./ast/variable_declaration_node.h:12:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(til::variable_declaration_node&&)'
-./ast/variable_declaration_node.h:12:9: note:   candidate expects 1 argument, 5 provided
-til_parser.y:127:206: error: no matching function for call to 'til::variable_declaration_node::variable_declaration_node(int, yytokentype, std::shared_ptr<cdk::basic_type>&, std::string&, cdk::sequence_node*&)'
-  127 |          | '(' type tIDENTIFIER '(' tFUNCTION '('type argdecs ')' ')' ')'          { $$ = new til::variable_declaration_node(LINE, tPRIVATE, $2, *$3, $8); delete $3; }
-      |                                                                                                                                                                                                              ^
-./ast/variable_declaration_node.h:18:5: note: candidate: 'til::variable_declaration_node::variable_declaration_node(int, int, std::shared_ptr<cdk::basic_type>, std::string&, cdk::expression_node*)'
-   18 |     variable_declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> var_type, std::string &identifier ,
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
-./ast/variable_declaration_node.h:19:33: note:   no known conversion for argument 5 from 'cdk::sequence_node*' to 'cdk::expression_node*'
-   19 |           cdk::expression_node *expression) :
-      |           ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
-./ast/variable_declaration_node.h:12:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(const til::variable_declaration_node&)'
-   12 |   class variable_declaration_node: public cdk::typed_node {
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
-./ast/variable_declaration_node.h:12:9: note:   candidate expects 1 argument, 5 provided
-./ast/variable_declaration_node.h:12:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(til::variable_declaration_node&&)'
-./ast/variable_declaration_node.h:12:9: note:   candidate expects 1 argument, 5 provided
-til_parser.y:128:196: error: no matching function for call to 'til::variable_declaration_node::variable_declaration_node(int, yytokentype, std::nullptr_t, std::string&, cdk::sequence_node*&)'
-  128 |          | '(' tPUBLIC tVAR tIDENTIFIER '(' tFUNCTION '(' type argdecs ')' ')' ')' { $$ = new til::variable_declaration_node(LINE, tPUBLIC, nullptr, *$4, $9); delete $4; }
-      |                                                                                                                                                                                                    ^
-./ast/variable_declaration_node.h:18:5: note: candidate: 'til::variable_declaration_node::variable_declaration_node(int, int, std::shared_ptr<cdk::basic_type>, std::string&, cdk::expression_node*)'
-   18 |     variable_declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> var_type, std::string &identifier ,
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
-./ast/variable_declaration_node.h:19:33: note:   no known conversion for argument 5 from 'cdk::sequence_node*' to 'cdk::expression_node*'
-   19 |           cdk::expression_node *expression) :
-      |           ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
-./ast/variable_declaration_node.h:12:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(const til::variable_declaration_node&)'
-   12 |   class variable_declaration_node: public cdk::typed_node {
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
-./ast/variable_declaration_node.h:12:9: note:   candidate expects 1 argument, 5 provided
-./ast/variable_declaration_node.h:12:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(til::variable_declaration_node&&)'
-./ast/variable_declaration_node.h:12:9: note:   candidate expects 1 argument, 5 provided
-til_parser.y:129:205: error: no matching function for call to 'til::variable_declaration_node::variable_declaration_node(int, yytokentype, std::shared_ptr<cdk::basic_type>&, std::string&, cdk::sequence_node*&)'
-  129 |          | '(' tPUBLIC type tIDENTIFIER '(' tFUNCTION '(' type argdecs ')' ')' ')' { $$ = new til::variable_declaration_node(LINE, tPUBLIC, $3, *$4, $9); delete $4; }
-      |                                                                                                                                                                                                             ^
-./ast/variable_declaration_node.h:18:5: note: candidate: 'til::variable_declaration_node::variable_declaration_node(int, int, std::shared_ptr<cdk::basic_type>, std::string&, cdk::expression_node*)'
-   18 |     variable_declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> var_type, std::string &identifier ,
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
-./ast/variable_declaration_node.h:19:33: note:   no known conversion for argument 5 from 'cdk::sequence_node*' to 'cdk::expression_node*'
-   19 |           cdk::expression_node *expression) :
-      |           ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
-./ast/variable_declaration_node.h:12:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(const til::variable_declaration_node&)'
-   12 |   class variable_declaration_node: public cdk::typed_node {
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
-./ast/variable_declaration_node.h:12:9: note:   candidate expects 1 argument, 5 provided
-./ast/variable_declaration_node.h:12:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(til::variable_declaration_node&&)'
-./ast/variable_declaration_node.h:12:9: note:   candidate expects 1 argument, 5 provided
-til_parser.y:130:196: error: no matching function for call to 'til::variable_declaration_node::variable_declaration_node(int, yytokentype, std::nullptr_t, std::string&, cdk::sequence_node*&)'
-  130 |          | '(' tPUBLIC tIDENTIFIER '(' tFUNCTION '(' type argdecs ')' ')' ')'      { $$ = new til::variable_declaration_node(LINE, tPUBLIC, nullptr, *$3, $8); delete $3; }
-      |                                                                                                                                                                                                    ^
-./ast/variable_declaration_node.h:18:5: note: candidate: 'til::variable_declaration_node::variable_declaration_node(int, int, std::shared_ptr<cdk::basic_type>, std::string&, cdk::expression_node*)'
-   18 |     variable_declaration_node(int lineno, int qualifier, std::shared_ptr<cdk::basic_type> var_type, std::string &identifier ,
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
-./ast/variable_declaration_node.h:19:33: note:   no known conversion for argument 5 from 'cdk::sequence_node*' to 'cdk::expression_node*'
-   19 |           cdk::expression_node *expression) :
-      |           ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
-./ast/variable_declaration_node.h:12:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(const til::variable_declaration_node&)'
-   12 |   class variable_declaration_node: public cdk::typed_node {
-      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
-./ast/variable_declaration_node.h:12:9: note:   candidate expects 1 argument, 5 provided
-./ast/variable_declaration_node.h:12:9: note: candidate: 'til::variable_declaration_node::variable_declaration_node(til::variable_declaration_node&&)'
-./ast/variable_declaration_node.h:12:9: note:   candidate expects 1 argument, 5 provided
-til_parser.y:133:176: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'block'
-  133 | funcDef : '(' type tIDENTIFIER '(' tFUNCTION '('type argdecs ')' ')' ')' block              { $$= new til::function_node(LINE, $8, $12, $7); }
-      |                                                                                                                                                                                ^    
-til_parser.y:134:176: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'block'
-  134 |         | '(' tVAR tIDENTIFIER '(' tFUNCTION '('type argdecs ')' ')' ')' block              { $$= new til::function_node(LINE, $8, $12, $7); }
-      |                                                                                                                                                                                ^    
-til_parser.y:135:176: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'block'
-  135 |         | '(' tPUBLIC tVAR tIDENTIFIER '(' tFUNCTION '(' type argdecs ')' ')' ')' block     { $$= new til::function_node(LINE, $9, $13, $8); }
-      |                                                                                                                                                                                ^    
-til_parser.y:136:176: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'block'
-  136 |         | '(' tPUBLIC type tIDENTIFIER '(' tFUNCTION '(' type argdecs ')' ')' ')' block     { $$= new til::function_node(LINE, $9, $13, $8); }
-      |                                                                                                                                                                                ^    
-til_parser.y:137:176: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'block'
-  137 |         | '(' tPUBLIC tIDENTIFIER '(' tFUNCTION '(' type argdecs ')' ')' ')' block          { $$= new til::function_node(LINE, $8, $12, $7); }
-      |                                                                                                                                                                                ^    
-til_parser.y:140:64: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'block'
-  140 | declarations_and_instr: declarations instructions     { $$ = new til::block_node(LINE, $1, $2); }
-      |                                                                ^~~~~
-til_parser.y:141:64: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'block'
-  141 |                       | declarations                  { $$ = new til::block_node(LINE, $1, new cdk::sequence_node(LINE)); }
-      |                                                                ^~~~~
-til_parser.y:142:64: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'block'
-  142 |                       | instructions                  { $$ = new til::block_node(LINE, new cdk::sequence_node(LINE), $1); }
-      |                                                                ^~~~~
-til_parser.y:143:64: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'block'
-  143 |                       | /* empty */                   { $$ = new til::block_node(LINE, new cdk::sequence_node(LINE), new cdk::sequence_node(LINE)); }
-      |                                                                ^~~~~
-til_parser.y:146:59: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'block'
-  146 | block : '(' tBLOCK declarations_and_instr        { $$ = $3); }
-      |                                                           ^~~~ 
-til_parser.y:146:78: error: 'YYSTYPE' {aka 'union YYSTYPE'} has no member named 'block'
-  146 | block : '(' tBLOCK declarations_and_instr        { $$ = $3); }
-      |                                                                              ^    
-til_parser.y:164:106: error: no matching function for call to 'til::print_node::print_node(int, cdk::expression_node*&)'
-  164 |      | tPRINT expr ';'                  { $$ = new til::print_node(LINE, $2); }
-      |                                                                                                          ^
-In file included from .auto/all_nodes.h:49:
-./ast/print_node.h:16:12: note: candidate: 'til::print_node::print_node(int, cdk::sequence_node*, bool)'
-   16 |     inline print_node(int lineno, cdk::sequence_node *arguments,
-      |            ^~~~~~~~~~
-./ast/print_node.h:16:55: note:   no known conversion for argument 2 from 'cdk::expression_node*' to 'cdk::sequence_node*'
-   16 |     inline print_node(int lineno, cdk::sequence_node *arguments,
-      |                                   ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
-./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(const til::print_node&)'
-   11 |   class print_node: public cdk::basic_node {
-      |         ^~~~~~~~~~
-./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
-./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(til::print_node&&)'
-./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
-til_parser.y:175:57: error: expected type-specifier
-  175 |      | tNULL                 { $$ = new til::nullptr(LINE); }
-      |                                                         ^~~
-til_parser.y:189:106: error: no matching function for call to 'til::stack_allocation_node::stack_allocation_node(cdk::expression_node*&)'
-  189 |      | '(' expr '!' ')'      { $$ = new til::stack_allocation_node($2); }
-      |                                                                                                          ^
-In file included from .auto/all_nodes.h:53:
-./ast/stack_allocation_node.h:14:5: note: candidate: 'til::stack_allocation_node::stack_allocation_node(int, cdk::expression_node*)'
-   14 |     stack_allocation_node(int lineno, cdk::expression_node *expression) :
-      |     ^~~~~~~~~~~~~~~~~~~~~
-./ast/stack_allocation_node.h:14:5: note:   candidate expects 2 arguments, 1 provided
-./ast/stack_allocation_node.h:12:9: note: candidate: 'til::stack_allocation_node::stack_allocation_node(const til::stack_allocation_node&)'
-   12 |   class stack_allocation_node: public cdk::unary_operation_node {
-      |         ^~~~~~~~~~~~~~~~~~~~~
-./ast/stack_allocation_node.h:12:9: note:   no known conversion for argument 1 from 'cdk::expression_node*' to 'const til::stack_allocation_node&'
-./ast/stack_allocation_node.h:12:9: note: candidate: 'til::stack_allocation_node::stack_allocation_node(til::stack_allocation_node&&)'
-./ast/stack_allocation_node.h:12:9: note:   no known conversion for argument 1 from 'cdk::expression_node*' to 'til::stack_allocation_node&&'
-make: *** [Makefile:40: til_parser.tab.o] Error 1
+til_parser.y:165.8-70: warning: rule useless in parser due to conflicts [-Wother]
+  165 | expr : tINT                  { $$ = new cdk::integer_node(LINE, $1); }
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+til_parser.y:166.8-69: warning: rule useless in parser due to conflicts [-Wother]
+  166 |      | tDOUBLE               { $$ = new cdk::double_node(LINE, $1); }
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ./targets/xml_writer.h:6,
+                 from ./targets/xml_target.h:6,
+                 from targets/xml_target.cpp:1:
+til_parser.y: In constructor 'YYSTYPE::YYSTYPE()':
+til_parser.y:19:25: error: 'cdk::primitive_type' has not been declared
+   19 |   YYSTYPE() : type(cdk::primitive_type::create(0, cdk::TYPE_VOID)) {}
+      |                         ^~~~~~~~~~~~~~
+./targets/xml_writer.h: In member function 'std::string til::xml_writer::type_to_str(std::shared_ptr<cdk::basic_type>)':
+./targets/xml_writer.h:82:51: error: 'functional_type' is not a member of 'cdk'
+   82 |       auto ftype = std::dynamic_pointer_cast<cdk::functional_type>(type);
+      |                                                   ^~~~~~~~~~~~~~~
+./targets/xml_writer.h:82:67: error: no matching function for call to 'dynamic_pointer_cast<<expression error> >(std::shared_ptr<cdk::basic_type>&)'
+   82 |       auto ftype = std::dynamic_pointer_cast<cdk::functional_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from /usr/include/c++/13/bits/shared_ptr.h:53,
+                 from /usr/include/c++/13/memory:80,
+                 from /usr/include/cdk/targets/basic_target.h:4,
+                 from ./targets/xml_target.h:4:
+/usr/include/c++/13/bits/shared_ptr_base.h:1955:5: note: candidate: 'template<class _Tp, class _Tp1, __gnu_cxx::_Lock_policy _Lp> std::__shared_ptr<_Tp1, _Lp> std::dynamic_pointer_cast(const __shared_ptr<_Tp2, _Lp>&)'
+ 1955 |     dynamic_pointer_cast(const __shared_ptr<_Tp1, _Lp>& __r) noexcept
+      |     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr_base.h:1955:5: note:   template argument deduction/substitution failed:
+./targets/xml_writer.h:82:67: error: template argument 1 is invalid
+   82 |       auto ftype = std::dynamic_pointer_cast<cdk::functional_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:718:5: note: candidate: 'template<class _Tp, class _Up> std::shared_ptr<_Tp> std::dynamic_pointer_cast(const shared_ptr<_Tp>&)'
+  718 |     dynamic_pointer_cast(const shared_ptr<_Up>& __r) noexcept
+      |     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:718:5: note:   template argument deduction/substitution failed:
+./targets/xml_writer.h:82:67: error: template argument 1 is invalid
+   82 |       auto ftype = std::dynamic_pointer_cast<cdk::functional_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:767:5: note: candidate: 'template<class _Tp, class _Up> std::shared_ptr<_Tp> std::dynamic_pointer_cast(shared_ptr<_Tp>&&)'
+  767 |     dynamic_pointer_cast(shared_ptr<_Up>&& __r) noexcept
+      |     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:767:5: note:   template argument deduction/substitution failed:
+./targets/xml_writer.h:82:67: error: template argument 1 is invalid
+   82 |       auto ftype = std::dynamic_pointer_cast<cdk::functional_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+./targets/xml_writer.h:87:51: error: 'structured_type' is not a member of 'cdk'
+   87 |       auto stype = std::dynamic_pointer_cast<cdk::structured_type>(type);
+      |                                                   ^~~~~~~~~~~~~~~
+./targets/xml_writer.h:87:67: error: no matching function for call to 'dynamic_pointer_cast<<expression error> >(std::shared_ptr<cdk::basic_type>&)'
+   87 |       auto stype = std::dynamic_pointer_cast<cdk::structured_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/13/bits/shared_ptr_base.h:1955:5: note: candidate: 'template<class _Tp, class _Tp1, __gnu_cxx::_Lock_policy _Lp> std::__shared_ptr<_Tp1, _Lp> std::dynamic_pointer_cast(const __shared_ptr<_Tp2, _Lp>&)'
+ 1955 |     dynamic_pointer_cast(const __shared_ptr<_Tp1, _Lp>& __r) noexcept
+      |     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr_base.h:1955:5: note:   template argument deduction/substitution failed:
+./targets/xml_writer.h:87:67: error: template argument 1 is invalid
+   87 |       auto stype = std::dynamic_pointer_cast<cdk::structured_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:718:5: note: candidate: 'template<class _Tp, class _Up> std::shared_ptr<_Tp> std::dynamic_pointer_cast(const shared_ptr<_Tp>&)'
+  718 |     dynamic_pointer_cast(const shared_ptr<_Up>& __r) noexcept
+      |     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:718:5: note:   template argument deduction/substitution failed:
+./targets/xml_writer.h:87:67: error: template argument 1 is invalid
+   87 |       auto stype = std::dynamic_pointer_cast<cdk::structured_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:767:5: note: candidate: 'template<class _Tp, class _Up> std::shared_ptr<_Tp> std::dynamic_pointer_cast(shared_ptr<_Tp>&&)'
+  767 |     dynamic_pointer_cast(shared_ptr<_Up>&& __r) noexcept
+      |     ^~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/shared_ptr.h:767:5: note:   template argument deduction/substitution failed:
+./targets/xml_writer.h:87:67: error: template argument 1 is invalid
+   87 |       auto stype = std::dynamic_pointer_cast<cdk::structured_type>(type);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+./targets/xml_writer.h:91:21: error: 'accumulate' is not a member of 'std'
+   91 |         return std::accumulate(components.begin(), components.end(), result,
+      |                     ^~~~~~~~~~
+./targets/xml_writer.h:97:19: error: 'to_string' is not a member of 'cdk'; did you mean 'std::__cxx11::to_string'?
+   97 |       return cdk::to_string(type);
+      |                   ^~~~~~~~~
+In file included from /usr/include/c++/13/string:54,
+                 from /usr/include/c++/13/bits/locale_classes.h:40,
+                 from /usr/include/c++/13/bits/ios_base.h:41,
+                 from /usr/include/c++/13/ios:44,
+                 from /usr/include/c++/13/ostream:40,
+                 from /usr/include/c++/13/bits/unique_ptr.h:42,
+                 from /usr/include/c++/13/memory:78:
+/usr/include/c++/13/bits/basic_string.h:4261:3: note: 'std::__cxx11::to_string' declared here
+ 4261 |   to_string(long double __val)
+      |   ^~~~~~~~~
+make: *** [Makefile:46: targets/xml_target.o] Error 1
 
