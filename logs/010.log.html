@@ -1,23 +1,26 @@
 <pre>
 Checking project structure...
-til_parser.y: warning: 58 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 54 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_print_node(til::print_node*, int)':
-targets/postfix_writer.cpp:217:9: error: 'class til::print_node' has no member named 'argument'; did you mean 'arguments'?
-  217 |   node->argument()->accept(this, lvl); // determine the value to print
-      |         ^~~~~~~~
-      |         arguments
-targets/postfix_writer.cpp:218:13: error: 'class til::print_node' has no member named 'argument'; did you mean 'arguments'?
-  218 |   if (node->argument()->is_typed(cdk::TYPE_INT)) {
-      |             ^~~~~~~~
-      |             arguments
-targets/postfix_writer.cpp:221:20: error: 'class til::print_node' has no member named 'argument'; did you mean 'arguments'?
-  221 |   } else if (node->argument()->is_typed(cdk::TYPE_STRING)) {
-      |                    ^~~~~~~~
-      |                    arguments
+targets/postfix_writer.cpp:222:7: error: '_externalFunctionsToDeclare' was not declared in this scope
+  222 |       _externalFunctionsToDeclare.insert("printi");
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp:226:7: error: '_externalFunctionsToDeclare' was not declared in this scope
+  226 |       _externalFunctionsToDeclare.insert("printi"); //fix printreal
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp:230:7: error: '_externalFunctionsToDeclare' was not declared in this scope
+  230 |       _externalFunctionsToDeclare.insert("prints");
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp:237:5: error: '_externalFunctionsToDeclare' was not declared in this scope
+  237 |     _externalFunctionsToDeclare.insert("println");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_read_node(til::read_node*, int)':
-targets/postfix_writer.cpp:237:9: error: 'class til::read_node' has no member named 'argument'
-  237 |   node->argument()->accept(this, lvl);
-      |         ^~~~~~~~
+targets/postfix_writer.cpp:247:5: error: '_externalFunctionsToDeclare' was not declared in this scope
+  247 |     _externalFunctionsToDeclare.insert("readi"); //fix readreal
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp:251:5: error: '_externalFunctionsToDeclare' was not declared in this scope
+  251 |     _externalFunctionsToDeclare.insert("readi");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
 make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
