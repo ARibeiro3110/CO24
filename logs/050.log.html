@@ -6,11 +6,7 @@ til_parser.y:105.10: warning: empty rule for typed nonterminal, and no action [-
 til_parser.y:106.11-14: warning: type clash on default action: <type> != <> [-Wother]
   106 |         | tVAR
       |           ^~~~
-til_parser.y:239.7: warning: empty rule for typed nonterminal, and no action [-Wother]
-  239 | expr :
-      |       ^
-til_parser.y: warning: 214 shift/reduce conflicts [-Wconflicts-sr]
-til_parser.y: warning: 6 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: warning: 5 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -5177,14 +5173,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 82("0")
 Next token is token "invalid token" ()
-Reducing stack by rule 83 (line 239):
--> $$ = nterm expr ()
-Entering state 119
-Stack now 0 1 9 29 55 82 119
-Next token is token "invalid token" ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 9 29 55 82
 Error: popping token tIDENTIFIER ()
 Stack now 0 1 9 29 55
 Error: popping token tVAR ()
@@ -5256,14 +5245,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 82("0")
 Next token is token "invalid token" ()
-Reducing stack by rule 83 (line 239):
--> $$ = nterm expr ()
-Entering state 119
-Stack now 0 1 9 29 55 82 119
-Next token is token "invalid token" ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 9 29 55 82
 Error: popping token tIDENTIFIER ()
 Stack now 0 1 9 29 55
 Error: popping token tVAR ()
@@ -5335,14 +5317,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 82("0")
 Next token is token "invalid token" ()
-Reducing stack by rule 83 (line 239):
--> $$ = nterm expr ()
-Entering state 119
-Stack now 0 1 9 29 55 82 119
-Next token is token "invalid token" ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 9 29 55 82
 Error: popping token tIDENTIFIER ()
 Stack now 0 1 9 29 55
 Error: popping token tVAR ()
@@ -12294,7 +12269,7 @@ Reducing stack by rule 35 (line 144):
 -> $$ = nterm literal ()
 Entering state 61
 Stack now 0 3 21 9 29 56 83 61
-Reducing stack by rule 84 (line 240):
+Reducing stack by rule 83 (line 239):
    $1 = nterm literal ()
 -> $$ = nterm expr ()
 Entering state 121
@@ -12805,7 +12780,7 @@ Reducing stack by rule 35 (line 144):
 -> $$ = nterm literal ()
 Entering state 61
 Stack now 0 3 21 9 29 56 83 61
-Reducing stack by rule 84 (line 240):
+Reducing stack by rule 83 (line 239):
    $1 = nterm literal ()
 -> $$ = nterm expr ()
 Entering state 121
@@ -13017,7 +12992,7 @@ Reducing stack by rule 35 (line 144):
 -> $$ = nterm literal ()
 Entering state 61
 Stack now 0 3 21 9 29 56 83 61
-Reducing stack by rule 84 (line 240):
+Reducing stack by rule 83 (line 239):
    $1 = nterm literal ()
 -> $$ = nterm expr ()
 Entering state 121
@@ -13113,7 +13088,7 @@ Reducing stack by rule 35 (line 144):
 -> $$ = nterm literal ()
 Entering state 61
 Stack now 0 3 21 9 32 29 56 83 61
-Reducing stack by rule 84 (line 240):
+Reducing stack by rule 83 (line 239):
    $1 = nterm literal ()
 -> $$ = nterm expr ()
 Entering state 121
@@ -14026,7 +14001,7 @@ Reducing stack by rule 35 (line 144):
 -> $$ = nterm literal ()
 Entering state 61
 Stack now 0 3 21 9 29 56 83 61
-Reducing stack by rule 84 (line 240):
+Reducing stack by rule 83 (line 239):
    $1 = nterm literal ()
 -> $$ = nterm expr ()
 Entering state 121
@@ -14167,7 +14142,7 @@ Reducing stack by rule 33 (line 142):
 -> $$ = nterm literal ()
 Entering state 61
 Stack now 0 1 9 29 56 83 61
-Reducing stack by rule 84 (line 240):
+Reducing stack by rule 83 (line 239):
    $1 = nterm literal ()
 -> $$ = nterm expr ()
 Entering state 121
@@ -14266,7 +14241,7 @@ Reducing stack by rule 35 (line 144):
 -> $$ = nterm literal ()
 Entering state 61
 Stack now 0 1 9 32 29 56 83 61
-Reducing stack by rule 84 (line 240):
+Reducing stack by rule 83 (line 239):
    $1 = nterm literal ()
 -> $$ = nterm expr ()
 Entering state 121
@@ -17014,14 +16989,7 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 82("1")
 Next token is token "invalid token" ()
-Reducing stack by rule 83 (line 239):
--> $$ = nterm expr ()
-Entering state 148
-Stack now 0 1 9 29 56 83 111 105 148
-Next token is token "invalid token" ()
 2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 9 29 56 83 111 105
 Error: popping token '+' ()
 Stack now 0 1 9 29 56 83 111
 Error: popping token '(' ()
@@ -17683,7 +17651,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 59
 Stack now 0 1 9 32 29 56 83 111 92 59
-Reducing stack by rule 109 (line 267):
+Reducing stack by rule 108 (line 266):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 135
