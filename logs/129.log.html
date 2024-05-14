@@ -1,3 +1,118 @@
 <pre>
 Checking project structure...
+til_scanner.l:209: warning, rule cannot be matched
+til_scanner.l:210: warning, rule cannot be matched
+til_scanner.l:211: warning, rule cannot be matched
+til_scanner.l:212: warning, rule cannot be matched
+til_scanner.l:213: warning, rule cannot be matched
+til_parser.y:44.61-68: warning: symbol tOBJECTS redeclared [-Wother]
+   44 | %token tNEXT tSTOP tRETURN tSET tSIZEOF tINDEX tLOOP tBLOCK tOBJECTS
+      |                                                             ^~~~~~~~
+til_parser.y:43.48-55: note: previous declaration
+   43 | %token tFOR tIF tPRINT tPRINTLN tPROGRAM tFUNC tOBJECTS
+      |                                                ^~~~~~~~
+til_parser.y: warning: 9 nonterminals useless in grammar [-Wother]
+til_parser.y: warning: 39 rules useless in grammar [-Wother]
+til_parser.y:122.1-11: warning: nonterminal useless in grammar: instruction [-Wother]
+  122 | instruction : expr                 { $$ = new til::evaluation_node(LI...
+      | ^~~~~~~~~~~
+til_parser.y:138.1-5: warning: nonterminal useless in grammar: block [-Wother]
+  138 | block : '(' tBLOCK ')'                           { $$ = new til::bloc...
+      | ^~~~~
+til_parser.y:153.1-18: warning: nonterminal useless in grammar: global_declaration [-Wother]
+  153 | global_declaration : tEXTERNAL  func_type  tIDENTIFIER               ...
+      | ^~~~~~~~~~~~~~~~~~
+til_parser.y:161.1-7: warning: nonterminal useless in grammar: opt_var [-Wother]
+  161 | opt_var : /* empty */         { $$ = nullptr; }
+      | ^~~~~~~
+til_parser.y:165.1-15: warning: nonterminal useless in grammar: opt_global_init [-Wother]
+  165 | opt_global_init : /* empty */    { $$ = nullptr; }
+      | ^~~~~~~~~~~~~~~
+til_parser.y:169.1-11: warning: nonterminal useless in grammar: global_init [-Wother]
+  169 | global_init : literal     { $$ = $1; }
+      | ^~~~~~~~~~~
+til_parser.y:173.1-19: warning: nonterminal useless in grammar: global_declarations [-Wother]
+  173 | global_declarations : global_declaration                             ...
+      | ^~~~~~~~~~~~~~~~~~~
+til_parser.y:177.1-12: warning: nonterminal useless in grammar: instructions [-Wother]
+  177 | instructions : instruction {$$ = new cdk::sequence_node(LINE, $1);}
+      | ^~~~~~~~~~~~
+til_parser.y:214.1-8: warning: nonterminal useless in grammar: func_def [-Wother]
+  214 | func_def : '(' tFUNC '(' func_type declarations ')' declarations ')' ...
+      | ^~~~~~~~
+til_parser.y: warning: 27 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 48 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:75:76: error: invalid conversion from 'cdk::basic_node*' to 'cdk::sequence_node*' [-fpermissive]
+   75 |      | program                { compiler->ast($$ = $1); }
+      |                                                                            ^    
+      |                                                                            |
+      |                                                                            cdk::basic_node*
+til_parser.y:78:112: error: no matching function for call to 'til::function_definition_node::function_definition_node(int, cdk::expression_node*&)'
+   78 | program : '(' tPROGRAM expr ')' { $$ = new til::function_definition_node(LINE, $3); }
+      |                                                                                                                ^
+In file included from .auto/all_nodes.h:44,
+                 from til_parser.y:8:
+./ast/function_definition_node.h:21:5: note: candidate: 'til::function_definition_node::function_definition_node(int, cdk::sequence_node*, cdk::sequence_node*)'
+   21 |     function_definition_node(int lineno, cdk::sequence_node *declarations, cdk::sequence_node *instructions)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+./ast/function_definition_node.h:21:5: note:   candidate expects 3 arguments, 2 provided
+./ast/function_definition_node.h:16:5: note: candidate: 'til::function_definition_node::function_definition_node(int, cdk::sequence_node*, cdk::sequence_node*, cdk::sequence_node*)'
+   16 |     function_definition_node(int lineno, cdk::sequence_node *arguments,
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+./ast/function_definition_node.h:16:5: note:   candidate expects 4 arguments, 2 provided
+./ast/function_definition_node.h:12:9: note: candidate: 'til::function_definition_node::function_definition_node(const til::function_definition_node&)'
+   12 |   class function_definition_node : public cdk::expression_node {
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+./ast/function_definition_node.h:12:9: note:   candidate expects 1 argument, 2 provided
+./ast/function_definition_node.h:12:9: note: candidate: 'til::function_definition_node::function_definition_node(til::function_definition_node&&)'
+./ast/function_definition_node.h:12:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:82:58: error: expected type-specifier
+   82 |      | '-' expr %prec tUNARY  { $$ = new cdk::do_unary_minus_node(LINE, $2); }
+      |                                                          ^~~
+til_parser.y:83:58: error: expected type-specifier
+   83 |      | '+' expr %prec tUNARY  { $$ = new cdk::do_unary_plus_node(LINE, $2); }
+      |                                                          ^~~
+til_parser.y:145:140: error: 'nulllptr' was not declared in this scope; did you mean 'nullptr_t'?
+  145 |             | var_type tIDENTIFIER             { $$ = new til::declaration_node(LINE, tPRIVATE, $1, *$2, nulllptr); delete $2; }
+      |                                                                                                                                            ^       
+      |                                                                                                                                            nullptr_t
+til_parser.y:196:98: error: no matching function for call to 'cdk::sequence_node::sequence_node(int, std::shared_ptr<cdk::basic_type>&)'
+  196 | var_types : var_type                {$$ = new cdk::sequence_node(LINE, $1); }
+      |                                                                                                  ^
+In file included from /usr/include/cdk/ast/all.h:75,
+                 from .auto/all_nodes.h:4:
+/usr/include/cdk/ast/sequence_node.h:39:5: note: candidate: 'cdk::sequence_node::sequence_node(int, cdk::basic_node*, cdk::sequence_node*)'
+   39 |     sequence_node(int lineno, basic_node *item, sequence_node *sequence = nullptr) :
+      |     ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:39:43: note:   no known conversion for argument 2 from 'std::shared_ptr<cdk::basic_type>' to 'cdk::basic_node*'
+   39 |     sequence_node(int lineno, basic_node *item, sequence_node *sequence = nullptr) :
+      |                               ~~~~~~~~~~~~^~~~
+/usr/include/cdk/ast/sequence_node.h:21:5: note: candidate: 'cdk::sequence_node::sequence_node(int)'
+   21 |     sequence_node(int lineno) : basic_node(lineno) { /* EMPTY */ }
+      |     ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:21:5: note:   candidate expects 1 argument, 2 provided
+/usr/include/cdk/ast/sequence_node.h:13:9: note: candidate: 'constexpr cdk::sequence_node::sequence_node(const cdk::sequence_node&)'
+   13 |   class sequence_node : public basic_node {
+      |         ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:13:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:197:117: error: no matching function for call to 'cdk::sequence_node::sequence_node(int, std::shared_ptr<cdk::basic_type>&, std::vector<std::shared_ptr<cdk::basic_type> >*&)'
+  197 |           | var_types var_type      {$$ = new cdk::sequence_node(LINE, $2, $1); }
+      |                                                                                                                     ^
+/usr/include/cdk/ast/sequence_node.h:39:5: note: candidate: 'cdk::sequence_node::sequence_node(int, cdk::basic_node*, cdk::sequence_node*)'
+   39 |     sequence_node(int lineno, basic_node *item, sequence_node *sequence = nullptr) :
+      |     ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:39:43: note:   no known conversion for argument 2 from 'std::shared_ptr<cdk::basic_type>' to 'cdk::basic_node*'
+   39 |     sequence_node(int lineno, basic_node *item, sequence_node *sequence = nullptr) :
+      |                               ~~~~~~~~~~~~^~~~
+/usr/include/cdk/ast/sequence_node.h:21:5: note: candidate: 'cdk::sequence_node::sequence_node(int)'
+   21 |     sequence_node(int lineno) : basic_node(lineno) { /* EMPTY */ }
+      |     ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:21:5: note:   candidate expects 1 argument, 3 provided
+/usr/include/cdk/ast/sequence_node.h:13:9: note: candidate: 'constexpr cdk::sequence_node::sequence_node(const cdk::sequence_node&)'
+   13 |   class sequence_node : public basic_node {
+      |         ^~~~~~~~~~~~~
+/usr/include/cdk/ast/sequence_node.h:13:9: note:   candidate expects 1 argument, 3 provided
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
