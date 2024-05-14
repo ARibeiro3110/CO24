@@ -7671,9 +7671,144 @@ Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 130("0xF")
-invalid hexadecimal number
-Compiler: failed (2/0). Generated empty asm file
+--accepting rule at line 129("0xF")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 32
+Stack now 0 1 15 36 64 32
+Reducing stack by rule 59 (line 163):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 118
+Stack now 0 1 15 36 64 118
+Reducing stack by rule 43 (line 133):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 117
+Stack now 0 1 15 36 64 117
+Reading a token
+--accepting rule at line 140(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 15 36 64 117 157
+Reducing stack by rule 27 (line 109):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instr ()
+Entering state 41
+Stack now 0 1 15 41
+Reducing stack by rule 25 (line 105):
+   $1 = nterm instr ()
+-> $$ = nterm instrs ()
+Entering state 40
+Stack now 0 1 15 40
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144(" 
+	")
+--accepting rule at line 140("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 97
+Stack now 0 1 15 40 97
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 61("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 63
+Stack now 0 1 15 40 97 63
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 144(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 127("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 32
+Stack now 0 1 15 40 97 63 32
+Reducing stack by rule 59 (line 163):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 116
+Stack now 0 1 15 40 97 63 116
+Reading a token
+--accepting rule at line 140(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 156
+Stack now 0 1 15 40 97 63 116 156
+Reducing stack by rule 32 (line 114):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instr ()
+Entering state 98
+Stack now 0 1 15 40 98
+Reducing stack by rule 24 (line 104):
+   $1 = nterm instrs ()
+   $2 = nterm instr ()
+-> $$ = nterm instrs ()
+Entering state 40
+Stack now 0 1 15 40
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144(" 
+")
+--accepting rule at line 140(")")
+Next token is token ')' ()
+Reducing stack by rule 17 (line 91):
+   $1 = nterm instrs ()
+-> $$ = nterm decls_instrs ()
+Entering state 37
+Stack now 0 1 15 37
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 94
+Stack now 0 1 15 37 94
+Reducing stack by rule 14 (line 86):
+   $1 = token '(' ()
+   $2 = token tPROGRAM ()
+   $3 = nterm decls_instrs ()
+   $4 = token ')' ()
+-> $$ = nterm program ()
+Entering state 5
+Stack now 0 5
+Reducing stack by rule 3 (line 69):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 21
+Stack now 0 2 21
+Stack now 0 2 21
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: ok (0/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-25-31-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 140("(")
@@ -7727,9 +7862,212 @@ Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 130("0x2f")
-invalid hexadecimal number
-Compiler: failed (2/0). Generated empty asm file
+--accepting rule at line 129("0x2f")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 32
+Stack now 0 1 15 36 64 32
+Reducing stack by rule 59 (line 163):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 118
+Stack now 0 1 15 36 64 118
+Reducing stack by rule 43 (line 133):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 117
+Stack now 0 1 15 36 64 117
+Reading a token
+--accepting rule at line 140(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 15 36 64 117 157
+Reducing stack by rule 27 (line 109):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instr ()
+Entering state 41
+Stack now 0 1 15 41
+Reducing stack by rule 25 (line 105):
+   $1 = nterm instr ()
+-> $$ = nterm instrs ()
+Entering state 40
+Stack now 0 1 15 40
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144(" 
+	")
+--accepting rule at line 140("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 97
+Stack now 0 1 15 40 97
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 63("println")
+Next token is token tPRINTLN ()
+Shifting token tPRINTLN ()
+Entering state 64
+Stack now 0 1 15 40 97 64
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 144(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 129("0x2f")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 32
+Stack now 0 1 15 40 97 64 32
+Reducing stack by rule 59 (line 163):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 118
+Stack now 0 1 15 40 97 64 118
+Reducing stack by rule 43 (line 133):
+   $1 = nterm expr ()
+-> $$ = nterm exprs ()
+Entering state 117
+Stack now 0 1 15 40 97 64 117
+Reading a token
+--accepting rule at line 140(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 157
+Stack now 0 1 15 40 97 64 117 157
+Reducing stack by rule 27 (line 109):
+   $1 = token '(' ()
+   $2 = token tPRINTLN ()
+   $3 = nterm exprs ()
+   $4 = token ')' ()
+-> $$ = nterm instr ()
+Entering state 98
+Stack now 0 1 15 40 98
+Reducing stack by rule 24 (line 104):
+   $1 = nterm instrs ()
+   $2 = nterm instr ()
+-> $$ = nterm instrs ()
+Entering state 40
+Stack now 0 1 15 40
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144(" 
+	")
+--accepting rule at line 140("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 97
+Stack now 0 1 15 40 97
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 61("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 63
+Stack now 0 1 15 40 97 63
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 144(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 127("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 32
+Stack now 0 1 15 40 97 63 32
+Reducing stack by rule 59 (line 163):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 116
+Stack now 0 1 15 40 97 63 116
+Reading a token
+--accepting rule at line 140(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 156
+Stack now 0 1 15 40 97 63 116 156
+Reducing stack by rule 32 (line 114):
+   $1 = token '(' ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token ')' ()
+-> $$ = nterm instr ()
+Entering state 98
+Stack now 0 1 15 40 98
+Reducing stack by rule 24 (line 104):
+   $1 = nterm instrs ()
+   $2 = nterm instr ()
+-> $$ = nterm instrs ()
+Entering state 40
+Stack now 0 1 15 40
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144(" 
+")
+--accepting rule at line 140(")")
+Next token is token ')' ()
+Reducing stack by rule 17 (line 91):
+   $1 = nterm instrs ()
+-> $$ = nterm decls_instrs ()
+Entering state 37
+Stack now 0 1 15 37
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 94
+Stack now 0 1 15 37 94
+Reducing stack by rule 14 (line 86):
+   $1 = token '(' ()
+   $2 = token tPROGRAM ()
+   $3 = nterm decls_instrs ()
+   $4 = token ')' ()
+-> $$ = nterm program ()
+Entering state 5
+Stack now 0 5
+Reducing stack by rule 3 (line 69):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 21
+Stack now 0 2 21
+Stack now 0 2 21
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: ok (0/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-01-32-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 140("(")
