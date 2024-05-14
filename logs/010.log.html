@@ -1,3 +1,12 @@
 <pre>
 Checking project structure...
+til_parser.y: warning: 58 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+In file included from .auto/all_nodes.h:53,
+                 from til_parser.y:8:
+./ast/read_node.h:4:10: fatal error: cdk/ast/expression_node_node.h: No such file or directory
+    4 | #include <cdk/ast/expression_node_node.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
