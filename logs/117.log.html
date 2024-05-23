@@ -1,3 +1,15 @@
 <pre>
 Checking project structure...
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_function_node(til::function_node*, int)':
+targets/type_checker.cpp:383:24: error: 'make_symbol' is not a member of 'til'
+  383 |   auto function = til::make_symbol("@", node->type());
+      |                        ^~~~~~~~~~~
+targets/type_checker.cpp: At global scope:
+targets/type_checker.cpp:434:6: error: redefinition of 'void til::type_checker::do_function_node(til::function_node*, int)'
+  434 | void til::type_checker::do_function_node(til::function_node *const node, int lvl) {
+      |      ^~~
+targets/type_checker.cpp:380:6: note: 'virtual void til::type_checker::do_function_node(til::function_node*, int)' previously defined here
+  380 | void til::type_checker::do_function_node(til::function_node *const node, int lvl) {
+      |      ^~~
+make: *** [Makefile:46: targets/type_checker.o] Error 1
 
