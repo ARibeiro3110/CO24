@@ -1,3 +1,36 @@
 <pre>
 Checking project structure...
+til_parser.y: warning: 2 nonterminals useless in grammar [-Wother]
+til_parser.y: warning: 6 rules useless in grammar [-Wother]
+til_parser.y:74.1-4: warning: nonterminal useless in grammar: type [-Wother]
+   74 | type : tINT_TYPE                   { $$ = cdk::primitive_type::create...
+      | ^~~~
+til_parser.y:81.1-9: warning: nonterminal useless in grammar: type_func [-Wother]
+   81 | type_func :'(' type  ')'           {$$ = cdk::functional_type::create...
+      | ^~~~~~~~~
+til_parser.y: warning: 76 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:90:95: error: invalid use of incomplete type 'class til::stop_node'
+   90 |      | tSTOP tINTEGER                   { $$ = new til::stop_node(LINE, $2); }
+      |                                                                                               ^
+In file included from ./targets/basic_ast_visitor.h:13,
+                 from /usr/include/cdk/ast/basic_node.h:6,
+                 from /usr/include/cdk/ast/typed_node.h:4,
+                 from /usr/include/cdk/ast/expression_node.h:4,
+                 from /usr/include/cdk/ast/binary_operation_node.h:4,
+                 from /usr/include/cdk/ast/add_node.h:4,
+                 from /usr/include/cdk/ast/all.h:51,
+                 from .auto/all_nodes.h:4,
+                 from til_parser.y:8:
+./.auto/all_nodes.h:27:7: note: forward declaration of 'class til::stop_node'
+   27 | class stop_node;
+      |       ^~~~~~~~~
+til_parser.y:91:84: error: invalid use of incomplete type 'class til::stop_node'
+   91 |      | tSTOP                            { $$ = new til::stop_node(LINE, 1); }
+      |                                                                                    ^
+./.auto/all_nodes.h:27:7: note: forward declaration of 'class til::stop_node'
+   27 | class stop_node;
+      |       ^~~~~~~~~
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
