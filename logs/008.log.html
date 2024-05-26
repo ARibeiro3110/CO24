@@ -1,3 +1,12 @@
 <pre>
 Checking project structure...
+til_parser.y: warning: 6 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 1 reduce/reduce conflict [-Wconflicts-rr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
+til_scanner.l:56:10: error: 'tELSE' was not declared in this scope; did you mean 'tLE'?
+   56 | "else"    { return tELSE;}
+      |          ^~~~~
+      |          tLE
+make: *** [Makefile:46: til_scanner.o] Error 1
 
