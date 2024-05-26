@@ -1,3 +1,51 @@
 <pre>
 Checking project structure...
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_read_node(til::read_node*, int)':
+targets/postfix_writer.cpp:243:5: error: '_functions_to_declare' was not declared in this scope
+  243 |     _functions_to_declare.insert("readint"); // "readi"??
+      |     ^~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp:248:5: error: '_functions_to_declare' was not declared in this scope
+  248 |     _functions_to_declare.insert("readreal"); // "readd"
+      |     ^~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_allocation_of_memory_node(til::allocation_of_memory_node*, int)':
+targets/postfix_writer.cpp:334:46: error: 'using std::__shared_ptr_access<cdk::basic_type, __gnu_cxx::_S_atomic, false, false>::element_type = class cdk::basic_type' {aka 'class cdk::basic_type'} has no member named 'referenced'
+  334 |   if(cdk::reference_type::cast(node->type()->referenced()) == cdk::TYPE_INT){
+      |                                              ^~~~~~~~~~
+targets/postfix_writer.cpp:337:51: error: 'using std::__shared_ptr_access<cdk::basic_type, __gnu_cxx::_S_atomic, false, false>::element_type = class cdk::basic_type' {aka 'class cdk::basic_type'} has no member named 'referenced'
+  337 |   else if(cdk::reference_type::cast(node->type()->referenced()) == cdk::TYPE_DOUBLE){
+      |                                                   ^~~~~~~~~~
+targets/postfix_writer.cpp:340:51: error: 'using std::__shared_ptr_access<cdk::basic_type, __gnu_cxx::_S_atomic, false, false>::element_type = class cdk::basic_type' {aka 'class cdk::basic_type'} has no member named 'referenced'
+  340 |   else if(cdk::reference_type::cast(node->type()->referenced()) == cdk::TYPE_STRING){
+      |                                                   ^~~~~~~~~~
+targets/postfix_writer.cpp:343:51: error: 'using std::__shared_ptr_access<cdk::basic_type, __gnu_cxx::_S_atomic, false, false>::element_type = class cdk::basic_type' {aka 'class cdk::basic_type'} has no member named 'referenced'
+  343 |   else if(cdk::reference_type::cast(node->type()->referenced()) == cdk::TYPE_VOID){
+      |                                                   ^~~~~~~~~~
+targets/postfix_writer.cpp:354:13: error: no matching function for call to 'cdk::basic_postfix_emitter::SALLOC()'
+  354 |   _pf.SALLOC(); // safely allocate mem
+      |   ~~~~~~~~~~^~
+In file included from ./targets/postfix_writer.h:7,
+                 from targets/postfix_writer.cpp:4:
+/usr/include/cdk/emitters/basic_postfix_emitter.h:218:18: note: candidate: 'virtual void cdk::basic_postfix_emitter::SALLOC(int)'
+  218 |     virtual void SALLOC(int value) = 0;
+      |                  ^~~~~~
+/usr/include/cdk/emitters/basic_postfix_emitter.h:218:18: note:   candidate expects 1 argument, 0 provided
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_null_pointer_node(til::null_pointer_node*, int)':
+targets/postfix_writer.cpp:377:6: error: '_isFunctionBody' was not declared in this scope
+  377 |   if(_isFunctionBody){
+      |      ^~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_function_call_node(til::function_call_node*, int)':
+targets/postfix_writer.cpp:410:14: error: 'function_names' was not declared in this scope; did you mean 'function_type'?
+  410 |     _pf.ADDR(function_names.top());
+      |              ^~~~~~~~~~~~~~
+      |              function_type
+targets/postfix_writer.cpp:412:11: error: 'external_name' was not declared in this scope
+  412 |   else if(external_name){ // external function
+      |           ^~~~~~~~~~~~~
+targets/postfix_writer.cpp:420:6: error: 'external_name' was not declared in this scope
+  420 |   if(external_name){ // quando temos o address, podemos chamar
+      |      ^~~~~~~~~~~~~
+targets/postfix_writer.cpp:422:26: error: expected unqualified-id before 'nullptr'
+  422 |     external_name = std::nullptr; // reset para sabermos quando acontece novamente
+      |                          ^~~~~~~
+make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
