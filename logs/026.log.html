@@ -2,20 +2,9 @@
 Checking project structure...
 til_scanner.l:71: warning, rule cannot be matched
 til_scanner.l:83: warning, rule cannot be matched
-til_parser.y: warning: 1 nonterminal useless in grammar [-Wother]
-til_parser.y: warning: 2 rules useless in grammar [-Wother]
-til_parser.y:122.1-9: warning: nonterminal useless in grammar: funcDecls [-Wother]
-  122 | funcDecls : funcDecls funcDecl     { $$ = new cdk::sequence_node(LINE...
-      | ^~~~~~~~~
-til_parser.y: warning: 80 shift/reduce conflicts [-Wconflicts-sr]
-til_parser.y: warning: 154 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: warning: 24 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: warning: 112 reduce/reduce conflicts [-Wconflicts-rr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-til_parser.y:164.8-70: warning: rule useless in parser due to conflicts [-Wother]
-  164 | expr : tINT                  { $$ = new cdk::integer_node(LINE, $1); }
-      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-til_parser.y:165.8-69: warning: rule useless in parser due to conflicts [-Wother]
-  165 |      | tDOUBLE               { $$ = new cdk::double_node(LINE, $1); }
-      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 81("(")
