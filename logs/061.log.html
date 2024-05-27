@@ -1,3 +1,38 @@
 <pre>
 Checking project structure...
+targets/type_checker.cpp:46:6: error: no declaration matches 'void til::type_checker::processUnaryExpression(cdk::unary_operation_node*, int, bool)'
+   46 | void til::type_checker::processUnaryExpression(cdk::unary_operation_node *const node, int lvl , bool acceptD) {
+      |      ^~~
+In file included from targets/type_checker.cpp:2:
+./targets/type_checker.h:27:10: note: candidate is: 'void til::type_checker::processUnaryExpression(cdk::unary_operation_node*, int)'
+   27 |     void processUnaryExpression(cdk::unary_operation_node *const node, int lvl);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+./targets/type_checker.h:11:9: note: 'class til::type_checker' defined here
+   11 |   class type_checker: public basic_ast_visitor {
+      |         ^~~~~~~~~~~~
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_unary_minus_node(cdk::unary_minus_node*, int)':
+targets/type_checker.cpp:61:25: error: no matching function for call to 'til::type_checker::processUnaryExpression(cdk::unary_minus_node* const&, int&, bool)'
+   61 |   processUnaryExpression(node, lvl, true);
+      |   ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+./targets/type_checker.h:27:10: note: candidate: 'void til::type_checker::processUnaryExpression(cdk::unary_operation_node*, int)'
+   27 |     void processUnaryExpression(cdk::unary_operation_node *const node, int lvl);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+./targets/type_checker.h:27:10: note:   candidate expects 2 arguments, 3 provided
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_unary_plus_node(cdk::unary_plus_node*, int)':
+targets/type_checker.cpp:64:25: error: no matching function for call to 'til::type_checker::processUnaryExpression(cdk::unary_plus_node* const&, int&, bool)'
+   64 |   processUnaryExpression(node, lvl, true);
+      |   ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+./targets/type_checker.h:27:10: note: candidate: 'void til::type_checker::processUnaryExpression(cdk::unary_operation_node*, int)'
+   27 |     void processUnaryExpression(cdk::unary_operation_node *const node, int lvl);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+./targets/type_checker.h:27:10: note:   candidate expects 2 arguments, 3 provided
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_not_node(cdk::not_node*, int)':
+targets/type_checker.cpp:67:25: error: no matching function for call to 'til::type_checker::processUnaryExpression(cdk::not_node* const&, int&, bool)'
+   67 |   processUnaryExpression(node,lvl, false);
+      |   ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+./targets/type_checker.h:27:10: note: candidate: 'void til::type_checker::processUnaryExpression(cdk::unary_operation_node*, int)'
+   27 |     void processUnaryExpression(cdk::unary_operation_node *const node, int lvl);
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+./targets/type_checker.h:27:10: note:   candidate expects 2 arguments, 3 provided
+make: *** [Makefile:46: targets/type_checker.o] Error 1
 
