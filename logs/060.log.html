@@ -1,35 +1,84 @@
 <pre>
 Checking project structure...
-In file included from ./targets/postfix_target.h:6,
-                 from targets/postfix_target.cpp:1:
-./targets/postfix_writer.h:21:10: error: 'set' in namespace 'std' does not name a template type
-   21 |     std::set<std::string> _symbols_to_declare;
-      |          ^~~
-./targets/postfix_writer.h:8:1: note: 'std::set' is defined in header '<set>'; did you forget to '#include <set>'?
-    7 | #include <cdk/emitters/basic_postfix_emitter.h>
-  +++ |+#include <set>
-    8 | 
-./targets/postfix_writer.h:22:10: error: 'stack' in namespace 'std' does not name a template type
-   22 |     std::stack<std::shared_ptr<til::symbol>> _functions;
-      |          ^~~~~
-./targets/postfix_writer.h:8:1: note: 'std::stack' is defined in header '<stack>'; did you forget to '#include <stack>'?
-    7 | #include <cdk/emitters/basic_postfix_emitter.h>
-  +++ |+#include <stack>
-    8 | 
-./targets/postfix_writer.h:24:10: error: 'stack' in namespace 'std' does not name a template type
-   24 |     std::stack<int> _cond, _end;
-      |          ^~~~~
-./targets/postfix_writer.h:24:5: note: 'std::stack' is defined in header '<stack>'; did you forget to '#include <stack>'?
-   24 |     std::stack<int> _cond, _end;
-      |     ^~~
-./targets/postfix_writer.h:50:12: error: ISO C++ forbids declaration of 'mkflbl' with no type [-fpermissive]
-   50 |     inline mkflbl(int lbl)
-      |            ^~~~~~
-./targets/postfix_writer.h: In member function 'int til::postfix_writer::mkflbl(int)':
-./targets/postfix_writer.h:57:21: error: cannot convert 'std::__cxx11::basic_ostringstream<char>::__string_type' {aka 'std::__cxx11::basic_string<char>'} to 'int' in return
-   57 |       return oss.str();
-      |              ~~~~~~~^~
-      |                     |
-      |                     std::__cxx11::basic_ostringstream<char>::__string_type {aka std::__cxx11::basic_string<char>}
-make: *** [Makefile:46: targets/postfix_target.o] Error 1
+In file included from ./targets/basic_ast_visitor.h:9,
+                 from /usr/include/cdk/ast/basic_node.h:6,
+                 from /usr/include/cdk/ast/sequence_node.h:5,
+                 from til_scanner.l:6:
+./targets/symbol.h:66:19: error: 'std::stirng' has not been declared
+   66 |     void set_name(std::stirng id)
+      |                   ^~~
+./targets/symbol.h: In member function 'bool til::symbol::initialized() const':
+./targets/symbol.h:73:14: error: '_inititalized' was not declared in this scope; did you mean 'initialized'?
+   73 |       return _inititalized;
+      |              ^~~~~~~~~~~~~
+      |              initialized
+./targets/symbol.h: In member function 'int til::symbol::offset() const':
+./targets/symbol.h:88:14: error: cannot convert 'til::symbol::offset' from type 'int (til::symbol::)() const' to type 'int'
+   88 |       return offset;
+      |              ^~~~~~
+./targets/symbol.h: In member function 'void til::symbol::set_offset(int)':
+./targets/symbol.h:93:7: error: '_offset' was not declared in this scope; did you mean 'offset'?
+   93 |       _offset = offset;
+      |       ^~~~~~~
+      |       offset
+In file included from /usr/include/c++/13/bits/char_traits.h:57,
+                 from /usr/include/c++/13/ios:42,
+                 from /usr/include/c++/13/ostream:40,
+                 from /usr/include/c++/13/iostream:41,
+                 from til_scanner.cpp:140:
+/usr/include/c++/13/bits/stl_construct.h: In instantiation of 'constexpr void std::_Construct(_Tp*, _Args&& ...) [with _Tp = til::symbol; _Args = {shared_ptr<cdk::basic_type>&, const __cxx11::basic_string<char, char_traits<char>, allocator<char> >&, bool&, int&, bool&, bool&}]':
+/usr/include/c++/13/bits/alloc_traits.h:661:19:   required from 'static constexpr void std::allocator_traits<std::allocator<void> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = til::symbol; _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; allocator_type = std::allocator<void>]'
+/usr/include/c++/13/bits/shared_ptr_base.h:604:39:   required from 'std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; _Tp = til::symbol; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr_base.h:971:16:   required from 'std::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = til::symbol; _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr_base.h:1712:14:   required from 'std::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; _Tp = til::symbol; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr.h:464:59:   required from 'std::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; _Tp = til::symbol]'
+/usr/include/c++/13/bits/shared_ptr.h:1009:14:   required from 'std::shared_ptr<std::_NonArray<_Tp> > std::make_shared(_Args&& ...) [with _Tp = til::symbol; _Args = {shared_ptr<cdk::basic_type>&, const __cxx11::basic_string<char, char_traits<char>, allocator<char> >&, bool&, int&, bool&, bool&}; _NonArray<_Tp> = til::symbol]'
+./targets/symbol.h:109:36:   required from here
+/usr/include/c++/13/bits/stl_construct.h:115:28: error: no matching function for call to 'construct_at(til::symbol*&, std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char>&, bool&, int&, bool&, bool&)'
+  115 |           std::construct_at(__p, std::forward<_Args>(__args)...);
+      |           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_construct.h:94:5: note: candidate: 'template<class _Tp, class ... _Args> constexpr decltype (::new(void*(0)) _Tp) std::construct_at(_Tp*, _Args&& ...)'
+   94 |     construct_at(_Tp* __location, _Args&&... __args)
+      |     ^~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_construct.h:94:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/stl_construct.h: In substitution of 'template<class _Tp, class ... _Args> constexpr decltype (::new(void*(0)) _Tp) std::construct_at(_Tp*, _Args&& ...) [with _Tp = til::symbol; _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}]':
+/usr/include/c++/13/bits/stl_construct.h:115:21:   required from 'constexpr void std::_Construct(_Tp*, _Args&& ...) [with _Tp = til::symbol; _Args = {shared_ptr<cdk::basic_type>&, const __cxx11::basic_string<char, char_traits<char>, allocator<char> >&, bool&, int&, bool&, bool&}]'
+/usr/include/c++/13/bits/alloc_traits.h:661:19:   required from 'static constexpr void std::allocator_traits<std::allocator<void> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = til::symbol; _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; allocator_type = std::allocator<void>]'
+/usr/include/c++/13/bits/shared_ptr_base.h:604:39:   required from 'std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; _Tp = til::symbol; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr_base.h:971:16:   required from 'std::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = til::symbol; _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr_base.h:1712:14:   required from 'std::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; _Tp = til::symbol; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr.h:464:59:   required from 'std::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; _Tp = til::symbol]'
+/usr/include/c++/13/bits/shared_ptr.h:1009:14:   required from 'std::shared_ptr<std::_NonArray<_Tp> > std::make_shared(_Args&& ...) [with _Tp = til::symbol; _Args = {shared_ptr<cdk::basic_type>&, const __cxx11::basic_string<char, char_traits<char>, allocator<char> >&, bool&, int&, bool&, bool&}; _NonArray<_Tp> = til::symbol]'
+./targets/symbol.h:109:36:   required from here
+/usr/include/c++/13/bits/stl_construct.h:96:17: error: no matching function for call to 'til::symbol::symbol(std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char>&, bool&, int&, bool&, bool&)'
+   96 |     -> decltype(::new((void*)0) _Tp(std::declval<_Args>()...))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./targets/symbol.h:22:5: note: candidate: 'til::symbol::symbol(std::shared_ptr<cdk::basic_type>, const std::string&, long int)'
+   22 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) : _type(type), _name(name), _value(value)
+      |     ^~~~~~
+./targets/symbol.h:22:5: note:   candidate expects 3 arguments, 6 provided
+./targets/symbol.h:11:9: note: candidate: 'til::symbol::symbol(const til::symbol&)'
+   11 |   class symbol
+      |         ^~~~~~
+./targets/symbol.h:11:9: note:   candidate expects 1 argument, 6 provided
+/usr/include/c++/13/bits/stl_construct.h: In instantiation of 'constexpr void std::_Construct(_Tp*, _Args&& ...) [with _Tp = til::symbol; _Args = {shared_ptr<cdk::basic_type>&, const __cxx11::basic_string<char, char_traits<char>, allocator<char> >&, bool&, int&, bool&, bool&}]':
+/usr/include/c++/13/bits/alloc_traits.h:661:19:   required from 'static constexpr void std::allocator_traits<std::allocator<void> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = til::symbol; _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; allocator_type = std::allocator<void>]'
+/usr/include/c++/13/bits/shared_ptr_base.h:604:39:   required from 'std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; _Tp = til::symbol; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr_base.h:971:16:   required from 'std::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = til::symbol; _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr_base.h:1712:14:   required from 'std::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; _Tp = til::symbol; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr.h:464:59:   required from 'std::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, bool&, int&, bool&, bool&}; _Tp = til::symbol]'
+/usr/include/c++/13/bits/shared_ptr.h:1009:14:   required from 'std::shared_ptr<std::_NonArray<_Tp> > std::make_shared(_Args&& ...) [with _Tp = til::symbol; _Args = {shared_ptr<cdk::basic_type>&, const __cxx11::basic_string<char, char_traits<char>, allocator<char> >&, bool&, int&, bool&, bool&}; _NonArray<_Tp> = til::symbol]'
+./targets/symbol.h:109:36:   required from here
+/usr/include/c++/13/bits/stl_construct.h:119:7: error: no matching function for call to 'til::symbol::symbol(std::shared_ptr<cdk::basic_type>&, const std::__cxx11::basic_string<char>&, bool&, int&, bool&, bool&)'
+  119 |       ::new((void*)__p) _Tp(std::forward<_Args>(__args)...);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./targets/symbol.h:22:5: note: candidate: 'til::symbol::symbol(std::shared_ptr<cdk::basic_type>, const std::string&, long int)'
+   22 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) : _type(type), _name(name), _value(value)
+      |     ^~~~~~
+./targets/symbol.h:22:5: note:   candidate expects 3 arguments, 6 provided
+./targets/symbol.h:11:9: note: candidate: 'til::symbol::symbol(const til::symbol&)'
+   11 |   class symbol
+      |         ^~~~~~
+./targets/symbol.h:11:9: note:   candidate expects 1 argument, 6 provided
+make: *** [Makefile:46: til_scanner.o] Error 1
 
