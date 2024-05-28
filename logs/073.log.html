@@ -1,5 +1,29 @@
 <pre>
 Checking project structure...
-make: *** No rule to make target 'clean'.  Stop.
-diff: /builds/leic-a-co24/eval/co24/checked-out-ref/073: No such file or directory
+targets/type_checker.cpp: In member function 'virtual void til::postfix_writer::do_double_node(cdk::double_node*, int)':
+targets/type_checker.cpp:17:7: error: '_' was not declared in this scope
+   17 |   if (_)
+      |       ^
+targets/type_checker.cpp:18:1: error: expected primary-expression before '}' token
+   18 | }
+      | ^
+targets/type_checker.cpp: In member function 'virtual void til::postfix_writer::do_return_node(til::return_node*, int)':
+targets/type_checker.cpp:269:7: error: '_function' was not declared in this scope
+  269 |   if (_function->type->name != cdk::TYPE_VOID) {
+      |       ^~~~~~~~~
+targets/type_checker.cpp:273:11: error: '_currentBodyRetLabel' was not declared in this scope
+  273 |   _pf.JMP(_currentBodyRetLabel);
+      |           ^~~~~~~~~~~~~~~~~~~~
+targets/type_checker.cpp:274:3: error: '_returnSeen' was not declared in this scope
+  274 |   _returnSeen = true;
+      |   ^~~~~~~~~~~
+targets/type_checker.cpp: In member function 'virtual void til::postfix_writer::do_block_node(til::block_node*, int)':
+targets/type_checker.cpp:294:16: error: expected ';' before '}' token
+  294 |   _symtab.pop()
+      |                ^
+      |                ;
+  295 | 
+  296 | }
+      | ~               
+make: *** [Makefile:46: targets/type_checker.o] Error 1
 
