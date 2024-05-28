@@ -1,464 +1,815 @@
 <pre>
 Checking project structure...
-til_parser.y: warning: 3 nonterminals useless in grammar [-Wother]
-til_parser.y: warning: 8 rules useless in grammar [-Wother]
-til_parser.y:72.1-4: warning: nonterminal useless in grammar: type [-Wother]
-   72 | type : tINT_TYPE                   { $$ = cdk::primitive_type::create...
+til_parser.y: warning: 6 nonterminals useless in grammar [-Wother]
+til_parser.y: warning: 19 rules useless in grammar [-Wother]
+til_parser.y:107.1-4: warning: nonterminal useless in grammar: list [-Wother]
+  107 | list : instr      { $$ = new cdk::sequence_node(LINE, $1); }
       | ^~~~
-til_parser.y:79.1-9: warning: nonterminal useless in grammar: type_func [-Wother]
-   79 | type_func :'(' type  ')'           {$$ = cdk::functional_type::create...
-      | ^~~~~~~~~
-til_parser.y:101.1-4: warning: nonterminal useless in grammar: stop [-Wother]
-  101 | stop :'(' tSTOP ')'               { $$ = new til::stop_node(LINE); }
+til_parser.y:117.1-5: warning: nonterminal useless in grammar: instr [-Wother]
+  117 | instr     : expr                          { $$ = new til::evaluation_...
+      | ^~~~~
+til_parser.y:128.1-4: warning: nonterminal useless in grammar: next [-Wother]
+  128 | next : '(' tNEXT ')'                { $$ = new til::next_node(LINE); }
       | ^~~~
+til_parser.y:132.1-6: warning: nonterminal useless in grammar: return [-Wother]
+  132 | return : '(' tRETURN ')'           { $$ = new til::return_node(LINE, ...
+      | ^~~~~~
+til_parser.y:136.1-4: warning: nonterminal useless in grammar: stop [-Wother]
+  136 | stop :'(' tSTOP ')'               { $$ = new til::stop_node(LINE); }
+      | ^~~~
+til_parser.y:164.1-5: warning: nonterminal useless in grammar: exprs [-Wother]
+  164 | exprs : exprs  expr    { $$ = new cdk::sequence_node(LINE, $2, $1); }
+      | ^~~~~
 til_parser.y: warning: 65 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in A-01-1-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------A-02-2-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in A-02-2-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------A-03-3-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in A-03-3-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------A-04-4-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in A-04-4-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------A-05-5-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in A-05-5-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------A-06-6-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in A-06-6-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------A-07-7-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in A-07-7-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------A-08-8-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in A-08-8-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-01-9-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-01-9-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-02-10-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-02-10-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-03-11-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-03-11-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-04-12-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-04-12-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-05-13-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-05-13-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-06-14-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-06-14-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-07-15-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-07-15-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-08-16-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-08-16-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-09-17-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-09-17-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-10-18-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-10-18-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-11-19-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-11-19-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-12-20-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-12-20-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-13-21-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-13-21-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-14-22-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-14-22-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-15-23-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-15-23-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-16-24-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-16-24-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-17-25-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-17-25-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-20-26-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-20-26-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-21-27-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-21-27-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-22-28-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-22-28-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-23-29-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-23-29-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-24-30-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-24-30-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------B-25-31-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in B-25-31-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-01-32-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -469,16 +820,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-02-33-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -489,11 +841,11 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-03-34-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -501,7 +853,8 @@ Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 75("string")
+--(end of buffer or a NUL)
+--accepting rule at line 77("string")
 Next token is token tSTRING_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -512,16 +865,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-04-35-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -532,16 +886,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-05-36-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -552,16 +907,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-06-37-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -572,16 +928,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-07-38-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -592,16 +949,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-08-39-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -612,16 +970,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-09-40-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -632,16 +991,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-10-41-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -652,16 +1012,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-11-42-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -672,16 +1033,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-12-43-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -692,16 +1054,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-13-44-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -712,16 +1075,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-14-45-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -732,16 +1096,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-15-46-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -752,16 +1117,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-16-47-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -772,16 +1138,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-19-48-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -792,11 +1159,11 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------C-20-49-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -804,7 +1171,8 @@ Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 75("string")
+--(end of buffer or a NUL)
+--accepting rule at line 77("string")
 Next token is token tSTRING_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -815,58 +1183,92 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------D-01-50-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in D-01-50-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------D-02-51-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in D-02-51-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------D-03-52-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in D-03-52-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-01-53-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -877,16 +1279,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-02-54-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -897,16 +1300,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-03-55-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -917,16 +1321,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-04-56-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -937,16 +1342,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-05-57-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -957,16 +1363,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-06-58-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -977,16 +1384,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-07-59-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -997,16 +1405,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-08-60-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -1017,194 +1426,338 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-09-61-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in E-09-61-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-10-62-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in E-10-62-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-11-63-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in E-11-63-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-12-64-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in E-12-64-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-13-65-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in E-13-65-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------E-14-66-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in E-14-66-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------F-01-67-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in F-01-67-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------F-02-68-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in F-02-68-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------F-03-69-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in F-03-69-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------G-01-70-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in G-01-70-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------G-02-71-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in G-02-71-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------G-03-72-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in G-03-72-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------G-04-73-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in G-04-73-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------G-05-74-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1219,12 +1772,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------G-06-75-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1239,12 +1793,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------G-07-76-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1259,12 +1814,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------G-08-77-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1279,12 +1835,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------J-01-78-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1299,12 +1856,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------J-02-79-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1319,12 +1877,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------J-03-80-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1339,12 +1898,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------J-04-81-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1354,21 +1914,32 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 52("forward")
 Next token is token tFORWARD ()
+Shifting token tFORWARD ()
+Entering state 10
+Stack now 0 2 10
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--accepting rule at line 113("(")
+Next token is token '(' ()
 1: syntax error
+Error: popping token tFORWARD ()
+Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tFORWARD ()
+Cleanup: discarding lookahead token '(' ()
 Stack now 0
 ** Syntax errors in J-04-81-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------J-05-82-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1383,12 +1954,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------J-06-83-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1399,21 +1971,32 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 51("external")
 Next token is token tEXTERNAL ()
+Shifting token tEXTERNAL ()
+Entering state 9
+Stack now 0 2 9
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--accepting rule at line 113("(")
+Next token is token '(' ()
 1: syntax error
+Error: popping token tEXTERNAL ()
+Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tEXTERNAL ()
+Cleanup: discarding lookahead token '(' ()
 Stack now 0
 ** Syntax errors in J-06-83-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------J-07-84-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1428,41 +2011,31 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------J-08-85-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
-Shifting token '(' ()
-Entering state 19
-Stack now 0 8 19
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 73("int")
-Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
-Stack now 0 8
-Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tINT_TYPE ()
+Cleanup: discarding lookahead token '(' ()
 Stack now 0
 ** Syntax errors in J-08-85-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-01-86-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1471,21 +2044,110 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 53("public")
 Next token is token tPUBLIC ()
-1: syntax error
+Shifting token tPUBLIC ()
+Entering state 11
+Stack now 0 2 11
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
+Next token is token tINT_TYPE ()
+Shifting token tINT_TYPE ()
+Entering state 15
+Stack now 0 2 11 15
+Reducing stack by rule 15 (line 111):
+   $1 = token tINT_TYPE ()
+-> $$ = nterm type ()
+Entering state 22
+Stack now 0 2 11 22
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 89("x")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 36
+Stack now 0 2 11 22 36
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 106("10")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 26
+Stack now 0 2 11 22 36 26
+Reducing stack by rule 19 (line 140):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 61
+Stack now 0 2 11 22 36 61
+Reading a token
+--accepting rule at line 113(")")
+Next token is token ')' ()
+Shifting token ')' ()
+Entering state 79
+Stack now 0 2 11 22 36 61 79
+Reducing stack by rule 12 (line 98):
+   $1 = token '(' ()
+   $2 = token tPUBLIC ()
+   $3 = nterm type ()
+   $4 = token tIDENTIFIER ()
+   $5 = nterm expr ()
+   $6 = token ')' ()
+-> $$ = nterm var_decl ()
+Entering state 7
+Stack now 0 7
+Reducing stack by rule 8 (line 92):
+   $1 = nterm var_decl ()
+-> $$ = nterm decl ()
+Entering state 6
+Stack now 0 6
+Reducing stack by rule 6 (line 88):
+   $1 = nterm decl ()
+-> $$ = nterm decls ()
+Entering state 5
+Stack now 0 5
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 115("
+")
+--accepting rule at line 113("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 2
+Stack now 0 5 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 54("var")
+Next token is token tVAR ()
+2: syntax error
 Error: popping token '(' ()
+Stack now 0 5
+Error: popping nterm decls ()
 Stack now 0
-Cleanup: discarding lookahead token tPUBLIC ()
+Cleanup: discarding lookahead token tVAR ()
 Stack now 0
 ** Syntax errors in K-01-86-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-02-87-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1500,12 +2162,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-03-88-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1520,12 +2183,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-04-89-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1540,12 +2204,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-05-90-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1560,12 +2225,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-06-91-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1580,12 +2246,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-07-92-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1600,12 +2267,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-08-93-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1615,21 +2283,32 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 52("forward")
 Next token is token tFORWARD ()
+Shifting token tFORWARD ()
+Entering state 10
+Stack now 0 2 10
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--accepting rule at line 113("(")
+Next token is token '(' ()
 1: syntax error
+Error: popping token tFORWARD ()
+Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tFORWARD ()
+Cleanup: discarding lookahead token '(' ()
 Stack now 0
 ** Syntax errors in K-08-93-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-09-94-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1639,21 +2318,32 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 52("forward")
 Next token is token tFORWARD ()
+Shifting token tFORWARD ()
+Entering state 10
+Stack now 0 2 10
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--accepting rule at line 113("(")
+Next token is token '(' ()
 1: syntax error
+Error: popping token tFORWARD ()
+Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tFORWARD ()
+Cleanup: discarding lookahead token '(' ()
 Stack now 0
 ** Syntax errors in K-09-94-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-10-95-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1663,21 +2353,32 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 52("forward")
 Next token is token tFORWARD ()
+Shifting token tFORWARD ()
+Entering state 10
+Stack now 0 2 10
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--accepting rule at line 113("(")
+Next token is token '(' ()
 1: syntax error
+Error: popping token tFORWARD ()
+Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tFORWARD ()
+Cleanup: discarding lookahead token '(' ()
 Stack now 0
 ** Syntax errors in K-10-95-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-11-96-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1687,21 +2388,32 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 52("forward")
 Next token is token tFORWARD ()
+Shifting token tFORWARD ()
+Entering state 10
+Stack now 0 2 10
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--accepting rule at line 113("(")
+Next token is token '(' ()
 1: syntax error
+Error: popping token tFORWARD ()
+Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tFORWARD ()
+Cleanup: discarding lookahead token '(' ()
 Stack now 0
 ** Syntax errors in K-11-96-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------L-01-97-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1716,12 +2428,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------L-02-98-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1731,21 +2444,32 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 52("forward")
 Next token is token tFORWARD ()
+Shifting token tFORWARD ()
+Entering state 10
+Stack now 0 2 10
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--accepting rule at line 113("(")
+Next token is token '(' ()
 1: syntax error
+Error: popping token tFORWARD ()
+Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tFORWARD ()
+Cleanup: discarding lookahead token '(' ()
 Stack now 0
 ** Syntax errors in L-02-98-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------L-03-99-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1755,21 +2479,32 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 52("forward")
 Next token is token tFORWARD ()
+Shifting token tFORWARD ()
+Entering state 10
+Stack now 0 2 10
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--accepting rule at line 113("(")
+Next token is token '(' ()
 1: syntax error
+Error: popping token tFORWARD ()
+Stack now 0 2
 Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tFORWARD ()
+Cleanup: discarding lookahead token '(' ()
 Stack now 0
 ** Syntax errors in L-03-99-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------O-01-100-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1784,12 +2519,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------O-02-101-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1804,12 +2540,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------O-03-102-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1824,11 +2561,11 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------P-01-103-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1836,7 +2573,8 @@ Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 74("double")
+--(end of buffer or a NUL)
+--accepting rule at line 76("double")
 Next token is token tDOUBLE_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -1847,16 +2585,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------P-02-104-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -1867,16 +2606,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------P-03-105-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -1887,11 +2627,11 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------P-04-106-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1899,7 +2639,8 @@ Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 74("double")
+--(end of buffer or a NUL)
+--accepting rule at line 76("double")
 Next token is token tDOUBLE_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -1910,11 +2651,11 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------P-05-107-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1922,7 +2663,8 @@ Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 74("double")
+--(end of buffer or a NUL)
+--accepting rule at line 76("double")
 Next token is token tDOUBLE_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -1933,11 +2675,11 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------P-06-108-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1945,7 +2687,8 @@ Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 74("double")
+--(end of buffer or a NUL)
+--accepting rule at line 76("double")
 Next token is token tDOUBLE_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -1956,12 +2699,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------P-07-109-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1976,12 +2720,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-01-110-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -1990,21 +2735,63 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 53("public")
 Next token is token tPUBLIC ()
+Shifting token tPUBLIC ()
+Entering state 11
+Stack now 0 2 11
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 89("main")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 20
+Stack now 0 2 11 20
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--accepting rule at line 113("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 31
+Stack now 0 2 11 20 31
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 71("function")
+Next token is token tFUNCTION ()
 1: syntax error
 Error: popping token '(' ()
+Stack now 0 2 11 20
+Error: popping token tIDENTIFIER ()
+Stack now 0 2 11
+Error: popping token tPUBLIC ()
+Stack now 0 2
+Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tPUBLIC ()
+Cleanup: discarding lookahead token tFUNCTION ()
 Stack now 0
 ** Syntax errors in Q-01-110-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-02-111-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2013,20 +2800,29 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 53("public")
 Next token is token tPUBLIC ()
-1: syntax error
-Error: popping token '(' ()
-Stack now 0
-Cleanup: discarding lookahead token tPUBLIC ()
-Stack now 0
-** Syntax errors in Q-02-111-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
-<font color='white' style='background: blue;'>---------------------------Q-03-112-N-ok.til---------------------------</font>
+Shifting token tPUBLIC ()
+Entering state 11
+Stack now 0 2 11
+Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 115(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 89("main")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 20
+Stack now 0 2 11 20
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 31
+Stack now 0 2 11 20 31
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2034,7 +2830,40 @@ Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 74("double")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 71("function")
+Next token is token tFUNCTION ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0 2 11 20
+Error: popping token tIDENTIFIER ()
+Stack now 0 2 11
+Error: popping token tPUBLIC ()
+Stack now 0 2
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tFUNCTION ()
+Stack now 0
+** Syntax errors in Q-02-111-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
+<font color='white' style='background: blue;'>---------------------------Q-03-112-N-ok.til---------------------------</font>
+--(end of buffer or a NUL)
+--accepting rule at line 113("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 76("double")
 Next token is token tDOUBLE_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -2045,25 +2874,36 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-04-113-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in Q-04-113-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-05-114-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2071,7 +2911,8 @@ Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 74("double")
+--(end of buffer or a NUL)
+--accepting rule at line 76("double")
 Next token is token tDOUBLE_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -2082,12 +2923,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-06-115-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2096,21 +2938,63 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 53("public")
 Next token is token tPUBLIC ()
+Shifting token tPUBLIC ()
+Entering state 11
+Stack now 0 2 11
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 89("main")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 20
+Stack now 0 2 11 20
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--accepting rule at line 113("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 31
+Stack now 0 2 11 20 31
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 71("function")
+Next token is token tFUNCTION ()
 1: syntax error
 Error: popping token '(' ()
+Stack now 0 2 11 20
+Error: popping token tIDENTIFIER ()
+Stack now 0 2 11
+Error: popping token tPUBLIC ()
+Stack now 0 2
+Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tPUBLIC ()
+Cleanup: discarding lookahead token tFUNCTION ()
 Stack now 0
 ** Syntax errors in Q-06-115-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-07-116-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2119,25 +3003,67 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 53("public")
 Next token is token tPUBLIC ()
+Shifting token tPUBLIC ()
+Entering state 11
+Stack now 0 2 11
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 89("main")
+Next token is token tIDENTIFIER ()
+Shifting token tIDENTIFIER ()
+Entering state 20
+Stack now 0 2 11 20
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 115(" ")
+--accepting rule at line 113("(")
+Next token is token '(' ()
+Shifting token '(' ()
+Entering state 31
+Stack now 0 2 11 20 31
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 71("function")
+Next token is token tFUNCTION ()
 1: syntax error
 Error: popping token '(' ()
+Stack now 0 2 11 20
+Error: popping token tIDENTIFIER ()
+Stack now 0 2 11
+Error: popping token tPUBLIC ()
+Stack now 0 2
+Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tPUBLIC ()
+Cleanup: discarding lookahead token tFUNCTION ()
 Stack now 0
 ** Syntax errors in Q-07-116-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------R-01-117-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -2148,16 +3074,17 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------R-02-118-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 73("int")
+--(end of buffer or a NUL)
+--accepting rule at line 75("int")
 Next token is token tINT_TYPE ()
 1: syntax error
 Error: popping token '(' ()
@@ -2168,56 +3095,56 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------S-01-119-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
-Shifting token '(' ()
-Entering state 19
-Stack now 0 8 19
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 76("void")
-Next token is token tVOID_TYPE ()
 1: syntax error
 Error: popping token '(' ()
-Stack now 0 8
-Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tVOID_TYPE ()
+Cleanup: discarding lookahead token '(' ()
 Stack now 0
 ** Syntax errors in S-01-119-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------S-01-120-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in S-01-120-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------U-01-121-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2232,12 +3159,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------U-02-122-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2252,12 +3180,13 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------U-03-123-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2272,76 +3201,49 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------X-01-124-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
-Shifting token '(' ()
-Entering state 19
-Stack now 0 8 19
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 74("double")
-Next token is token tDOUBLE_TYPE ()
 1: syntax error
 Error: popping token '(' ()
-Stack now 0 8
-Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tDOUBLE_TYPE ()
+Cleanup: discarding lookahead token '(' ()
 Stack now 0
 ** Syntax errors in X-01-124-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------X-02-125-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
-Shifting token '(' ()
-Entering state 19
-Stack now 0 8 19
-Reading a token
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---(end of buffer or a NUL)
---accepting rule at line 74("double")
-Next token is token tDOUBLE_TYPE ()
 1: syntax error
 Error: popping token '(' ()
-Stack now 0 8
-Error: popping token '(' ()
 Stack now 0
-Cleanup: discarding lookahead token tDOUBLE_TYPE ()
+Cleanup: discarding lookahead token '(' ()
 Stack now 0
 ** Syntax errors in X-02-125-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Z-01-126-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
+--(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
@@ -2356,86 +3258,152 @@ Stack now 0
 Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Z-02-127-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in Z-02-127-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Z-03-128-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in Z-03-128-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Z-04-129-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in Z-04-129-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Z-05-130-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in Z-05-130-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Z-06-131-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in Z-06-131-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Z-07-132-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
---accepting rule at line 109("(")
+--accepting rule at line 113("(")
 Next token is token '(' ()
 Shifting token '(' ()
-Entering state 8
-Stack now 0 8
+Entering state 2
+Stack now 0 2
 Reading a token
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
 --(end of buffer or a NUL)
---accepting rule at line 113("p")
-Unknown character
-Compiler: failed (2/0). Generated empty asm file
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 73("program")
+Next token is token tPROGRAM ()
+1: syntax error
+Error: popping token '(' ()
+Stack now 0
+Cleanup: discarding lookahead token tPROGRAM ()
+Stack now 0
+** Syntax errors in Z-07-132-N-ok.til
+Compiler: failed (1/0). Generated empty asm file
 </pre>
