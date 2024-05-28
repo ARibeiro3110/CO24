@@ -1,29 +1,65 @@
 <pre>
 Checking project structure...
-targets/type_checker.cpp: In member function 'virtual void til::postfix_writer::do_double_node(cdk::double_node*, int)':
-targets/type_checker.cpp:17:7: error: '_' was not declared in this scope
-   17 |   if (_)
-      |       ^
-targets/type_checker.cpp:18:1: error: expected primary-expression before '}' token
-   18 | }
-      | ^
-targets/type_checker.cpp: In member function 'virtual void til::postfix_writer::do_return_node(til::return_node*, int)':
-targets/type_checker.cpp:269:7: error: '_function' was not declared in this scope
-  269 |   if (_function->type->name != cdk::TYPE_VOID) {
-      |       ^~~~~~~~~
-targets/type_checker.cpp:273:11: error: '_currentBodyRetLabel' was not declared in this scope
-  273 |   _pf.JMP(_currentBodyRetLabel);
-      |           ^~~~~~~~~~~~~~~~~~~~
-targets/type_checker.cpp:274:3: error: '_returnSeen' was not declared in this scope
-  274 |   _returnSeen = true;
-      |   ^~~~~~~~~~~
-targets/type_checker.cpp: In member function 'virtual void til::postfix_writer::do_block_node(til::block_node*, int)':
-targets/type_checker.cpp:294:16: error: expected ';' before '}' token
-  294 |   _symtab.pop()
-      |                ^
-      |                ;
-  295 | 
-  296 | }
-      | ~               
-make: *** [Makefile:46: targets/type_checker.o] Error 1
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_double_node(cdk::double_node*, int)':
+targets/postfix_writer.cpp:16:7: error: '_inFuncionBody' was not declared in this scope
+   16 |   if (_inFuncionBody) {
+      |       ^~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_integer_node(cdk::integer_node*, int)':
+targets/postfix_writer.cpp:44:7: error: '_inFunctionBody' was not declared in this scope
+   44 |   if (_inFunctionBody) {
+      |       ^~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_string_node(cdk::string_node*, int)':
+targets/postfix_writer.cpp:60:7: error: '_inFunctionBody' was not declared in this scope
+   60 |   if (_inFunctionBody) {
+      |       ^~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_variable_node(cdk::variable_node*, int)':
+targets/postfix_writer.cpp:172:15: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'qualifier'
+  172 |   if (symbol->qualifier() == tEXTERNAL) {
+      |               ^~~~~~~~~
+targets/postfix_writer.cpp:172:30: error: 'tEXTERNAL' was not declared in this scope
+  172 |   if (symbol->qualifier() == tEXTERNAL) {
+      |                              ^~~~~~~~~
+targets/postfix_writer.cpp:173:5: error: '_externalFunctionName' was not declared in this scope
+  173 |     _externalFunctionName = symbol->name();
+      |     ^~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp:174:22: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'global'
+  174 |   } else if (symbol->global()) {
+      |                      ^~~~~~
+targets/postfix_writer.cpp:177:23: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'offset'
+  177 |     _pf.LOCAL(symbol->offset());
+      |                       ^~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_rvalue_node(cdk::rvalue_node*, int)':
+targets/postfix_writer.cpp:197:7: error: '_externalFunctionName' was not declared in this scope
+  197 |   if (_externalFunctionName) {
+      |       ^~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_function_node(til::function_node*, int)':
+targets/postfix_writer.cpp:265:3: error: '_functionLabels' was not declared in this scope; did you mean 'functionLabel'?
+  265 |   _functionLabels.push(functionLabel);
+      |   ^~~~~~~~~~~~~~~
+      |   functionLabel
+targets/postfix_writer.cpp:271:20: error: '_offset' was not declared in this scope; did you mean 'off_t'?
+  271 |   auto oldOffset = _offset;
+      |                    ^~~~~~~
+      |                    off_t
+targets/postfix_writer.cpp:275:3: error: '_inFunctionArgs' was not declared in this scope
+  275 |   _inFunctionArgs = true;
+      |   ^~~~~~~~~~~~~~~
+targets/postfix_writer.cpp:285:30: error: '_currentFunctionRetLabel' was not declared in this scope; did you mean 'oldFunctionRetLabel'?
+  285 |   auto oldFunctionRetLabel = _currentFunctionRetLabel;
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                              oldFunctionRetLabel
+targets/postfix_writer.cpp:288:32: error: '_currentFunctionLoopsLabel' was not declared in this scope; did you mean 'oldFunctionLoopsLabel'?
+  288 |   auto oldFunctionLoopsLabel = _currentFunctionLoopsLabel;
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                oldFunctionLoopsLabel
+targets/postfix_writer.cpp:298:13: error: '_currentFunctonRetLabel' was not declared in this scope
+  298 |   _pf.LABEL(_currentFunctonRetLabel);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp:302:3: error: type '<type error>' argument given to 'delete', expected pointer
+  302 |   delete _currentFunctionLoopsLabel;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp:309:7: error: '_inFunctionBody' was not declared in this scope
+  309 |   if (_inFunctionBody) {
+      |       ^~~~~~~~~~~~~~~
+make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
