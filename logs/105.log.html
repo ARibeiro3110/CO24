@@ -1,5 +1,20 @@
 <pre>
 Checking project structure...
-make: *** No rule to make target 'clean'.  Stop.
-diff: /builds/leic-a-co24/eval/co24/checked-out-ref/105: No such file or directory
+targets/postfix_writer.cpp:466:6: error: no declaration matches 'void til::postfix_writer::executeLoopControlInstruction(T*)'
+  466 | void til::postfix_writer::executeLoopControlInstruction(T * const node) {
+      |      ^~~
+targets/postfix_writer.cpp:466:6: note: no functions named 'void til::postfix_writer::executeLoopControlInstruction(T*)'
+In file included from targets/postfix_writer.cpp:4:
+./targets/postfix_writer.h:14:9: note: 'class til::postfix_writer' defined here
+   14 |   class postfix_writer: public basic_ast_visitor {
+      |         ^~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_next_node(til::next_node*, int)':
+targets/postfix_writer.cpp:492:3: error: 'executeLoopControlInstruction' was not declared in this scope
+  492 |   executeLoopControlInstruction<0>(node);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_stop_node(til::stop_node*, int)':
+targets/postfix_writer.cpp:496:3: error: 'executeLoopControlInstruction' was not declared in this scope
+  496 |   executeLoopControlInstruction<1>(node);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
