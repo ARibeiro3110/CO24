@@ -1,10 +1,69 @@
 <pre>
 Checking project structure...
-targets/type_checker.cpp:42:6: error: redefinition of 'void til::type_checker::do_double_node(cdk::double_node*, int)'
-   42 | void til::type_checker::do_double_node(cdk::double_node *const node, int lvl) {
-      |      ^~~
-targets/type_checker.cpp:22:6: note: 'virtual void til::type_checker::do_double_node(cdk::double_node*, int)' previously defined here
-   22 | void til::type_checker::do_double_node(cdk::double_node *const node, int lvl) {
-      |      ^~~
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_add_node(cdk::add_node*, int)':
+targets/type_checker.cpp:208:3: error: 'processBinaryExpression' was not declared in this scope; did you mean 'processUnaryExpression'?
+  208 |   processBinaryExpression(node, lvl, true, true, false);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+      |   processUnaryExpression
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_sub_node(cdk::sub_node*, int)':
+targets/type_checker.cpp:211:3: error: 'processBinaryExpression' was not declared in this scope; did you mean 'processUnaryExpression'?
+  211 |   processBinaryExpression(node, lvl, true, true, true);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+      |   processUnaryExpression
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_mul_node(cdk::mul_node*, int)':
+targets/type_checker.cpp:214:3: error: 'processBinaryExpression' was not declared in this scope; did you mean 'processUnaryExpression'?
+  214 |   processBinaryExpression(node, lvl, true, false, false);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+      |   processUnaryExpression
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_div_node(cdk::div_node*, int)':
+targets/type_checker.cpp:217:3: error: 'processBinaryExpression' was not declared in this scope; did you mean 'processUnaryExpression'?
+  217 |   processBinaryExpression(node, lvl, true, false, false);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+      |   processUnaryExpression
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_mod_node(cdk::mod_node*, int)':
+targets/type_checker.cpp:220:3: error: 'processBinaryExpression' was not declared in this scope; did you mean 'processUnaryExpression'?
+  220 |   processBinaryExpression(node, lvl, false, false, false);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+      |   processUnaryExpression
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_lt_node(cdk::lt_node*, int)':
+targets/type_checker.cpp:235:3: error: 'processBinaryExpression' was not declared in this scope; did you mean 'processUnaryExpression'?
+  235 |   processBinaryExpression(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+      |   processUnaryExpression
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_le_node(cdk::le_node*, int)':
+targets/type_checker.cpp:238:3: error: 'processBinaryExpression' was not declared in this scope; did you mean 'processUnaryExpression'?
+  238 |   processBinaryExpression(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+      |   processUnaryExpression
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_ge_node(cdk::ge_node*, int)':
+targets/type_checker.cpp:241:3: error: 'processBinaryExpression' was not declared in this scope; did you mean 'processUnaryExpression'?
+  241 |   processBinaryExpression(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+      |   processUnaryExpression
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_gt_node(cdk::gt_node*, int)':
+targets/type_checker.cpp:244:3: error: 'processBinaryExpression' was not declared in this scope; did you mean 'processUnaryExpression'?
+  244 |   processBinaryExpression(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+      |   processUnaryExpression
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_ne_node(cdk::ne_node*, int)':
+targets/type_checker.cpp:247:3: error: 'processBinaryExpression' was not declared in this scope; did you mean 'processUnaryExpression'?
+  247 |   processBinaryExpression(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+      |   processUnaryExpression
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_eq_node(cdk::eq_node*, int)':
+targets/type_checker.cpp:250:3: error: 'processBinaryExpression' was not declared in this scope; did you mean 'processUnaryExpression'?
+  250 |   processBinaryExpression(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+      |   processUnaryExpression
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_and_node(cdk::and_node*, int)':
+targets/type_checker.cpp:254:3: error: 'processBinaryExpression' was not declared in this scope; did you mean 'processUnaryExpression'?
+  254 |   processBinaryExpression(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+      |   processUnaryExpression
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_or_node(cdk::or_node*, int)':
+targets/type_checker.cpp:257:3: error: 'processBinaryExpression' was not declared in this scope; did you mean 'processUnaryExpression'?
+  257 |   processBinaryExpression(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~
+      |   processUnaryExpression
 make: *** [Makefile:46: targets/type_checker.o] Error 1
 
