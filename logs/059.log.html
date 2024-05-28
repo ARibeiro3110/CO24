@@ -41,66 +41,91 @@ targets/type_checker.cpp:113:6: note: no functions named 'void til::type_checker
 ./targets/type_checker.h:11:9: note: 'class til::type_checker' defined here
    11 |   class type_checker: public basic_ast_visitor {
       |         ^~~~~~~~~~~~
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_and_node(cdk::and_node*, int)':
+targets/type_checker.cpp:187:3: error: 'processIntegerBinaryExpression' was not declared in this scope; did you mean 'processBinaryExpression'?
+  187 |   processIntegerBinaryExpression(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |   processBinaryExpression
+targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_or_node(cdk::or_node*, int)':
+targets/type_checker.cpp:190:3: error: 'processIntegerBinaryExpression' was not declared in this scope; did you mean 'processBinaryExpression'?
+  190 |   processIntegerBinaryExpression(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |   processBinaryExpression
+targets/type_checker.cpp: At global scope:
+targets/type_checker.cpp:230:6: error: no declaration matches 'void til::type_checker::processIntegerBinaryExpression(cdk::binary_operation_node*, int)'
+  230 | void til::type_checker::processIntegerBinaryExpression(cdk::binary_operation_node *const node, int lvl) {
+      |      ^~~
+targets/type_checker.cpp:230:6: note: no functions named 'void til::type_checker::processIntegerBinaryExpression(cdk::binary_operation_node*, int)'
+./targets/type_checker.h:11:9: note: 'class til::type_checker' defined here
+   11 |   class type_checker: public basic_ast_visitor {
+      |         ^~~~~~~~~~~~
+targets/type_checker.cpp:242:6: error: no declaration matches 'void til::type_checker::processIntegerDoubleBinaryExpression(cdk::binary_operation_node*, int)'
+  242 | void til::type_checker::processIntegerDoubleBinaryExpression(cdk::binary_operation_node *const node, int lvl) {
+      |      ^~~
+targets/type_checker.cpp:242:6: note: no functions named 'void til::type_checker::processIntegerDoubleBinaryExpression(cdk::binary_operation_node*, int)'
+./targets/type_checker.h:11:9: note: 'class til::type_checker' defined here
+   11 |   class type_checker: public basic_ast_visitor {
+      |         ^~~~~~~~~~~~
 targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_index_node(til::index_node*, int)':
-targets/type_checker.cpp:371:27: error: invalid operands of types 'cdk::expression_node*' and 'const char [17]' to binary 'operator+'
-  371 |     throw node->pointer() + "is not a pointer";
+targets/type_checker.cpp:389:27: error: invalid operands of types 'cdk::expression_node*' and 'const char [17]' to binary 'operator+'
+  389 |     throw node->pointer() + "is not a pointer";
       |           ~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~
       |                        |    |
       |                        |    const char [17]
       |                        cdk::expression_node*
-targets/type_checker.cpp:373:23: error: 'class cdk::expression_node' has no member named 'is_type'; did you mean 'is_typed'?
-  373 |   if (!node->index()->is_type()dk::TYPE_INT)
+targets/type_checker.cpp:391:23: error: 'class cdk::expression_node' has no member named 'is_type'; did you mean 'is_typed'?
+  391 |   if (!node->index()->is_type()dk::TYPE_INT)
       |                       ^~~~~~~
       |                       is_typed
-targets/type_checker.cpp:373:32: error: expected ')' before 'dk'
-  373 |   if (!node->index()->is_type()dk::TYPE_INT)
+targets/type_checker.cpp:391:32: error: expected ')' before 'dk'
+  391 |   if (!node->index()->is_type()dk::TYPE_INT)
       |      ~                         ^~
       |                                )
-targets/type_checker.cpp:375:25: error: invalid operands of types 'cdk::expression_node*' and 'const char [18]' to binary 'operator+'
-  375 |     throw node->index() + "is not an integer";
+targets/type_checker.cpp:393:25: error: invalid operands of types 'cdk::expression_node*' and 'const char [18]' to binary 'operator+'
+  393 |     throw node->index() + "is not an integer";
       |           ~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~
       |                      |    |
       |                      |    const char [18]
       |                      cdk::expression_node*
-targets/type_checker.cpp:377:46: error: 'class til::index_node' has no member named 'base'
-  377 |   node->type(cdk::reference_type::cast(node->base()->type())->referenced();)}
+targets/type_checker.cpp:395:46: error: 'class til::index_node' has no member named 'base'
+  395 |   node->type(cdk::reference_type::cast(node->base()->type())->referenced();)}
       |                                              ^~~~
-targets/type_checker.cpp:377:76: error: expected primary-expression before ')' token
-  377 |   node->type(cdk::reference_type::cast(node->base()->type())->referenced();)}
+targets/type_checker.cpp:395:76: error: expected primary-expression before ')' token
+  395 |   node->type(cdk::reference_type::cast(node->base()->type())->referenced();)}
       |                                                                            ^
 targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_mem_stack_allocation_node(til::mem_stack_allocation_node*, int)':
-targets/type_checker.cpp:384:28: error: invalid operands of types 'cdk::expression_node*' and 'const char [18]' to binary 'operator+'
-  384 |     throw node->argument() + "is not an integer";
+targets/type_checker.cpp:402:28: error: invalid operands of types 'cdk::expression_node*' and 'const char [18]' to binary 'operator+'
+  402 |     throw node->argument() + "is not an integer";
       |           ~~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~
       |                         |    |
       |                         |    const char [18]
       |                         cdk::expression_node*
-targets/type_checker.cpp:390:40: error: qualified-id in declaration before '(' token
-  390 | void til::type_checker::do_nullptr_node(til::nullptr_node * const node, int lvl) {
+targets/type_checker.cpp:408:40: error: qualified-id in declaration before '(' token
+  408 | void til::type_checker::do_nullptr_node(til::nullptr_node * const node, int lvl) {
       |                                        ^
-targets/type_checker.cpp:399:39: error: qualified-id in declaration before '(' token
-  399 | void til::type_checker::do_return_node(til::return_node * const node, int lvl) {
+targets/type_checker.cpp:414:39: error: qualified-id in declaration before '(' token
+  414 | void til::type_checker::do_return_node(til::return_node * const node, int lvl) {
       |                                       ^
-targets/type_checker.cpp:425:43: error: qualified-id in declaration before '(' token
-  425 | void til::type_checker::do_address_of_node(til::address_of_node * const node, int lvl) {
+targets/type_checker.cpp:440:43: error: qualified-id in declaration before '(' token
+  440 | void til::type_checker::do_address_of_node(til::address_of_node * const node, int lvl) {
       |                                           ^
-targets/type_checker.cpp:432:39: error: qualified-id in declaration before '(' token
-  432 | void til::type_checker::do_sizeof_node(til::sizeof_node * const node, int lvl) {
+targets/type_checker.cpp:447:39: error: qualified-id in declaration before '(' token
+  447 | void til::type_checker::do_sizeof_node(til::sizeof_node * const node, int lvl) {
       |                                       ^
-targets/type_checker.cpp:438:38: error: qualified-id in declaration before '(' token
-  438 | void til::type_checker::do_block_node(til::block_node * const node, int lvl) {
+targets/type_checker.cpp:453:38: error: qualified-id in declaration before '(' token
+  453 | void til::type_checker::do_block_node(til::block_node * const node, int lvl) {
       |                                      ^
-targets/type_checker.cpp:444:42: error: qualified-id in declaration before '(' token
-  444 | void til::type_checker::do_func_call_node(til::func_call_node * const node, int lvl) {
+targets/type_checker.cpp:459:42: error: qualified-id in declaration before '(' token
+  459 | void til::type_checker::do_func_call_node(til::func_call_node * const node, int lvl) {
       |                                          ^
-targets/type_checker.cpp:449:44: error: qualified-id in declaration before '(' token
-  449 | void til::type_checker::do_declaration_node(til::declaration_node * const node, int lvl) {
+targets/type_checker.cpp:464:44: error: qualified-id in declaration before '(' token
+  464 | void til::type_checker::do_declaration_node(til::declaration_node * const node, int lvl) {
       |                                            ^
-targets/type_checker.cpp:451:2: error: expected '}' at end of input
-  451 | }
+targets/type_checker.cpp:466:2: error: expected '}' at end of input
+  466 | }
       |  ^
-targets/type_checker.cpp:381:108: note: to match this '{'
-  381 | void til::type_checker::do_mem_stack_allocation_node(til::mem_stack_allocation_node * const node, int lvl) {
+targets/type_checker.cpp:399:108: note: to match this '{'
+  399 | void til::type_checker::do_mem_stack_allocation_node(til::mem_stack_allocation_node * const node, int lvl) {
       |                                                                                                            ^
 make: *** [Makefile:46: targets/type_checker.o] Error 1
 
