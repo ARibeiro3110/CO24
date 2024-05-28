@@ -1,49 +1,123 @@
 <pre>
 Checking project structure...
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_and_node(cdk::and_node*, int)':
+targets/postfix_writer.cpp:34:28: error: expected ';' before '}' token
+   34 |   _pf.LABEL(mklbl(end_and))
+      |                            ^
+      |                            ;
+   35 | }
+      | ~                           
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_unary_minus_node(cdk::unary_minus_node*, int)':
-targets/postfix_writer.cpp:70:13: error: expected unqualified-id before '->' token
-   70 |   if (node->->is_typed(cdk::TYPE_DOUBLE)){
+targets/postfix_writer.cpp:83:13: error: expected unqualified-id before '->' token
+   83 |   if (node->->is_typed(cdk::TYPE_DOUBLE)){
       |             ^~
 targets/postfix_writer.cpp: At global scope:
-targets/postfix_writer.cpp:152:6: error: no declaration matches 'void til::postfix_writer::equalize_binary_types(cdk::binary_operation_node*, int)'
-  152 | void til::postfix_writer::equalize_binary_types(cdk::binary_operation_node * const node, int lvl){
+targets/postfix_writer.cpp:165:6: error: no declaration matches 'void til::postfix_writer::equalize_binary_types(cdk::binary_operation_node*, int)'
+  165 | void til::postfix_writer::equalize_binary_types(cdk::binary_operation_node * const node, int lvl){
       |      ^~~
-targets/postfix_writer.cpp:152:6: note: no functions named 'void til::postfix_writer::equalize_binary_types(cdk::binary_operation_node*, int)'
+targets/postfix_writer.cpp:165:6: note: no functions named 'void til::postfix_writer::equalize_binary_types(cdk::binary_operation_node*, int)'
 In file included from targets/postfix_writer.cpp:4:
 ./targets/postfix_writer.h:14:9: note: 'class til::postfix_writer' defined here
    14 |   class postfix_writer: public basic_ast_visitor {
       |         ^~~~~~~~~~~~~~
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_mul_node(cdk::mul_node*, int)':
-targets/postfix_writer.cpp:170:3: error: 'equalize_binary_types' was not declared in this scope
-  170 |   equalize_binary_types(node, lvl);
+targets/postfix_writer.cpp:183:3: error: 'equalize_binary_types' was not declared in this scope
+  183 |   equalize_binary_types(node, lvl);
       |   ^~~~~~~~~~~~~~~~~~~~~
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_div_node(cdk::div_node*, int)':
-targets/postfix_writer.cpp:178:3: error: 'equalize_binary_types' was not declared in this scope
-  178 |   equalize_binary_types(node, lvl);
+targets/postfix_writer.cpp:191:3: error: 'equalize_binary_types' was not declared in this scope
+  191 |   equalize_binary_types(node, lvl);
       |   ^~~~~~~~~~~~~~~~~~~~~
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_lt_node(cdk::lt_node*, int)':
-targets/postfix_writer.cpp:192:3: error: 'equalize_binary_types' was not declared in this scope
-  192 |   equalize_binary_types(node, lvl);
+targets/postfix_writer.cpp:205:3: error: 'equalize_binary_types' was not declared in this scope
+  205 |   equalize_binary_types(node, lvl);
       |   ^~~~~~~~~~~~~~~~~~~~~
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_le_node(cdk::le_node*, int)':
-targets/postfix_writer.cpp:199:3: error: 'equalize_binary_types' was not declared in this scope
-  199 |   equalize_binary_types(node, lvl);
+targets/postfix_writer.cpp:212:3: error: 'equalize_binary_types' was not declared in this scope
+  212 |   equalize_binary_types(node, lvl);
       |   ^~~~~~~~~~~~~~~~~~~~~
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_ge_node(cdk::ge_node*, int)':
-targets/postfix_writer.cpp:206:3: error: 'equalize_binary_types' was not declared in this scope
-  206 |   equalize_binary_types(node, lvl);
+targets/postfix_writer.cpp:219:3: error: 'equalize_binary_types' was not declared in this scope
+  219 |   equalize_binary_types(node, lvl);
       |   ^~~~~~~~~~~~~~~~~~~~~
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_gt_node(cdk::gt_node*, int)':
-targets/postfix_writer.cpp:213:3: error: 'equalize_binary_types' was not declared in this scope
-  213 |   equalize_binary_types(node, lvl);
+targets/postfix_writer.cpp:226:3: error: 'equalize_binary_types' was not declared in this scope
+  226 |   equalize_binary_types(node, lvl);
       |   ^~~~~~~~~~~~~~~~~~~~~
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_ne_node(cdk::ne_node*, int)':
-targets/postfix_writer.cpp:220:3: error: 'equalize_binary_types' was not declared in this scope
-  220 |   equalize_binary_types(node, lvl);
+targets/postfix_writer.cpp:233:3: error: 'equalize_binary_types' was not declared in this scope
+  233 |   equalize_binary_types(node, lvl);
       |   ^~~~~~~~~~~~~~~~~~~~~
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_eq_node(cdk::eq_node*, int)':
-targets/postfix_writer.cpp:227:3: error: 'equalize_binary_types' was not declared in this scope
-  227 |   equalize_binary_types(node, lvl);
+targets/postfix_writer.cpp:240:3: error: 'equalize_binary_types' was not declared in this scope
+  240 |   equalize_binary_types(node, lvl);
       |   ^~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_evaluation_node(til::evaluation_node*, int)':
+targets/postfix_writer.cpp:327:6: error: 'till' has not been declared
+  327 | void till::postfix_writer::handle_sequence_print(til::sequence_node){
+      |      ^~~~
+targets/postfix_writer.cpp:327:49: error: qualified-id in declaration before '(' token
+  327 | void till::postfix_writer::handle_sequence_print(til::sequence_node){
+      |                                                 ^
+targets/postfix_writer.cpp:349:40: error: qualified-id in declaration before '(' token
+  349 | void til::postfix_writer::do_print_node(til::print_node * const node, int lvl) {
+      |                                        ^
+targets/postfix_writer.cpp:353:42: error: qualified-id in declaration before '(' token
+  353 | void til::postfix_writer::do_println_node(til::println_node * const node, int lvl){
+      |                                          ^
+targets/postfix_writer.cpp:360:39: error: qualified-id in declaration before '(' token
+  360 | void til::postfix_writer::do_read_node(til::read_node * const node, int lvl) {
+      |                                       ^
+targets/postfix_writer.cpp:373:39: error: qualified-id in declaration before '(' token
+  373 | void til::postfix_writer::do_loop_node(til::loop_node * const node, int lvl) {
+      |                                       ^
+targets/postfix_writer.cpp:386:37: error: qualified-id in declaration before '(' token
+  386 | void til::postfix_writer::do_if_node(til::if_node * const node, int lvl) {
+      |                                     ^
+targets/postfix_writer.cpp:397:42: error: qualified-id in declaration before '(' token
+  397 | void til::postfix_writer::do_if_else_node(til::if_else_node * const node, int lvl) {
+      |                                          ^
+targets/postfix_writer.cpp:409:42: error: qualified-id in declaration before '(' token
+  409 | void til::postfix_writer::do_address_node(til::address_node * const node, int lvl){
+      |                                          ^
+targets/postfix_writer.cpp:413:40: error: qualified-id in declaration before '(' token
+  413 | void til::postfix_writer::do_alloc_node(til::alloc_node * const node, int lvl){}
+      |                                        ^
+targets/postfix_writer.cpp:415:40: error: qualified-id in declaration before '(' token
+  415 | void til::postfix_writer::do_block_node(til::block_node * const node, int lvl){}
+      |                                        ^
+targets/postfix_writer.cpp:417:39: error: qualified-id in declaration before '(' token
+  417 | void til::postfix_writer::do_call_node(til::call_node * const node, int lvl){}
+      |                                       ^
+targets/postfix_writer.cpp:419:43: error: qualified-id in declaration before '(' token
+  419 | void til::postfix_writer::do_function_node(til::function_node * const node, int lvl){}
+      |                                           ^
+targets/postfix_writer.cpp:421:40: error: qualified-id in declaration before '(' token
+  421 | void til::postfix_writer::do_index_node(til::index_node * const node, int lvl){}
+      |                                        ^
+targets/postfix_writer.cpp:423:39: error: qualified-id in declaration before '(' token
+  423 | void til::postfix_writer::do_next_node(til::next_node * const node, int lvl){}
+      |                                       ^
+targets/postfix_writer.cpp:425:41: error: qualified-id in declaration before '(' token
+  425 | void til::postfix_writer::do_return_node(til::return_node * const node, int lvl){}
+      |                                         ^
+targets/postfix_writer.cpp:427:41: error: qualified-id in declaration before '(' token
+  427 | void til::postfix_writer::do_sizeof_node(til::sizeof_node * const node, int lvl){}
+      |                                         ^
+targets/postfix_writer.cpp:429:39: error: qualified-id in declaration before '(' token
+  429 | void til::postfix_writer::do_stop_node(til::stop_node * const node, int lvl){}
+      |                                       ^
+targets/postfix_writer.cpp:431:39: error: qualified-id in declaration before '(' token
+  431 | void til::postfix_writer::do_null_node(til::null_node * const node, int lvl){}
+      |                                       ^
+targets/postfix_writer.cpp:433:46: error: qualified-id in declaration before '(' token
+  433 | void til::postfix_writer::do_declaration_node(til::declaration_node * const node, int lvl){}
+      |                                              ^
+targets/postfix_writer.cpp:433:93: error: expected '}' at end of input
+  433 | void til::postfix_writer::do_declaration_node(til::declaration_node * const node, int lvl){}
+      |                                                                                             ^
+targets/postfix_writer.cpp:320:90: note: to match this '{'
+  320 | void til::postfix_writer::do_evaluation_node(til::evaluation_node * const node, int lvl) {
+      |                                                                                          ^
 make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
