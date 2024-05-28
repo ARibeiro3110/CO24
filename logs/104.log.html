@@ -1,5 +1,49 @@
 <pre>
 Checking project structure...
-make: *** No rule to make target 'clean'.  Stop.
-diff: /builds/leic-a-co24/eval/co24/checked-out-ref/104: No such file or directory
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_unary_minus_node(cdk::unary_minus_node*, int)':
+targets/postfix_writer.cpp:70:13: error: expected unqualified-id before '->' token
+   70 |   if (node->->is_typed(cdk::TYPE_DOUBLE)){
+      |             ^~
+targets/postfix_writer.cpp: At global scope:
+targets/postfix_writer.cpp:152:6: error: no declaration matches 'void til::postfix_writer::equalize_binary_types(cdk::binary_operation_node*, int)'
+  152 | void til::postfix_writer::equalize_binary_types(cdk::binary_operation_node * const node, int lvl){
+      |      ^~~
+targets/postfix_writer.cpp:152:6: note: no functions named 'void til::postfix_writer::equalize_binary_types(cdk::binary_operation_node*, int)'
+In file included from targets/postfix_writer.cpp:4:
+./targets/postfix_writer.h:14:9: note: 'class til::postfix_writer' defined here
+   14 |   class postfix_writer: public basic_ast_visitor {
+      |         ^~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_mul_node(cdk::mul_node*, int)':
+targets/postfix_writer.cpp:170:3: error: 'equalize_binary_types' was not declared in this scope
+  170 |   equalize_binary_types(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_div_node(cdk::div_node*, int)':
+targets/postfix_writer.cpp:178:3: error: 'equalize_binary_types' was not declared in this scope
+  178 |   equalize_binary_types(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_lt_node(cdk::lt_node*, int)':
+targets/postfix_writer.cpp:192:3: error: 'equalize_binary_types' was not declared in this scope
+  192 |   equalize_binary_types(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_le_node(cdk::le_node*, int)':
+targets/postfix_writer.cpp:199:3: error: 'equalize_binary_types' was not declared in this scope
+  199 |   equalize_binary_types(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_ge_node(cdk::ge_node*, int)':
+targets/postfix_writer.cpp:206:3: error: 'equalize_binary_types' was not declared in this scope
+  206 |   equalize_binary_types(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_gt_node(cdk::gt_node*, int)':
+targets/postfix_writer.cpp:213:3: error: 'equalize_binary_types' was not declared in this scope
+  213 |   equalize_binary_types(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_ne_node(cdk::ne_node*, int)':
+targets/postfix_writer.cpp:220:3: error: 'equalize_binary_types' was not declared in this scope
+  220 |   equalize_binary_types(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_eq_node(cdk::eq_node*, int)':
+targets/postfix_writer.cpp:227:3: error: 'equalize_binary_types' was not declared in this scope
+  227 |   equalize_binary_types(node, lvl);
+      |   ^~~~~~~~~~~~~~~~~~~~~
+make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
