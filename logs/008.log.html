@@ -3,10 +3,52 @@ Checking project structure...
 til_parser.y: warning: 6 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: warning: 1 reduce/reduce conflict [-Wconflicts-rr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-til_scanner.l: In member function 'virtual int til_scanner_FlexLexer::yylex()':
-til_scanner.l:56:10: error: 'tELSE' was not declared in this scope; did you mean 'tLE'?
-   56 | "else"    { return tELSE;}
-      |          ^~~~~
-      |          tLE
-make: *** [Makefile:46: til_scanner.o] Error 1
+targets/frame_size_calculator.cpp:66:6: error: variable or field 'do_neg_node' declared void
+   66 | void til::frame_size_calculator::do_neg_node(cdk::neg_node *const node,
+      |      ^~~
+targets/frame_size_calculator.cpp:66:51: error: 'neg_node' is not a member of 'cdk'; did you mean 'ne_node'?
+   66 | void til::frame_size_calculator::do_neg_node(cdk::neg_node *const node,
+      |                                                   ^~~~~~~~
+      |                                                   ne_node
+targets/frame_size_calculator.cpp:66:61: error: expected primary-expression before 'const'
+   66 | void til::frame_size_calculator::do_neg_node(cdk::neg_node *const node,
+      |                                                             ^~~~~
+targets/frame_size_calculator.cpp:67:46: error: expected primary-expression before 'int'
+   67 |                                              int lvl) {
+      |                                              ^~~
+targets/frame_size_calculator.cpp:94:11: error: 'til::xml_writer' has not been declared
+   94 | void til::xml_writer::do_unary_operation(cdk::unary_operation_node * const node, int lvl) {
+      |           ^~~~~~~~~~
+targets/frame_size_calculator.cpp:98:11: error: 'til::xml_writer' has not been declared
+   98 | void til::xml_writer::do_unary_minus_node(cdk::unary_minus_node * const node, int lvl) {
+      |           ^~~~~~~~~~
+targets/frame_size_calculator.cpp:101:11: error: 'til::xml_writer' has not been declared
+  101 | void til::xml_writer::do_unary_plus_node(cdk::unary_plus_node * const node, int lvl) {
+      |           ^~~~~~~~~~
+targets/frame_size_calculator.cpp:186:6: error: variable or field 'do_declaration_node' declared void
+  186 | void til::frame_size_calculator::do_declaration_node(
+      |      ^~~
+targets/frame_size_calculator.cpp:187:10: error: 'declaration_node' is not a member of 'til'; did you mean 'var_declaration_node'?
+  187 |     til::declaration_node *const node, int lvl) {
+      |          ^~~~~~~~~~~~~~~~
+      |          var_declaration_node
+targets/frame_size_calculator.cpp:187:28: error: expected primary-expression before 'const'
+  187 |     til::declaration_node *const node, int lvl) {
+      |                            ^~~~~
+targets/frame_size_calculator.cpp:187:40: error: expected primary-expression before 'int'
+  187 |     til::declaration_node *const node, int lvl) {
+      |                                        ^~~
+targets/frame_size_calculator.cpp:191:6: error: variable or field 'do_function_definition_node' declared void
+  191 | void til::frame_size_calculator::do_function_definition_node(
+      |      ^~~
+targets/frame_size_calculator.cpp:192:10: error: 'function_definition_node' is not a member of 'til'
+  192 |     til::function_definition_node *const node, int lvl) {
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~
+targets/frame_size_calculator.cpp:192:36: error: expected primary-expression before 'const'
+  192 |     til::function_definition_node *const node, int lvl) {
+      |                                    ^~~~~
+targets/frame_size_calculator.cpp:192:48: error: expected primary-expression before 'int'
+  192 |     til::function_definition_node *const node, int lvl) {
+      |                                                ^~~
+make: *** [Makefile:46: targets/frame_size_calculator.o] Error 1
 
