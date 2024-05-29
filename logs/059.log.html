@@ -2,27 +2,20 @@
 Checking project structure...
 til_parser.y: warning: 1 shift/reduce conflict [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
-til_parser.y:221:154: error: no matching function for call to 'til::func_call_node::func_call_node(int, cdk::lvalue_node*&, cdk::sequence_node*&)'
-  221 |            | '(' lval opt_expressions ')'                   { $$ = new til::func_call_node(LINE, $2, $3); }
-      |                                                                                                                                                          ^
-In file included from .auto/all_nodes.h:43,
-                 from til_parser.y:8:
-./ast/func_call_node.h:23:9: note: candidate: 'til::func_call_node::func_call_node(int, cdk::expression_node*, cdk::sequence_node*)'
-   23 |         func_call_node(int lineno, cdk::expression_node *function,
-      |         ^~~~~~~~~~~~~~
-./ast/func_call_node.h:23:58: note:   no known conversion for argument 2 from 'cdk::lvalue_node*' to 'cdk::expression_node*'
-   23 |         func_call_node(int lineno, cdk::expression_node *function,
-      |                                    ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
-./ast/func_call_node.h:18:9: note: candidate: 'til::func_call_node::func_call_node(int, cdk::expression_node*)'
-   18 |         func_call_node(int lineno, cdk::expression_node *function):
-      |         ^~~~~~~~~~~~~~
-./ast/func_call_node.h:18:9: note:   candidate expects 2 arguments, 3 provided
-./ast/func_call_node.h:12:7: note: candidate: 'til::func_call_node::func_call_node(const til::func_call_node&)'
-   12 | class func_call_node : public cdk::expression_node {
-      |       ^~~~~~~~~~~~~~
-./ast/func_call_node.h:12:7: note:   candidate expects 1 argument, 3 provided
-./ast/func_call_node.h:12:7: note: candidate: 'til::func_call_node::func_call_node(til::func_call_node&&)'
-./ast/func_call_node.h:12:7: note:   candidate expects 1 argument, 3 provided
-make: *** [Makefile:40: til_parser.tab.o] Error 1
+In file included from ./targets/postfix_target.h:6,
+                 from targets/postfix_target.cpp:1:
+./targets/postfix_writer.h:31:33: error: 'mml' was not declared in this scope
+   31 |     std::vector<std::shared_ptr<mml::symbol>> _functions;
+      |                                 ^~~
+./targets/postfix_writer.h:31:44: error: template argument 1 is invalid
+   31 |     std::vector<std::shared_ptr<mml::symbol>> _functions;
+      |                                            ^~
+./targets/postfix_writer.h:31:47: error: template argument 1 is invalid
+   31 |     std::vector<std::shared_ptr<mml::symbol>> _functions;
+      |                                               ^~~~~~~~~~
+./targets/postfix_writer.h:31:47: error: template argument 2 is invalid
+./targets/postfix_writer.h:31:10: error: '<expression error>' in namespace 'std' does not name a type
+   31 |     std::vector<std::shared_ptr<mml::symbol>> _functions;
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Makefile:46: targets/postfix_target.o] Error 1
 
