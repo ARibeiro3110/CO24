@@ -1,3 +1,21 @@
 <pre>
 Checking project structure...
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_double_node(cdk::double_node*, int)':
+targets/postfix_writer.cpp:16:6: error: 'inFunction' was not declared in this scope
+   16 |   if(inFunction){
+      |      ^~~~~~~~~~
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_block_node(til::block_node*, int)':
+targets/postfix_writer.cpp:297:3: error: '_finalInstruction' was not declared in this scope
+  297 |   _finalInstruction = false;
+      |   ^~~~~~~~~~~~~~~~~
+targets/postfix_writer.cpp:306:3: error: '_' was not declared in this scope
+  306 |   _
+      |   ^
+targets/postfix_writer.cpp:300:10: warning: unused variable 'child' [-Wunused-variable]
+  300 |     auto child = node->instructions()->node(i);
+      |          ^~~~~
+targets/postfix_writer.cpp:310:3: error: '_' was not declared in this scope
+  310 |   _
+      |   ^
+make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
