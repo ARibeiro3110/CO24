@@ -34283,8 +34283,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 2: Wrong type of expression (sizeof_node)
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-02-71-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_G-02-71-N-ok.out	Wed May 29 17:40:45 2024
+*** expected/G-02-71-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_G-02-71-N-ok.out	Wed May 29 18:40:47 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 8
@@ -34528,8 +34528,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 2: Wrong type of expression (sizeof_node)
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-03-72-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_G-03-72-N-ok.out	Wed May 29 17:40:45 2024
+*** expected/G-03-72-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_G-03-72-N-ok.out	Wed May 29 18:40:47 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 4
@@ -34778,8 +34778,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 2: Wrong type of expression (sizeof_node)
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-04-73-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_G-04-73-N-ok.out	Wed May 29 17:40:45 2024
+*** expected/G-04-73-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_G-04-73-N-ok.out	Wed May 29 18:40:47 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 4
@@ -35407,8 +35407,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 3: Wrong type of expression (sizeof_node)
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-06-75-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_G-06-75-N-ok.out	Wed May 29 17:40:45 2024
+*** expected/G-06-75-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_G-06-75-N-ok.out	Wed May 29 18:40:47 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 8
@@ -35859,11 +35859,10 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-1: cannot declare variable of type void
-3: undeclared variable 'f'
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-07-76-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_G-07-76-N-ok.out	Wed May 29 17:40:45 2024
+3: Wrong type of expression (sizeof_node)
+4: return value specified for void function
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/G-07-76-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_G-07-76-N-ok.out	Wed May 29 18:40:47 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 4
@@ -36342,9 +36341,9 @@ Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 3: Wrong type of expression (sizeof_node)
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-08-77-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_G-08-77-N-ok.out	Wed May 29 17:40:46 2024
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/G-08-77-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_G-08-77-N-ok.out	Wed May 29 18:40:47 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 8
@@ -36744,11 +36743,9 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-1: cannot declare variable of type void
-3: undeclared variable 'f'
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/J-01-78-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_J-01-78-N-ok.out	Wed May 29 17:40:46 2024
+4: return value specified for void function
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/J-01-78-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_J-01-78-N-ok.out	Wed May 29 18:40:47 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - ola
@@ -37180,10 +37177,14 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: J-02-79-N-ok.asm:12: error: undefined symbol `printi' (first use)
-J-02-79-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
-J-02-79-N-ok.asm:14: error: undefined symbol `println' (first use)
-'yasm' failed
+3: Wrong type for argument 1 of print_node
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/J-02-79-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_J-02-79-N-ok.out	Wed May 29 18:40:47 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 2
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------J-03-80-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 97("(")
@@ -37621,10 +37622,15 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: J-03-80-N-ok.asm:12: error: undefined symbol `prints' (first use)
-J-03-80-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
-J-03-80-N-ok.asm:14: error: undefined symbol `println' (first use)
-'yasm' failed
+3: Wrong type for argument 1 of print_node
+4: wrong type for return expression
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/J-03-80-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_J-03-80-N-ok.out	Wed May 29 18:40:47 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- ola
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------J-04-81-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 97("(")
@@ -38192,15 +38198,10 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-2: cannot declare variable of type void
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/J-04-81-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_J-04-81-N-ok.out	Wed May 29 17:40:46 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 3
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+5: return value specified for void function
+Compiler: ok (0/0). YASM: J-04-81-N-ok.asm:8: error: undefined symbol `f' (first use)
+J-04-81-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
+'yasm' failed
 <font color='white' style='background: blue;'>---------------------------J-05-82-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 97("(")
@@ -38631,10 +38632,14 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: J-05-82-N-ok.asm:12: error: undefined symbol `printi' (first use)
-J-05-82-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
-J-05-82-N-ok.asm:14: error: undefined symbol `println' (first use)
-'yasm' failed
+3: Wrong type for argument 1 of print_node
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/J-05-82-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_J-05-82-N-ok.out	Wed May 29 18:40:47 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 314
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------J-06-83-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 97("(")
@@ -38975,8 +38980,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 3: Wrong type for argument 1 of print_node
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/J-06-83-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_J-06-83-N-ok.out	Wed May 29 17:40:46 2024
+*** expected/J-06-83-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_J-06-83-N-ok.out	Wed May 29 18:40:47 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 1
@@ -39563,11 +39568,9 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-1: cannot declare variable of type void
-3: undeclared variable 'f'
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/J-07-84-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_J-07-84-N-ok.out	Wed May 29 17:40:46 2024
+4: return value specified for void function
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/J-07-84-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_J-07-84-N-ok.out	Wed May 29 18:40:47 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 3
@@ -40047,11 +40050,9 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-1: wrong type in initializer for variable 'f'
-3: undeclared variable 'f'
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/J-08-85-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_J-08-85-N-ok.out	Wed May 29 17:40:46 2024
+3: Wrong type for argument 1 of print_node
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/J-08-85-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_J-08-85-N-ok.out	Wed May 29 18:40:47 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 2
@@ -40685,12 +40686,9 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-2: cannot declare variable of type void
-4: undeclared variable 'f'
-Compiler: failed (139/0). YASM: K-01-86-N-ok.asm:8: error: undefined symbol `x' (first use)
-K-01-86-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
-K-01-86-N-ok.asm:11: error: undefined symbol `printi' (first use)
-K-01-86-N-ok.asm:13: error: undefined symbol `println' (first use)
+6: return value specified for void function
+Compiler: ok (0/0). YASM: K-01-86-N-ok.asm:13: error: undefined symbol `x' (first use)
+K-01-86-N-ok.asm:13: error:  (Each undefined symbol is reported only once.)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------K-02-87-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -70348,8 +70346,8 @@ Cleanup: popping nterm file ()
 4: Incompatible types in assignment expression
 5: undeclared variable 'Wrong type in pointer index's base'
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/Q-03-112-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_Q-03-112-N-ok.out	Wed May 29 17:40:47 2024
+*** expected/Q-03-112-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_Q-03-112-N-ok.out	Wed May 29 18:40:48 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 6.1E1
@@ -70920,8 +70918,8 @@ Cleanup: popping nterm file ()
 4: Incompatible types in assignment expression
 5: undeclared variable 'Wrong type in pointer index's base'
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/Q-04-113-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_Q-04-113-N-ok.out	Wed May 29 17:40:47 2024
+*** expected/Q-04-113-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_Q-04-113-N-ok.out	Wed May 29 18:40:48 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 6.1E1
@@ -74631,10 +74629,17 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: R-01-117-N-ok.asm:38: error: undefined symbol `printi' (first use)
-R-01-117-N-ok.asm:38: error:  (Each undefined symbol is reported only once.)
-R-01-117-N-ok.asm:40: error: undefined symbol `println' (first use)
-'yasm' failed
+6: Wrong type in right argument of binary expression (Should be Integer)
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: *** expected/R-01-117-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_R-01-117-N-ok.out	Wed May 29 18:40:48 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+! 30
+<font color="brown">--- 1 ----</font>
+! 0
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------R-02-118-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 97("(")
@@ -75571,10 +75576,17 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: R-02-118-N-ok.asm:44: error: undefined symbol `printi' (first use)
-R-02-118-N-ok.asm:44: error:  (Each undefined symbol is reported only once.)
-R-02-118-N-ok.asm:46: error: undefined symbol `println' (first use)
-'yasm' failed
+6: Wrong type in right argument of binary expression (Should be Integer)
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: *** expected/R-02-118-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_R-02-118-N-ok.out	Wed May 29 18:40:48 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+! 30
+<font color="brown">--- 1 ----</font>
+! 0
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------S-01-119-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 97("(")
@@ -76147,15 +76159,10 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-3: Incompatible types in assignment expression
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/S-01-119-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_S-01-119-N-ok.out	Wed May 29 17:40:47 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 3
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: failed (139/0). YASM: S-01-119-N-ok.asm:18: error: undefined symbol `printi' (first use)
+S-01-119-N-ok.asm:18: error:  (Each undefined symbol is reported only once.)
+S-01-119-N-ok.asm:20: error: undefined symbol `println' (first use)
+'yasm' failed
 <font color='white' style='background: blue;'>---------------------------S-01-120-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 97("(")
@@ -76727,15 +76734,10 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-3: Incompatible types in assignment expression
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/S-01-120-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_S-01-120-N-ok.out	Wed May 29 17:40:48 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 3
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: failed (139/0). YASM: S-01-120-N-ok.asm:18: error: undefined symbol `printi' (first use)
+S-01-120-N-ok.asm:18: error:  (Each undefined symbol is reported only once.)
+S-01-120-N-ok.asm:20: error: undefined symbol `println' (first use)
+'yasm' failed
 <font color='white' style='background: blue;'>---------------------------U-01-121-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 97("(")
@@ -90318,11 +90320,12 @@ Stack now 0 2 22
 Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+5: wrong type for return expression
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/Z-01-126-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_Z-01-126-N-ok.out	Wed May 29 17:40:48 2024
+*** expected/Z-01-126-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_Z-01-126-N-ok.out	Wed May 29 18:40:49 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 2
@@ -92166,8 +92169,8 @@ Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/Z-04-129-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_Z-04-129-N-ok.out	Wed May 29 17:40:48 2024
+*** expected/Z-04-129-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_Z-04-129-N-ok.out	Wed May 29 18:40:49 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 12
@@ -92743,8 +92746,8 @@ Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/Z-05-130-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_Z-05-130-N-ok.out	Wed May 29 17:40:48 2024
+*** expected/Z-05-130-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_Z-05-130-N-ok.out	Wed May 29 18:40:49 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 21
@@ -93733,8 +93736,8 @@ Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/Z-06-131-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_Z-06-131-N-ok.out	Wed May 29 17:40:48 2024
+*** expected/Z-06-131-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_Z-06-131-N-ok.out	Wed May 29 18:40:49 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 23
@@ -94791,8 +94794,8 @@ Stack now 0 2 22
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/Z-07-132-N-ok.out	Wed May 29 17:23:38 2024
---- logs/058_Z-07-132-N-ok.out	Wed May 29 17:40:48 2024
+*** expected/Z-07-132-N-ok.out	Wed May 29 18:23:42 2024
+--- logs/058_Z-07-132-N-ok.out	Wed May 29 18:40:49 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 23
