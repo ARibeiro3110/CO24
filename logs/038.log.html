@@ -1881,8 +1881,8 @@ Cleanup: popping nterm file ()
 3: return statement outside begin end block
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/A-08-8-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_A-08-8-N-ok.out	Thu May 30 15:38:55 2024
+ok. Running: *** expected/A-08-8-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_A-08-8-N-ok.out	Thu May 30 16:37:32 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! xYz
@@ -31497,8 +31497,8 @@ Cleanup: popping nterm file ()
 14: return statement outside begin end block
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/F-03-69-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_F-03-69-N-ok.out	Thu May 30 15:38:57 2024
+ok. Running: *** expected/F-03-69-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_F-03-69-N-ok.out	Thu May 30 16:37:35 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1,9 ****</font>
 ! I	ER x=1
@@ -33476,16 +33476,10 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-1: cannot declare variable of type void
-3: undeclared variable 'f'
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-07-76-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_G-07-76-N-ok.out	Thu May 30 15:38:58 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 4
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+4: return value specified for void function
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------G-08-77-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -33944,9 +33938,10 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------J-01-78-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -34332,16 +34327,10 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-1: cannot declare variable of type void
-3: undeclared variable 'f'
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/J-01-78-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_J-01-78-N-ok.out	Thu May 30 15:38:58 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- ola
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+4: return value specified for void function
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------J-02-79-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -34759,9 +34748,9 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------J-03-80-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -35190,9 +35179,10 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+4: wrong type for return expression
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------J-04-81-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -35751,10 +35741,10 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-2: cannot declare variable of type void
-Compiler: failed (139/0). YASM: J-04-81-N-ok.asm:8: error: undefined symbol `f' (first use)
-J-04-81-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+5: return value specified for void function
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------J-05-82-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -36176,9 +36166,9 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------J-06-83-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -37079,16 +37069,10 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-1: cannot declare variable of type void
-3: undeclared variable 'f'
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/J-07-84-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_J-07-84-N-ok.out	Thu May 30 15:38:58 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 3
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+4: return value specified for void function
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------J-08-85-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -37554,16 +37538,9 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-1: wrong type in initializer for variable 'f'
-3: undeclared variable 'f'
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/J-08-85-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_J-08-85-N-ok.out	Thu May 30 15:38:58 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 2
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------K-01-86-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -38181,11 +38158,10 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-2: cannot declare variable of type void
-4: undeclared variable 'f'
-Compiler: failed (139/0). YASM: K-01-86-N-ok.asm:16: error: undefined symbol `printi' (first use)
-K-01-86-N-ok.asm:16: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+6: return value specified for void function
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------K-02-87-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -38647,11 +38623,12 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-1: cannot declare variable of type void
-3: undeclared variable 'f'
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/K-02-87-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_K-02-87-N-ok.out	Thu May 30 15:38:58 2024
+3: wrong number of arguments in function call
+4: return value specified for void function
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: *** expected/K-02-87-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_K-02-87-N-ok.out	Thu May 30 16:37:35 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 3
@@ -39248,11 +39225,12 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-1: cannot declare variable of type void
-3: undeclared variable 'f'
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/K-03-88-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_K-03-88-N-ok.out	Thu May 30 15:38:58 2024
+3: wrong number of arguments in function call
+4: return value specified for void function
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: *** expected/K-03-88-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_K-03-88-N-ok.out	Thu May 30 16:37:35 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 7
@@ -39805,9 +39783,14 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+3: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/K-04-89-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_K-04-89-N-ok.out	Thu May 30 16:37:35 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 4
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------K-05-90-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -40428,9 +40411,14 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+3: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/K-05-90-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_K-05-90-N-ok.out	Thu May 30 16:37:35 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 6
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------K-06-91-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -41181,9 +41169,14 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+3: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/K-06-91-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_K-06-91-N-ok.out	Thu May 30 16:37:35 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 10
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------K-07-92-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -41722,9 +41715,16 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: K-07-92-N-ok.asm:14: error: undefined symbol `prints' (first use)
-K-07-92-N-ok.asm:14: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+3: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: *** expected/K-07-92-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_K-07-92-N-ok.out	Thu May 30 16:37:35 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- ola
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------K-08-93-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -42746,9 +42746,17 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: K-08-93-N-ok.asm:15: error: undefined symbol `prints' (first use)
-K-08-93-N-ok.asm:15: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+3: redeclaration of variable 'g'
+5: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: *** expected/K-08-93-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_K-08-93-N-ok.out	Thu May 30 16:37:35 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- ola
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------K-09-94-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -43824,9 +43832,11 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: K-09-94-N-ok.asm:14: error: undefined symbol `g' (first use)
-K-09-94-N-ok.asm:14: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+3: redeclaration of variable 'g'
+5: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ld: K-09-94-N-ok.o: in function `no symbol':
+K-09-94-N-ok.asm:(.text._L1+0xe): undefined reference to `g'
+'ld' failed
 <font color='white' style='background: blue;'>---------------------------K-10-95-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -44904,9 +44914,11 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: K-10-95-N-ok.asm:14: error: undefined symbol `g' (first use)
-K-10-95-N-ok.asm:14: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+3: redeclaration of variable 'g'
+5: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ld: K-10-95-N-ok.o: in function `no symbol':
+K-10-95-N-ok.asm:(.text._L1+0xe): undefined reference to `g'
+'ld' failed
 <font color='white' style='background: blue;'>---------------------------K-11-96-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -45932,9 +45944,17 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: K-11-96-N-ok.asm:14: error: undefined symbol `prints' (first use)
-K-11-96-N-ok.asm:14: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+3: redeclaration of variable 'g'
+5: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: *** expected/K-11-96-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_K-11-96-N-ok.out	Thu May 30 16:37:36 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- ola
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------L-01-97-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -47024,10 +47044,15 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: L-01-97-N-ok.asm:22: error: undefined symbol `_L3' (first use)
-L-01-97-N-ok.asm:22: error:  (Each undefined symbol is reported only once.)
-L-01-97-N-ok.asm:31: error: undefined symbol `_L4' (first use)
-'yasm' failed
+6: wrong number of arguments in function call
+11: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/L-01-97-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_L-01-97-N-ok.out	Thu May 30 16:37:36 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 15
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------L-02-98-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -48925,10 +48950,11 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: L-02-98-N-ok.asm:38: error: undefined symbol `_L4' (first use)
-L-02-98-N-ok.asm:38: error:  (Each undefined symbol is reported only once.)
-L-02-98-N-ok.asm:52: error: undefined symbol `g' (first use)
-'yasm' failed
+15: redeclaration of variable 'g'
+17: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ld: L-02-98-N-ok.o: in function `no symbol':
+L-02-98-N-ok.asm:(.text._L1+0x59): undefined reference to `g'
+'ld' failed
 <font color='white' style='background: blue;'>---------------------------L-03-99-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -50831,10 +50857,11 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: L-03-99-N-ok.asm:37: error: undefined symbol `_L4' (first use)
-L-03-99-N-ok.asm:37: error:  (Each undefined symbol is reported only once.)
-L-03-99-N-ok.asm:51: error: undefined symbol `g' (first use)
-'yasm' failed
+15: redeclaration of variable 'g'
+17: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ld: L-03-99-N-ok.o: in function `no symbol':
+L-03-99-N-ok.asm:(.text._L1+0x59): undefined reference to `g'
+'ld' failed
 <font color='white' style='background: blue;'>---------------------------O-01-100-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -51605,9 +51632,16 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+3: wrong number of arguments in function call
+4: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/O-01-100-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_O-01-100-N-ok.out	Thu May 30 16:37:36 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 1.3E15
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------O-02-101-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -52227,9 +52261,16 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+3: wrong number of arguments in function call
+4: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/O-02-101-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_O-02-101-N-ok.out	Thu May 30 16:37:36 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 1E12
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------O-03-102-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -52844,9 +52885,16 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+3: wrong number of arguments in function call
+4: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/O-03-102-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_O-03-102-N-ok.out	Thu May 30 16:37:36 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 99
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------P-01-103-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -53685,8 +53733,8 @@ Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/P-01-103-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_P-01-103-N-ok.out	Thu May 30 15:38:58 2024
+*** expected/P-01-103-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_P-01-103-N-ok.out	Thu May 30 16:37:36 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 6.2E33.1E3
@@ -54981,8 +55029,8 @@ Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/P-02-104-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_P-02-104-N-ok.out	Thu May 30 15:38:59 2024
+*** expected/P-02-104-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_P-02-104-N-ok.out	Thu May 30 16:37:36 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 378
@@ -57924,8 +57972,8 @@ Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/P-03-105-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_P-03-105-N-ok.out	Thu May 30 15:38:59 2024
+*** expected/P-03-105-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_P-03-105-N-ok.out	Thu May 30 16:37:36 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1,2 ****</font>
 -   2222
@@ -59520,8 +59568,8 @@ Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/P-04-106-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_P-04-106-N-ok.out	Thu May 30 15:38:59 2024
+*** expected/P-04-106-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_P-04-106-N-ok.out	Thu May 30 16:37:36 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 4444441.6E1
@@ -60265,8 +60313,8 @@ Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/P-05-107-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_P-05-107-N-ok.out	Thu May 30 15:38:59 2024
+*** expected/P-05-107-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_P-05-107-N-ok.out	Thu May 30 16:37:36 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 6
@@ -61496,8 +61544,8 @@ Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/P-06-108-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_P-06-108-N-ok.out	Thu May 30 15:38:59 2024
+*** expected/P-06-108-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_P-06-108-N-ok.out	Thu May 30 16:37:36 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 3
@@ -62865,9 +62913,14 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/P-07-109-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_P-07-109-N-ok.out	Thu May 30 16:37:36 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 1
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------Q-01-110-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -64298,9 +64351,14 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/Q-01-110-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_Q-01-110-N-ok.out	Thu May 30 16:37:36 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 6.1E1
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------Q-02-111-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -65780,9 +65838,14 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/Q-02-111-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_Q-02-111-N-ok.out	Thu May 30 16:37:36 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 6.1E1
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------Q-03-112-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -67561,9 +67624,15 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+4: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/Q-05-114-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_Q-05-114-N-ok.out	Thu May 30 16:37:36 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 6.1E1
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------Q-06-115-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -68258,9 +68327,14 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+4: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/Q-06-115-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_Q-06-115-N-ok.out	Thu May 30 16:37:36 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 6.1E1
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------Q-07-116-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -69536,9 +69610,14 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/Q-07-116-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_Q-07-116-N-ok.out	Thu May 30 16:37:36 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 6.1E1
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------R-01-117-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -70413,9 +70492,9 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------R-02-118-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -71321,9 +71400,9 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------S-01-119-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -71880,16 +71959,10 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-3: wrong type in right argument of assignment expression
 5: return statement outside begin end block
-Compiler: ok (0/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/S-01-119-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_S-01-119-N-ok.out	Thu May 30 15:38:59 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 3
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------S-01-120-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -72443,16 +72516,10 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-3: wrong type in right argument of assignment expression
 5: return statement outside begin end block
-Compiler: ok (0/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/S-01-120-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_S-01-120-N-ok.out	Thu May 30 15:38:59 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 3
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------U-01-121-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -73887,9 +73954,15 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+4: wrong number of arguments in function call
+5: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/U-01-121-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_U-01-121-N-ok.out	Thu May 30 16:37:37 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 46
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------U-02-122-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -76000,9 +76073,16 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+4: wrong number of arguments in function call
+5: wrong number of arguments in function call
+6: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/U-02-122-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_U-02-122-N-ok.out	Thu May 30 16:37:37 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 4630
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------U-03-123-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -79411,9 +79491,17 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+5: wrong number of arguments in function call
+6: wrong number of arguments in function call
+7: wrong number of arguments in function call
+8: wrong number of arguments in function call
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/U-03-123-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_U-03-123-N-ok.out	Thu May 30 16:37:37 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 463025
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------X-01-124-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -81805,9 +81893,9 @@ Cleanup: popping nterm file ()
 8: undeclared variable 'f'
 9: undeclared variable 'ff'
 10: undeclared variable 'h'
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/X-01-124-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_X-01-124-N-ok.out	Thu May 30 15:38:59 2024
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/X-01-124-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_X-01-124-N-ok.out	Thu May 30 16:37:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 1.1-1-1-1
@@ -84442,9 +84530,9 @@ Cleanup: popping nterm file ()
 7: undeclared variable 'f'
 8: undeclared variable 'ff'
 9: undeclared variable 'g'
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/X-02-125-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_X-02-125-N-ok.out	Thu May 30 15:38:59 2024
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/X-02-125-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_X-02-125-N-ok.out	Thu May 30 16:37:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 1.1-12-2
@@ -85396,9 +85484,19 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+1: wrong type for return expression
+5: wrong type for return expression
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: *** expected/Z-01-126-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_Z-01-126-N-ok.out	Thu May 30 16:37:37 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+! 2
+<font color="brown">--- 1 ----</font>
+! 134516736
+\ No newline at end of file
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------Z-02-127-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 126("(")
@@ -86000,12 +86098,12 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-2: wrong type in function call
-2: wrong type in function call
+2: wrong number of arguments in function call
+2: wrong number of arguments in function call
 3: undeclared variable 'i'
 4: return statement outside begin end block
-Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/Z-02-127-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_Z-02-127-N-ok.out	Thu May 30 15:38:59 2024
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/Z-02-127-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_Z-02-127-N-ok.out	Thu May 30 16:37:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 2
@@ -86612,12 +86710,12 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-2: wrong type in function call
-2: wrong type in function call
+2: wrong number of arguments in function call
+2: wrong number of arguments in function call
 3: undeclared variable 'i'
 4: return statement outside begin end block
-Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/Z-03-128-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_Z-03-128-N-ok.out	Thu May 30 15:38:59 2024
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/Z-03-128-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_Z-03-128-N-ok.out	Thu May 30 16:37:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 2
@@ -87162,10 +87260,10 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-2: wrong type in function call
+2: wrong number of arguments in function call
 3: return statement outside begin end block
-Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/Z-04-129-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_Z-04-129-N-ok.out	Thu May 30 15:38:59 2024
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/Z-04-129-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_Z-04-129-N-ok.out	Thu May 30 16:37:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 12
@@ -87710,10 +87808,10 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-2: wrong type in function call
+2: wrong number of arguments in function call
 3: return statement outside begin end block
-Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/Z-05-130-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_Z-05-130-N-ok.out	Thu May 30 15:38:59 2024
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/Z-05-130-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_Z-05-130-N-ok.out	Thu May 30 16:37:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 21
@@ -88664,8 +88762,8 @@ Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/Z-06-131-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_Z-06-131-N-ok.out	Thu May 30 15:39:00 2024
+*** expected/Z-06-131-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_Z-06-131-N-ok.out	Thu May 30 16:37:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 23
@@ -89675,8 +89773,8 @@ Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/Z-07-132-N-ok.out	Thu May 30 15:23:53 2024
---- logs/038_Z-07-132-N-ok.out	Thu May 30 15:39:00 2024
+*** expected/Z-07-132-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/038_Z-07-132-N-ok.out	Thu May 30 16:37:37 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 23
