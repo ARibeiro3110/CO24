@@ -5,78 +5,12 @@ til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict c
 til_parser.y:135.12-106: warning: rule useless in parser due to conflicts [-Wother]
   135 | typevoid : tTYPEVOID                              { $$ = cdk::primiti...
       |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_string_node(cdk::string_node*, int)':
-targets/postfix_writer.cpp:81:28: error: no match for 'operator=' (operand types are 'const std::__cxx11::basic_string<char>' and 'int')
-   81 |   _pf.LABEL(mklbl(lbl1 = ++_lbl)); // give the string a name
-      |                            ^~~~
-In file included from /usr/include/c++/13/string:54,
-                 from targets/postfix_writer.cpp:1:
-/usr/include/c++/13/bits/basic_string.h:835:7: note: candidate: 'constexpr std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(_CharT) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]' (near match)
-  835 |       operator=(_CharT __c)
-      |       ^~~~~~~~
-/usr/include/c++/13/bits/basic_string.h:835:7: note:   passing 'const std::__cxx11::basic_string<char>*' as 'this' argument discards qualifiers
-/usr/include/c++/13/bits/basic_string.h:823:7: note: candidate: 'constexpr std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]' (near match)
-  823 |       operator=(const _CharT* __s)
-      |       ^~~~~~~~
-/usr/include/c++/13/bits/basic_string.h:823:7: note:   conversion of argument 1 would be ill-formed:
-targets/postfix_writer.cpp:81:26: error: invalid conversion from 'int' to 'const char*' [-fpermissive]
-   81 |   _pf.LABEL(mklbl(lbl1 = ++_lbl)); // give the string a name
-      |                          ^~~~~~
-      |                          |
-      |                          int
-/usr/include/c++/13/bits/basic_string.h:921:7: note: candidate: 'constexpr std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(std::initializer_list<_Tp>) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'
-  921 |       operator=(initializer_list<_CharT> __l)
-      |       ^~~~~~~~
-/usr/include/c++/13/bits/basic_string.h:921:42: note:   no known conversion for argument 1 from 'int' to 'std::initializer_list<char>'
-  921 |       operator=(initializer_list<_CharT> __l)
-      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
-/usr/include/c++/13/bits/basic_string.h:853:7: note: candidate: 'constexpr std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'
-  853 |       operator=(basic_string&& __str)
-      |       ^~~~~~~~
-/usr/include/c++/13/bits/basic_string.h:853:32: note:   no known conversion for argument 1 from 'int' to 'std::__cxx11::basic_string<char>&&'
-  853 |       operator=(basic_string&& __str)
-      |                 ~~~~~~~~~~~~~~~^~~~~
-/usr/include/c++/13/bits/basic_string.h:812:7: note: candidate: 'constexpr std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'
-  812 |       operator=(const basic_string& __str)
-      |       ^~~~~~~~
-/usr/include/c++/13/bits/basic_string.h:812:37: note:   no known conversion for argument 1 from 'int' to 'const std::__cxx11::basic_string<char>&'
-  812 |       operator=(const basic_string& __str)
-      |                 ~~~~~~~~~~~~~~~~~~~~^~~~~
-/usr/include/c++/13/bits/basic_string.h:936:8: note: candidate: 'template<class _Tp> constexpr std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_If_sv<_Tp, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&> std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(const _Tp&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'
-  936 |        operator=(const _Tp& __svt)
-      |        ^~~~~~~~
-/usr/include/c++/13/bits/basic_string.h:936:8: note:   template argument deduction/substitution failed:
-In file included from /usr/include/c++/13/bits/char_traits.h:50,
-                 from /usr/include/c++/13/string:42:
-/usr/include/c++/13/type_traits: In substitution of 'template<bool _Cond, class _Tp> using std::enable_if_t = typename std::enable_if::type [with bool _Cond = false; _Tp = std::__cxx11::basic_string<char>&]':
-/usr/include/c++/13/bits/basic_string.h:144:8:   required by substitution of 'template<class _CharT, class _Traits, class _Alloc> template<class _Tp, class _Res> using std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::_If_sv = std::enable_if_t<std::__and_<std::is_convertible<const _Tp&, std::basic_string_view<_CharT, _Traits> >, std::__not_<std::is_convertible<const _Tp*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>*> >, std::__not_<std::is_convertible<const _Tp&, const _CharT*> > >::value, _Res> [with _Tp = int; _Res = std::__cxx11::basic_string<char>&; _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]'
-/usr/include/c++/13/bits/basic_string.h:936:8:   required by substitution of 'template<class _Tp> constexpr std::__cxx11::basic_string<char>::_If_sv<_Tp, std::__cxx11::basic_string<char>&> std::__cxx11::basic_string<char>::operator=(const _Tp&) [with _Tp = int]'
-targets/postfix_writer.cpp:81:28:   required from here
-/usr/include/c++/13/type_traits:2610:11: error: no type named 'type' in 'struct std::enable_if<false, std::__cxx11::basic_string<char>&>'
- 2610 |     using enable_if_t = typename enable_if<_Cond, _Tp>::type;
-      |           ^~~~~~~~~~~
-targets/postfix_writer.cpp:87:20: error: cannot convert 'const std::__cxx11::basic_string<char>' to 'int'
-   87 |     _pf.ADDR(mklbl(lbl1)); // the string to be printed
-      |                    ^~~~
-      |                    |
-      |                    const std::__cxx11::basic_string<char>
-In file included from targets/postfix_writer.cpp:4:
-./targets/postfix_writer.h:55:34: note:   initializing argument 1 of 'std::string til::postfix_writer::mklbl(int)'
-   55 |     inline std::string mklbl(int lbl) {
-      |                              ~~~~^~~
-targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_function_def_node(til::function_def_node*, int)':
-targets/postfix_writer.cpp:352:28: error: 'make_symbol' is not a member of 'til'; did you mean 'create_symbol'?
-  352 |     const auto main = til::make_symbol(cdk::functional_type::create(cdk::primitive_type::create(
-      |                            ^~~~~~~~~~~
-      |                            create_symbol
-targets/postfix_writer.cpp:370:11: error: 'class til::function_def_node' has no member named 'block'
-  370 |     node->block()->accept(this, lvl + 2);
-      |           ^~~~~
-targets/postfix_writer.cpp:425:15: error: 'class til::function_def_node' has no member named 'block'
-  425 |     if (node->block())
-      |               ^~~~~
-targets/postfix_writer.cpp:426:13: error: 'class til::function_def_node' has no member named 'block'
-  426 |       node->block()->accept(this, lvl + 2);
-      |             ^~~~~
-make: *** [Makefile:46: targets/postfix_writer.o] Error 1
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/frame_size_calculator.o:(.rodata._ZTVN3til21frame_size_calculatorE[_ZTVN3til21frame_size_calculatorE]+0xd0): undefined reference to `til::frame_size_calculator::do_unary_minus_node(cdk::unary_minus_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/frame_size_calculator.o:(.rodata._ZTVN3til21frame_size_calculatorE[_ZTVN3til21frame_size_calculatorE]+0xd8): undefined reference to `til::frame_size_calculator::do_unary_plus_node(cdk::unary_plus_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/frame_size_calculator.o:(.rodata._ZTVN3til21frame_size_calculatorE[_ZTVN3til21frame_size_calculatorE]+0x120): undefined reference to `til::frame_size_calculator::do_if_else_node(til::if_else_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/frame_size_calculator.o:(.rodata._ZTVN3til21frame_size_calculatorE[_ZTVN3til21frame_size_calculatorE]+0x158): undefined reference to `til::frame_size_calculator::do_read_node(til::read_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0xd0): undefined reference to `til::type_checker::do_unary_minus_node(cdk::unary_minus_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/type_checker.o:(.rodata._ZTVN3til12type_checkerE[_ZTVN3til12type_checkerE]+0xd8): undefined reference to `til::type_checker::do_unary_plus_node(cdk::unary_plus_node*, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:72: til] Error 1
 
