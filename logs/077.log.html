@@ -1,3 +1,25 @@
 <pre>
 Checking project structure...
+til_parser.y: warning: 3 reduce/reduce conflicts [-Wconflicts-rr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_parser.y:135.12-106: warning: rule useless in parser due to conflicts [-Wother]
+  135 | typevoid : tTYPEVOID                              { $$ = cdk::primiti...
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_stop_node(til::stop_node*, int)':
+targets/xml_writer.cpp:202:49: error: 'class til::stop_node' has no member named 'nvalue'
+  202 |   os() << std::string(lvl, ' ') << "<" << node->nvalue() << " levels='" << node->nvalue() << "'>" << std::endl;
+      |                                                 ^~~~~~
+targets/xml_writer.cpp:202:82: error: 'class til::stop_node' has no member named 'nvalue'
+  202 |   os() << std::string(lvl, ' ') << "<" << node->nvalue() << " levels='" << node->nvalue() << "'>" << std::endl;
+      |                                                                                  ^~~~~~
+targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_next_node(til::next_node*, int)':
+targets/xml_writer.cpp:208:49: error: 'class til::next_node' has no member named 'nvalue'; did you mean 'nval'?
+  208 |   os() << std::string(lvl, ' ') << "<" << node->nvalue() << " level='" << node->nvalue() << "'>" << std::endl;
+      |                                                 ^~~~~~
+      |                                                 nval
+targets/xml_writer.cpp:208:81: error: 'class til::next_node' has no member named 'nvalue'; did you mean 'nval'?
+  208 |   os() << std::string(lvl, ' ') << "<" << node->nvalue() << " level='" << node->nvalue() << "'>" << std::endl;
+      |                                                                                 ^~~~~~
+      |                                                                                 nval
+make: *** [Makefile:46: targets/xml_writer.o] Error 1
 
