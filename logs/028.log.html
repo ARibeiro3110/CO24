@@ -1,6 +1,6 @@
 <pre>
 Checking project structure...
-til_parser.y: warning: 1 shift/reduce conflict [-Wconflicts-sr]
+til_parser.y: warning: 47 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -1701,8 +1701,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/A-07-7-N-ok.out	Thu May 30 19:23:41 2024
---- logs/028_A-07-7-N-ok.out	Thu May 30 19:34:50 2024
+ok. Running: *** expected/A-07-7-N-ok.out	Thu May 30 20:23:41 2024
+--- logs/028_A-07-7-N-ok.out	Thu May 30 20:34:30 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 <font color="brown">--- 1,2 ----</font>
@@ -1932,8 +1932,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/A-08-8-N-ok.out	Thu May 30 19:23:41 2024
---- logs/028_A-08-8-N-ok.out	Thu May 30 19:34:50 2024
+ok. Running: *** expected/A-08-8-N-ok.out	Thu May 30 20:23:41 2024
+--- logs/028_A-08-8-N-ok.out	Thu May 30 20:34:30 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! xYz
@@ -2036,7 +2036,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 136
 Stack now 0 1 15 57 108 153 38 39 87 136
-Reducing stack by rule 65 (line 171):
+Reducing stack by rule 66 (line 172):
    $1 = token '+' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -2049,7 +2049,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -2318,7 +2318,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 138
 Stack now 0 1 15 57 108 153 38 39 87 38 41 89 138
-Reducing stack by rule 67 (line 173):
+Reducing stack by rule 69 (line 175):
    $1 = token '*' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -2331,14 +2331,14 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 39 87 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
 -> $$ = nterm expr ()
 Entering state 136
 Stack now 0 1 15 57 108 153 38 39 87 136
-Reducing stack by rule 65 (line 171):
+Reducing stack by rule 66 (line 172):
    $1 = token '+' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -2352,7 +2352,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -2615,7 +2615,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 138
 Stack now 0 1 15 57 108 153 38 40 88 38 41 89 138
-Reducing stack by rule 67 (line 173):
+Reducing stack by rule 69 (line 175):
    $1 = token '*' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -2628,14 +2628,14 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 40 88 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
 -> $$ = nterm expr ()
 Entering state 137
 Stack now 0 1 15 57 108 153 38 40 88 137
-Reducing stack by rule 66 (line 172):
+Reducing stack by rule 68 (line 174):
    $1 = token '-' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -2649,7 +2649,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -2912,7 +2912,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 136
 Stack now 0 1 15 57 108 153 38 40 88 38 39 87 136
-Reducing stack by rule 65 (line 171):
+Reducing stack by rule 66 (line 172):
    $1 = token '+' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -2925,14 +2925,14 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 40 88 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
 -> $$ = nterm expr ()
 Entering state 137
 Stack now 0 1 15 57 108 153 38 40 88 137
-Reducing stack by rule 66 (line 172):
+Reducing stack by rule 68 (line 174):
    $1 = token '-' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -2946,7 +2946,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -3183,7 +3183,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 137
 Stack now 0 1 15 57 108 153 38 40 88 137
-Reducing stack by rule 66 (line 172):
+Reducing stack by rule 68 (line 174):
    $1 = token '-' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -3196,7 +3196,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -3435,7 +3435,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 139
 Stack now 0 1 15 57 108 153 38 42 90 139
-Reducing stack by rule 68 (line 174):
+Reducing stack by rule 70 (line 176):
    $1 = token '/' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -3448,7 +3448,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -3687,7 +3687,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 140
 Stack now 0 1 15 57 108 153 38 43 91 140
-Reducing stack by rule 69 (line 175):
+Reducing stack by rule 71 (line 177):
    $1 = token '%' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -3700,7 +3700,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -3936,7 +3936,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 141
 Stack now 0 1 15 57 108 153 38 44 92 141
-Reducing stack by rule 70 (line 176):
+Reducing stack by rule 72 (line 178):
    $1 = token '<' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -3949,7 +3949,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -4187,7 +4187,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 142
 Stack now 0 1 15 57 108 153 38 45 93 142
-Reducing stack by rule 71 (line 177):
+Reducing stack by rule 73 (line 179):
    $1 = token '>' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -4200,7 +4200,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -4454,7 +4454,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 142
 Stack now 0 1 15 57 108 153 38 32 38 45 93 142
-Reducing stack by rule 71 (line 177):
+Reducing stack by rule 73 (line 179):
    $1 = token '>' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -4467,14 +4467,14 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 32 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
 -> $$ = nterm expr ()
 Entering state 76
 Stack now 0 1 15 57 108 153 38 32 76
-Reducing stack by rule 79 (line 185):
+Reducing stack by rule 81 (line 187):
    $1 = token tNOT ()
    $2 = nterm expr ()
 -> $$ = nterm expr ()
@@ -4487,7 +4487,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -4737,7 +4737,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 141
 Stack now 0 1 15 57 108 153 38 32 38 44 92 141
-Reducing stack by rule 70 (line 176):
+Reducing stack by rule 72 (line 178):
    $1 = token '<' ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -4750,14 +4750,14 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 32 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
 -> $$ = nterm expr ()
 Entering state 76
 Stack now 0 1 15 57 108 153 38 32 76
-Reducing stack by rule 79 (line 185):
+Reducing stack by rule 81 (line 187):
    $1 = token tNOT ()
    $2 = nterm expr ()
 -> $$ = nterm expr ()
@@ -4770,7 +4770,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -5005,7 +5005,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 128
 Stack now 0 1 15 57 108 153 38 36 80 128
-Reducing stack by rule 75 (line 181):
+Reducing stack by rule 77 (line 183):
    $1 = token tEQ ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -5018,7 +5018,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -5271,7 +5271,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 128
 Stack now 0 1 15 57 108 153 38 32 38 36 80 128
-Reducing stack by rule 75 (line 181):
+Reducing stack by rule 77 (line 183):
    $1 = token tEQ ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -5284,14 +5284,14 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 32 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
 -> $$ = nterm expr ()
 Entering state 76
 Stack now 0 1 15 57 108 153 38 32 76
-Reducing stack by rule 79 (line 185):
+Reducing stack by rule 81 (line 187):
    $1 = token tNOT ()
    $2 = nterm expr ()
 -> $$ = nterm expr ()
@@ -5304,7 +5304,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -5556,7 +5556,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 128
 Stack now 0 1 15 57 108 153 38 30 38 36 80 128
-Reducing stack by rule 75 (line 181):
+Reducing stack by rule 77 (line 183):
    $1 = token tEQ ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -5569,7 +5569,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 30 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -5639,7 +5639,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 128
 Stack now 0 1 15 57 108 153 38 30 74 38 32 38 36 80 128
-Reducing stack by rule 75 (line 181):
+Reducing stack by rule 77 (line 183):
    $1 = token tEQ ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -5652,14 +5652,14 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 30 74 38 32 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
 -> $$ = nterm expr ()
 Entering state 76
 Stack now 0 1 15 57 108 153 38 30 74 38 32 76
-Reducing stack by rule 79 (line 185):
+Reducing stack by rule 81 (line 187):
    $1 = token tNOT ()
    $2 = nterm expr ()
 -> $$ = nterm expr ()
@@ -5672,14 +5672,14 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 30 74 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
 -> $$ = nterm expr ()
 Entering state 124
 Stack now 0 1 15 57 108 153 38 30 74 124
-Reducing stack by rule 77 (line 183):
+Reducing stack by rule 79 (line 185):
    $1 = token tAND ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -5693,7 +5693,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -5945,7 +5945,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 128
 Stack now 0 1 15 57 108 153 38 31 38 36 80 128
-Reducing stack by rule 75 (line 181):
+Reducing stack by rule 77 (line 183):
    $1 = token tEQ ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -5958,7 +5958,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 31 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -6012,7 +6012,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 128
 Stack now 0 1 15 57 108 153 38 31 75 38 36 80 128
-Reducing stack by rule 75 (line 181):
+Reducing stack by rule 77 (line 183):
    $1 = token tEQ ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -6025,14 +6025,14 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 31 75 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
 -> $$ = nterm expr ()
 Entering state 125
 Stack now 0 1 15 57 108 153 38 31 75 125
-Reducing stack by rule 78 (line 184):
+Reducing stack by rule 80 (line 186):
    $1 = token tOR ()
    $2 = nterm expr ()
    $3 = nterm expr ()
@@ -6046,7 +6046,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -6272,27 +6272,159 @@ Stack now 0 1 15 57 108 153 38 39 87
 Reading a token
 --accepting rule at line 73(")")
 Next token is token tRIGHT ()
-2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 15 57 108 153 38 39
-Error: popping token '+' ()
-Stack now 0 1 15 57 108 153 38
-Error: popping token tLEFT ()
+Reducing stack by rule 65 (line 171):
+   $1 = token '+' ()
+   $2 = nterm expr ()
+-> $$ = nterm expr ()
+Entering state 86
+Stack now 0 1 15 57 108 153 38 86
+Next token is token tRIGHT ()
+Shifting token tRIGHT ()
+Entering state 134
+Stack now 0 1 15 57 108 153 38 86 134
+Reducing stack by rule 87 (line 194):
+   $1 = token tLEFT ()
+   $2 = nterm expr ()
+   $3 = token tRIGHT ()
+-> $$ = nterm expr ()
+Entering state 168
+Stack now 0 1 15 57 108 153 168
+Reducing stack by rule 59 (line 161):
+   $1 = nterm expressions ()
+   $2 = nterm expr ()
+-> $$ = nterm expressions ()
+Entering state 153
 Stack now 0 1 15 57 108 153
-Error: popping nterm expressions ()
-Stack now 0 1 15 57 108
-Error: popping token tPRINTLN ()
-Stack now 0 1 15 57
-Error: popping token tLEFT ()
-Stack now 0 1 15
-Error: popping token tPROGRAM ()
-Stack now 0 1
-Error: popping token tLEFT ()
-Stack now 0
-Cleanup: discarding lookahead token tRIGHT ()
-Stack now 0
-** Syntax errors in B-16-24-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 73(")")
+Next token is token tRIGHT ()
+Shifting token tRIGHT ()
+Entering state 173
+Stack now 0 1 15 57 108 153 173
+Reducing stack by rule 46 (line 141):
+   $1 = token tLEFT ()
+   $2 = token tPRINTLN ()
+   $3 = nterm expressions ()
+   $4 = token tRIGHT ()
+-> $$ = nterm instruction ()
+Entering state 62
+Stack now 0 1 15 62
+Reducing stack by rule 42 (line 135):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 61
+Stack now 0 1 15 61
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144("     
+	")
+--accepting rule at line 72("(")
+Next token is token tLEFT ()
+Shifting token tLEFT ()
+Entering state 116
+Stack now 0 1 15 61 116
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 87("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 111
+Stack now 0 1 15 61 116 111
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 144(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 140("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 23
+Stack now 0 1 15 61 116 111 23
+Reducing stack by rule 60 (line 165):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 159
+Stack now 0 1 15 61 116 111 159
+Reading a token
+--accepting rule at line 73(")")
+Next token is token tRIGHT ()
+Shifting token tRIGHT ()
+Entering state 176
+Stack now 0 1 15 61 116 111 159 176
+Reducing stack by rule 52 (line 147):
+   $1 = token tLEFT ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token tRIGHT ()
+-> $$ = nterm instruction ()
+Entering state 117
+Stack now 0 1 15 61 117
+Reducing stack by rule 43 (line 136):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 61
+Stack now 0 1 15 61
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144(" 
+")
+--accepting rule at line 73(")")
+Next token is token tRIGHT ()
+Reducing stack by rule 27 (line 108):
+   $1 = nterm instructions ()
+-> $$ = nterm decls_instrs ()
+Entering state 59
+Stack now 0 1 15 59
+Next token is token tRIGHT ()
+Shifting token tRIGHT ()
+Entering state 115
+Stack now 0 1 15 59 115
+Reducing stack by rule 24 (line 103):
+   $1 = token tLEFT ()
+   $2 = token tPROGRAM ()
+   $3 = nterm decls_instrs ()
+   $4 = token tRIGHT ()
+-> $$ = nterm program ()
+Entering state 5
+Stack now 0 5
+Reducing stack by rule 3 (line 74):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 20
+Stack now 0 2 20
+Stack now 0 2 20
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-17-25-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 72("(")
@@ -6392,31 +6524,176 @@ Stack now 0 1 15 57 108 153 38 40 38 40 88
 Reading a token
 --accepting rule at line 73(")")
 Next token is token tRIGHT ()
-2: syntax error
-Error: popping nterm expr ()
-Stack now 0 1 15 57 108 153 38 40 38 40
-Error: popping token '-' ()
-Stack now 0 1 15 57 108 153 38 40 38
-Error: popping token tLEFT ()
-Stack now 0 1 15 57 108 153 38 40
-Error: popping token '-' ()
-Stack now 0 1 15 57 108 153 38
-Error: popping token tLEFT ()
+Reducing stack by rule 67 (line 173):
+   $1 = token '-' ()
+   $2 = nterm expr ()
+-> $$ = nterm expr ()
+Entering state 86
+Stack now 0 1 15 57 108 153 38 40 38 86
+Next token is token tRIGHT ()
+Shifting token tRIGHT ()
+Entering state 134
+Stack now 0 1 15 57 108 153 38 40 38 86 134
+Reducing stack by rule 87 (line 194):
+   $1 = token tLEFT ()
+   $2 = nterm expr ()
+   $3 = token tRIGHT ()
+-> $$ = nterm expr ()
+Entering state 88
+Stack now 0 1 15 57 108 153 38 40 88
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 73(")")
+Next token is token tRIGHT ()
+Reducing stack by rule 67 (line 173):
+   $1 = token '-' ()
+   $2 = nterm expr ()
+-> $$ = nterm expr ()
+Entering state 86
+Stack now 0 1 15 57 108 153 38 86
+Next token is token tRIGHT ()
+Shifting token tRIGHT ()
+Entering state 134
+Stack now 0 1 15 57 108 153 38 86 134
+Reducing stack by rule 87 (line 194):
+   $1 = token tLEFT ()
+   $2 = nterm expr ()
+   $3 = token tRIGHT ()
+-> $$ = nterm expr ()
+Entering state 168
+Stack now 0 1 15 57 108 153 168
+Reducing stack by rule 59 (line 161):
+   $1 = nterm expressions ()
+   $2 = nterm expr ()
+-> $$ = nterm expressions ()
+Entering state 153
 Stack now 0 1 15 57 108 153
-Error: popping nterm expressions ()
-Stack now 0 1 15 57 108
-Error: popping token tPRINTLN ()
-Stack now 0 1 15 57
-Error: popping token tLEFT ()
-Stack now 0 1 15
-Error: popping token tPROGRAM ()
-Stack now 0 1
-Error: popping token tLEFT ()
-Stack now 0
-Cleanup: discarding lookahead token tRIGHT ()
-Stack now 0
-** Syntax errors in B-17-25-N-ok.til
-Compiler: failed (1/0). Generated empty asm file
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 73(")")
+Next token is token tRIGHT ()
+Shifting token tRIGHT ()
+Entering state 173
+Stack now 0 1 15 57 108 153 173
+Reducing stack by rule 46 (line 141):
+   $1 = token tLEFT ()
+   $2 = token tPRINTLN ()
+   $3 = nterm expressions ()
+   $4 = token tRIGHT ()
+-> $$ = nterm instruction ()
+Entering state 62
+Stack now 0 1 15 62
+Reducing stack by rule 42 (line 135):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 61
+Stack now 0 1 15 61
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144(" 
+	")
+--accepting rule at line 72("(")
+Next token is token tLEFT ()
+Shifting token tLEFT ()
+Entering state 116
+Stack now 0 1 15 61 116
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 87("return")
+Next token is token tRETURN ()
+Shifting token tRETURN ()
+Entering state 111
+Stack now 0 1 15 61 116 111
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 144(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 140("0")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 23
+Stack now 0 1 15 61 116 111 23
+Reducing stack by rule 60 (line 165):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 159
+Stack now 0 1 15 61 116 111 159
+Reading a token
+--accepting rule at line 73(")")
+Next token is token tRIGHT ()
+Shifting token tRIGHT ()
+Entering state 176
+Stack now 0 1 15 61 116 111 159 176
+Reducing stack by rule 52 (line 147):
+   $1 = token tLEFT ()
+   $2 = token tRETURN ()
+   $3 = nterm expr ()
+   $4 = token tRIGHT ()
+-> $$ = nterm instruction ()
+Entering state 117
+Stack now 0 1 15 61 117
+Reducing stack by rule 43 (line 136):
+   $1 = nterm instructions ()
+   $2 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 61
+Stack now 0 1 15 61
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144(" 
+")
+--accepting rule at line 73(")")
+Next token is token tRIGHT ()
+Reducing stack by rule 27 (line 108):
+   $1 = nterm instructions ()
+-> $$ = nterm decls_instrs ()
+Entering state 59
+Stack now 0 1 15 59
+Next token is token tRIGHT ()
+Shifting token tRIGHT ()
+Entering state 115
+Stack now 0 1 15 59 115
+Reducing stack by rule 24 (line 103):
+   $1 = token tLEFT ()
+   $2 = token tPROGRAM ()
+   $3 = nterm decls_instrs ()
+   $4 = token tRIGHT ()
+-> $$ = nterm program ()
+Entering state 5
+Stack now 0 5
+Reducing stack by rule 3 (line 74):
+   $1 = nterm program ()
+-> $$ = nterm file ()
+Entering state 2
+Stack now 0 2
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144("
+")
+--(end of buffer or a NUL)
+--EOF (start condition 0)
+Now at end of input.
+Shifting token "end of file" ()
+Entering state 20
+Stack now 0 2 20
+Stack now 0 2 20
+Cleanup: popping token "end of file" ()
+Cleanup: popping nterm file ()
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-20-26-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 72("(")
@@ -6757,8 +7034,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/B-20-26-N-ok.out	Thu May 30 19:23:41 2024
---- logs/028_B-20-26-N-ok.out	Thu May 30 19:34:50 2024
+ok. Running: *** expected/B-20-26-N-ok.out	Thu May 30 20:23:41 2024
+--- logs/028_B-20-26-N-ok.out	Thu May 30 20:34:31 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - OK
@@ -7104,8 +7381,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/B-21-27-N-ok.out	Thu May 30 19:23:41 2024
---- logs/028_B-21-27-N-ok.out	Thu May 30 19:34:50 2024
+ok. Running: *** expected/B-21-27-N-ok.out	Thu May 30 20:23:41 2024
+--- logs/028_B-21-27-N-ok.out	Thu May 30 20:34:31 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 <font color="brown">--- 1,2 ----</font>
@@ -7452,8 +7729,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/B-22-28-N-ok.out	Thu May 30 19:23:41 2024
---- logs/028_B-22-28-N-ok.out	Thu May 30 19:34:50 2024
+ok. Running: *** expected/B-22-28-N-ok.out	Thu May 30 20:23:41 2024
+--- logs/028_B-22-28-N-ok.out	Thu May 30 20:34:31 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - OK
@@ -7799,8 +8076,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/B-23-29-N-ok.out	Thu May 30 19:23:41 2024
---- logs/028_B-23-29-N-ok.out	Thu May 30 19:34:50 2024
+ok. Running: *** expected/B-23-29-N-ok.out	Thu May 30 20:23:41 2024
+--- logs/028_B-23-29-N-ok.out	Thu May 30 20:34:31 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 <font color="brown">--- 1,2 ----</font>
@@ -8580,7 +8857,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -8599,7 +8876,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -8612,7 +8889,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -8853,7 +9130,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -8872,7 +9149,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -8885,7 +9162,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -8937,7 +9214,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 61 116 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -9106,7 +9383,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -9125,7 +9402,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -9138,7 +9415,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -9389,7 +9666,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -9427,18 +9704,174 @@ Stack now 0 3 1 15 57 27 72 38 40 88
 Reading a token
 --accepting rule at line 73(")")
 Next token is token tRIGHT ()
-3: syntax error
-Error: popping nterm expr ()
-Stack now 0 3 1 15 57 27 72 38 40
+Reducing stack by rule 67 (line 173):
+   $1 = token '-' ()
+   $2 = nterm expr ()
+-> $$ = nterm expr ()
+Entering state 86
+Stack now 0 3 1 15 57 27 72 38 86
+Next token is token tRIGHT ()
+Shifting token tRIGHT ()
+Entering state 134
+Stack now 0 3 1 15 57 27 72 38 86 134
+Reducing stack by rule 87 (line 194):
+   $1 = token tLEFT ()
+   $2 = nterm expr ()
+   $3 = token tRIGHT ()
+-> $$ = nterm expr ()
+Entering state 123
+Stack now 0 3 1 15 57 27 72 123
+Reducing stack by rule 78 (line 184):
+   $1 = token tSET ()
+   $2 = nterm lval ()
+   $3 = nterm expr ()
+-> $$ = nterm expr ()
+Entering state 86
+Stack now 0 3 1 15 57 86
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 73(")")
+Next token is token tRIGHT ()
+Shifting token tRIGHT ()
+Entering state 134
+Stack now 0 3 1 15 57 86 134
+Reducing stack by rule 87 (line 194):
+   $1 = token tLEFT ()
+   $2 = nterm expr ()
+   $3 = token tRIGHT ()
+-> $$ = nterm expr ()
+Entering state 65
+Stack now 0 3 1 15 65
+Reducing stack by rule 44 (line 139):
+   $1 = nterm expr ()
+-> $$ = nterm instruction ()
+Entering state 62
+Stack now 0 3 1 15 62
+Reducing stack by rule 42 (line 135):
+   $1 = nterm instruction ()
+-> $$ = nterm instructions ()
+Entering state 61
+Stack now 0 3 1 15 61
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144(" 
+	")
+--accepting rule at line 72("(")
+Next token is token tLEFT ()
+Shifting token tLEFT ()
+Entering state 116
+Stack now 0 3 1 15 61 116
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 88("println")
+Next token is token tPRINTLN ()
+Shifting token tPRINTLN ()
+Entering state 108
+Stack now 0 3 1 15 61 116 108
+Reducing stack by rule 58 (line 159):
+-> $$ = nterm expressions ()
+Entering state 153
+Stack now 0 3 1 15 61 116 108 153
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 144(" ")
+--accepting rule at line 72("(")
+Next token is token tLEFT ()
+Shifting token tLEFT ()
+Entering state 38
+Stack now 0 3 1 15 61 116 108 153 38
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 142("+")
+Next token is token '+' ()
+Shifting token '+' ()
+Entering state 39
+Stack now 0 3 1 15 61 116 108 153 38 39
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 140("1")
+Next token is token tINTEGER ()
+Shifting token tINTEGER ()
+Entering state 23
+Stack now 0 3 1 15 61 116 108 153 38 39 23
+Reducing stack by rule 60 (line 165):
+   $1 = token tINTEGER ()
+-> $$ = nterm expr ()
+Entering state 87
+Stack now 0 3 1 15 61 116 108 153 38 39 87
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 144(" ")
+--accepting rule at line 72("(")
+Next token is token tLEFT ()
+Shifting token tLEFT ()
+Entering state 38
+Stack now 0 3 1 15 61 116 108 153 38 39 87 38
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 142("*")
+Next token is token '*' ()
+Shifting token '*' ()
+Entering state 41
+Stack now 0 3 1 15 61 116 108 153 38 39 87 38 41
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 144(" ")
+--accepting rule at line 72("(")
+Next token is token tLEFT ()
+Shifting token tLEFT ()
+Entering state 38
+Stack now 0 3 1 15 61 116 108 153 38 39 87 38 41 38
+Reading a token
+--(end of buffer or a NUL)
+--(end of buffer or a NUL)
+--accepting rule at line 142("-")
+Next token is token '-' ()
+Shifting token '-' ()
+Entering state 40
+Stack now 0 3 1 15 61 116 108 153 38 39 87 38 41 38 40
+Reading a token
+--(end of buffer or a NUL)
+--accepting rule at line 144(" ")
+--(end of buffer or a NUL)
+--accepting rule at line 106("x")
+Next token is token tIDENTIFIER ()
+4: syntax error
 Error: popping token '-' ()
-Stack now 0 3 1 15 57 27 72 38
+Stack now 0 3 1 15 61 116 108 153 38 39 87 38 41 38
 Error: popping token tLEFT ()
-Stack now 0 3 1 15 57 27 72
-Error: popping nterm lval ()
-Stack now 0 3 1 15 57 27
-Error: popping token tSET ()
-Stack now 0 3 1 15 57
+Stack now 0 3 1 15 61 116 108 153 38 39 87 38 41
+Error: popping token '*' ()
+Stack now 0 3 1 15 61 116 108 153 38 39 87 38
 Error: popping token tLEFT ()
+Stack now 0 3 1 15 61 116 108 153 38 39 87
+Error: popping nterm expr ()
+Stack now 0 3 1 15 61 116 108 153 38 39
+Error: popping token '+' ()
+Stack now 0 3 1 15 61 116 108 153 38
+Error: popping token tLEFT ()
+Stack now 0 3 1 15 61 116 108 153
+Error: popping nterm expressions ()
+Stack now 0 3 1 15 61 116 108
+Error: popping token tPRINTLN ()
+Stack now 0 3 1 15 61 116
+Error: popping token tLEFT ()
+Stack now 0 3 1 15 61
+Error: popping nterm instructions ()
 Stack now 0 3 1 15
 Error: popping token tPROGRAM ()
 Stack now 0 3 1
@@ -9446,7 +9879,7 @@ Error: popping token tLEFT ()
 Stack now 0 3
 Error: popping nterm declarations ()
 Stack now 0
-Cleanup: discarding lookahead token tRIGHT ()
+Cleanup: discarding lookahead token tIDENTIFIER ()
 Stack now 0
 ** Syntax errors in C-07-38-N-ok.til
 Compiler: failed (1/0). Generated empty asm file
@@ -12457,8 +12890,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/D-01-50-N-ok.out	Thu May 30 19:23:41 2024
---- logs/028_D-01-50-N-ok.out	Thu May 30 19:34:51 2024
+ok. Running: *** expected/D-01-50-N-ok.out	Thu May 30 20:23:41 2024
+--- logs/028_D-01-50-N-ok.out	Thu May 30 20:34:32 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - elif
@@ -13500,8 +13933,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/D-02-51-N-ok.out	Thu May 30 19:23:41 2024
---- logs/028_D-02-51-N-ok.out	Thu May 30 19:34:51 2024
+ok. Running: *** expected/D-02-51-N-ok.out	Thu May 30 20:23:41 2024
+--- logs/028_D-02-51-N-ok.out	Thu May 30 20:34:32 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - elif4
@@ -14544,8 +14977,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/D-03-52-N-ok.out	Thu May 30 19:23:41 2024
---- logs/028_D-03-52-N-ok.out	Thu May 30 19:34:51 2024
+ok. Running: *** expected/D-03-52-N-ok.out	Thu May 30 20:23:41 2024
+--- logs/028_D-03-52-N-ok.out	Thu May 30 20:34:32 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - OK
@@ -14655,7 +15088,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -14674,7 +15107,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -14687,7 +15120,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -14875,7 +15308,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -14894,7 +15327,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -14907,7 +15340,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -15164,7 +15597,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 61 116 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -15183,7 +15616,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 61 116 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -15196,7 +15629,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 61 116 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -15384,7 +15817,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -15403,7 +15836,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -15416,7 +15849,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -17648,7 +18081,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 73
 Stack now 0 1 15 57 108 153 38 29 73
-Reducing stack by rule 81 (line 187):
+Reducing stack by rule 83 (line 189):
    $1 = token tSIZEOF ()
    $2 = nterm expr ()
 -> $$ = nterm expr ()
@@ -17660,7 +18093,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -17887,7 +18320,7 @@ Reducing stack by rule 62 (line 167):
 -> $$ = nterm expr ()
 Entering state 73
 Stack now 0 1 15 57 108 153 38 29 73
-Reducing stack by rule 81 (line 187):
+Reducing stack by rule 83 (line 189):
    $1 = token tSIZEOF ()
    $2 = nterm expr ()
 -> $$ = nterm expr ()
@@ -17899,7 +18332,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -18127,7 +18560,7 @@ Reducing stack by rule 63 (line 168):
 -> $$ = nterm expr ()
 Entering state 73
 Stack now 0 1 15 57 108 153 38 29 73
-Reducing stack by rule 81 (line 187):
+Reducing stack by rule 83 (line 189):
    $1 = token tSIZEOF ()
    $2 = nterm expr ()
 -> $$ = nterm expr ()
@@ -18139,7 +18572,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -18371,7 +18804,7 @@ Reducing stack by rule 61 (line 166):
 -> $$ = nterm expr ()
 Entering state 73
 Stack now 0 1 15 57 108 153 38 29 73
-Reducing stack by rule 81 (line 187):
+Reducing stack by rule 83 (line 189):
    $1 = token tSIZEOF ()
    $2 = nterm expr ()
 -> $$ = nterm expr ()
@@ -18384,7 +18817,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 57 108 153 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -19017,7 +19450,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 133
 Stack now 0 1 10 47 38 85 133
-Reducing stack by rule 84 (line 191):
+Reducing stack by rule 86 (line 193):
    $1 = token tLEFT ()
    $2 = nterm function ()
    $3 = token tRIGHT ()
@@ -19306,7 +19739,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 133
 Stack now 0 1 10 47 38 85 133
-Reducing stack by rule 84 (line 191):
+Reducing stack by rule 86 (line 193):
    $1 = token tLEFT ()
    $2 = nterm function ()
    $3 = token tRIGHT ()
@@ -19619,7 +20052,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 133
 Stack now 0 1 10 47 38 85 133
-Reducing stack by rule 84 (line 191):
+Reducing stack by rule 86 (line 193):
    $1 = token tLEFT ()
    $2 = nterm function ()
    $3 = token tRIGHT ()
@@ -19863,7 +20296,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 133
 Stack now 0 1 10 47 38 85 133
-Reducing stack by rule 84 (line 191):
+Reducing stack by rule 86 (line 193):
    $1 = token tLEFT ()
    $2 = nterm function ()
    $3 = token tRIGHT ()
@@ -20142,7 +20575,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 133
 Stack now 0 1 10 47 38 85 133
-Reducing stack by rule 84 (line 191):
+Reducing stack by rule 86 (line 193):
    $1 = token tLEFT ()
    $2 = nterm function ()
    $3 = token tRIGHT ()
@@ -20728,7 +21161,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 133
 Stack now 0 1 10 47 38 85 133
-Reducing stack by rule 84 (line 191):
+Reducing stack by rule 86 (line 193):
    $1 = token tLEFT ()
    $2 = nterm function ()
    $3 = token tRIGHT ()
@@ -21488,7 +21921,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 133
 Stack now 0 1 18 68 38 85 133
-Reducing stack by rule 84 (line 191):
+Reducing stack by rule 86 (line 193):
    $1 = token tLEFT ()
    $2 = nterm function ()
    $3 = token tRIGHT ()
@@ -22547,10 +22980,22 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 106("x")
 Next token is token tIDENTIFIER ()
+Reducing stack by rule 65 (line 171):
+   $1 = token '+' ()
+   $2 = nterm expr ()
+-> $$ = nterm expr ()
+Entering state 86
+Stack now 0 1 10 47 38 82 130 165 183 189 57 111 38 86
+Next token is token tIDENTIFIER ()
+Reducing stack by rule 58 (line 159):
+-> $$ = nterm expressions ()
+Entering state 135
+Stack now 0 1 10 47 38 82 130 165 183 189 57 111 38 86 135
+Next token is token tIDENTIFIER ()
 1: syntax error
+Error: popping nterm expressions ()
+Stack now 0 1 10 47 38 82 130 165 183 189 57 111 38 86
 Error: popping nterm expr ()
-Stack now 0 1 10 47 38 82 130 165 183 189 57 111 38 39
-Error: popping token '+' ()
 Stack now 0 1 10 47 38 82 130 165 183 189 57 111 38
 Error: popping token tLEFT ()
 Stack now 0 1 10 47 38 82 130 165 183 189 57 111
@@ -22738,7 +23183,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 1 10 47 38 82 130 165 183 189 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -22757,7 +23202,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 1 10 47 38 82 130 165 183 189 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -22770,7 +23215,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 10 47 38 82 130 165 183 189 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -22845,10 +23290,22 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 106("x")
 Next token is token tIDENTIFIER ()
+Reducing stack by rule 65 (line 171):
+   $1 = token '+' ()
+   $2 = nterm expr ()
+-> $$ = nterm expr ()
+Entering state 86
+Stack now 0 1 10 47 38 82 130 165 183 189 61 116 111 38 86
+Next token is token tIDENTIFIER ()
+Reducing stack by rule 58 (line 159):
+-> $$ = nterm expressions ()
+Entering state 135
+Stack now 0 1 10 47 38 82 130 165 183 189 61 116 111 38 86 135
+Next token is token tIDENTIFIER ()
 1: syntax error
+Error: popping nterm expressions ()
+Stack now 0 1 10 47 38 82 130 165 183 189 61 116 111 38 86
 Error: popping nterm expr ()
-Stack now 0 1 10 47 38 82 130 165 183 189 61 116 111 38 39
-Error: popping token '+' ()
 Stack now 0 1 10 47 38 82 130 165 183 189 61 116 111 38
 Error: popping token tLEFT ()
 Stack now 0 1 10 47 38 82 130 165 183 189 61 116 111
@@ -23091,7 +23548,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 1 10 47 38 82 130 165 183 189 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -23110,7 +23567,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 1 10 47 38 82 130 165 183 189 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -23123,7 +23580,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 10 47 38 82 130 165 183 189 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -23214,10 +23671,22 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 106("x")
 Next token is token tIDENTIFIER ()
+Reducing stack by rule 65 (line 171):
+   $1 = token '+' ()
+   $2 = nterm expr ()
+-> $$ = nterm expr ()
+Entering state 86
+Stack now 0 1 10 47 38 82 130 165 183 189 61 116 111 38 39 38 86
+Next token is token tIDENTIFIER ()
+Reducing stack by rule 58 (line 159):
+-> $$ = nterm expressions ()
+Entering state 135
+Stack now 0 1 10 47 38 82 130 165 183 189 61 116 111 38 39 38 86 135
+Next token is token tIDENTIFIER ()
 1: syntax error
+Error: popping nterm expressions ()
+Stack now 0 1 10 47 38 82 130 165 183 189 61 116 111 38 39 38 86
 Error: popping nterm expr ()
-Stack now 0 1 10 47 38 82 130 165 183 189 61 116 111 38 39 38 39
-Error: popping token '+' ()
 Stack now 0 1 10 47 38 82 130 165 183 189 61 116 111 38 39 38
 Error: popping token tLEFT ()
 Stack now 0 1 10 47 38 82 130 165 183 189 61 116 111 38 39
@@ -26553,7 +27022,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 133
 Stack now 0 1 10 47 38 85 133
-Reducing stack by rule 84 (line 191):
+Reducing stack by rule 86 (line 193):
    $1 = token tLEFT ()
    $2 = nterm function ()
    $3 = token tRIGHT ()
@@ -26786,7 +27255,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -26833,7 +27302,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 166
 Stack now 0 3 1 15 57 27 72 38 83 131 166
-Reducing stack by rule 82 (line 188):
+Reducing stack by rule 84 (line 190):
    $1 = token tLEFT ()
    $2 = token tOBJECTS ()
    $3 = nterm expr ()
@@ -26841,7 +27310,7 @@ Reducing stack by rule 82 (line 188):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -26855,7 +27324,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -27144,7 +27613,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 58 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -27191,7 +27660,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 166
 Stack now 0 3 1 15 58 57 27 72 38 83 131 166
-Reducing stack by rule 82 (line 188):
+Reducing stack by rule 84 (line 190):
    $1 = token tLEFT ()
    $2 = token tOBJECTS ()
    $3 = nterm expr ()
@@ -27199,7 +27668,7 @@ Reducing stack by rule 82 (line 188):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 58 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -27213,7 +27682,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 58 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -27261,7 +27730,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 58 114 116 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -27308,7 +27777,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 166
 Stack now 0 3 1 15 58 114 116 27 72 38 83 131 166
-Reducing stack by rule 82 (line 188):
+Reducing stack by rule 84 (line 190):
    $1 = token tLEFT ()
    $2 = token tOBJECTS ()
    $3 = nterm expr ()
@@ -27316,7 +27785,7 @@ Reducing stack by rule 82 (line 188):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 58 114 116 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -27330,7 +27799,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 58 114 116 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -27749,7 +28218,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 58 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -28138,7 +28607,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 58 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -28185,7 +28654,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 166
 Stack now 0 3 1 15 58 57 27 72 38 83 131 166
-Reducing stack by rule 82 (line 188):
+Reducing stack by rule 84 (line 190):
    $1 = token tLEFT ()
    $2 = token tOBJECTS ()
    $3 = nterm expr ()
@@ -28193,7 +28662,7 @@ Reducing stack by rule 82 (line 188):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 58 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -28207,7 +28676,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 58 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -28488,7 +28957,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 58 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -28535,7 +29004,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 166
 Stack now 0 3 1 15 58 57 27 72 38 83 131 166
-Reducing stack by rule 82 (line 188):
+Reducing stack by rule 84 (line 190):
    $1 = token tLEFT ()
    $2 = token tOBJECTS ()
    $3 = nterm expr ()
@@ -28543,7 +29012,7 @@ Reducing stack by rule 82 (line 188):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 58 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -28557,7 +29026,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 58 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -28925,7 +29394,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 58 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -28972,7 +29441,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 166
 Stack now 0 3 1 15 58 57 27 72 38 83 131 166
-Reducing stack by rule 82 (line 188):
+Reducing stack by rule 84 (line 190):
    $1 = token tLEFT ()
    $2 = token tOBJECTS ()
    $3 = nterm expr ()
@@ -28980,7 +29449,7 @@ Reducing stack by rule 82 (line 188):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 58 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -28994,7 +29463,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 58 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -29042,7 +29511,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 58 114 116 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -29089,7 +29558,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 166
 Stack now 0 3 1 15 58 114 116 27 72 38 83 131 166
-Reducing stack by rule 82 (line 188):
+Reducing stack by rule 84 (line 190):
    $1 = token tLEFT ()
    $2 = token tOBJECTS ()
    $3 = nterm expr ()
@@ -29097,7 +29566,7 @@ Reducing stack by rule 82 (line 188):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 58 114 116 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -29111,7 +29580,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 58 114 116 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -29661,10 +30130,22 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 106("p")
 Next token is token tIDENTIFIER ()
+Reducing stack by rule 65 (line 171):
+   $1 = token '+' ()
+   $2 = nterm expr ()
+-> $$ = nterm expr ()
+Entering state 86
+Stack now 0 1 12 48 38 82 130 165 183 189 57 111 38 86
+Next token is token tIDENTIFIER ()
+Reducing stack by rule 58 (line 159):
+-> $$ = nterm expressions ()
+Entering state 135
+Stack now 0 1 12 48 38 82 130 165 183 189 57 111 38 86 135
+Next token is token tIDENTIFIER ()
 1: syntax error
+Error: popping nterm expressions ()
+Stack now 0 1 12 48 38 82 130 165 183 189 57 111 38 86
 Error: popping nterm expr ()
-Stack now 0 1 12 48 38 82 130 165 183 189 57 111 38 39
-Error: popping token '+' ()
 Stack now 0 1 12 48 38 82 130 165 183 189 57 111 38
 Error: popping token tLEFT ()
 Stack now 0 1 12 48 38 82 130 165 183 189 57 111
@@ -29920,10 +30401,22 @@ Reading a token
 --(end of buffer or a NUL)
 --accepting rule at line 106("p")
 Next token is token tIDENTIFIER ()
+Reducing stack by rule 65 (line 171):
+   $1 = token '+' ()
+   $2 = nterm expr ()
+-> $$ = nterm expr ()
+Entering state 86
+Stack now 0 1 12 48 38 82 130 165 183 189 57 111 38 86
+Next token is token tIDENTIFIER ()
+Reducing stack by rule 58 (line 159):
+-> $$ = nterm expressions ()
+Entering state 135
+Stack now 0 1 12 48 38 82 130 165 183 189 57 111 38 86 135
+Next token is token tIDENTIFIER ()
 1: syntax error
+Error: popping nterm expressions ()
+Stack now 0 1 12 48 38 82 130 165 183 189 57 111 38 86
 Error: popping nterm expr ()
-Stack now 0 1 12 48 38 82 130 165 183 189 57 111 38 39
-Error: popping token '+' ()
 Stack now 0 1 12 48 38 82 130 165 183 189 57 111 38
 Error: popping token tLEFT ()
 Stack now 0 1 12 48 38 82 130 165 183 189 57 111
@@ -30168,7 +30661,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 58 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -30198,12 +30691,12 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 58 57 27 72 38 33 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 77
 Stack now 0 3 1 15 58 57 27 72 38 33 77
-Reducing stack by rule 80 (line 186):
+Reducing stack by rule 82 (line 188):
    $1 = token tPOS ()
    $2 = nterm lval ()
 -> $$ = nterm expr ()
@@ -30215,14 +30708,14 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 58 57 27 72 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 15 58 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -30236,7 +30729,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 15 58 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -30541,7 +31034,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 1 15 58 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -30571,12 +31064,12 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 1 15 58 57 27 72 38 33 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 77
 Stack now 0 1 15 58 57 27 72 38 33 77
-Reducing stack by rule 80 (line 186):
+Reducing stack by rule 82 (line 188):
    $1 = token tPOS ()
    $2 = nterm lval ()
 -> $$ = nterm expr ()
@@ -30588,14 +31081,14 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 58 57 27 72 38 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 1 15 58 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -30609,7 +31102,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 1 15 58 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -31754,7 +32247,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 10 47 38 82 130 165 182 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -31773,7 +32266,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 10 47 38 82 130 165 182 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -31786,7 +32279,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 10 47 38 82 130 165 182 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -32174,7 +32667,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 10 47 38 82 130 165 182 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -32193,7 +32686,7 @@ Reducing stack by rule 60 (line 165):
 -> $$ = nterm expr ()
 Entering state 123
 Stack now 0 3 1 10 47 38 82 130 165 182 57 27 72 123
-Reducing stack by rule 76 (line 182):
+Reducing stack by rule 78 (line 184):
    $1 = token tSET ()
    $2 = nterm lval ()
    $3 = nterm expr ()
@@ -32206,7 +32699,7 @@ Next token is token tRIGHT ()
 Shifting token tRIGHT ()
 Entering state 134
 Stack now 0 3 1 10 47 38 82 130 165 182 57 86 134
-Reducing stack by rule 85 (line 192):
+Reducing stack by rule 87 (line 194):
    $1 = token tLEFT ()
    $2 = nterm expr ()
    $3 = token tRIGHT ()
@@ -32411,7 +32904,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 3 1 15 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -32737,7 +33230,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 1 15 58 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -35829,7 +36322,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 1 15 58 57 18 68 38 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -36317,7 +36810,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 1 15 58 57 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
@@ -36349,7 +36842,7 @@ Next token is token tIDENTIFIER ()
 Shifting token tIDENTIFIER ()
 Entering state 70
 Stack now 0 1 15 58 57 27 72 38 27 70
-Reducing stack by rule 87 (line 196):
+Reducing stack by rule 89 (line 198):
    $1 = token tIDENTIFIER ()
 -> $$ = nterm lval ()
 Entering state 72
