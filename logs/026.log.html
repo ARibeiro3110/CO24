@@ -202,10 +202,16 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: A-01-1-N-ok.asm:14: error: undefined symbol `prints' (first use)
-A-01-1-N-ok.asm:14: error:  (Each undefined symbol is reported only once.)
-A-01-1-N-ok.asm:16: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+*** expected/A-01-1-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_A-01-1-N-ok.out	Thu May 30 22:33:55 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- string
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------A-02-2-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -474,10 +480,16 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: A-02-2-N-ok.asm:14: error: undefined symbol `prints' (first use)
-A-02-2-N-ok.asm:14: error:  (Each undefined symbol is reported only once.)
-A-02-2-N-ok.asm:40: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+*** expected/A-02-2-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_A-02-2-N-ok.out	Thu May 30 22:33:55 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- string
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------A-03-3-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -748,10 +760,16 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: A-03-3-N-ok.asm:14: error: undefined symbol `prints' (first use)
-A-03-3-N-ok.asm:14: error:  (Each undefined symbol is reported only once.)
-A-03-3-N-ok.asm:40: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+*** expected/A-03-3-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_A-03-3-N-ok.out	Thu May 30 22:33:55 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- ABCD
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------A-04-4-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -1019,10 +1037,16 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: A-04-4-N-ok.asm:14: error: undefined symbol `prints' (first use)
-A-04-4-N-ok.asm:14: error:  (Each undefined symbol is reported only once.)
-A-04-4-N-ok.asm:24: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+*** expected/A-04-4-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_A-04-4-N-ok.out	Thu May 30 22:33:55 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- AA
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------A-05-5-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -1228,10 +1252,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: A-05-5-N-ok.asm:9: error: undefined symbol `printi' (first use)
-A-05-5-N-ok.asm:9: error:  (Each undefined symbol is reported only once.)
-A-05-5-N-ok.asm:11: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------A-06-6-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -1441,10 +1465,16 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: A-06-6-N-ok.asm:14: error: undefined symbol `prints' (first use)
-A-06-6-N-ok.asm:14: error:  (Each undefined symbol is reported only once.)
-A-06-6-N-ok.asm:16: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+*** expected/A-06-6-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_A-06-6-N-ok.out	Thu May 30 22:33:56 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- ola
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------A-07-7-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -1662,10 +1692,16 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: A-07-7-N-ok.asm:14: error: undefined symbol `prints' (first use)
-A-07-7-N-ok.asm:14: error:  (Each undefined symbol is reported only once.)
-A-07-7-N-ok.asm:16: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+*** expected/A-07-7-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_A-07-7-N-ok.out	Thu May 30 22:33:56 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- X Y Z
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------A-08-8-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -1878,10 +1914,16 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: A-08-8-N-ok.asm:14: error: undefined symbol `prints' (first use)
-A-08-8-N-ok.asm:14: error:  (Each undefined symbol is reported only once.)
-A-08-8-N-ok.asm:16: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+*** expected/A-08-8-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_A-08-8-N-ok.out	Thu May 30 22:33:56 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- xYz
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------B-01-9-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -2121,10 +2163,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-01-9-N-ok.asm:12: error: undefined symbol `printi' (first use)
-B-01-9-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
-B-01-9-N-ok.asm:14: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-02-10-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -2404,10 +2446,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-02-10-N-ok.asm:16: error: undefined symbol `printi' (first use)
-B-02-10-N-ok.asm:16: error:  (Each undefined symbol is reported only once.)
-B-02-10-N-ok.asm:18: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-03-11-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -2687,10 +2729,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-03-11-N-ok.asm:16: error: undefined symbol `printi' (first use)
-B-03-11-N-ok.asm:16: error:  (Each undefined symbol is reported only once.)
-B-03-11-N-ok.asm:18: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-04-12-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -2970,10 +3012,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-04-12-N-ok.asm:15: error: undefined symbol `printi' (first use)
-B-04-12-N-ok.asm:15: error:  (Each undefined symbol is reported only once.)
-B-04-12-N-ok.asm:17: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-05-13-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -3213,10 +3255,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-05-13-N-ok.asm:12: error: undefined symbol `printi' (first use)
-B-05-13-N-ok.asm:12: error:  (Each undefined symbol is reported only once.)
-B-05-13-N-ok.asm:14: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-06-14-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -3456,10 +3498,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-06-14-N-ok.asm:15: error: undefined symbol `printi' (first use)
-B-06-14-N-ok.asm:15: error:  (Each undefined symbol is reported only once.)
-B-06-14-N-ok.asm:17: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-07-15-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -3699,10 +3741,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-07-15-N-ok.asm:15: error: undefined symbol `printi' (first use)
-B-07-15-N-ok.asm:15: error:  (Each undefined symbol is reported only once.)
-B-07-15-N-ok.asm:17: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-08-16-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -3941,10 +3983,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-08-16-N-ok.asm:15: error: undefined symbol `printi' (first use)
-B-08-16-N-ok.asm:15: error:  (Each undefined symbol is reported only once.)
-B-08-16-N-ok.asm:17: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-09-17-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -4183,10 +4225,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-09-17-N-ok.asm:15: error: undefined symbol `printi' (first use)
-B-09-17-N-ok.asm:15: error:  (Each undefined symbol is reported only once.)
-B-09-17-N-ok.asm:17: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-10-18-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -4453,8 +4495,8 @@ Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-10-18-N-ok.out	Thu May 30 21:23:46 2024
---- logs/026_B-10-18-N-ok.out	Thu May 30 21:34:31 2024
+*** expected/B-10-18-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_B-10-18-N-ok.out	Thu May 30 22:33:56 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 0
@@ -4726,8 +4768,8 @@ Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-11-19-N-ok.out	Thu May 30 21:23:46 2024
---- logs/026_B-11-19-N-ok.out	Thu May 30 21:34:31 2024
+*** expected/B-11-19-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_B-11-19-N-ok.out	Thu May 30 22:33:56 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 0
@@ -4971,10 +5013,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-12-20-N-ok.asm:15: error: undefined symbol `printi' (first use)
-B-12-20-N-ok.asm:15: error:  (Each undefined symbol is reported only once.)
-B-12-20-N-ok.asm:17: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-13-21-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -5241,8 +5283,8 @@ Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-13-21-N-ok.out	Thu May 30 21:23:46 2024
---- logs/026_B-13-21-N-ok.out	Thu May 30 21:34:31 2024
+*** expected/B-13-21-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_B-13-21-N-ok.out	Thu May 30 22:33:56 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 0
@@ -5588,10 +5630,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-16-24-N-ok.asm:9: error: undefined symbol `printi' (first use)
-B-16-24-N-ok.asm:9: error:  (Each undefined symbol is reported only once.)
-B-16-24-N-ok.asm:11: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-17-25-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -5841,10 +5883,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-17-25-N-ok.asm:11: error: undefined symbol `printi' (first use)
-B-17-25-N-ok.asm:11: error:  (Each undefined symbol is reported only once.)
-B-17-25-N-ok.asm:13: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-20-26-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -6230,10 +6272,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-24-30-N-ok.asm:9: error: undefined symbol `printi' (first use)
-B-24-30-N-ok.asm:9: error:  (Each undefined symbol is reported only once.)
-B-24-30-N-ok.asm:11: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-25-31-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -6492,10 +6534,18 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-25-31-N-ok.asm:9: error: undefined symbol `printi' (first use)
-B-25-31-N-ok.asm:9: error:  (Each undefined symbol is reported only once.)
-B-25-31-N-ok.asm:11: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+*** expected/B-25-31-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_B-25-31-N-ok.out	Thu May 30 22:33:57 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+! 4747
+<font color="brown">--- 1,2 ----</font>
+! 47
+! 47
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------C-01-32-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -6846,14 +6896,14 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 16913152
+INITIAL OFFSET: 29496064
 ARG: x, 4
 IN BODY
-OFFSET: x, 16913148
+OFFSET: x, 29496060
 3: undeclared variable 'x'
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/C-01-32-N-ok.out	Thu May 30 21:23:46 2024
---- logs/026_C-01-32-N-ok.out	Thu May 30 21:34:32 2024
+*** expected/C-01-32-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_C-01-32-N-ok.out	Thu May 30 22:33:57 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 0
@@ -7177,10 +7227,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 38126336
+INITIAL OFFSET: 25469696
 ARG: x, 4
 IN BODY
-OFFSET: x, 38126332
+OFFSET: x, 25469692
 Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -7506,10 +7556,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 31978240
+INITIAL OFFSET: 35025664
 ARG: x, 4
 IN BODY
-OFFSET: x, 31978236
+OFFSET: x, 35025660
 Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -8486,10 +8536,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 16626432
+INITIAL OFFSET: 23724800
 ARG: x, 4
 IN BODY
-OFFSET: x, 16626428
+OFFSET: x, 23724796
 Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -8910,10 +8960,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 15954688
+INITIAL OFFSET: 11764480
 ARG: x, 4
 IN BODY
-OFFSET: x, 15954684
+OFFSET: x, 11764476
 Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -9334,10 +9384,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 36512512
+INITIAL OFFSET: 4961024
 ARG: x, 4
 IN BODY
-OFFSET: x, 36512508
+OFFSET: x, 4961020
 Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -9758,10 +9808,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 37868288
+INITIAL OFFSET: 26718976
 ARG: x, 4
 IN BODY
-OFFSET: x, 37868284
+OFFSET: x, 26718972
 Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -10182,10 +10232,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 29868800
+INITIAL OFFSET: 21664512
 ARG: x, 4
 IN BODY
-OFFSET: x, 29868796
+OFFSET: x, 21664508
 Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -10606,10 +10656,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 27665152
+INITIAL OFFSET: 23212800
 ARG: x, 4
 IN BODY
-OFFSET: x, 27665148
+OFFSET: x, 23212796
 Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -11524,10 +11574,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 19043072
+INITIAL OFFSET: 27861760
 ARG: x, 4
 IN BODY
-OFFSET: x, 19043068
+OFFSET: x, 27861756
 Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -11836,10 +11886,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 12153600
+INITIAL OFFSET: 17396480
 ARG: x, 4
 IN BODY
-OFFSET: x, 12153596
+OFFSET: x, 17396476
 Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -12153,10 +12203,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 8581888
+INITIAL OFFSET: 26800896
 ARG: x, 4
 IN BODY
-OFFSET: x, 8581884
+OFFSET: x, 26800892
 Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -15006,10 +15056,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: G-01-70-N-ok.asm:9: error: undefined symbol `printi' (first use)
-G-01-70-N-ok.asm:9: error:  (Each undefined symbol is reported only once.)
-G-01-70-N-ok.asm:11: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------G-02-71-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -15237,8 +15287,8 @@ Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-02-71-N-ok.out	Thu May 30 21:23:46 2024
---- logs/026_G-02-71-N-ok.out	Thu May 30 21:34:33 2024
+*** expected/G-02-71-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_G-02-71-N-ok.out	Thu May 30 22:33:57 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 8
@@ -15471,10 +15521,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: G-03-72-N-ok.asm:9: error: undefined symbol `printi' (first use)
-G-03-72-N-ok.asm:9: error:  (Each undefined symbol is reported only once.)
-G-03-72-N-ok.asm:11: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------G-04-73-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -15707,10 +15757,10 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: G-04-73-N-ok.asm:9: error: undefined symbol `printi' (first use)
-G-04-73-N-ok.asm:9: error:  (Each undefined symbol is reported only once.)
-G-04-73-N-ok.asm:11: error: undefined symbol `println' (first use)
-'yasm' failed
+Compiler: failed (139/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: execution failed
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------G-05-74-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 116("(")
@@ -16004,7 +16054,7 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 36586240
+INITIAL OFFSET: 23773952
 Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------G-06-75-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -16301,7 +16351,7 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 37335808
+INITIAL OFFSET: 8975104
 Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------G-07-76-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -17342,14 +17392,14 @@ Stack now 0 2 23
 Stack now 0 2 23
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-INITIAL OFFSET: 10674944
+INITIAL OFFSET: 30130944
 ARG: argc, 4
 IN BODY
-OFFSET: argc, 10674940
+OFFSET: argc, 30130940
 3: undeclared variable 'argc'
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/J-06-83-N-ok.out	Thu May 30 21:23:46 2024
---- logs/026_J-06-83-N-ok.out	Thu May 30 21:34:33 2024
+*** expected/J-06-83-N-ok.out	Thu May 30 22:23:42 2024
+--- logs/026_J-06-83-N-ok.out	Thu May 30 22:33:58 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 1
