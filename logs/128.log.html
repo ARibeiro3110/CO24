@@ -4,12 +4,6 @@ til_scanner.l:118: warning, rule cannot be matched
 til_parser.y: warning: 1 shift/reduce conflict [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
 targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_declaration_node(til::declaration_node*, int)':
-targets/type_checker.cpp:308:26: error: 'ft' was not declared in this scope
-  308 |       bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && ftype->name() == rtype->name()));
-      |                          ^~
-targets/type_checker.cpp:308:32: error: 'rt' was not declared in this scope
-  308 |       bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && ftype->name() == rtype->name()));
-      |                                ^~
 targets/type_checker.cpp:308:40: error: 'rtype' was not declared in this scope; did you mean 'wctype'?
   308 |       bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && ftype->name() == rtype->name()));
       |                                        ^~~~~
@@ -18,15 +12,9 @@ targets/type_checker.cpp:308:81: error: 'ftype' was not declared in this scope; 
   308 |       bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && ftype->name() == rtype->name()));
       |                                                                                 ^~~~~
       |                                                                                 wctype
-targets/type_checker.cpp:315:28: error: 'tFOREIGN' was not declared in this scope
-  315 |   if (node->qualifier() == tFOREIGN && !node->is_typed(cdk::TYPE_FUNCTIONAL)) {
-      |                            ^~~~~~~~
-targets/type_checker.cpp:319:17: error: 'make_symbol' was not declared in this scope
-  319 |   auto symbol = make_symbol(node->identifier(), node->type(), node->qualifier());
-      |                 ^~~~~~~~~~~
-targets/type_checker.cpp:328:32: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'qualifier'
-  328 |   if (prev != nullptr && prev->qualifier() == tFORWARD) {
-      |                                ^~~~~~~~~
+targets/type_checker.cpp:315:28: error: 'tEXTERNAL' was not declared in this scope
+  315 |   if (node->qualifier() == tEXTERNAL && !node->is_typed(cdk::TYPE_FUNCTIONAL)) {
+      |                            ^~~~~~~~~
 targets/type_checker.cpp:328:47: error: 'tFORWARD' was not declared in this scope
   328 |   if (prev != nullptr && prev->qualifier() == tFORWARD) {
       |                                               ^~~~~~~~
@@ -44,42 +32,74 @@ targets/type_checker.cpp:329:79: error: 'ftype' was not declared in this scope; 
   329 |     bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && ftype->name() == rtype->name()));
       |                                                                               ^~~~~
       |                                                                               wctype
-targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_function_node(til::function_node*, int)':
-targets/type_checker.cpp:343:24: error: 'make_symbol' is not a member of 'til'
-  343 |   auto function = til::make_symbol("@", node->type());
-      |                        ^~~~~~~~~~~
 targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_function_call_node(til::function_call_node*, int)':
-targets/type_checker.cpp:364:22: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'is_main'
-  364 |     else if (symbol->is_main()) {
-      |                      ^~~~~~~
-targets/type_checker.cpp:405:24: error: 'ft' was not declared in this scope
-  405 |     bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && ftype->name() == rtype->name()));
-      |                        ^~
-targets/type_checker.cpp:405:30: error: 'rt' was not declared in this scope
-  405 |     bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && ftype->name() == rtype->name()));
-      |                              ^~
-targets/type_checker.cpp:405:38: error: 'rtype' was not declared in this scope; did you mean 'wctype'?
-  405 |     bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && ftype->name() == rtype->name()));
+targets/type_checker.cpp:406:38: error: 'rtype' was not declared in this scope; did you mean 'wctype'?
+  406 |     bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && functype->name() == rtype->name()));
       |                                      ^~~~~
       |                                      wctype
-targets/type_checker.cpp:405:79: error: 'ftype' was not declared in this scope; did you mean 'wctype'?
-  405 |     bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && ftype->name() == rtype->name()));
-      |                                                                               ^~~~~
-      |                                                                               wctype
-targets/type_checker.cpp: In member function 'virtual void til::type_checker::do_return_node(til::return_node*, int)':
-targets/type_checker.cpp:478:22: error: 'ft' was not declared in this scope
-  478 |   bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && ftype->name() == rtype->name()));
-      |                      ^~
-targets/type_checker.cpp:478:28: error: 'rt' was not declared in this scope
-  478 |   bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && ftype->name() == rtype->name()));
-      |                            ^~
-targets/type_checker.cpp:478:36: error: 'rtype' was not declared in this scope; did you mean 'wctype'?
-  478 |   bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && ftype->name() == rtype->name()));
-      |                                    ^~~~~
-      |                                    wctype
-targets/type_checker.cpp:478:77: error: 'ftype' was not declared in this scope; did you mean 'wctype'?
-  478 |   bool compatible = (ft == rt) && (rtype == nullptr || (rtype != nullptr && ftype->name() == rtype->name()));
-      |                                                                             ^~~~~
-      |                                                                             wctype
+In file included from /usr/include/c++/13/bits/char_traits.h:57,
+                 from /usr/include/c++/13/string:42,
+                 from targets/type_checker.cpp:1:
+/usr/include/c++/13/bits/stl_construct.h: In instantiation of 'constexpr void std::_Construct(_Tp*, _Args&& ...) [with _Tp = til::symbol; _Args = {shared_ptr<cdk::primitive_type>, const __cxx11::basic_string<char, char_traits<char>, allocator<char> >&, int}]':
+/usr/include/c++/13/bits/alloc_traits.h:661:19:   required from 'static constexpr void std::allocator_traits<std::allocator<void> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = til::symbol; _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; allocator_type = std::allocator<void>]'
+/usr/include/c++/13/bits/shared_ptr_base.h:604:39:   required from 'std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; _Tp = til::symbol; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr_base.h:971:16:   required from 'std::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = til::symbol; _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr_base.h:1712:14:   required from 'std::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; _Tp = til::symbol; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr.h:464:59:   required from 'std::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; _Tp = til::symbol]'
+/usr/include/c++/13/bits/shared_ptr.h:1009:14:   required from 'std::shared_ptr<std::_NonArray<_Tp> > std::make_shared(_Args&& ...) [with _Tp = til::symbol; _Args = {shared_ptr<cdk::primitive_type>, const __cxx11::basic_string<char, char_traits<char>, allocator<char> >&, int}; _NonArray<_Tp> = til::symbol]'
+targets/type_checker.cpp:162:48:   required from here
+/usr/include/c++/13/bits/stl_construct.h:115:28: error: no matching function for call to 'construct_at(til::symbol*&, std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char>&, int)'
+  115 |           std::construct_at(__p, std::forward<_Args>(__args)...);
+      |           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_construct.h:94:5: note: candidate: 'template<class _Tp, class ... _Args> constexpr decltype (::new(void*(0)) _Tp) std::construct_at(_Tp*, _Args&& ...)'
+   94 |     construct_at(_Tp* __location, _Args&&... __args)
+      |     ^~~~~~~~~~~~
+/usr/include/c++/13/bits/stl_construct.h:94:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/13/bits/stl_construct.h: In substitution of 'template<class _Tp, class ... _Args> constexpr decltype (::new(void*(0)) _Tp) std::construct_at(_Tp*, _Args&& ...) [with _Tp = til::symbol; _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}]':
+/usr/include/c++/13/bits/stl_construct.h:115:21:   required from 'constexpr void std::_Construct(_Tp*, _Args&& ...) [with _Tp = til::symbol; _Args = {shared_ptr<cdk::primitive_type>, const __cxx11::basic_string<char, char_traits<char>, allocator<char> >&, int}]'
+/usr/include/c++/13/bits/alloc_traits.h:661:19:   required from 'static constexpr void std::allocator_traits<std::allocator<void> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = til::symbol; _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; allocator_type = std::allocator<void>]'
+/usr/include/c++/13/bits/shared_ptr_base.h:604:39:   required from 'std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; _Tp = til::symbol; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr_base.h:971:16:   required from 'std::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = til::symbol; _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr_base.h:1712:14:   required from 'std::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; _Tp = til::symbol; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr.h:464:59:   required from 'std::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; _Tp = til::symbol]'
+/usr/include/c++/13/bits/shared_ptr.h:1009:14:   required from 'std::shared_ptr<std::_NonArray<_Tp> > std::make_shared(_Args&& ...) [with _Tp = til::symbol; _Args = {shared_ptr<cdk::primitive_type>, const __cxx11::basic_string<char, char_traits<char>, allocator<char> >&, int}; _NonArray<_Tp> = til::symbol]'
+targets/type_checker.cpp:162:48:   required from here
+/usr/include/c++/13/bits/stl_construct.h:96:17: error: no matching function for call to 'til::symbol::symbol(std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char>&, int)'
+   96 |     -> decltype(::new((void*)0) _Tp(std::declval<_Args>()...))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ./targets/basic_ast_visitor.h:9,
+                 from ./targets/type_checker.h:4,
+                 from targets/type_checker.cpp:2:
+./targets/symbol.h:19:5: note: candidate: 'til::symbol::symbol(const std::string&, std::shared_ptr<cdk::basic_type>, int)'
+   19 |     symbol(const std::string &name, std::shared_ptr<cdk::basic_type> type, int qualifier) :
+      |     ^~~~~~
+./targets/symbol.h:19:31: note:   no known conversion for argument 1 from 'std::shared_ptr<cdk::primitive_type>' to 'const std::string&' {aka 'const std::__cxx11::basic_string<char>&'}
+   19 |     symbol(const std::string &name, std::shared_ptr<cdk::basic_type> type, int qualifier) :
+      |            ~~~~~~~~~~~~~~~~~~~^~~~
+./targets/symbol.h:10:9: note: candidate: 'til::symbol::symbol(const til::symbol&)'
+   10 |   class symbol {
+      |         ^~~~~~
+./targets/symbol.h:10:9: note:   candidate expects 1 argument, 3 provided
+/usr/include/c++/13/bits/stl_construct.h: In instantiation of 'constexpr void std::_Construct(_Tp*, _Args&& ...) [with _Tp = til::symbol; _Args = {shared_ptr<cdk::primitive_type>, const __cxx11::basic_string<char, char_traits<char>, allocator<char> >&, int}]':
+/usr/include/c++/13/bits/alloc_traits.h:661:19:   required from 'static constexpr void std::allocator_traits<std::allocator<void> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = til::symbol; _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; allocator_type = std::allocator<void>]'
+/usr/include/c++/13/bits/shared_ptr_base.h:604:39:   required from 'std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; _Tp = til::symbol; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr_base.h:971:16:   required from 'std::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = til::symbol; _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr_base.h:1712:14:   required from 'std::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; _Tp = til::symbol; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]'
+/usr/include/c++/13/bits/shared_ptr.h:464:59:   required from 'std::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, int}; _Tp = til::symbol]'
+/usr/include/c++/13/bits/shared_ptr.h:1009:14:   required from 'std::shared_ptr<std::_NonArray<_Tp> > std::make_shared(_Args&& ...) [with _Tp = til::symbol; _Args = {shared_ptr<cdk::primitive_type>, const __cxx11::basic_string<char, char_traits<char>, allocator<char> >&, int}; _NonArray<_Tp> = til::symbol]'
+targets/type_checker.cpp:162:48:   required from here
+/usr/include/c++/13/bits/stl_construct.h:119:7: error: no matching function for call to 'til::symbol::symbol(std::shared_ptr<cdk::primitive_type>, const std::__cxx11::basic_string<char>&, int)'
+  119 |       ::new((void*)__p) _Tp(std::forward<_Args>(__args)...);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./targets/symbol.h:19:5: note: candidate: 'til::symbol::symbol(const std::string&, std::shared_ptr<cdk::basic_type>, int)'
+   19 |     symbol(const std::string &name, std::shared_ptr<cdk::basic_type> type, int qualifier) :
+      |     ^~~~~~
+./targets/symbol.h:19:31: note:   no known conversion for argument 1 from 'std::shared_ptr<cdk::primitive_type>' to 'const std::string&' {aka 'const std::__cxx11::basic_string<char>&'}
+   19 |     symbol(const std::string &name, std::shared_ptr<cdk::basic_type> type, int qualifier) :
+      |            ~~~~~~~~~~~~~~~~~~~^~~~
+./targets/symbol.h:10:9: note: candidate: 'til::symbol::symbol(const til::symbol&)'
+   10 |   class symbol {
+      |         ^~~~~~
+./targets/symbol.h:10:9: note:   candidate expects 1 argument, 3 provided
 make: *** [Makefile:46: targets/type_checker.o] Error 1
 
