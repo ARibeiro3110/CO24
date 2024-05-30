@@ -33,11 +33,11 @@ targets/type_checker.cpp:235:43:   required from here
    96 |     -> decltype(::new((void*)0) _Tp(std::declval<_Args>()...))
       |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 In file included from ./targets/basic_ast_visitor.h:9:
-./targets/symbol.h:16:5: note: candidate: 'til::symbol::symbol(std::shared_ptr<cdk::basic_type>, const std::string&, long int)'
-   16 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
+./targets/symbol.h:18:5: note: candidate: 'til::symbol::symbol(std::shared_ptr<cdk::basic_type>, const std::string&, long int)'
+   18 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
       |     ^~~~~~
-./targets/symbol.h:16:45: note:   no known conversion for argument 1 from 'const char [2]' to 'std::shared_ptr<cdk::basic_type>'
-   16 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
+./targets/symbol.h:18:45: note:   no known conversion for argument 1 from 'const char [2]' to 'std::shared_ptr<cdk::basic_type>'
+   18 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
       |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
 ./targets/symbol.h:10:9: note: candidate: 'til::symbol::symbol(const til::symbol&)'
    10 |   class symbol {
@@ -54,11 +54,11 @@ targets/type_checker.cpp:235:43:   required from here
 /usr/include/c++/13/bits/stl_construct.h:119:7: error: no matching function for call to 'til::symbol::symbol(const char [2], std::shared_ptr<cdk::functional_type>, int)'
   119 |       ::new((void*)__p) _Tp(std::forward<_Args>(__args)...);
       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./targets/symbol.h:16:5: note: candidate: 'til::symbol::symbol(std::shared_ptr<cdk::basic_type>, const std::string&, long int)'
-   16 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
+./targets/symbol.h:18:5: note: candidate: 'til::symbol::symbol(std::shared_ptr<cdk::basic_type>, const std::string&, long int)'
+   18 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
       |     ^~~~~~
-./targets/symbol.h:16:45: note:   no known conversion for argument 1 from 'const char [2]' to 'std::shared_ptr<cdk::basic_type>'
-   16 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
+./targets/symbol.h:18:45: note:   no known conversion for argument 1 from 'const char [2]' to 'std::shared_ptr<cdk::basic_type>'
+   18 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
       |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
 ./targets/symbol.h:10:9: note: candidate: 'til::symbol::symbol(const til::symbol&)'
    10 |   class symbol {
@@ -91,11 +91,11 @@ targets/type_checker.cpp:242:43:   required from here
 /usr/include/c++/13/bits/stl_construct.h:96:17: error: no matching function for call to 'til::symbol::symbol(const char [2], std::shared_ptr<cdk::basic_type>, int)'
    96 |     -> decltype(::new((void*)0) _Tp(std::declval<_Args>()...))
       |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./targets/symbol.h:16:5: note: candidate: 'til::symbol::symbol(std::shared_ptr<cdk::basic_type>, const std::string&, long int)'
-   16 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
+./targets/symbol.h:18:5: note: candidate: 'til::symbol::symbol(std::shared_ptr<cdk::basic_type>, const std::string&, long int)'
+   18 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
       |     ^~~~~~
-./targets/symbol.h:16:45: note:   no known conversion for argument 1 from 'const char [2]' to 'std::shared_ptr<cdk::basic_type>'
-   16 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
+./targets/symbol.h:18:45: note:   no known conversion for argument 1 from 'const char [2]' to 'std::shared_ptr<cdk::basic_type>'
+   18 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
       |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
 ./targets/symbol.h:10:9: note: candidate: 'til::symbol::symbol(const til::symbol&)'
    10 |   class symbol {
@@ -112,11 +112,11 @@ targets/type_checker.cpp:242:43:   required from here
 /usr/include/c++/13/bits/stl_construct.h:119:7: error: no matching function for call to 'til::symbol::symbol(const char [2], std::shared_ptr<cdk::basic_type>, int)'
   119 |       ::new((void*)__p) _Tp(std::forward<_Args>(__args)...);
       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-./targets/symbol.h:16:5: note: candidate: 'til::symbol::symbol(std::shared_ptr<cdk::basic_type>, const std::string&, long int)'
-   16 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
+./targets/symbol.h:18:5: note: candidate: 'til::symbol::symbol(std::shared_ptr<cdk::basic_type>, const std::string&, long int)'
+   18 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
       |     ^~~~~~
-./targets/symbol.h:16:45: note:   no known conversion for argument 1 from 'const char [2]' to 'std::shared_ptr<cdk::basic_type>'
-   16 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
+./targets/symbol.h:18:45: note:   no known conversion for argument 1 from 'const char [2]' to 'std::shared_ptr<cdk::basic_type>'
+   18 |     symbol(std::shared_ptr<cdk::basic_type> type, const std::string &name, long value) :
       |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
 ./targets/symbol.h:10:9: note: candidate: 'til::symbol::symbol(const til::symbol&)'
    10 |   class symbol {
