@@ -1,12 +1,12 @@
 <pre>
 Checking project structure...
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_next_node(til::next_node*, int)':
-targets/postfix_writer.cpp:351:23: warning: comparison of integer expressions of different signedness: 'std::vector<int>::size_type' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
-  351 |   if (_loopIni.size() >= n){
+targets/postfix_writer.cpp:364:23: warning: comparison of integer expressions of different signedness: 'std::vector<int>::size_type' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+  364 |   if (_loopIni.size() >= n){
       |       ~~~~~~~~~~~~~~~~^~~~
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_stop_node(til::stop_node*, int)':
-targets/postfix_writer.cpp:367:23: warning: comparison of integer expressions of different signedness: 'std::vector<int>::size_type' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
-  367 |   if (_loopIni.size() >= n){
+targets/postfix_writer.cpp:381:23: warning: comparison of integer expressions of different signedness: 'std::vector<int>::size_type' {aka 'long unsigned int'} and 'int' [-Wsign-compare]
+  381 |   if (_loopIni.size() >= n){
       |       ~~~~~~~~~~~~~~~~^~~~
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -210,14 +210,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/A-01-1-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_A-01-1-N-ok.out	Thu May 30 15:56:45 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- string
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------A-02-2-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -486,14 +481,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/A-02-2-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_A-02-2-N-ok.out	Thu May 30 15:56:45 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- string
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------A-03-3-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -764,14 +754,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/A-03-3-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_A-03-3-N-ok.out	Thu May 30 15:56:45 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- ABCD
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------A-04-4-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -1039,14 +1024,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/A-04-4-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_A-04-4-N-ok.out	Thu May 30 15:56:45 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- AA
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------A-05-5-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -1252,14 +1232,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/A-05-5-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_A-05-5-N-ok.out	Thu May 30 15:56:45 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 10
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------A-06-6-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -1469,14 +1444,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/A-06-6-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_A-06-6-N-ok.out	Thu May 30 15:56:45 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- ola
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------A-07-7-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -1694,14 +1664,16 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/A-07-7-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_A-07-7-N-ok.out	Thu May 30 15:56:45 2024
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: *** expected/A-07-7-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_A-07-7-N-ok.out	Thu May 30 16:54:21 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
-- X Y Z
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+<font color="brown">--- 1,2 ----</font>
+  X  Y  Z 
++ 
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------A-08-8-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -1914,14 +1886,18 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/A-08-8-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_A-08-8-N-ok.out	Thu May 30 15:56:45 2024
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: *** expected/A-08-8-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_A-08-8-N-ok.out	Thu May 30 16:54:21 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
-- xYz
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+! xYz
+<font color="brown">--- 1,3 ----</font>
+! x
+! Y	z
+! 
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-01-9-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -2161,14 +2137,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-01-9-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_B-01-9-N-ok.out	Thu May 30 15:56:45 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 3
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-02-10-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -2448,14 +2419,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-02-10-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_B-02-10-N-ok.out	Thu May 30 15:56:45 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 7
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-03-11-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -2735,14 +2701,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-03-11-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_B-03-11-N-ok.out	Thu May 30 15:56:45 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- -5
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-04-12-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -3022,14 +2983,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-04-12-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_B-04-12-N-ok.out	Thu May 30 15:56:45 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- -7
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-05-13-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -3269,14 +3225,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-05-13-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_B-05-13-N-ok.out	Thu May 30 15:56:45 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 0
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-06-14-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -3516,14 +3467,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-06-14-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_B-06-14-N-ok.out	Thu May 30 15:56:45 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 1
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-07-15-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -3763,14 +3709,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-07-15-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_B-07-15-N-ok.out	Thu May 30 15:56:46 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 50
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-08-16-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -4009,14 +3950,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-08-16-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_B-08-16-N-ok.out	Thu May 30 15:56:46 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 0
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-09-17-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -4255,14 +4191,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-09-17-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_B-09-17-N-ok.out	Thu May 30 15:56:46 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 0
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-10-18-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -4619,14 +4550,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-12-20-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_B-12-20-N-ok.out	Thu May 30 15:56:46 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 0
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-13-21-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -5056,14 +4982,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-16-24-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_B-16-24-N-ok.out	Thu May 30 15:56:46 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 3
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-17-25-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -5313,14 +5234,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/B-17-25-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_B-17-25-N-ok.out	Thu May 30 15:56:46 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 3
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-20-26-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -5634,9 +5550,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-20-26-N-ok.asm:11: error: undefined symbol `_L2' (first use)
-B-20-26-N-ok.asm:11: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-21-27-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -5950,9 +5866,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-21-27-N-ok.asm:11: error: undefined symbol `_L2' (first use)
-B-21-27-N-ok.asm:11: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-22-28-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -6266,9 +6182,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-22-28-N-ok.asm:11: error: undefined symbol `_L2' (first use)
-B-22-28-N-ok.asm:11: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-23-29-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -6582,9 +6498,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: B-23-29-N-ok.asm:11: error: undefined symbol `_L2' (first use)
-B-23-29-N-ok.asm:11: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------B-24-30-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -7075,9 +6991,14 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: C-01-32-N-ok.asm:8: error: undefined symbol `x' (first use)
-C-01-32-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+3: undeclared variable 'undeclared variable 'x''
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/C-01-32-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_C-01-32-N-ok.out	Thu May 30 16:54:22 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 0
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------C-02-33-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -7390,9 +7311,14 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: C-02-33-N-ok.asm:8: error: undefined symbol `x' (first use)
-C-02-33-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+3: undeclared variable 'undeclared variable 'x''
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/C-02-33-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_C-02-33-N-ok.out	Thu May 30 16:54:22 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 4
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------C-03-34-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -7709,9 +7635,14 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: C-03-34-N-ok.asm:8: error: undefined symbol `x' (first use)
-C-03-34-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+3: undeclared variable 'undeclared variable 'x''
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/C-03-34-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_C-03-34-N-ok.out	Thu May 30 16:54:22 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- ola
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------C-04-35-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -9955,10 +9886,14 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: C-08-39-N-ok.asm:8: error: undefined symbol `x' (first use)
-C-08-39-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
-C-08-39-N-ok.asm:11: error: undefined symbol `y' (first use)
-'yasm' failed
+4: undeclared variable 'undeclared variable 'x''
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/C-08-39-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_C-08-39-N-ok.out	Thu May 30 16:54:23 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 0
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------C-09-40-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -10364,10 +10299,14 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: C-09-40-N-ok.asm:8: error: undefined symbol `y' (first use)
-C-09-40-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
-C-09-40-N-ok.asm:11: error: undefined symbol `x' (first use)
-'yasm' failed
+4: undeclared variable 'undeclared variable 'y''
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/C-09-40-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_C-09-40-N-ok.out	Thu May 30 16:54:23 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 0
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------C-10-41-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -10773,10 +10712,14 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: C-10-41-N-ok.asm:8: error: undefined symbol `x' (first use)
-C-10-41-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
-C-10-41-N-ok.asm:11: error: undefined symbol `y' (first use)
-'yasm' failed
+4: undeclared variable 'undeclared variable 'x''
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/C-10-41-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_C-10-41-N-ok.out	Thu May 30 16:54:23 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 0
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------C-11-42-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -11182,10 +11125,14 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: C-11-42-N-ok.asm:8: error: undefined symbol `y' (first use)
-C-11-42-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
-C-11-42-N-ok.asm:11: error: undefined symbol `x' (first use)
-'yasm' failed
+4: undeclared variable 'undeclared variable 'y''
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/C-11-42-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_C-11-42-N-ok.out	Thu May 30 16:54:23 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 0
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------C-12-43-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -11591,10 +11538,14 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: C-12-43-N-ok.asm:8: error: undefined symbol `x' (first use)
-C-12-43-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
-C-12-43-N-ok.asm:11: error: undefined symbol `y' (first use)
-'yasm' failed
+4: undeclared variable 'undeclared variable 'x''
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/C-12-43-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_C-12-43-N-ok.out	Thu May 30 16:54:23 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 0
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------C-13-44-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -12000,9 +11951,14 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: C-13-44-N-ok.asm:8: error: undefined symbol `y' (first use)
-C-13-44-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+4: undeclared variable 'undeclared variable 'y''
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/C-13-44-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_C-13-44-N-ok.out	Thu May 30 16:54:23 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 0
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------C-14-45-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -12950,9 +12906,14 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: C-19-48-N-ok.asm:8: error: undefined symbol `x' (first use)
-C-19-48-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+3: undeclared variable 'undeclared variable 'x''
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/C-19-48-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_C-19-48-N-ok.out	Thu May 30 16:54:23 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- 10
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------C-20-49-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -13257,9 +13218,14 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: C-20-49-N-ok.asm:8: error: undefined symbol `x' (first use)
-C-20-49-N-ok.asm:8: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+3: undeclared variable 'undeclared variable 'x''
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/C-20-49-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_C-20-49-N-ok.out	Thu May 30 16:54:23 2024
+<font style="background: brown;" color="white">----- ZONE  1  ----</font>
+<font color="brown">*** 1 ****</font>
+- ole2
+<font color="brown">--- 0 ----</font>
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------D-01-50-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -13720,9 +13686,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: D-01-50-N-ok.asm:11: error: undefined symbol `_L2' (first use)
-D-01-50-N-ok.asm:11: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------D-02-51-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -14652,9 +14618,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: D-02-51-N-ok.asm:11: error: undefined symbol `_L2' (first use)
-D-02-51-N-ok.asm:11: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------D-03-52-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -15585,9 +15551,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: D-03-52-N-ok.asm:11: error: undefined symbol `_L2' (first use)
-D-03-52-N-ok.asm:11: error:  (Each undefined symbol is reported only once.)
-'yasm' failed
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------E-01-53-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -17520,14 +17486,11 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/E-03-55-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_E-03-55-N-ok.out	Thu May 30 15:56:47 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 9
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: failed (139/0). YASM: E-03-55-N-ok.asm:9: error: undefined symbol `printi' (first use)
+E-03-55-N-ok.asm:9: error:  (Each undefined symbol is reported only once.)
+E-03-55-N-ok.asm:11: error: undefined symbol `println' (first use)
+E-03-55-N-ok.asm:14: error: undefined symbol `x' (first use)
+'yasm' failed
 <font color='white' style='background: blue;'>---------------------------E-04-56-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -18669,6 +18632,7 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+3: undeclared variable 'undeclared variable 'x''
 Compiler: failed (139/0). YASM: E-05-57-N-ok.asm:10: error: undefined symbol `x' (first use)
 E-05-57-N-ok.asm:10: error:  (Each undefined symbol is reported only once.)
 E-05-57-N-ok.asm:21: error: undefined symbol `_L3' (first use)
@@ -19242,6 +19206,7 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+3: undeclared variable 'undeclared variable 'x''
 Compiler: failed (139/0). YASM: E-06-58-N-ok.asm:10: error: undefined symbol `x' (first use)
 E-06-58-N-ok.asm:10: error:  (Each undefined symbol is reported only once.)
 E-06-58-N-ok.asm:22: error: undefined symbol `_L3' (first use)
@@ -19880,14 +19845,13 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/E-07-59-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_E-07-59-N-ok.out	Thu May 30 15:56:47 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 9
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+4: undeclared variable 'undeclared variable 'x''
+Compiler: failed (139/0). YASM: E-07-59-N-ok.asm:9: error: undefined symbol `printi' (first use)
+E-07-59-N-ok.asm:9: error:  (Each undefined symbol is reported only once.)
+E-07-59-N-ok.asm:11: error: undefined symbol `println' (first use)
+E-07-59-N-ok.asm:14: error: undefined symbol `x' (first use)
+E-07-59-N-ok.asm:26: error: undefined symbol `_L3' (first use)
+'yasm' failed
 <font color='white' style='background: blue;'>---------------------------E-08-60-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -20426,6 +20390,7 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+3: undeclared variable 'undeclared variable 'x''
 Compiler: failed (139/0). YASM: E-08-60-N-ok.asm:10: error: undefined symbol `x' (first use)
 E-08-60-N-ok.asm:10: error:  (Each undefined symbol is reported only once.)
 E-08-60-N-ok.asm:21: error: undefined symbol `_L3' (first use)
@@ -20971,6 +20936,7 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+3: undeclared variable 'undeclared variable 'x''
 Compiler: failed (139/0). YASM: E-09-61-N-ok.asm:10: error: undefined symbol `x' (first use)
 E-09-61-N-ok.asm:10: error:  (Each undefined symbol is reported only once.)
 E-09-61-N-ok.asm:21: error: undefined symbol `_L3' (first use)
@@ -21676,10 +21642,10 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+4: undeclared variable 'undeclared variable 'x''
 Compiler: failed (139/0). YASM: E-10-62-N-ok.asm:10: error: undefined symbol `x' (first use)
 E-10-62-N-ok.asm:10: error:  (Each undefined symbol is reported only once.)
 E-10-62-N-ok.asm:21: error: undefined symbol `_L3' (first use)
-E-10-62-N-ok.asm:39: error: undefined symbol `_L4' (first use)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------E-11-63-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -22800,6 +22766,8 @@ E-11-63-N-ok.asm:10: error:  (Each undefined symbol is reported only once.)
 E-11-63-N-ok.asm:21: error: undefined symbol `_L3' (first use)
 E-11-63-N-ok.asm:39: error: undefined symbol `_L4' (first use)
 E-11-63-N-ok.asm:53: error: undefined symbol `_L6' (first use)
+E-11-63-N-ok.asm:60: error: undefined symbol `prints' (first use)
+E-11-63-N-ok.asm:62: error: undefined symbol `println' (first use)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------E-12-64-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -23338,8 +23306,8 @@ Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/E-12-64-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_E-12-64-N-ok.out	Thu May 30 15:56:47 2024
+*** expected/E-12-64-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_E-12-64-N-ok.out	Thu May 30 16:54:23 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 01234567891011121314151617181920212223242526272829
@@ -24042,8 +24010,8 @@ Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/E-13-65-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_E-13-65-N-ok.out	Thu May 30 15:56:47 2024
+*** expected/E-13-65-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_E-13-65-N-ok.out	Thu May 30 16:54:23 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 0246810121416182022242628
@@ -25159,8 +25127,8 @@ Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/E-14-66-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_E-14-66-N-ok.out	Thu May 30 15:56:47 2024
+*** expected/E-14-66-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_E-14-66-N-ok.out	Thu May 30 16:54:24 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 1516182022242628
@@ -27578,12 +27546,12 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+6: undeclared variable 'undeclared variable 'x''
 Compiler: failed (139/0). YASM: F-02-68-N-ok.asm:10: error: undefined symbol `y' (first use)
 F-02-68-N-ok.asm:10: error:  (Each undefined symbol is reported only once.)
 F-02-68-N-ok.asm:21: error: undefined symbol `_L3' (first use)
 F-02-68-N-ok.asm:24: error: undefined symbol `x' (first use)
 F-02-68-N-ok.asm:35: error: undefined symbol `_L5' (first use)
-F-02-68-N-ok.asm:55: error: undefined symbol `_L7' (first use)
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------F-03-69-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -28450,14 +28418,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-01-70-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_G-01-70-N-ok.out	Thu May 30 15:56:48 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 4
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------G-02-71-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -28875,14 +28838,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-04-73-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_G-04-73-N-ok.out	Thu May 30 15:56:48 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 4
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
+ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------G-05-74-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 88("(")
@@ -29176,9 +29134,9 @@ Stack now 0 2 15
 Stack now 0 2 15
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-05-74-N-ok.out	Thu May 30 15:23:53 2024
---- logs/106_G-05-74-N-ok.out	Thu May 30 15:56:48 2024
+3: undeclared variable 'undeclared variable 'i''
+Compiler: ok (0/0). YASM: ok. LD: ok. Running: *** expected/G-05-74-N-ok.out	Thu May 30 16:23:37 2024
+--- logs/106_G-05-74-N-ok.out	Thu May 30 16:54:24 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 4
