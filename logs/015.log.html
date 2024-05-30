@@ -2,120 +2,20 @@
 Checking project structure...
 til_parser.y: warning: 7 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_variable_node(cdk::variable_node*, int)':
-targets/postfix_writer.cpp:332:15: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'qualifier'; did you mean 'int til::symbol::_qualifier'? (not accessible from this context)
-  332 |   if (symbol->qualifier() == tFOREIGN) {
-      |               ^~~~~~~~~
-In file included from ./targets/basic_ast_visitor.h:9,
-                 from ./targets/type_checker.h:4,
-                 from targets/postfix_writer.cpp:3:
-./targets/symbol.h:14:13: note: declared private here
-   14 |         int _qualifier;
-      |             ^~~~~~~~~~
-targets/postfix_writer.cpp:332:30: error: 'tFOREIGN' was not declared in this scope
-  332 |   if (symbol->qualifier() == tFOREIGN) {
-      |                              ^~~~~~~~
-targets/postfix_writer.cpp:334:22: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'global'
-  334 |   } else if (symbol->global()) {
-      |                      ^~~~~~
-targets/postfix_writer.cpp:337:23: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'offset'
-  337 |     _pf.LOCAL(symbol->offset());
-      |                       ^~~~~~
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_print_node(til::print_node*, int)':
-targets/postfix_writer.cpp:399:9: error: 'class til::print_node' has no member named 'argument'; did you mean 'arguments'?
-  399 |   node->argument()->accept(this, lvl); // determine the value to print
-      |         ^~~~~~~~
-      |         arguments
-targets/postfix_writer.cpp:400:13: error: 'class til::print_node' has no member named 'argument'; did you mean 'arguments'?
-  400 |   if (node->argument()->is_typed(cdk::TYPE_INT)) {
-      |             ^~~~~~~~
-      |             arguments
-targets/postfix_writer.cpp:403:20: error: 'class til::print_node' has no member named 'argument'; did you mean 'arguments'?
-  403 |   } else if (node->argument()->is_typed(cdk::TYPE_STRING)) {
-      |                    ^~~~~~~~
-      |                    arguments
-targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_return_node(til::return_node*, int)':
-targets/postfix_writer.cpp:544:40: error: 'class til::return_node' has no member named 'retval'
-  544 |     acceptCovariantNode(rettype, node->retval(), lvl + 2);
-      |                                        ^~~~~~
-targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_variable_decl_node(til::variable_decl_node*, int)':
-targets/postfix_writer.cpp:614:11: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'offset'
-  614 |   symbol->offset(offset);
-      |           ^~~~~~
-targets/postfix_writer.cpp:619:34: error: 'class til::variable_decl_node' has no member named 'initializer'
-  619 |     if (_inFunctionArgs || node->initializer() == nullptr) {
-      |                                  ^~~~~~~~~~~
-targets/postfix_writer.cpp:623:45: error: 'class til::variable_decl_node' has no member named 'initializer'
-  623 |     acceptCovariantNode(node->type(), node->initializer(), lvl);
-      |                                             ^~~~~~~~~~~
-targets/postfix_writer.cpp:625:25: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'offset'
-  625 |       _pf.LOCAL(symbol->offset());
-      |                         ^~~~~~
-targets/postfix_writer.cpp:628:25: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'offset'
-  628 |       _pf.LOCAL(symbol->offset());
-      |                         ^~~~~~
-targets/postfix_writer.cpp:635:15: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'qualifier'; did you mean 'int til::symbol::_qualifier'? (not accessible from this context)
-  635 |   if (symbol->qualifier() == tFORWARD || symbol->qualifier() == tFOREIGN) {
-      |               ^~~~~~~~~
-./targets/symbol.h:14:13: note: declared private here
-   14 |         int _qualifier;
-      |             ^~~~~~~~~~
-targets/postfix_writer.cpp:635:50: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'qualifier'; did you mean 'int til::symbol::_qualifier'? (not accessible from this context)
-  635 |   if (symbol->qualifier() == tFORWARD || symbol->qualifier() == tFOREIGN) {
-      |                                                  ^~~~~~~~~
-./targets/symbol.h:14:13: note: declared private here
-   14 |         int _qualifier;
-      |             ^~~~~~~~~~
-targets/postfix_writer.cpp:635:65: error: 'tFOREIGN' was not declared in this scope
-  635 |   if (symbol->qualifier() == tFORWARD || symbol->qualifier() == tFOREIGN) {
-      |                                                                 ^~~~~~~~
-targets/postfix_writer.cpp:642:13: error: 'class til::variable_decl_node' has no member named 'initializer'
-  642 |   if (node->initializer() == nullptr) {
-      |             ^~~~~~~~~~~
-targets/postfix_writer.cpp:646:17: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'qualifier'; did you mean 'int til::symbol::_qualifier'? (not accessible from this context)
-  646 |     if (symbol->qualifier() == tPUBLIC) {
-      |                 ^~~~~~~~~
-./targets/symbol.h:14:13: note: declared private here
-   14 |         int _qualifier;
-      |             ^~~~~~~~~~
-targets/postfix_writer.cpp:656:51: error: 'class til::variable_decl_node' has no member named 'initializer'
-  656 |         til::null_node, til::function_node>(node->initializer())) {
-      |                                                   ^~~~~~~~~~~
-targets/postfix_writer.cpp:663:15: error: 'using std::__shared_ptr_access<til::symbol, __gnu_cxx::_S_atomic, false, false>::element_type = class til::symbol' {aka 'class til::symbol'} has no member named 'qualifier'; did you mean 'int til::symbol::_qualifier'? (not accessible from this context)
-  663 |   if (symbol->qualifier() == tPUBLIC) {
-      |               ^~~~~~~~~
-./targets/symbol.h:14:13: note: declared private here
-   14 |         int _qualifier;
-      |             ^~~~~~~~~~
-targets/postfix_writer.cpp:669:49: error: 'class til::variable_decl_node' has no member named 'initializer'
-  669 |   if (node->is_typed(cdk::TYPE_DOUBLE) && node->initializer()->is_typed(cdk::TYPE_INT)) {
-      |                                                 ^~~~~~~~~~~
-targets/postfix_writer.cpp:672:60: error: 'class til::variable_decl_node' has no member named 'initializer'
-  672 |     auto int_node = dynamic_cast<cdk::integer_node*>(node->initializer());
-      |                                                            ^~~~~~~~~~~
-targets/postfix_writer.cpp:675:11: error: 'class til::variable_decl_node' has no member named 'initializer'
-  675 |     node->initializer()->accept(this, lvl);
-      |           ^~~~~~~~~~~
+targets/postfix_writer.cpp:401:28: error: 'class cdk::sequence_node' has no member named 'is_typed'
+  401 |     if (node->arguments()->is_typed(cdk::TYPE_INT)) {
+      |                            ^~~~~~~~
+targets/postfix_writer.cpp:404:35: error: 'class cdk::sequence_node' has no member named 'is_typed'
+  404 |     } else if (node->arguments()->is_typed(cdk::TYPE_STRING)) {
+      |                                   ^~~~~~~~
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_function_node(til::function_node*, int)':
-targets/postfix_writer.cpp:756:3: error: 'frame_size_calculator' was not declared in this scope
-  756 |   frame_size_calculator fsc(_compiler, _symtab);
+targets/postfix_writer.cpp:767:3: error: 'frame_size_calculator' was not declared in this scope
+  767 |   frame_size_calculator fsc(_compiler, _symtab);
       |   ^~~~~~~~~~~~~~~~~~~~~
-targets/postfix_writer.cpp:757:26: error: 'fsc' was not declared in this scope; did you mean 'fsync'?
-  757 |   node->block()->accept(&fsc, lvl);
+targets/postfix_writer.cpp:768:26: error: 'fsc' was not declared in this scope; did you mean 'fsync'?
+  768 |   node->block()->accept(&fsc, lvl);
       |                          ^~~
       |                          fsync
-targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_sizeof_node(til::sizeof_node*, int)':
-targets/postfix_writer.cpp:811:29: error: invalid use of member function 'void cdk::typed_node::type(std::shared_ptr<cdk::basic_type>)' (did you forget the '()' ?)
-  811 |   _pf.INT(node->argument()->type->size());
-      |           ~~~~~~~~~~~~~~~~~~^~~~
-targets/postfix_writer.cpp: In instantiation of 'void til::postfix_writer::executeLoopControlInstruction(T*) [with long unsigned int P = 0; T = til::next_node]':
-targets/postfix_writer.cpp:526:35:   required from here
-targets/postfix_writer.cpp:509:42: error: 'class til::next_node' has no member named 'level'; did you mean 'n_level'?
-  509 |   auto level = static_cast<size_t>(node->level());
-      |                                    ~~~~~~^~~~~
-      |                                    n_level
-targets/postfix_writer.cpp: In instantiation of 'void til::postfix_writer::executeLoopControlInstruction(T*) [with long unsigned int P = 1; T = til::stop_node]':
-targets/postfix_writer.cpp:530:35:   required from here
-targets/postfix_writer.cpp:509:42: error: 'class til::stop_node' has no member named 'level'
 make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
