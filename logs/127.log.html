@@ -7,40 +7,62 @@ til_parser.y:190.1-6: warning: nonterminal useless in grammar: string [-Wother]
       | ^~~~~~
 til_parser.y: warning: 14 shift/reduce conflicts [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
-til_parser.y:117:54: error: expected type-specifier
-  117 | program : tBEGIN decls_list tEND { compiler->ast(new til::program_node(LINE, $2)); }
-      |                                                      ^~~
-til_parser.y:142:106: error: no matching function for call to 'til::print_node::print_node(int, cdk::expression_node*&)'
-  142 |      | tPRINT expr ';'                  { $$ = new til::print_node(LINE, $2); }
-      |                                                                                                          ^
-In file included from .auto/all_nodes.h:50,
-                 from til_parser.y:8:
-./ast/print_node.h:16:12: note: candidate: 'til::print_node::print_node(int, cdk::sequence_node*, bool)'
-   16 |     inline print_node(int lineno, cdk::sequence_node *arguments,
-      |            ^~~~~~~~~~
-./ast/print_node.h:16:55: note:   no known conversion for argument 2 from 'cdk::expression_node*' to 'cdk::sequence_node*'
-   16 |     inline print_node(int lineno, cdk::sequence_node *arguments,
-      |                                   ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
-./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(const til::print_node&)'
-   11 |   class print_node: public cdk::basic_node {
-      |         ^~~~~~~~~~
-./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
-./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(til::print_node&&)'
-./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
-til_parser.y:143:101: error: no matching function for call to 'til::read_node::read_node(int, cdk::lvalue_node*&)'
-  143 |      | tREAD lval ';'                   { $$ = new til::read_node(LINE, $2); }
-      |                                                                                                     ^
-In file included from .auto/all_nodes.h:51:
-./ast/read_node.h:15:5: note: candidate: 'til::read_node::read_node(int)'
-   15 |     read_node(int lineno) :
-      |     ^~~~~~~~~
-./ast/read_node.h:15:5: note:   candidate expects 1 argument, 2 provided
-./ast/read_node.h:11:9: note: candidate: 'til::read_node::read_node(const til::read_node&)'
-   11 |   class read_node : public cdk::expression_node {
-      |         ^~~~~~~~~
-./ast/read_node.h:11:9: note:   candidate expects 1 argument, 2 provided
-./ast/read_node.h:11:9: note: candidate: 'til::read_node::read_node(til::read_node&&)'
-./ast/read_node.h:11:9: note:   candidate expects 1 argument, 2 provided
-make: *** [Makefile:40: til_parser.tab.o] Error 1
+targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_print_node(til::print_node*, int)':
+targets/xml_writer.cpp:153:9: error: 'class til::print_node' has no member named 'argument'; did you mean 'arguments'?
+  153 |   node->argument()->accept(this, lvl + 2);
+      |         ^~~~~~~~
+      |         arguments
+targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_read_node(til::read_node*, int)':
+targets/xml_writer.cpp:162:9: error: 'class til::read_node' has no member named 'argument'; did you mean 'cdk::lvalue_node* til::read_node::_argument'? (not accessible from this context)
+  162 |   node->argument()->accept(this, lvl + 2);
+      |         ^~~~~~~~
+In file included from ./.auto/all_nodes.h:53,
+                 from targets/xml_writer.cpp:4:
+./ast/read_node.h:12:23: note: declared private here
+   12 |     cdk::lvalue_node *_argument;
+      |                       ^~~~~~~~~
+targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_declaration_node(til::declaration_node*, int)':
+targets/xml_writer.cpp:240:35: error: 'qualifier_to_str' was not declared in this scope
+  240 |       std::make_pair("qualifier", qualifier_to_str(node->qualifier())),
+      |                                   ^~~~~~~~~~~~~~~~
+targets/xml_writer.cpp:241:30: error: 'type_to_str' was not declared in this scope
+  241 |       std::make_pair("type", type_to_str(node->type())),
+      |                              ^~~~~~~~~~~
+targets/xml_writer.cpp:239:3: error: 'openTagWithAttributes' was not declared in this scope
+  239 |   openTagWithAttributes(node, lvl,
+      |   ^~~~~~~~~~~~~~~~~~~~~
+targets/xml_writer.cpp:245:5: error: 'emptyTag' was not declared in this scope
+  245 |     emptyTag("initializer", lvl + 2);
+      |     ^~~~~~~~
+targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_function_call_node(til::function_call_node*, int)':
+targets/xml_writer.cpp:261:5: error: 'emptyTag' was not declared in this scope
+  261 |     emptyTag("recursive", lvl + 4);
+      |     ^~~~~~~~
+targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_function_node(til::function_node*, int)':
+targets/xml_writer.cpp:277:30: error: 'type_to_str' was not declared in this scope
+  277 |       std::make_pair("type", type_to_str(node->type())),
+      |                              ^~~~~~~~~~~
+targets/xml_writer.cpp:278:33: error: 'bool_to_str' was not declared in this scope
+  278 |       std::make_pair("is_main", bool_to_str(node->is_main()))
+      |                                 ^~~~~~~~~~~
+targets/xml_writer.cpp:276:3: error: 'openTagWithAttributes' was not declared in this scope
+  276 |   openTagWithAttributes(node, lvl,
+      |   ^~~~~~~~~~~~~~~~~~~~~
+targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_next_node(til::next_node*, int)':
+targets/xml_writer.cpp:296:3: error: 'emptyTagWithAttributes' was not declared in this scope
+  296 |   emptyTagWithAttributes(node, lvl, std::make_pair("level", node->level()));
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_nullptr_node(til::nullptr_node*, int)':
+targets/xml_writer.cpp:302:5: error: 'emptyTag' was not declared in this scope
+  302 |     emptyTag(node, lvl);
+      |     ^~~~~~~~
+targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_return_node(til::return_node*, int)':
+targets/xml_writer.cpp:310:5: error: 'emptyTag' was not declared in this scope
+  310 |     emptyTag(node, lvl);
+      |     ^~~~~~~~
+targets/xml_writer.cpp: In member function 'virtual void til::xml_writer::do_stop_node(til::stop_node*, int)':
+targets/xml_writer.cpp:322:3: error: 'emptyTagWithAttributes' was not declared in this scope
+  322 |   emptyTagWithAttributes(node, lvl, std::make_pair("level", node->level()));
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+make: *** [Makefile:46: targets/xml_writer.o] Error 1
 
