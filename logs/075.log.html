@@ -1,40 +1,46 @@
 <pre>
 Checking project structure...
-targets/postfix_writer.cpp:865:6: error: no declaration matches 'void til::postfix_writer::processLocalVariableInitialization(std::shared_ptr<til::symbol>, cdk::expression_node*, int)'
-  865 | void til::postfix_writer::processLocalVariableInitialization(
+targets/type_checker.cpp:238:6: error: redefinition of 'bool til::type_checker::processBinaryExpression(cdk::binary_operation_node*, int)'
+  238 | bool til::type_checker::processBinaryExpression(
       |      ^~~
-targets/postfix_writer.cpp:865:6: note: no functions named 'void til::postfix_writer::processLocalVariableInitialization(std::shared_ptr<til::symbol>, cdk::expression_node*, int)'
-In file included from targets/postfix_writer.cpp:4:
-./targets/postfix_writer.h:17:9: note: 'class til::postfix_writer' defined here
-   17 |   class postfix_writer: public basic_ast_visitor {
-      |         ^~~~~~~~~~~~~~
-targets/postfix_writer.cpp:890:6: error: no declaration matches 'void til::postfix_writer::processGlobalVariableInitialization(std::shared_ptr<til::symbol>, cdk::expression_node*, int)'
-  890 | void til::postfix_writer::processGlobalVariableInitialization(
+targets/type_checker.cpp:131:6: note: 'bool til::type_checker::processBinaryExpression(cdk::binary_operation_node*, int)' previously defined here
+  131 | bool til::type_checker::processBinaryExpression(
       |      ^~~
-targets/postfix_writer.cpp:890:6: note: no functions named 'void til::postfix_writer::processGlobalVariableInitialization(std::shared_ptr<til::symbol>, cdk::expression_node*, int)'
-./targets/postfix_writer.h:17:9: note: 'class til::postfix_writer' defined here
-   17 |   class postfix_writer: public basic_ast_visitor {
-      |         ^~~~~~~~~~~~~~
-targets/postfix_writer.cpp:1094:6: error: no declaration matches 'void til::postfix_writer::processIDPBinaryExpression(cdk::binary_operation_node*, int)'
- 1094 | void til::postfix_writer::processIDPBinaryExpression(
+targets/type_checker.cpp:272:6: error: redefinition of 'void til::type_checker::processIBinaryExpression(cdk::binary_operation_node*, int)'
+  272 | void til::type_checker::processIBinaryExpression(
       |      ^~~
-targets/postfix_writer.cpp:1094:6: note: no functions named 'void til::postfix_writer::processIDPBinaryExpression(cdk::binary_operation_node*, int)'
-./targets/postfix_writer.h:17:9: note: 'class til::postfix_writer' defined here
-   17 |   class postfix_writer: public basic_ast_visitor {
-      |         ^~~~~~~~~~~~~~
-targets/postfix_writer.cpp:1125:6: error: no declaration matches 'void til::postfix_writer::processIDBinaryExpression(cdk::binary_operation_node*, int)'
- 1125 | void til::postfix_writer::processIDBinaryExpression(
+targets/type_checker.cpp:165:6: note: 'void til::type_checker::processIBinaryExpression(cdk::binary_operation_node*, int)' previously defined here
+  165 | void til::type_checker::processIBinaryExpression(
       |      ^~~
-targets/postfix_writer.cpp:1125:6: note: no functions named 'void til::postfix_writer::processIDBinaryExpression(cdk::binary_operation_node*, int)'
-./targets/postfix_writer.h:17:9: note: 'class til::postfix_writer' defined here
-   17 |   class postfix_writer: public basic_ast_visitor {
-      |         ^~~~~~~~~~~~~~
-targets/postfix_writer.cpp:1139:6: error: no declaration matches 'void til::postfix_writer::processGeneralLogicalBinaryExpression(cdk::binary_operation_node*, int)'
- 1139 | void til::postfix_writer::processGeneralLogicalBinaryExpression(
+targets/type_checker.cpp:285:6: error: redefinition of 'void til::type_checker::processAdditiveBinaryExpression(cdk::binary_operation_node*, int, bool)'
+  285 | void til::type_checker::processAdditiveBinaryExpression(
       |      ^~~
-targets/postfix_writer.cpp:1139:6: note: no functions named 'void til::postfix_writer::processGeneralLogicalBinaryExpression(cdk::binary_operation_node*, int)'
-./targets/postfix_writer.h:17:9: note: 'class til::postfix_writer' defined here
-   17 |   class postfix_writer: public basic_ast_visitor {
-      |         ^~~~~~~~~~~~~~
-make: *** [Makefile:46: targets/postfix_writer.o] Error 1
+targets/type_checker.cpp:178:6: note: 'void til::type_checker::processAdditiveBinaryExpression(cdk::binary_operation_node*, int, bool)' previously defined here
+  178 | void til::type_checker::processAdditiveBinaryExpression(
+      |      ^~~
+targets/type_checker.cpp:311:6: error: redefinition of 'void til::type_checker::processComparisonBinaryExpression(cdk::binary_operation_node*, int)'
+  311 | void til::type_checker::processComparisonBinaryExpression(
+      |      ^~~
+targets/type_checker.cpp:204:6: note: 'void til::type_checker::processComparisonBinaryExpression(cdk::binary_operation_node*, int)' previously defined here
+  204 | void til::type_checker::processComparisonBinaryExpression(
+      |      ^~~
+targets/type_checker.cpp:317:6: error: redefinition of 'void til::type_checker::processIDBinaryExpression(cdk::binary_operation_node*, int)'
+  317 | void til::type_checker::processIDBinaryExpression(
+      |      ^~~
+targets/type_checker.cpp:210:6: note: 'void til::type_checker::processIDBinaryExpression(cdk::binary_operation_node*, int)' previously defined here
+  210 | void til::type_checker::processIDBinaryExpression(
+      |      ^~~
+targets/type_checker.cpp:324:6: error: redefinition of 'void til::type_checker::processLogicalBinaryExpression(cdk::binary_operation_node*, int)'
+  324 | void til::type_checker::processLogicalBinaryExpression(
+      |      ^~~
+targets/type_checker.cpp:217:6: note: 'void til::type_checker::processLogicalBinaryExpression(cdk::binary_operation_node*, int)' previously defined here
+  217 | void til::type_checker::processLogicalBinaryExpression(
+      |      ^~~
+targets/type_checker.cpp:330:6: error: redefinition of 'void til::type_checker::processEqualityBinaryExpression(cdk::binary_operation_node*, int)'
+  330 | void til::type_checker::processEqualityBinaryExpression(
+      |      ^~~
+targets/type_checker.cpp:223:6: note: 'void til::type_checker::processEqualityBinaryExpression(cdk::binary_operation_node*, int)' previously defined here
+  223 | void til::type_checker::processEqualityBinaryExpression(
+      |      ^~~
+make: *** [Makefile:46: targets/type_checker.o] Error 1
 
