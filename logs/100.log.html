@@ -1,5 +1,12 @@
 <pre>
 Checking project structure...
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_return_node(til::return_node*, int)':
+targets/postfix_writer.cpp:670:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  670 |         if (_functions.back()->name() == "_program") {
+      |         ^~
+targets/postfix_writer.cpp:673:7: note: here
+  673 |       case cdk::TYPE_STRING:
+      |       ^~~~
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 142("(")
@@ -9685,6 +9692,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -10025,6 +10033,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -12485,6 +12494,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -12930,6 +12941,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -13375,6 +13388,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -13820,6 +13835,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -14265,6 +14282,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -14710,6 +14729,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -15255,6 +15276,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -15800,6 +15823,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -16327,6 +16352,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -16650,6 +16677,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -16978,6 +17006,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -22857,6 +22886,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -23476,6 +23506,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -24170,6 +24201,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -24752,6 +24784,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+1: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -25337,6 +25370,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -26102,6 +26136,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -27305,6 +27340,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -31246,6 +31282,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+2: unknown type for initializer
+4: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -32445,6 +32483,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+2: unknown type for initializer
+4: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -33922,6 +33962,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+2: unknown type for initializer
+4: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -35244,9 +35286,9 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: ok (0/0). YASM: G-05-74-N-ok.asm:7: error: redefinition of `i'
+G-05-74-N-ok.asm:3: error: `i' previously defined here
+'yasm' failed
 <font color='white' style='background: blue;'>---------------------------G-06-75-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 142("(")
@@ -35567,9 +35609,9 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: ok (0/0). YASM: G-06-75-N-ok.asm:7: error: redefinition of `i'
+G-06-75-N-ok.asm:3: error: `i' previously defined here
+'yasm' failed
 <font color='white' style='background: blue;'>---------------------------G-07-76-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 142("(")
@@ -38477,6 +38519,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+unexpected initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -39101,6 +39144,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+unexpected initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -39676,6 +39720,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+unexpected initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -40334,6 +40379,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+unexpected initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -41127,6 +41173,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+unexpected initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -41688,6 +41735,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+unexpected initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -42716,9 +42764,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-09-94-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 142("(")
@@ -43803,9 +43849,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+unexpected initializer
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------K-10-95-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 142("(")
@@ -44886,6 +44931,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+unexpected initializer
+3: variable 'g' redeclared
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -45906,6 +45953,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+unexpected initializer
+3: variable 'g' redeclared
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -47070,6 +47119,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+unexpected initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -49071,9 +49121,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------L-03-99-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 142("(")
@@ -51065,6 +51113,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+unexpected initializer
+15: variable 'g' redeclared
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -51884,6 +51934,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+unexpected initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -52542,6 +52593,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+unexpected initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -53200,6 +53252,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+unexpected initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -55511,7 +55564,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
+Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
 <font color='white' style='background: blue;'>---------------------------P-03-105-N-ok.til---------------------------</font>
@@ -58669,7 +58722,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
+3: unknown type for initializer
+Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
 <font color='white' style='background: blue;'>---------------------------P-04-106-N-ok.til---------------------------</font>
@@ -60356,6 +60410,9 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+2: unknown type for initializer
+4: unknown type for initializer
+5: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -61148,7 +61205,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
+Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
 <font color='white' style='background: blue;'>---------------------------P-06-108-N-ok.til---------------------------</font>
@@ -62482,7 +62539,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
+Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
 <font color='white' style='background: blue;'>---------------------------P-07-109-N-ok.til---------------------------</font>
@@ -63944,9 +64001,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+unexpected initializer
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-01-110-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 142("(")
@@ -65486,9 +65542,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-02-111-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 142("(")
@@ -67088,9 +67142,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-03-112-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 142("(")
@@ -67660,9 +67712,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+1: unknown type for initializer
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-04-113-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 142("(")
@@ -68234,7 +68285,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
+2: unknown type for initializer
+Compiler: failed (139/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
 <font color='white' style='background: blue;'>---------------------------Q-05-114-N-ok.til---------------------------</font>
@@ -68961,9 +69013,8 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+1: unknown type for initializer
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-06-115-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 142("(")
@@ -69690,9 +69741,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------Q-07-116-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 142("(")
@@ -71066,9 +71115,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
-/home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
-'ld' failed
+Compiler: failed (139/0). Generated empty asm file
 <font color='white' style='background: blue;'>---------------------------R-01-117-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 142("(")
@@ -74302,6 +74349,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
@@ -74941,6 +74989,7 @@ Stack now 0 2 18
 Stack now 0 2 18
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
+2: unknown type for initializer
 Compiler: ok (0/0). YASM: ok. LD: ld: /usr/lib/librts.a(lib32.o): in function `_start':
 /home/abuild/rpmbuild/BUILD/librts5-202103031636//lib32.asm:47:(.text+0x49): undefined reference to `_main'
 'ld' failed
