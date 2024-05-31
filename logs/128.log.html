@@ -3,19 +3,8 @@ Checking project structure...
 til_scanner.l:118: warning, rule cannot be matched
 til_parser.y: warning: 1 shift/reduce conflict [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_declaration_node(til::declaration_node*, int)':
-targets/postfix_writer.cpp:551:7: error: '_inFunctionArgs' was not declared in this scope; did you mean 'inFunction'?
-  551 |   if (_inFunctionArgs) {
-      |       ^~~~~~~~~~~~~~~
-      |       inFunction
-targets/postfix_writer.cpp:564:9: error: '_inFunctionArgs' was not declared in this scope; did you mean 'inFunction'?
-  564 |     if (_inFunctionArgs || node->initializer() == nullptr) {
-      |         ^~~~~~~~~~~~~~~
-      |         inFunction
-targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_function_node(til::function_node*, int)':
-targets/postfix_writer.cpp:639:3: error: '_inFunctionArgs' was not declared in this scope; did you mean 'inFunction'?
-  639 |   _inFunctionArgs = true;
-      |   ^~~~~~~~~~~~~~~
-      |   inFunction
-make: *** [Makefile:46: targets/postfix_writer.o] Error 1
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/frame_size_calculator.o:(.rodata._ZTVN3til21frame_size_calculatorE[_ZTVN3til21frame_size_calculatorE]+0xd0): undefined reference to `til::frame_size_calculator::do_unary_minus_node(cdk::unary_minus_node*, int)'
+/usr/lib64/gcc/x86_64-suse-linux/13/../../../../x86_64-suse-linux/bin/ld: targets/frame_size_calculator.o:(.rodata._ZTVN3til21frame_size_calculatorE[_ZTVN3til21frame_size_calculatorE]+0xd8): undefined reference to `til::frame_size_calculator::do_unary_plus_node(cdk::unary_plus_node*, int)'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:72: til] Error 1
 
