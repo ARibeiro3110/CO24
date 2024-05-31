@@ -3,35 +3,19 @@ Checking project structure...
 til_scanner.l:118: warning, rule cannot be matched
 til_parser.y: warning: 1 shift/reduce conflict [-Wconflicts-sr]
 til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
-targets/frame_size_calculator.cpp:92:6: error: redefinition of 'void til::frame_size_calculator::do_ne_node(cdk::ne_node*, int)'
-   92 | void til::frame_size_calculator::do_ne_node(cdk::ne_node * const node, int lvl) {
-      |      ^~~
-targets/frame_size_calculator.cpp:56:6: note: 'virtual void til::frame_size_calculator::do_ne_node(cdk::ne_node*, int)' previously defined here
-   56 | void til::frame_size_calculator::do_ne_node(cdk::ne_node * const node, int lvl) {
-      |      ^~~
-targets/frame_size_calculator.cpp:119:6: error: no declaration matches 'void til::frame_size_calculator::do_program_node(cdk::assignment_node*, int)'
-  119 | void til::frame_size_calculator::do_program_node(cdk::assignment_node * const node, int lvl) {
-      |      ^~~
-In file included from ./targets/frame_size_calculator.h:31,
-                 from targets/frame_size_calculator.cpp:2:
-./.auto/visitor_decls.h:41:8: note: candidate is: 'virtual void til::frame_size_calculator::do_program_node(til::program_node*, int)'
-   41 |   void do_program_node(til::program_node *const node, int lvl);
-      |        ^~~~~~~~~~~~~~~
-./targets/frame_size_calculator.h:9:9: note: 'class til::frame_size_calculator' defined here
-    9 |   class frame_size_calculator: public basic_ast_visitor {
-      |         ^~~~~~~~~~~~~~~~~~~~~
-targets/frame_size_calculator.cpp:134:6: error: variable or field 'do_read_node' declared void
-  134 | void til::frame_size_calculator::do_read_node(til::input_node * const node, int lvl) {
-      |      ^~~
-targets/frame_size_calculator.cpp:134:52: error: 'input_node' is not a member of 'til'; did you mean 'next_node'?
-  134 | void til::frame_size_calculator::do_read_node(til::input_node * const node, int lvl) {
-      |                                                    ^~~~~~~~~~
-      |                                                    next_node
-targets/frame_size_calculator.cpp:134:65: error: expected primary-expression before 'const'
-  134 | void til::frame_size_calculator::do_read_node(til::input_node * const node, int lvl) {
-      |                                                                 ^~~~~
-targets/frame_size_calculator.cpp:134:77: error: expected primary-expression before 'int'
-  134 | void til::frame_size_calculator::do_read_node(til::input_node * const node, int lvl) {
-      |                                                                             ^~~
-make: *** [Makefile:46: targets/frame_size_calculator.o] Error 1
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_declaration_node(til::declaration_node*, int)':
+targets/postfix_writer.cpp:551:7: error: '_inFunctionArgs' was not declared in this scope; did you mean 'inFunction'?
+  551 |   if (_inFunctionArgs) {
+      |       ^~~~~~~~~~~~~~~
+      |       inFunction
+targets/postfix_writer.cpp:564:9: error: '_inFunctionArgs' was not declared in this scope; did you mean 'inFunction'?
+  564 |     if (_inFunctionArgs || node->initializer() == nullptr) {
+      |         ^~~~~~~~~~~~~~~
+      |         inFunction
+targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_function_node(til::function_node*, int)':
+targets/postfix_writer.cpp:639:3: error: '_inFunctionArgs' was not declared in this scope; did you mean 'inFunction'?
+  639 |   _inFunctionArgs = true;
+      |   ^~~~~~~~~~~~~~~
+      |   inFunction
+make: *** [Makefile:46: targets/postfix_writer.o] Error 1
 
