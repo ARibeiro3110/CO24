@@ -1,11 +1,11 @@
 <pre>
 Checking project structure...
 targets/postfix_writer.cpp: In member function 'virtual void til::postfix_writer::do_function_call_node(til::function_call_node*, int)':
-targets/postfix_writer.cpp:631:13: warning: this statement may fall through [-Wimplicit-fallthrough=]
-  631 |             if (_forwardLabel.empty()) {
-      |             ^~
-targets/postfix_writer.cpp:637:9: note: here
-  637 |         case cdk::TYPE_STRING:
+targets/postfix_writer.cpp:636:29: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  636 |                 _pf.LDFVAL32();
+      |                 ~~~~~~~~~~~~^~
+targets/postfix_writer.cpp:638:9: note: here
+  638 |         case cdk::TYPE_STRING:
       |         ^~~~
 <font color='white' style='background: blue;'>---------------------------A-01-1-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -1637,8 +1637,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/A-07-7-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_A-07-7-N-ok.out	Fri May 31 15:37:30 2024
+ok. Running: *** expected/A-07-7-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_A-07-7-N-ok.out	Fri May 31 16:37:50 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 <font color="brown">--- 1,2 ----</font>
@@ -1855,8 +1855,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/A-08-8-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_A-08-8-N-ok.out	Fri May 31 15:37:30 2024
+ok. Running: *** expected/A-08-8-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_A-08-8-N-ok.out	Fri May 31 16:37:50 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! xYz
@@ -8181,8 +8181,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/B-25-31-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_B-25-31-N-ok.out	Fri May 31 15:37:31 2024
+ok. Running: *** expected/B-25-31-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_B-25-31-N-ok.out	Fri May 31 16:37:51 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 4747
@@ -18729,8 +18729,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-01-53-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_E-01-53-N-ok.out	Fri May 31 15:37:32 2024
+ok. Running: *** expected/E-01-53-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_E-01-53-N-ok.out	Fri May 31 16:37:52 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 123
@@ -19389,8 +19389,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-02-54-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_E-02-54-N-ok.out	Fri May 31 15:37:32 2024
+ok. Running: *** expected/E-02-54-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_E-02-54-N-ok.out	Fri May 31 16:37:52 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 10-1-2-3
@@ -20730,8 +20730,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-04-56-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_E-04-56-N-ok.out	Fri May 31 15:37:32 2024
+ok. Running: *** expected/E-04-56-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_E-04-56-N-ok.out	Fri May 31 16:37:52 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 135
@@ -21291,8 +21291,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-05-57-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_E-05-57-N-ok.out	Fri May 31 15:37:32 2024
+ok. Running: *** expected/E-05-57-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_E-05-57-N-ok.out	Fri May 31 16:37:52 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 123
@@ -21889,8 +21889,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-06-58-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_E-06-58-N-ok.out	Fri May 31 15:37:32 2024
+ok. Running: *** expected/E-06-58-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_E-06-58-N-ok.out	Fri May 31 16:37:52 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 10-1-2-3
@@ -23107,8 +23107,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-08-60-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_E-08-60-N-ok.out	Fri May 31 15:37:32 2024
+ok. Running: *** expected/E-08-60-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_E-08-60-N-ok.out	Fri May 31 16:37:53 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 135
@@ -23671,8 +23671,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-09-61-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_E-09-61-N-ok.out	Fri May 31 15:37:32 2024
+ok. Running: *** expected/E-09-61-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_E-09-61-N-ok.out	Fri May 31 16:37:53 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 01234567891011121314151617181920212223242526272829
@@ -24438,8 +24438,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-10-62-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_E-10-62-N-ok.out	Fri May 31 15:37:32 2024
+ok. Running: *** expected/E-10-62-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_E-10-62-N-ok.out	Fri May 31 16:37:53 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 0246810121416182022242628
@@ -25609,8 +25609,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-11-63-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_E-11-63-N-ok.out	Fri May 31 15:37:32 2024
+ok. Running: *** expected/E-11-63-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_E-11-63-N-ok.out	Fri May 31 16:37:53 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 1516182022242628
@@ -26188,8 +26188,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-12-64-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_E-12-64-N-ok.out	Fri May 31 15:37:32 2024
+ok. Running: *** expected/E-12-64-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_E-12-64-N-ok.out	Fri May 31 16:37:53 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 01234567891011121314151617181920212223242526272829
@@ -26950,8 +26950,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-13-65-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_E-13-65-N-ok.out	Fri May 31 15:37:32 2024
+ok. Running: *** expected/E-13-65-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_E-13-65-N-ok.out	Fri May 31 16:37:53 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 0246810121416182022242628
@@ -28116,8 +28116,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/E-14-66-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_E-14-66-N-ok.out	Fri May 31 15:37:32 2024
+ok. Running: *** expected/E-14-66-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_E-14-66-N-ok.out	Fri May 31 16:37:53 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 1516182022242628
@@ -29491,8 +29491,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/F-01-67-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_F-01-67-N-ok.out	Fri May 31 15:37:33 2024
+ok. Running: *** expected/F-01-67-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_F-01-67-N-ok.out	Fri May 31 16:37:53 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 123456
@@ -30652,8 +30652,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/F-02-68-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_F-02-68-N-ok.out	Fri May 31 15:37:33 2024
+ok. Running: *** expected/F-02-68-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_F-02-68-N-ok.out	Fri May 31 16:37:53 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 123456123456
@@ -35311,14 +35311,7 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/J-02-79-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_J-02-79-N-ok.out	Fri May 31 15:37:33 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-! 2
-<font color="brown">--- 1 ----</font>
-! 134516736
-<font color='brown'>output differs from expected</font>
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------J-03-80-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -36724,14 +36717,7 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/J-05-82-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_J-05-82-N-ok.out	Fri May 31 15:37:33 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-! 314
-<font color="brown">--- 1 ----</font>
-! 134516736
-<font color='brown'>output differs from expected</font>
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------J-06-83-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -37070,14 +37056,7 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: execution failed
-*** expected/J-06-83-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_J-06-83-N-ok.out	Fri May 31 15:37:33 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-- 1
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------J-07-84-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -38102,14 +38081,7 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/J-08-85-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_J-08-85-N-ok.out	Fri May 31 15:37:33 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-! 2
-<font color="brown">--- 1 ----</font>
-! 134516736
-<font color='brown'>output differs from expected</font>
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------K-01-86-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -38730,8 +38702,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/K-01-86-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_K-01-86-N-ok.out	Fri May 31 15:37:33 2024
+ok. Running: *** expected/K-01-86-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_K-01-86-N-ok.out	Fri May 31 16:37:54 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 310
@@ -40323,14 +40295,7 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/K-04-89-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_K-04-89-N-ok.out	Fri May 31 15:37:33 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-! 4
-<font color="brown">--- 1 ----</font>
-! 3
-<font color='brown'>output differs from expected</font>
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------K-05-90-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -40949,14 +40914,7 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/K-05-90-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_K-05-90-N-ok.out	Fri May 31 15:37:33 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-! 6
-<font color="brown">--- 1 ----</font>
-! 5
-<font color='brown'>output differs from expected</font>
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------K-06-91-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -41704,14 +41662,7 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/K-06-91-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_K-06-91-N-ok.out	Fri May 31 15:37:33 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-! 10
-<font color="brown">--- 1 ----</font>
-! 4
-<font color='brown'>output differs from expected</font>
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------K-07-92-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -44273,14 +44224,15 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: execution failed
-*** expected/K-09-94-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_K-09-94-N-ok.out	Fri May 31 15:37:34 2024
+ok. Running: *** expected/K-09-94-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_K-09-94-N-ok.out	Fri May 31 16:37:54 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
-- ola10
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+! ola10
+<font color="brown">--- 1,2 ----</font>
+! ola
+! 10
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------K-10-95-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -45337,14 +45289,15 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: execution failed
-*** expected/K-10-95-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_K-10-95-N-ok.out	Fri May 31 15:37:34 2024
+ok. Running: *** expected/K-10-95-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_K-10-95-N-ok.out	Fri May 31 16:37:54 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
-- ola10
-<font color="brown">--- 0 ----</font>
-<font color='brown'>output differs from expected</font>
+! ola10
+<font color="brown">--- 1,2 ----</font>
+! ola
+! 10
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------K-11-96-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -47453,13 +47406,13 @@ Cleanup: popping nterm file ()
 7: wrong number of arguments in function call
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/L-01-97-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_L-01-97-N-ok.out	Fri May 31 15:37:34 2024
+ok. Running: *** expected/L-01-97-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_L-01-97-N-ok.out	Fri May 31 16:37:54 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 15
 <font color="brown">--- 1 ----</font>
-! 134516736
+! 9
 <font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------L-02-98-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -49375,13 +49328,13 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: execution failed
-*** expected/L-02-98-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_L-02-98-N-ok.out	Fri May 31 15:37:34 2024
+ok. Running: *** expected/L-02-98-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_L-02-98-N-ok.out	Fri May 31 16:37:54 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
-- 6
-<font color="brown">--- 0 ----</font>
+! 6
+<font color="brown">--- 1 ----</font>
+! 0
 <font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------L-03-99-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -51312,13 +51265,13 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: execution failed
-*** expected/L-03-99-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_L-03-99-N-ok.out	Fri May 31 15:37:34 2024
+ok. Running: *** expected/L-03-99-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_L-03-99-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
-- 6
-<font color="brown">--- 0 ----</font>
+! 6
+<font color="brown">--- 1 ----</font>
+! 0
 <font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------O-01-100-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -52089,8 +52042,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/O-01-100-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_O-01-100-N-ok.out	Fri May 31 15:37:34 2024
+ok. Running: *** expected/O-01-100-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_O-01-100-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 1.3E15
@@ -52717,8 +52670,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/O-02-101-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_O-02-101-N-ok.out	Fri May 31 15:37:34 2024
+ok. Running: *** expected/O-02-101-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_O-02-101-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 1E12
@@ -53340,8 +53293,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/O-03-102-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_O-03-102-N-ok.out	Fri May 31 15:37:34 2024
+ok. Running: *** expected/O-03-102-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_O-03-102-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 99
@@ -54186,8 +54139,8 @@ Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/P-01-103-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_P-01-103-N-ok.out	Fri May 31 15:37:34 2024
+*** expected/P-01-103-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_P-01-103-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 6.2E33.1E3
@@ -55488,8 +55441,8 @@ Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/P-02-104-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_P-02-104-N-ok.out	Fri May 31 15:37:34 2024
+*** expected/P-02-104-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_P-02-104-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 378
@@ -58497,8 +58450,8 @@ Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/P-03-105-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_P-03-105-N-ok.out	Fri May 31 15:37:34 2024
+*** expected/P-03-105-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_P-03-105-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1,2 ****</font>
 !   2222
@@ -58507,7 +58460,7 @@ ok. Running: execution failed
 !  
 !  
 ! 0
-! -6834720
+! -3224448
 ! 4
 ! 2
 ! 
@@ -60126,8 +60079,8 @@ Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/P-04-106-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_P-04-106-N-ok.out	Fri May 31 15:37:34 2024
+*** expected/P-04-106-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_P-04-106-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 4444441.6E1
@@ -62104,8 +62057,8 @@ Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/P-06-108-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_P-06-108-N-ok.out	Fri May 31 15:37:34 2024
+*** expected/P-06-108-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_P-06-108-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 3
@@ -63466,8 +63419,8 @@ Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/P-07-109-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_P-07-109-N-ok.out	Fri May 31 15:37:34 2024
+*** expected/P-07-109-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_P-07-109-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 1
@@ -64900,8 +64853,8 @@ Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/Q-01-110-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_Q-01-110-N-ok.out	Fri May 31 15:37:34 2024
+*** expected/Q-01-110-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_Q-01-110-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 6.1E1
@@ -66389,8 +66342,8 @@ Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/Q-02-111-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_Q-02-111-N-ok.out	Fri May 31 15:37:34 2024
+*** expected/Q-02-111-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_Q-02-111-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 6.1E1
@@ -70113,8 +70066,8 @@ Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/Q-07-116-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_Q-07-116-N-ok.out	Fri May 31 15:37:34 2024
+*** expected/Q-07-116-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_Q-07-116-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 6.1E1
@@ -74392,15 +74345,15 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/U-01-121-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_U-01-121-N-ok.out	Fri May 31 15:37:35 2024
+ok. Running: *** expected/U-01-121-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_U-01-121-N-ok.out	Fri May 31 16:37:55 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 46
 <font color="brown">--- 1,2 ----</font>
-! 1
+! 4
 ! 6
-<font color='brown'>output differs from expected</font>
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------U-02-122-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -76491,13 +76444,13 @@ Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/U-02-122-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_U-02-122-N-ok.out	Fri May 31 15:37:35 2024
+*** expected/U-02-122-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_U-02-122-N-ok.out	Fri May 31 16:37:56 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 4630
 <font color="brown">--- 1,2 ----</font>
-! 1
+! 4
 ! 6
 <font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------U-03-123-N-ok.til---------------------------</font>
@@ -79852,13 +79805,13 @@ Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
 ok. Running: execution failed
-*** expected/U-03-123-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_U-03-123-N-ok.out	Fri May 31 15:37:35 2024
+*** expected/U-03-123-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_U-03-123-N-ok.out	Fri May 31 16:37:56 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 463025
 <font color="brown">--- 1,2 ----</font>
-! 1
+! 4
 ! 6
 <font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------X-01-124-N-ok.til---------------------------</font>
@@ -82161,17 +82114,17 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/X-01-124-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_X-01-124-N-ok.out	Fri May 31 15:37:35 2024
+ok. Running: *** expected/X-01-124-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_X-01-124-N-ok.out	Fri May 31 16:37:56 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 1.1-1-1-1
 <font color="brown">--- 1,4 ----</font>
 ! 1.1
-! -1
-! -1
-! -1
-<font color='green'>TEST PASSED!</font>
+! 0E-324
+! 0E-324
+! 0E-324
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------X-02-125-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -84711,17 +84664,17 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/X-02-125-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_X-02-125-N-ok.out	Fri May 31 15:37:35 2024
+ok. Running: *** expected/X-02-125-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_X-02-125-N-ok.out	Fri May 31 16:37:56 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 1.1-12-2
 <font color="brown">--- 1,4 ----</font>
 ! 1.1
 ! -1
-! 2
-! -2
-<font color='green'>TEST PASSED!</font>
+! 0E-324
+! 0E-324
+<font color='brown'>output differs from expected</font>
 <font color='white' style='background: blue;'>---------------------------Z-01-126-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -85646,14 +85599,7 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/Z-01-126-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_Z-01-126-N-ok.out	Fri May 31 15:37:35 2024
-<font style="background: brown;" color="white">----- ZONE  1  ----</font>
-<font color="brown">*** 1 ****</font>
-! 2
-<font color="brown">--- 1 ----</font>
-! 1
-<font color='brown'>output differs from expected</font>
+ok. Running: <font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------Z-02-127-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -88875,15 +88821,15 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/Z-06-131-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_Z-06-131-N-ok.out	Fri May 31 15:37:35 2024
+ok. Running: *** expected/Z-06-131-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_Z-06-131-N-ok.out	Fri May 31 16:37:56 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 23
 <font color="brown">--- 1,2 ----</font>
-! 1
-! 1
-<font color='brown'>output differs from expected</font>
+! 2
+! 3
+<font color='green'>TEST PASSED!</font>
 <font color='white' style='background: blue;'>---------------------------Z-07-132-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
 --accepting rule at line 124("(")
@@ -89873,13 +89819,13 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 Compiler: ok (0/0). YASM: ok. LD: ld: warning: kernel.o: missing .note.GNU-stack section implies executable stack
 ld: NOTE: This behaviour is deprecated and will be removed in a future version of the linker
-ok. Running: *** expected/Z-07-132-N-ok.out	Fri May 31 15:23:40 2024
---- logs/034_Z-07-132-N-ok.out	Fri May 31 15:37:35 2024
+ok. Running: *** expected/Z-07-132-N-ok.out	Fri May 31 16:23:43 2024
+--- logs/034_Z-07-132-N-ok.out	Fri May 31 16:37:56 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 ! 23
 <font color="brown">--- 1,2 ----</font>
-! 1
-! 1
-<font color='brown'>output differs from expected</font>
+! 2
+! 3
+<font color='green'>TEST PASSED!</font>
 </pre>
