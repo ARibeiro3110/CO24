@@ -1,3 +1,46 @@
 <pre>
 Checking project structure...
+til_parser.y: warning: 1 nonterminal useless in grammar [-Wother]
+til_parser.y: warning: 2 rules useless in grammar [-Wother]
+til_parser.y:190.1-6: warning: nonterminal useless in grammar: string [-Wother]
+  190 | string : string tSTRING    { $$ = $1; $$->append(*$2); delete $2; }
+      | ^~~~~~
+til_parser.y: warning: 14 shift/reduce conflicts [-Wconflicts-sr]
+til_parser.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+til_parser.y: In function 'int yyparse(std::shared_ptr<cdk::compiler>)':
+til_parser.y:117:54: error: expected type-specifier
+  117 | program : tBEGIN decls_list tEND { compiler->ast(new til::program_node(LINE, $2)); }
+      |                                                      ^~~
+til_parser.y:142:106: error: no matching function for call to 'til::print_node::print_node(int, cdk::expression_node*&)'
+  142 |      | tPRINT expr ';'                  { $$ = new til::print_node(LINE, $2); }
+      |                                                                                                          ^
+In file included from .auto/all_nodes.h:50,
+                 from til_parser.y:8:
+./ast/print_node.h:16:12: note: candidate: 'til::print_node::print_node(int, cdk::sequence_node*, bool)'
+   16 |     inline print_node(int lineno, cdk::sequence_node *arguments,
+      |            ^~~~~~~~~~
+./ast/print_node.h:16:55: note:   no known conversion for argument 2 from 'cdk::expression_node*' to 'cdk::sequence_node*'
+   16 |     inline print_node(int lineno, cdk::sequence_node *arguments,
+      |                                   ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(const til::print_node&)'
+   11 |   class print_node: public cdk::basic_node {
+      |         ^~~~~~~~~~
+./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+./ast/print_node.h:11:9: note: candidate: 'constexpr til::print_node::print_node(til::print_node&&)'
+./ast/print_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+til_parser.y:143:101: error: no matching function for call to 'til::read_node::read_node(int, cdk::lvalue_node*&)'
+  143 |      | tREAD lval ';'                   { $$ = new til::read_node(LINE, $2); }
+      |                                                                                                     ^
+In file included from .auto/all_nodes.h:51:
+./ast/read_node.h:15:5: note: candidate: 'til::read_node::read_node(int)'
+   15 |     read_node(int lineno) :
+      |     ^~~~~~~~~
+./ast/read_node.h:15:5: note:   candidate expects 1 argument, 2 provided
+./ast/read_node.h:11:9: note: candidate: 'til::read_node::read_node(const til::read_node&)'
+   11 |   class read_node : public cdk::expression_node {
+      |         ^~~~~~~~~
+./ast/read_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+./ast/read_node.h:11:9: note: candidate: 'til::read_node::read_node(til::read_node&&)'
+./ast/read_node.h:11:9: note:   candidate expects 1 argument, 2 provided
+make: *** [Makefile:40: til_parser.tab.o] Error 1
 
