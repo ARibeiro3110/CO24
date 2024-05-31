@@ -25107,9 +25107,10 @@ Cleanup: popping nterm file ()
 1: wrong type in initializer of variable 'i'
 3: undeclared variable 'undeclared variable 'i''
 4: return statement outside program or function
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-05-74-N-ok.out	Fri May 31 06:23:42 2024
---- logs/072_G-05-74-N-ok.out	Fri May 31 06:48:00 2024
+munmap_chunk(): invalid pointer
+Compiler: failed (134/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/G-05-74-N-ok.out	Fri May 31 07:23:41 2024
+--- logs/072_G-05-74-N-ok.out	Fri May 31 07:48:00 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 4
@@ -25418,10 +25419,9 @@ Cleanup: popping nterm file ()
 1: wrong type in initializer of variable 'i'
 3: undeclared variable 'undeclared variable 'i''
 4: return statement outside program or function
-free(): invalid pointer
-Compiler: failed (134/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-06-75-N-ok.out	Fri May 31 06:23:42 2024
---- logs/072_G-06-75-N-ok.out	Fri May 31 06:48:00 2024
+Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/G-06-75-N-ok.out	Fri May 31 07:23:41 2024
+--- logs/072_G-06-75-N-ok.out	Fri May 31 07:48:00 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 8
@@ -25856,9 +25856,10 @@ Cleanup: popping nterm file ()
 1: wrong type in initializer of variable 'f'
 3: undeclared variable 'undeclared variable 'f''
 4: void function '@' cannot return a value
-Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/G-07-76-N-ok.out	Fri May 31 06:23:42 2024
---- logs/072_G-07-76-N-ok.out	Fri May 31 06:48:00 2024
+munmap_chunk(): invalid pointer
+Compiler: failed (134/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/G-07-76-N-ok.out	Fri May 31 07:23:41 2024
+--- logs/072_G-07-76-N-ok.out	Fri May 31 07:48:00 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 4
@@ -26320,7 +26321,7 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 1: wrong type in initializer of variable 'f'
 3: undeclared variable 'undeclared variable 'f''
-free(): invalid pointer
+munmap_chunk(): invalid pointer
 Compiler: failed (134/0). YASM: G-08-77-N-ok.asm:14: error: unexpected end of line after instruction
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------J-01-78-N-ok.til---------------------------</font>
@@ -26713,10 +26714,10 @@ Cleanup: popping nterm file ()
 1: wrong type in initializer of variable 'f'
 3: undeclared variable 'undeclared variable 'f''
 4: void function '@' cannot return a value
-munmap_chunk(): invalid pointer
+free(): invalid pointer
 Compiler: failed (134/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/J-01-78-N-ok.out	Fri May 31 06:23:42 2024
---- logs/072_J-01-78-N-ok.out	Fri May 31 06:48:00 2024
+*** expected/J-01-78-N-ok.out	Fri May 31 07:23:41 2024
+--- logs/072_J-01-78-N-ok.out	Fri May 31 07:48:00 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - ola
@@ -27137,7 +27138,8 @@ Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
 1: wrong type in initializer of variable 'f'
 3: undeclared variable 'undeclared variable 'f''
-Compiler: failed (139/0). YASM: J-02-79-N-ok.asm:10: error: unexpected end of line after instruction
+munmap_chunk(): invalid pointer
+Compiler: failed (134/0). YASM: J-02-79-N-ok.asm:10: error: unexpected end of line after instruction
 'yasm' failed
 <font color='white' style='background: blue;'>---------------------------J-03-80-N-ok.til---------------------------</font>
 --(end of buffer or a NUL)
@@ -27572,10 +27574,9 @@ Cleanup: popping nterm file ()
 1: wrong type in initializer of variable 'f'
 3: undeclared variable 'undeclared variable 'f''
 4: return type mismatch in function '@'
-munmap_chunk(): invalid pointer
-Compiler: failed (134/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/J-03-80-N-ok.out	Fri May 31 06:23:42 2024
---- logs/072_J-03-80-N-ok.out	Fri May 31 06:48:00 2024
+Compiler: failed (139/0). YASM: ok. LD: ok. Running: execution failed
+*** expected/J-03-80-N-ok.out	Fri May 31 07:23:41 2024
+--- logs/072_J-03-80-N-ok.out	Fri May 31 07:48:00 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - ola
@@ -29457,8 +29458,8 @@ Cleanup: popping nterm file ()
 4: void function '@' cannot return a value
 munmap_chunk(): invalid pointer
 Compiler: failed (134/0). YASM: ok. LD: ok. Running: execution failed
-*** expected/J-07-84-N-ok.out	Fri May 31 06:23:42 2024
---- logs/072_J-07-84-N-ok.out	Fri May 31 06:48:00 2024
+*** expected/J-07-84-N-ok.out	Fri May 31 07:23:41 2024
+--- logs/072_J-07-84-N-ok.out	Fri May 31 07:48:00 2024
 <font style="background: brown;" color="white">----- ZONE  1  ----</font>
 <font color="brown">*** 1 ****</font>
 - 3
@@ -29925,7 +29926,8 @@ Stack now 0 2 21
 Stack now 0 2 21
 Cleanup: popping token "end of file" ()
 Cleanup: popping nterm file ()
-Compiler: failed (139/0). YASM: J-08-85-N-ok.asm:32: error: undefined symbol `printi' (first use)
+munmap_chunk(): invalid pointer
+Compiler: failed (134/0). YASM: J-08-85-N-ok.asm:32: error: undefined symbol `printi' (first use)
 J-08-85-N-ok.asm:32: error:  (Each undefined symbol is reported only once.)
 J-08-85-N-ok.asm:34: error: undefined symbol `println' (first use)
 J-08-85-N-ok.asm:37: error: unexpected end of line after instruction
@@ -30546,7 +30548,8 @@ Cleanup: popping nterm file ()
 2: wrong type in initializer of variable 'f'
 4: undeclared variable 'undeclared variable 'f''
 6: void function '@' cannot return a value
-Compiler: failed (139/0). YASM: K-01-86-N-ok.asm:16: error: undefined symbol `printi' (first use)
+munmap_chunk(): invalid pointer
+Compiler: failed (134/0). YASM: K-01-86-N-ok.asm:16: error: undefined symbol `printi' (first use)
 K-01-86-N-ok.asm:16: error:  (Each undefined symbol is reported only once.)
 K-01-86-N-ok.asm:18: error: undefined symbol `println' (first use)
 'yasm' failed
