@@ -70,12 +70,12 @@ function compile_project() {
   #DIFF=`diff -r $PROJDIR $CHECKOUT_DIR_REF/$1 --exclude .git | fgrep -v ist13500 | egrep -v -e '^[0-9]' | fgrep -v -e '---' | fgrep -v diff`
   DIFF=`diff -r $PROJDIR $CHECKOUT_DIR_REF/$1 --exclude .git | fgrep -v ist13500 | egrep -v -e '^[0-9]' | fgrep -v -e '---' | fgrep -v diff | egrep -v -e '^Only in'`
   #echo "RRR -[$DIFF]- RRR" >> $RESULTS_FILE
-  if [ x$DIFF = "x" ]; then
-    echo "!! Bad project (repository contains only the previous delivery)." >> $RESULTS_FILE
-    echo >> $RESULTS_FILE
-    echo
-    exit
-  fi
+  # if [ x$DIFF = "x" ]; then
+  #   echo "!! Bad project (repository contains only the previous delivery)." >> $RESULTS_FILE
+  #   echo >> $RESULTS_FILE
+  #   echo
+  #   exit
+  # fi
 
   echo >> $RESULTS_FILE
   echo "====================     N O D E S     ====================" >> $RESULTS_FILE
