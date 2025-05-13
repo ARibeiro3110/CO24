@@ -1,5 +1,4 @@
 #!/bin/zsh
-unset HOME
 BASE_DIR=`pwd`
 CHECKOUT_DIR=$BASE_DIR/checked-out
 CHECKOUT_DIR_REF=$BASE_DIR/checked-out-ref
@@ -8,6 +7,7 @@ LOGS_DIR=$EVAL_DIR/logs
 TESTS_DIR=$EVAL_DIR/auto-tests
 GROUP_RATE=$(ls auto-tests/*-ok.til | sed -e 's=auto-tests/==g' | cut -d- -f1 | sort -u | wc -l)
 LANG=til
+ROOT=${HOME}/compiladores/root
 
 #--------------------------------------------------------------------------
 PROJDIR=$CHECKOUT_DIR/$1
@@ -65,7 +65,7 @@ function compile_project() {
   
   echo "Checking project structure..."
   cd $PROJDIR
-  make ROOT= clean > /dev/null
+  make clean > /dev/null
 
   #DIFF=`diff -r $PROJDIR $CHECKOUT_DIR_REF/$1 --exclude .git | fgrep -v ist13500 | egrep -v -e '^[0-9]' | fgrep -v -e '---' | fgrep -v diff`
   DIFF=`diff -r $PROJDIR $CHECKOUT_DIR_REF/$1 --exclude .git | fgrep -v ist13500 | egrep -v -e '^[0-9]' | fgrep -v -e '---' | fgrep -v diff | egrep -v -e '^Only in'`
@@ -142,7 +142,7 @@ function compile_project() {
   fi
   
   # first try with name ${LANG}_parser.y
-  make ROOT= ${LANG}_parser.tab.h > /dev/null 2>&1
+  make ${LANG}_parser.tab.h > /dev/null 2>&1
   #byacc -v ${LANG}_parser.y > /dev/null 2>&1
   if [ ! -f ${LANG}_parser.output ]; then
     echo "!! could not find a valid grammar file to create LALR(1) description." >> $RESULTS_FILE
@@ -169,8 +169,8 @@ function compile_project() {
   echo "====================     COMPILING     ====================" >> $RESULTS_FILE
   echo >> $RESULTS_FILE
 
-  make ROOT= clean > /dev/null
-  make ROOT= > /dev/null # trying 'make'
+  make clean > /dev/null
+  make > /dev/null # trying 'make'
 
   if [ ! -f ${LANG} ]; then
     echo "!! Makefile could not produce '${LANG}'." >> $RESULTS_FILE
